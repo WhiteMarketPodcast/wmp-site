@@ -1,0 +1,62 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true,
+    "es6": true
+  },
+  "extends": ["eslint:recommended", "airbnb"],
+  "globals": {
+    "graphql": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["./src"]
+      }
+    }
+  },
+  "plugins": ["react", "jsx-a11y"],
+  "rules": {
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["ExternalLink"]
+      }
+    ],
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true
+      }
+    ],
+    "semi": ["error", "always"],
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "no-use-before-define": 0,
+    "object-curly-newline": 0,
+    "react/jsx-filename-extension": 0,
+    "react/no-danger": 0,
+    "react/prefer-stateless-function": 0,
+    "import/prefer-default-export": 0,
+    "react/forbid-prop-types": 0,
+    "arrow-parens": [2, "always"],
+    "max-len": [0, 80]
+  }
+}
