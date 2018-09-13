@@ -1,42 +1,40 @@
-@import "~bulma/sass/utilities/initial-variables"
+// When changing these colours, make sure to update the ones in styles/colors.js
+$white: #F7F7F7
+$green: #4FC77B
+$emerald: #3F8F85
+$lightGrey: #E0E2DB
+$grey: #D2D4C8
+$darkGrey: #4A4A4A
+$black: #3A3A3A
 
-// Config vars
-$kaldi-red: #FD461E
-$kaldi-red-invert: #fff
+  
+  
+body
+  background-color: $white
+  color: $black
+  font-size: 1rem
+  font-family: 'Quicksand', 'Fira Sans', 'Roboto', sans-serif
+  line-height: 1.6
+  margin: 0
+  overflow-x: hidden
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
+h1, h2, h3, h4, h5, h6
+  color: $darkGrey
+  font-family: 'Zilla Slab', sans-serif
 
-.content .taglist
-  list-style: none
-  margin-bottom: 0
-  margin-left: 0
-  margin-right: 1.5rem
-  margin-top: 1.5rem
-  display: flex
-  flex-wrap: wrap
-  justify-content: left
-  align-items: center
-  li
-    padding: 0 2rem 1rem 0
-    margin-bottom: 1.5rem
-    margin-top: 0
+h1
+  background-color: $emerald
+  color: $white
+  padding: 1rem
 
-// Helper Classes
-.full-width-image-container
-  width: 100vw
-  height: 400px
-  position: relative
-  left: 50%
-  right: 50%
-  margin: 5em -50vw
-  background-size: cover
-  background-position: bottom
-  display: flex
-  justify-content: center
-  align-items: center
+a
+  color: $emerald
+  text-decoration: none
+  transition: all 0.2s ease
 
-.margin-top-0
-  margin-top: 0 !important
+  &:hover
+    filter: contrast(200%)
 
-@import "~bulma"
+code
+  background-color: $emerald
+  color: $white
