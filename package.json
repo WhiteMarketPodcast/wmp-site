@@ -50,6 +50,7 @@
     "develop": "npm run clean && gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --arrow-parens always --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "lint": "eslint --fix \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

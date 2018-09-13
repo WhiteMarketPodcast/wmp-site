@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { node, string } from 'prop-types';
 
 export const HTMLContent = ({ content, className }) => (
   <div className={className} dangerouslySetInnerHTML={{ __html: content }} />
@@ -10,10 +10,15 @@ const Content = ({ content, className }) => (
 );
 
 Content.propTypes = {
-  content: PropTypes.node,
-  className: PropTypes.string,
+  content: node,
+  className: string,
+};
+Content.defaultProps = {
+  content: '',
+  className: '',
 };
 
 HTMLContent.propTypes = Content.propTypes;
+HTMLContent.defaultProps = Content.defaultProps;
 
 export default Content;

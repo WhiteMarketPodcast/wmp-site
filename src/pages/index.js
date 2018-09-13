@@ -1,45 +1,50 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link, graphql } from 'gatsby';
-import Layout from '../components/Layout';
+import { graphql } from 'gatsby';
+import Layout from 'components/Layout';
+import Link from 'components/Link';
+import { Card, LinkButton, PaddedSection } from 'styles/components';
 
-export default class IndexPage extends React.Component {
+export default class IndexPage extends Component {
+  static propTypes = {
+    data: PropTypes.shape({
+      allMarkdownRemark: PropTypes.shape({
+        edges: PropTypes.array,
+      }),
+    }).isRequired,
+  };
+
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-            </div>
-            {posts.map(({ node: post }) => (
-              <div
-                className="content"
-                style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-                key={post.id}
-              >
-                <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
-                </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button is-small" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </div>
-            ))}
+        <PaddedSection>
+          <div>
+            <h1>From the blog</h1>
           </div>
-        </section>
+
+          {posts.map(({ node: post }) => {
+            const {
+              id,
+              frontmatter: { image, title, date },
+              fields: { slug },
+              excerpt,
+            } = post;
+            return (
+              <Card key={id}>
+                <img src={image} alt="" />
+                <h2>
+                  <Link to={slug}>{title}</Link>
+                </h2>
+                <small>{date}</small>
+                <p>{excerpt}</p>
+                <LinkButton to={slug}>Keep Reading →</LinkButton>
+              </Card>
+            );
+          })}
+        </PaddedSection>
       </Layout>
     );
   }
@@ -50,7 +55,7 @@ IndexPage.propTypes = {
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
     }),
-  }),
+  }).isRequired,
 };
 
 export const pageQuery = graphql`
@@ -69,7 +74,8 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD MMMM YYYY")
+            image
           }
         }
       }

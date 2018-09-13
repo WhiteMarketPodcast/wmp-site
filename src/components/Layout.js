@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { node } from 'prop-types';
 import Helmet from 'react-helmet';
+import 'styles/all.sass';
+import 'styles';
 
-import Navbar from '../components/Navbar';
-import './all.sass';
+import Navbar from './Navbar';
 
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <Fragment>
     <Helmet title="Home | Gatsby + Netlify CMS" />
     <Navbar />
-    <div>{children}</div>
-  </div>
+    <main>{children}</main>
+  </Fragment>
 );
+
+TemplateWrapper.propTypes = {
+  children: node.isRequired,
+};
 
 export default TemplateWrapper;
