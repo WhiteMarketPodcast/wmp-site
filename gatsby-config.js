@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'White Market Podcast',
   },
   plugins: [
     'gatsby-plugin-resolve-src',

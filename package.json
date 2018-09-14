@@ -1,9 +1,14 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
+  "name": "white-market-static",
+  "description": "White Market Podcast site built with Gatsby and Netlify CMS",
   "version": "1.1.3",
   "author": "Austin Green",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.4",
+    "@fortawesome/free-brands-svg-icons": "^5.3.1",
+    "@fortawesome/free-regular-svg-icons": "^5.3.1",
+    "@fortawesome/free-solid-svg-icons": "^5.3.1",
+    "@fortawesome/react-fontawesome": "^0.1.3",
     "babel-eslint": "^9.0.0",
     "babel-plugin-styled-components": "^1.7.1",
     "eslint": "^5.5.0",
