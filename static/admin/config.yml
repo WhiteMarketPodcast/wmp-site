@@ -22,8 +22,9 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'text', required: false }
       - { label: 'Cover image', name: 'image', widget: 'image' }
-      - { label: 'Podcast link', name: 'podcastURL', widget: 'string', required: false }
-      - { label: 'Video link', name: 'video', widget: 'string', required: false }
+      - { label: 'Image credit', name: 'imageCredit', widget: 'string', required: false }
+      - { label: 'Podcast URL', name: 'podcastURL', widget: 'string', required: false }
+      - { label: 'Video URL', name: 'videoURL', widget: 'string', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Tags', name: 'tags', widget: 'list', required: false }
 
