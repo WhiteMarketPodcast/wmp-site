@@ -25,4 +25,8 @@ FeatureGrid.propTypes = {
   ),
 };
 
+FeatureGrid.defaultProps = {
+  gridItems: [],
+};
+
 export default FeatureGrid;

@@ -1,29 +1,44 @@
 import React from 'react';
+import { object } from 'prop-types';
 import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
 
 class TagRoute extends React.Component {
+  static propTypes = {
+    data: object.isRequired,
+    pageContext: object.isRequired,
+  };
+
   render() {
-    const posts = this.props.data.allMarkdownRemark.edges;
-    const postLinks = posts.map((post) => (
-      <li key={post.node.fields.slug}>
-        <Link to={post.node.fields.slug}>
-          <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
-        </Link>
-      </li>
-    ));
-    const tag = this.props.pageContext.tag;
-    const title = this.props.data.site.siteMetadata.title;
-    const totalCount = this.props.data.allMarkdownRemark.totalCount;
-    const tagHeader = `${totalCount} post${
-      totalCount === 1 ? '' : 's'
-    } tagged with “${tag}”`;
+    const {
+      data: {
+        allMarkdownRemark: { edges: posts, totalCount },
+        site: { siteMetadata },
+      },
+      pageContext: { tag },
+    } = this.props;
+
+    const tagHeader = `Posts tagged with “${tag}”: ${totalCount}`;
+    const postLinks = posts.map(({ node: post }) => {
+      const {
+        fields: { slug },
+        frontmatter: { title },
+      } = post;
+
+      return (
+        <li key={slug}>
+          <Link to={slug}>
+            <h2 className="is-size-2">{title}</h2>
+          </Link>
+        </li>
+      );
+    });
 
     return (
       <Layout>
         <section className="section">
-          <Helmet title={`${tag} | ${title}`} />
+          <Helmet title={`${tag} | ${siteMetadata.title}`} />
           <div className="container content">
             <div className="columns">
               <div

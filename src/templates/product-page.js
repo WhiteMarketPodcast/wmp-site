@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { array, string, shape, object } from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Features from '../components/Features';
@@ -108,27 +108,27 @@ export const ProductPageTemplate = ({
 );
 
 ProductPageTemplate.propTypes = {
-  image: PropTypes.string,
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
-  main: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    image1: PropTypes.object,
-    image2: PropTypes.object,
-    image3: PropTypes.object,
-  }),
-  testimonials: PropTypes.array,
-  fullImage: PropTypes.string,
-  pricing: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    plans: PropTypes.array,
-  }),
+  image: string.isRequired,
+  title: string.isRequired,
+  heading: string.isRequired,
+  description: string.isRequired,
+  intro: shape({
+    blurbs: array.isRequired,
+  }).isRequired,
+  main: shape({
+    heading: string.isRequired,
+    description: string.isRequired,
+    image1: object.isRequired,
+    image2: object.isRequired,
+    image3: object.isRequired,
+  }).isRequired,
+  testimonials: array.isRequired,
+  fullImage: string.isRequired,
+  pricing: shape({
+    heading: string.isRequired,
+    description: string.isRequired,
+    plans: array.isRequired,
+  }).isRequired,
 };
 
 const ProductPage = ({ data }) => {
@@ -152,11 +152,11 @@ const ProductPage = ({ data }) => {
 };
 
 ProductPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
+  data: shape({
+    markdownRemark: shape({
+      frontmatter: object,
+    }).isRequired,
+  }).isRequired,
 };
 
 export default ProductPage;

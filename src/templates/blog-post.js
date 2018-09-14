@@ -1,5 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import {
+  array,
+  func,
+  node,
+  string,
+  instanceOf,
+  shape,
+  object,
+} from 'prop-types';
 import { kebabCase } from 'lodash';
 import Helmet from 'react-helmet';
 import { graphql, Link } from 'gatsby';
@@ -18,7 +26,7 @@ export const BlogPostTemplate = ({
 
   return (
     <section className="section">
-      {helmet || ''}
+      {helmet}
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -27,18 +35,16 @@ export const BlogPostTemplate = ({
             </h1>
             <p>{description}</p>
             <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="taglist">
-                  {tags.map((tag) => (
-                    <li key={`${tag}tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
+            <div style={{ marginTop: `4rem` }}>
+              <h4>Tags</h4>
+              <ul className="taglist">
+                {tags.map((tag) => (
+                  <li key={`${tag}tag`}>
+                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -47,11 +53,19 @@ export const BlogPostTemplate = ({
 };
 
 BlogPostTemplate.propTypes = {
-  content: PropTypes.node.isRequired,
-  contentComponent: PropTypes.func,
-  description: PropTypes.string,
-  title: PropTypes.string,
-  helmet: PropTypes.instanceOf(Helmet),
+  content: node.isRequired,
+  contentComponent: func,
+  description: string,
+  title: string.isRequired,
+  helmet: instanceOf(Helmet),
+  tags: array,
+};
+
+BlogPostTemplate.defaultProps = {
+  contentComponent: undefined,
+  tags: [],
+  helmet: null,
+  description: '',
 };
 
 const BlogPost = ({ data }) => {
@@ -72,8 +86,8 @@ const BlogPost = ({ data }) => {
 };
 
 BlogPost.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
+  data: shape({
+    markdownRemark: object,
   }).isRequired,
 };
 
