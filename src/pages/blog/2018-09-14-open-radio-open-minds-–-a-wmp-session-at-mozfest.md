@@ -3,6 +3,8 @@ templateKey: blog-post
 title: 'Open Radio, Open Minds – a WMP session at MozFest'
 date: 2017-10-19T08:00:33.312Z
 image: /img/eric-nopanen-208576-1140x759.jpg
+tags:
+  - '#mozfest'
 ---
 [**MozFest 2017** schedule](https://guidebook.com/guide/114124/) is out now! In case you missed it, **White Market Podcast** will be hosting a session under the Open Innovation banner.  This is happening as part of the **Mozilla Open Leadership** program, [for which WMP has been selected to](https://www.whitemarketpodcast.co.uk/blog/2017/10/05/making-wmp-open-a-fresh-start-with-the-help-of-mozilla/) as a project. “**[Open Radio, Open Minds](https://guidebook.com/guide/114124/event/16741474/)**” is scheduled for Saturday 28th at 4:30pm, with a showcase on Sunday at the Gallery at the same time. Below you can find some more details about the session, including required equipment and targeted audience. _If you want to hear me and other Mozilla Open Leaders about our projects and sessions at MozFest, [check our demo call](http://air.mozilla.org/mozilla-open-leaders-round-4-demos-rebel-foxes/#@40m0s)._
 
