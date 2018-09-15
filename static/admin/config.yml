@@ -21,7 +21,8 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'text', required: false }
-      - { label: 'Cover image', name: 'image', widget: 'image' }
+      - { label: 'Cover image (uploaded)', name: 'image', widget: 'image', required: false }
+      - { label: 'Image URL', name: 'imageURL', widget: 'string', required: false }
       - { label: 'Image credit', name: 'imageCredit', widget: 'string', required: false }
       - { label: 'Podcast URL', name: 'podcastURL', widget: 'string', required: false }
       - { label: 'Video URL', name: 'videoURL', widget: 'string', required: false }

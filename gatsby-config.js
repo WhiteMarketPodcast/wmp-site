@@ -11,7 +11,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Zilla Slab', 'Quicksand'],
+          families: ['Crete Round', 'Quicksand'],
         },
       },
     },
