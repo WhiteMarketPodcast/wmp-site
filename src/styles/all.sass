@@ -22,9 +22,36 @@ h1, h2, h3, h4, h5, h6
   font-weight: 400
 
 h1
-  background-color: $emerald
-  color: $white
-  padding: 1rem
+  font-size: 3rem
+  line-height: 1.05em
+
+  @media screen and (max-width: 767px)
+    font-size: 2rem
+    line-height: 1.25em
+
+h2
+  font-size: 2.25rem
+  line-height: 1.25em
+
+  @media screen and (max-width: 767px)
+    font-size: 1.625rem
+    line-height: 1.154em
+
+h3
+  font-size: 1.75rem
+  line-height: 1.25em
+
+  @media screen and (max-width: 767px)
+    font-size: 1.375rem
+    line-height: 1.364em
+
+h4
+  font-size: 1.125rem
+  line-height: 1.22em
+
+  @media screen and (max-width: 767px)
+    line-height: 1.11em
+
 
 a
   color: $emerald
@@ -37,3 +64,10 @@ a
 code
   background-color: $emerald
   color: $white
+
+hr
+  border: 0
+  background-color: $grey
+  height: 1px
+  width: 50ch
+  margin: 2rem auto

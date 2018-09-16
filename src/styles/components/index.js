@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Link from 'components/Link';
-import { emerald, white } from './colors';
-import { onMobile } from './mediaQueries';
+import { emerald, white } from '../colors';
+import { onMobile } from '../mediaQueries';
 
 export const BlogPreviewContainer = styled.div`
   position: relative;
