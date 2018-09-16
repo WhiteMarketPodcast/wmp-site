@@ -5,7 +5,12 @@ import { graphql } from 'gatsby';
 import InfiniteScroll from 'react-infinite-scroller';
 import Layout from 'components/Layout';
 import Link from 'components/Link';
-import { Card, CardBG, LinkButton } from 'styles/components';
+import {
+  BlogPreviewContainer,
+  BlogPreviewCard,
+  BlogPreviewBG,
+  LinkButton,
+} from 'styles/components';
 
 export default class IndexPage extends Component {
   static propTypes = {
@@ -46,11 +51,11 @@ export default class IndexPage extends Component {
           excerpt,
         } = post;
         return (
-          <CardBG
-            key={id}
-            style={{ backgroundImage: `url(${image || imageURL})` }}
-          >
-            <Card>
+          <BlogPreviewContainer key={id}>
+            <BlogPreviewBG
+              style={{ backgroundImage: `url(${image || imageURL})` }}
+            />
+            <BlogPreviewCard>
               {/* <img src={image || imageURL} alt={imageAlt || ''} /> */}
               <h2>
                 <Link to={slug}>{title}</Link>
@@ -58,8 +63,8 @@ export default class IndexPage extends Component {
               <small>{date}</small>
               <p>{excerpt}</p>
               <LinkButton to={slug}>Keep Reading →</LinkButton>
-            </Card>
-          </CardBG>
+            </BlogPreviewCard>
+          </BlogPreviewContainer>
         );
       })
       .value();
