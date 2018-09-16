@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
 import Link from 'components/Link';
-import { Card, LinkButton, PaddedSection } from 'styles/components';
+import { Card, CardBG, LinkButton, PaddedSection } from 'styles/components';
 
 export default class IndexPage extends Component {
   static propTypes = {
@@ -20,21 +20,17 @@ export default class IndexPage extends Component {
 
     return (
       <Layout>
-        <PaddedSection>
-          <div>
-            <h1>From the blog</h1>
-          </div>
-
-          {posts.map(({ node: post }) => {
-            const {
-              id,
-              frontmatter: { image, title, date },
-              fields: { slug },
-              excerpt,
-            } = post;
-            return (
+        {posts.map(({ node: post }) => {
+          const {
+            id,
+            frontmatter: { image, imageURL, imageAlt, title, date },
+            fields: { slug },
+            excerpt,
+          } = post;
+          return (
+            <CardBG style={{ backgroundImage: `url(${image || imageURL})` }}>
               <Card key={id}>
-                <img src={image} alt="" />
+                {/* <img src={image || imageURL} alt={imageAlt || ''} /> */}
                 <h2>
                   <Link to={slug}>{title}</Link>
                 </h2>
@@ -42,9 +38,9 @@ export default class IndexPage extends Component {
                 <p>{excerpt}</p>
                 <LinkButton to={slug}>Keep Reading →</LinkButton>
               </Card>
-            );
-          })}
-        </PaddedSection>
+            </CardBG>
+          );
+        })}
       </Layout>
     );
   }
@@ -61,6 +57,7 @@ IndexPage.propTypes = {
 export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
+      limit: 6
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
     ) {
@@ -76,6 +73,9 @@ export const pageQuery = graphql`
             templateKey
             date(formatString: "DD MMMM YYYY")
             image
+            imageURL
+            imageAlt
+            format
           }
         }
       }
