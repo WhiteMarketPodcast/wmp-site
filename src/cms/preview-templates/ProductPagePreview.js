@@ -49,8 +49,8 @@ const ProductPagePreview = ({ entry, getAsset }) => {
 ProductPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
-  }),
-  getAsset: PropTypes.func,
+  }).isRequired,
+  getAsset: PropTypes.func.isRequired,
 };
 
 export default ProductPagePreview;

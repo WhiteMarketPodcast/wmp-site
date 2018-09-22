@@ -12,8 +12,8 @@ const AboutPagePreview = ({ entry, widgetFor }) => (
 AboutPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
-  }),
-  widgetFor: PropTypes.func,
+  }).isRequired,
+  widgetFor: PropTypes.func.isRequired,
 };
 
 export default AboutPagePreview;
