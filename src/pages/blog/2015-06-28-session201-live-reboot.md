@@ -37,4 +37,4 @@ M-PeX – Ignis \[[Enough Records](http://enoughrecords.scene.org/release/enrmp3
 Terrible Terrible – Technicolor Idols \[[Jamendo](https://www.jamendo.com/pt/list/p500104828/fail-better-the-remixes)\]  
 Basement Skylights – Technicolor Idols \[[Jamendo](https://www.jamendo.com/pt/list/p500104828/fail-better-the-remixes)\]
 
-<small>.: Photo by <a href="https://www.flickr.com/photos/acidpix/8410432441" target="_blank" rel="nofollow">Acid Pix</a> :. <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="nofollow">CC-BY</a></small>
+<small>.: Photo by [Acid Pix](https://www.flickr.com/photos/acidpix/8410432441) :. [CC-BY](https://creativecommons.org/licenses/by/2.0/)</small>

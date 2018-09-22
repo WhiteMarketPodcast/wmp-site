@@ -47,6 +47,7 @@ export class BlogPostTemplate extends Component {
 
   renderTags() {
     const { tags } = this.props;
+    console.log('tags', tags);
 
     if (_.isEmpty(tags)) return null;
 

@@ -1,24 +1,25 @@
 ---
 templateKey: blog-post
-title: "Session 2.02 – Celebrating Summer, Enjoying the Rain"
+title: 'Session 2.02 – Celebrating Summer, Enjoying the Rain'
 date: 2015-07-05T21:00:24.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-NC-SA-Beach-Sky-by-Darren-Flinders.jpg"
-imageAlt: "CC-NC-SA-Beach-Sky-by-Darren-Flinders"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-NC-SA-Beach-Sky-by-Darren-Flinders.jpg'
+imageAlt: 'CC-NC-SA-Beach-Sky-by-Darren-Flinders'
+format: 'audio'
 categories:
-  - "Podcasts"
+  - 'Podcasts'
 tags:
-  - "Bad Panda Records"
-  - "Bandcamp"
-  - "blocSonic"
-  - "Discos Konfort"
-  - "Free Music Archive"
-  - "iD.Eology"
-  - "Maltine Records"
-  - "Monster Jinx"
-  - "otoginomori"
-  - "Test Tube"
+  - 'Bad Panda Records'
+  - 'Bandcamp'
+  - 'blocSonic'
+  - 'Discos Konfort'
+  - 'Free Music Archive'
+  - 'iD.Eology'
+  - 'Maltine Records'
+  - 'Monster Jinx'
+  - 'otoginomori'
+  - 'Test Tube'
 ---
+
 Following this week’s amazing weather, we decided to have a session celebrating summer with some warm songs. Ironically, it started to pour just before the show started. Either way, I decided to go with the flow and the heat was definitely on during this session.
 
 AZUpubschool – Good Night Girl (feat. KOSMO KAT) \[[Maltine Records](http://maltinerecords.cs8.biz/135.html)\]  
@@ -36,4 +37,5 @@ T Bird and The Breaks – Is There Any Love? (Out of the Rain) \[[Bandcamp](http
 Multi-Panel – August \[[Test Tube](http://www.monocromatica.com/netlabel/releases/tube108.htm)\]  
 kujyaku – aquarium in the sky \[[otoginomori](http://otoginomori.bandcamp.com/album/-)\]
 
-<small>.: Photo by <a href="https://www.flickr.com/photos/darrenflinders/14620075076/" target="_blank" rel="nofollow">Darren Flinders</a> :. <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank" rel="nofollow">CC-NC-SA</a></small>
+<small>.: Photo by [Darren Flinders](https://www.flickr.com/photos/darrenflinders/14620075076/) :.
+[CC-NC-SA](https://creativecommons.org/licenses/by-nc-nd/2.0/)</small>
