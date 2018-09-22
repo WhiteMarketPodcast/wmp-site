@@ -60,8 +60,6 @@ export class BlogPostTemplate extends Component {
 
   renderTags() {
     const { tags } = this.props;
-    console.log('tags', tags);
-
     if (_.isEmpty(tags)) return null;
 
     const tagList = _.map(tags, (tag) => (
@@ -79,7 +77,8 @@ export class BlogPostTemplate extends Component {
   }
 
   renderNextAndPreviousButtons() {
-    const { nextPost, previousPost } = this.props.pageContext;
+    const { pageContext } = this.props;
+    const { nextPost, previousPost } = pageContext;
     console.log('nextPost, previousPost', nextPost, previousPost);
     return nextPost && previousPost && null;
   }
@@ -92,6 +91,7 @@ export class BlogPostTemplate extends Component {
       description,
       image,
       imageURL,
+      tags,
       title,
       helmet,
     } = this.props;
@@ -106,7 +106,7 @@ export class BlogPostTemplate extends Component {
           <Date>{date}</Date>
         </Hero>
 
-        <Column>
+        <Column className={_.isEmpty(tags) ? 'no-aside' : ''}>
           <BlogContent>
             <PostContent content={content} />
             {this.renderNextAndPreviousButtons()}

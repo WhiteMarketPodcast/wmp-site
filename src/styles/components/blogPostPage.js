@@ -46,6 +46,10 @@ export const Column = styled.div`
   display: grid;
   grid-template-columns: 3fr 1fr;
 
+  &.no-aside {
+    grid-template-columns: 1fr;
+  }
+
   ${onMobile} {
     grid-template-columns: 1fr;
   }
