@@ -5,6 +5,7 @@ import { BlogPostTemplate } from 'templates/blog-post';
 import { StyleSheetManager } from 'styled-components';
 
 const BlogPostPreview = ({ entry, widgetFor }) => {
+  window.entry = entry;
   const tags = entry.getIn(['data', 'tags']);
   console.log('tags', tags);
 

@@ -1,20 +1,21 @@
 ---
 templateKey: blog-post
-title: "10 Years of White Market Podcast"
+title: 10 Years of White Market Podcast
 date: 2018-03-21T10:12:50.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/rawpixel-com-574835-unsplash.jpg"
-imageAlt: "rawpixel-com-574835-unsplash"
-format: "standard"
+imageURL: https://res.cloudinary.com/thekdizzler/image/upload/white_market/rawpixel-com-574835-unsplash.jpg
+imageAlt: rawpixel-com-574835-unsplash
+format: standard
 categories:
-  - "Blog"
+  - Blog
 tags:
-  - "anniversary"
-  - "marca branca"
-  - "mozilla open leadership"
-  - "open work"
-  - "podcast"
-  - "ten years"
+  - '#anniversary'
+  - marca branca
+  - mozilla open leadership
+  - open work
+  - podcast
+  - ten years
 ---
+
 I am not sure how it got to this, but **White Market Podcast is now a 10 year-old project**. That means a full decade of celebrating the best in free music and free culture. Originally in Portuguese as [**Programa Marca Branca**](http://programamarcabranca.blogspot.pt/), the [first episode](http://programamarcabranca.blogspot.pt/2008/03/programa-1.html) aired back in March 2008. More than a 100 sessions later, I can tell you that it had ups and downs like any other long-term relationship, but that the overall experience has been truly amazing and humbling.
 
 A couple of years ago, [I wrote an article](https://www.whitemarketpodcast.co.uk/blog/2016/03/22/happy-birthday-white-market/) about how the show started and what the next steps were: I explained how much the landscape of free music had changed since the start and I laid the bricks of a new season of episodes focused on digital rights and freedoms. For a variety of reasons, _but mainly because I gave WMP my full time dedication for about four months_, 2016 ended up being the best year of the show. In 21 sessions, there was space for [Linux](https://www.whitemarketpodcast.co.uk/podcasts/2016/08/25/session-3-06-happy-anniversary-linux/) and [free software](https://www.whitemarketpodcast.co.uk/podcasts/2016/09/01/session-3-07-fsfe-summit-2016-and-some-tunes/), [public domain](https://www.whitemarketpodcast.co.uk/podcasts/2017/01/01/session-3-20-happy-public-domain-day/), [cultural heritage](https://www.whitemarketpodcast.co.uk/podcasts/2016/12/04/session-3-18-preserving-cultural-heritage-europeana/), [experimentalism](https://www.whitemarketpodcast.co.uk/podcasts/2016/10/02/session-3-11-experimentalism-pilot-eleven/), various [copyright-dedicated](https://www.whitemarketpodcast.co.uk/podcasts/2016/09/18/session-3-09-eu-copyright-mess/) [episodes](https://www.whitemarketpodcast.co.uk/podcasts/2016/10/16/session-3-13-exceptions-not-rule/) and many other things. The effort paid off: the community grew significantly and the show even [won a **Community Radio Award**](https://www.whitemarketpodcast.co.uk/blog/2016/09/12/silver-innovation-award-year-community-radio-awards/).
@@ -27,8 +28,7 @@ There were also other key events in 2017 that reframed my view of White Market P
 
 And so, ten years after it all began, I see the show becoming what I have envisioned so many moons ago. Slowly, but surely, **the path is set to make White Market Podcast open source and a community-orientated project**.
 
-So, how can you get involved?
------------------------------
+## So, how can you get involved?
 
 Good thing you ask! We are currently looking for contributions regarding **content** and regarding **code**. Either way, our [**GitHub** repos](https://github.com/WhiteMarketPodcast) are where all the action and fun takes place.
 

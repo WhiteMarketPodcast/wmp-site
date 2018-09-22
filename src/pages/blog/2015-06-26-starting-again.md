@@ -2,16 +2,16 @@
 templateKey: blog-post
 title: "We're starting again and we're bringing treats"
 date: 2015-06-26T11:38:21.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/Norton-Kersche-Remixed-album-cover.jpg'
-format: 'standard'
+imageURL: https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/Norton-Kersche-Remixed-album-cover.jpg
+format: standard
 categories:
-  - 'Blog'
-  - 'Features'
-  - 'FMA Collection'
+  - Blog
+  - Features
+  - FMA Collection
 tags:
-  - 'Free Music Archive'
-  - 'Norton'
-  - 'restart'
+  - Free Music Archive
+  - Norton
+  - restart
 ---
 
 After months of silence, White Market is back on this glorious web adress. While our old website sadly died, our old podcasts remain available on [Internet Archive](https://archive.org/search.php?query=creator%3A%22White+Market+Podcast%22) and [Mixcloud](https://www.mixcloud.com/whitemarketpodcast). On Sunday, I’ll be live on [Spark Sunderland](http://www.sparksunderland.com/) from 8pm bringing you some more Creative Commons-licenced songs and other free tunes.
