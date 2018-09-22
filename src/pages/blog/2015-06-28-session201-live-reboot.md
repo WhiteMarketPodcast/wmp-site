@@ -1,24 +1,23 @@
 ---
 templateKey: blog-post
-title: 'Session 2.01 – Live Reboot'
+title: Session 2.01 – Live Reboot
 date: 2015-06-28T21:00:11.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-BY-Restart-by-Acid-Pix.jpg'
-imageAlt: 'CC-BY-Restart-by-Acid-Pix'
-format: 'audio'
-categories:
-  - 'Podcasts'
+imageURL: >-
+  https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-BY-Restart-by-Acid-Pix.jpg
+podcastURL: >-
+  http://media.blubrry.com/white_market/s/ia601500.us.archive.org/28/items/WhiteMarket20150628Session201_201508/WhiteMarket-20150628-Session201.mp3
 tags:
-  - 'aaahh records'
-  - 'Bandcamp'
-  - 'Enough Records'
-  - 'Free Music Archive'
-  - 'Jamendo'
-  - 'LibreCommeLair'
-  - 'live radio'
-  - 'Maltine Records'
-  - 'Monster Jinx'
-  - 'playlist'
-  - 'Records on Ribs'
+  - aaahh records
+  - Bandcamp
+  - Enough Records
+  - Free Music Archive
+  - Jamendo
+  - LibreCommeLair
+  - live radio
+  - Maltine Records
+  - Monster Jinx
+  - playlist
+  - Records on Ribs
 ---
 
 Our live reboot and first session at Spark couldn’t have had a better playlist. From rock’n’roll to smooth tropical beats, there was a bit of everything there. There were a few hiccups here and there, but not bad for a restart.
