@@ -8,7 +8,7 @@ const BlogPostPreview = ({ entry, widgetFor }) => {
   window.entry = entry;
   const tags = entry.getIn(['data', 'tags']);
   console.log('tags', tags);
-  const iframe = document.querySelector('.nc-previewPane-frame');
+  const iframe = document.querySelector('iframe');
   const iframeHeadElem = iframe.contentDocument.head;
 
   return (
