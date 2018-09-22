@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ProductPageTemplate } from '../../templates/product-page';
+import { ProductPageTemplate } from 'templates/product-page';
+import injectStyle from '../injectStyle';
 
 const ProductPagePreview = ({ entry, getAsset }) => {
   const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs']);
@@ -53,4 +54,4 @@ ProductPagePreview.propTypes = {
   getAsset: PropTypes.func.isRequired,
 };
 
-export default ProductPagePreview;
+export default injectStyle(ProductPagePreview);

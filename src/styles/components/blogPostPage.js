@@ -11,6 +11,7 @@ export const Title = styled.h1`
 
 export const Hero = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
@@ -29,6 +30,11 @@ export const Hero = styled.div`
   ${onMobile} {
     padding: 1rem;
   }
+`;
+
+export const Date = styled.div`
+  color: ${white};
+  font-weight: 600;
 `;
 
 export const CoverImage = styled.img`

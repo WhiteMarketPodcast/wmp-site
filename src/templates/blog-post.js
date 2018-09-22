@@ -18,6 +18,7 @@ import {
   Hero,
   Title,
   BlogContent,
+  Date,
   TagList,
   TagContainer,
 } from 'styles/components/blogPostPage';
@@ -27,8 +28,14 @@ export class BlogPostTemplate extends Component {
     content: node.isRequired,
     contentComponent: func,
     description: string,
+    format: string.isRequired,
     image: string,
+    imageAlt: string,
     imageURL: string,
+    imageCredit: string,
+    podcastURL: string,
+    videoURL: string,
+    date: string.isRequired,
     title: string.isRequired,
     helmet: instanceOf(Helmet),
     tags: array,
@@ -40,7 +47,11 @@ export class BlogPostTemplate extends Component {
     helmet: null,
     description: '',
     image: '',
+    imageAlt: '',
+    imageCredit: '',
     imageURL: '',
+    podcastURL: '',
+    videoURL: '',
   };
 
   state = {};
@@ -69,23 +80,14 @@ export class BlogPostTemplate extends Component {
     const {
       content,
       contentComponent,
+      date,
       description,
       image,
       imageURL,
       title,
       helmet,
-      tags,
     } = this.props;
-    console.log({
-      content,
-      contentComponent,
-      description,
-      image,
-      imageURL,
-      tags,
-      title,
-      helmet,
-    });
+    console.log(`props`, this.props);
     const PostContent = contentComponent || Content;
 
     return (
@@ -93,7 +95,8 @@ export class BlogPostTemplate extends Component {
         {helmet}
         <Hero src={image || imageURL}>
           <Title>{title}</Title>
-          <p>{description}</p>
+          {description && <p>{description}</p>}
+          <Date>{date}</Date>
         </Hero>
 
         <BlogContent>
@@ -107,6 +110,7 @@ export class BlogPostTemplate extends Component {
 
 const BlogPost = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark;
+  console.log('frontmatter', frontmatter);
 
   return (
     <Layout>
@@ -142,6 +146,7 @@ export const pageQuery = graphql`
         imageAlt
         format
         tags
+        podcastURL
       }
     }
   }

@@ -18,16 +18,70 @@ collections:
           widget: 'hidden',
           default: 'blog-post',
         }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'text', required: false }
-      - { label: 'Cover image (uploaded)', name: 'image', widget: 'image', required: false }
-      - { label: 'Image URL', name: 'imageURL', widget: 'string', required: false }
-      - { label: 'Image credit', name: 'imageCredit', widget: 'string', required: false }
-      - { label: 'Podcast URL', name: 'podcastURL', widget: 'string', required: false }
-      - { label: 'Video URL', name: 'videoURL', widget: 'string', required: false }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
-      - { label: 'Tags', name: 'tags', widget: 'list', required: false }
+      - {
+          label: 'Title',
+          name: 'title',
+          widget: 'string',
+        }
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
+        }
+      - {
+          label: 'Description',
+          name: 'description',
+          widget: 'text',
+          required: false,
+        }
+      - {
+          label: 'Post type',
+          name: 'format',
+          widget: 'select',
+          options: ['standard', 'podcast', 'audio', 'video'],
+          default: 'standard',
+        }
+      - {
+          label: 'Cover image (upload)',
+          name: 'image',
+          widget: 'image',
+          required: false,
+        }
+      - {
+          label: 'Image URL',
+          name: 'imageURL',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Image credit',
+          name: 'imageCredit',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Podcast URL',
+          name: 'podcastURL',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Video URL',
+          name: 'videoURL',
+          widget: 'string',
+          required: false,
+        }
+      - {
+          label: 'Body',
+          name: 'body',
+          widget: 'markdown',
+        }
+      - {
+          label: 'Tags',
+          name: 'tags',
+          widget: 'list',
+          default: [],
+        }
 
   - name: 'pages'
     label: 'Pages'

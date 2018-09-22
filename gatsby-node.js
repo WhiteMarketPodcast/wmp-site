@@ -29,19 +29,23 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     const posts = result.data.allMarkdownRemark.edges;
+    const lastPostIndex = posts.length - 1;
 
-    posts.forEach((edge) => {
-      const id = edge.node.id;
+    posts.forEach((edge, index) => {
+      const {
+        id,
+        fields: { slug },
+        frontmatter: { tags, templateKey },
+      } = edge.node;
+      const previousPost = index !== 0 && posts[index - 1].node;
+      const nextPost = index !== lastPostIndex && posts[index + 1].node;
+
       createPage({
-        path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`,
-        ),
+        path: slug,
+        tags,
+        component: path.resolve(`src/templates/${String(templateKey)}.js`),
         // additional data can be passed via context
-        context: {
-          id,
-        },
+        context: { id, previousPost, nextPost },
       });
     });
 
@@ -63,9 +67,7 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: tagPath,
         component: path.resolve(`src/templates/tags.js`),
-        context: {
-          tag,
-        },
+        context: { tag },
       });
     });
   });
@@ -76,10 +78,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode });
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    });
+    createNodeField({ name: `slug`, node, value });
   }
 };

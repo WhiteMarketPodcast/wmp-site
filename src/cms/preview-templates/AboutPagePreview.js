@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { AboutPageTemplate } from '../../templates/about-page';
+import { AboutPageTemplate } from 'templates/about-page';
+import injectStyle from '../injectStyle';
 
 const AboutPagePreview = ({ entry, widgetFor }) => (
   <AboutPageTemplate
@@ -16,4 +17,4 @@ AboutPagePreview.propTypes = {
   widgetFor: PropTypes.func.isRequired,
 };
 
-export default AboutPagePreview;
+export default injectStyle(AboutPagePreview);

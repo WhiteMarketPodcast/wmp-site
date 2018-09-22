@@ -2,21 +2,24 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { BlogPostTemplate } from 'templates/blog-post';
-import { StyleSheetManager } from 'styled-components';
+import injectStyle from '../injectStyle';
 
 const BlogPostPreview = ({ entry, widgetFor }) => {
-  const iframe = document.querySelector('iframe');
-  const iframeHeadElem = iframe.contentDocument.head;
+  // TODO: Find a better fix for this
+  let tags = entry.getIn(['data', 'tags']);
+  if (!_.isArray(tags)) tags = _.get(tags, '_tail.array') || [];
 
   return (
-    <StyleSheetManager target={iframeHeadElem}>
-      <BlogPostTemplate
-        content={widgetFor('body')}
-        description={entry.getIn(['data', 'description'])}
-        tags={entry.getIn(['data', 'tags'])}
-        title={entry.getIn(['data', 'title'])}
-      />
-    </StyleSheetManager>
+    <BlogPostTemplate
+      content={widgetFor('body')}
+      description={entry.getIn(['data', 'description'])}
+      tags={tags}
+      title={entry.getIn(['data', 'title'])}
+      image={entry.getIn(['data', 'image'])}
+      imageURL={entry.getIn(['data', 'imageURL'])}
+      format={entry.getIn(['data', 'format'])}
+      podcastURL={entry.getIn(['data', 'podcastURL'])}
+    />
   );
 };
 
@@ -27,4 +30,4 @@ BlogPostPreview.propTypes = {
   widgetFor: PropTypes.func.isRequired,
 };
 
-export default BlogPostPreview;
+export default injectStyle(BlogPostPreview);
