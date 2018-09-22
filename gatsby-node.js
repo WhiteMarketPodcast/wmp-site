@@ -17,6 +17,7 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               tags
               templateKey
+              title
             }
           }
         }
@@ -28,17 +29,28 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    const posts = result.data.allMarkdownRemark.edges;
-    const lastPostIndex = posts.length - 1;
+    const pages = result.data.allMarkdownRemark.edges;
+    const blogPosts = _(pages)
+      .filter((page) => _.includes(_.get(page, 'node.fields.slug'), `/blog/`))
+      .sortBy('node.fields.slug')
+      .value();
 
-    posts.forEach((edge, index) => {
+    function getNextOrPrevious(post, offset) {
+      const index = _.indexOf(blogPosts, post);
+      const otherIndex = index + offset;
+      const otherPost = blogPosts[otherIndex];
+      return otherPost ? otherPost.node : {};
+    }
+
+    pages.forEach((edge) => {
       const {
         id,
         fields: { slug },
         frontmatter: { tags, templateKey },
       } = edge.node;
-      const previousPost = index !== 0 && posts[index - 1].node;
-      const nextPost = index !== lastPostIndex && posts[index + 1].node;
+
+      const previousPost = getNextOrPrevious(edge, -1);
+      const nextPost = getNextOrPrevious(edge, 1);
 
       createPage({
         path: slug,
@@ -52,7 +64,7 @@ exports.createPages = ({ actions, graphql }) => {
     // Tag pages:
     let tags = [];
     // Iterate through each post, putting all found tags into `tags`
-    posts.forEach((edge) => {
+    pages.forEach((edge) => {
       if (_.get(edge, `node.frontmatter.tags`)) {
         tags = tags.concat(edge.node.frontmatter.tags);
       }

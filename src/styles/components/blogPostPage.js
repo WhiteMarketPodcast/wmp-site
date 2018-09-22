@@ -35,10 +35,20 @@ export const Hero = styled.div`
 export const Date = styled.div`
   color: ${white};
   font-weight: 600;
+  margin-top: 1rem;
 `;
 
 export const CoverImage = styled.img`
   object-fit: cover;
+`;
+
+export const Column = styled.div`
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+
+  ${onMobile} {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const BlogContent = styled.div`
@@ -84,8 +94,13 @@ export const BlogContent = styled.div`
   }
 `;
 
-export const TagContainer = styled.div`
+export const TagContainer = styled.aside`
   padding: 2rem 1rem;
+  background-color: ${emerald};
+
+  h4 {
+    color: ${white};
+  }
 
   ${onMobile} {
     padding: 1rem;
@@ -103,8 +118,16 @@ export const TagList = styled.ul`
   }
 
   a {
-    border: 1px solid ${emerald};
-    margin: 0 0.5rem 0.5rem 0;
-    padding: 0.5rem 1rem;
+    background-color: ${emerald};
+    border: 1px solid ${white};
+    color: ${white};
+    font-size: 0.8em;
+    font-weight: 600;
+    margin: 0 0.4rem 0.4rem 0;
+    padding: 0.3rem 0.8rem;
+
+    &:hover {
+      filter: saturate(200%);
+    }
   }
 `;

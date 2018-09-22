@@ -1,5 +1,5 @@
 import { injectGlobal } from 'styled-components';
-import { onMobile, onTablet, onDesktop, onHighDefScreen } from './mediaQueries';
+import { onMobile, onDesktop } from './mediaQueries';
 // import { black, white, darkGrey, emerald } from './colors';
 
 // eslint-disable-next-line
@@ -8,8 +8,7 @@ injectGlobal`
     font-size: 16px;
     
     ${onMobile} { font-size: 16px; }
-    ${onTablet} { font-size: 17px; }
     ${onDesktop} { font-size: 18px; }
-    ${onHighDefScreen} { font-size: 20px; }
+    @media screen and (min-width: 1400px) { font-size: 20px; }
   }
 `;

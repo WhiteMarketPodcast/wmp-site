@@ -17,6 +17,7 @@ import Content, { HTMLContent } from 'components/Content';
 import {
   Hero,
   Title,
+  Column,
   BlogContent,
   Date,
   TagList,
@@ -38,6 +39,7 @@ export class BlogPostTemplate extends Component {
     date: string.isRequired,
     title: string.isRequired,
     helmet: instanceOf(Helmet),
+    pageContext: object.isRequired,
     tags: array,
   };
 
@@ -76,6 +78,12 @@ export class BlogPostTemplate extends Component {
     );
   }
 
+  renderNextAndPreviousButtons() {
+    const { nextPost, previousPost } = this.props.pageContext;
+    console.log('nextPost, previousPost', nextPost, previousPost);
+    return nextPost && previousPost && null;
+  }
+
   render() {
     const {
       content,
@@ -87,7 +95,6 @@ export class BlogPostTemplate extends Component {
       title,
       helmet,
     } = this.props;
-    console.log(`props`, this.props);
     const PostContent = contentComponent || Content;
 
     return (
@@ -99,18 +106,20 @@ export class BlogPostTemplate extends Component {
           <Date>{date}</Date>
         </Hero>
 
-        <BlogContent>
-          <PostContent content={content} />
-        </BlogContent>
-        {this.renderTags()}
+        <Column>
+          <BlogContent>
+            <PostContent content={content} />
+            {this.renderNextAndPreviousButtons()}
+          </BlogContent>
+          {this.renderTags()}
+        </Column>
       </section>
     );
   }
 }
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, pageContext }) => {
   const { html, frontmatter } = data.markdownRemark;
-  console.log('frontmatter', frontmatter);
 
   return (
     <Layout>
@@ -118,6 +127,7 @@ const BlogPost = ({ data }) => {
         content={html}
         contentComponent={HTMLContent}
         helmet={<Helmet title={`${frontmatter.title} | Blog`} />}
+        pageContext={pageContext}
         {...frontmatter}
       />
     </Layout>
