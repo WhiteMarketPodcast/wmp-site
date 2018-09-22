@@ -5,9 +5,6 @@ import { BlogPostTemplate } from 'templates/blog-post';
 import { StyleSheetManager } from 'styled-components';
 
 const BlogPostPreview = ({ entry, widgetFor }) => {
-  window.entry = entry;
-  const tags = entry.getIn(['data', 'tags']);
-  console.log('tags', tags);
   const iframe = document.querySelector('iframe');
   const iframeHeadElem = iframe.contentDocument.head;
 
@@ -16,7 +13,7 @@ const BlogPostPreview = ({ entry, widgetFor }) => {
       <BlogPostTemplate
         content={widgetFor('body')}
         description={entry.getIn(['data', 'description'])}
-        tags={_.isArray(tags) ? tags : []}
+        tags={entry.getIn(['data', 'tags'])}
         title={entry.getIn(['data', 'title'])}
       />
     </StyleSheetManager>

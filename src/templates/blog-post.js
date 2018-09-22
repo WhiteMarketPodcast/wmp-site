@@ -74,7 +74,18 @@ export class BlogPostTemplate extends Component {
       imageURL,
       title,
       helmet,
+      tags,
     } = this.props;
+    console.log({
+      content,
+      contentComponent,
+      description,
+      image,
+      imageURL,
+      tags,
+      title,
+      helmet,
+    });
     const PostContent = contentComponent || Content;
 
     return (
