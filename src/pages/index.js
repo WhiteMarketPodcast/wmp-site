@@ -11,6 +11,7 @@ import {
   PreviewTextContainer,
   BlogType,
 } from 'styles/components';
+import { BlogPreviewImage } from '../styles/components';
 
 const formatConverter = {
   standard: `blog`,
@@ -46,7 +47,8 @@ export default class IndexPage extends Component {
         // excerpt,
       } = post;
       return (
-        <BlogPreviewContainer key={id} bgImage={image || imageURL} to={slug}>
+        <BlogPreviewContainer key={id} to={slug}>
+          <BlogPreviewImage bgImage={image || imageURL} />
           <PreviewTextContainer index={index}>
             <BlogType>{formatConverter[format]}</BlogType>
             <PreviewTitle index={index}>

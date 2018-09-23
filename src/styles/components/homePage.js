@@ -9,7 +9,7 @@ const isHighlightedPreview = (index) => _.includes([0, 3, 5], index);
 export const BlogPostPreviewGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(11, 250px);
+  grid-template-rows: repeat(8, 150px);
   grid-gap: 5px;
   min-height: calc(100vh - 180px);
   max-width: 1500px;
@@ -18,14 +18,11 @@ export const BlogPostPreviewGrid = styled.div`
   grid-auto-flow: dense;
   grid-template-areas:
     'main'
-    'main'
     'small1'
     'small2'
     'big1'
-    'big1'
     'small3'
     'small4'
-    'big2'
     'big2'
     'small5';
 
@@ -127,6 +124,22 @@ export const BlogPreviewContainer = styled(Link)`
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+
+  &:hover {
+    filter: inherit;
+  }
+
+  @media (max-width: 575px) {
+    align-items: flex-start;
+  }
+`;
+
+export const BlogPreviewImage = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background-color: ${emerald};
   background-position: center;
   background-size: cover;
@@ -137,10 +150,11 @@ export const BlogPreviewContainer = styled(Link)`
       rgba(0, 0, 0, 0.2)
     ),
     url(${({ bgImage }) => bgImage});
-  transition: filter 0.2s ease;
 
-  &:hover {
-    filter: inherit;
+  @media (max-width: 575px) {
+    background-image: url(${({ bgImage }) => bgImage});
+
+    width: 40%;
   }
 `;
 
@@ -164,12 +178,16 @@ export const PreviewTextContainer = styled.div`
   ${onMobile} {
     padding: 1rem;
   }
+
+  @media (max-width: 575px) {
+    background-color: ${white};
+    padding: 0 1rem;
+    margin-left: 40%;
+  }
 `;
 
 export const BlogType = styled.div`
-  position: absolute;
-  top: -0.7em;
-  left: 1em;
+  display: inline;
   background-color: ${emerald};
   color: ${white};
   font-size: 0.75rem;
@@ -177,6 +195,12 @@ export const BlogType = styled.div`
   line-height: 1;
   padding: 0.2rem 0.5rem;
   text-transform: uppercase;
+
+  @media (min-width: 576px) {
+    position: absolute;
+    top: -0.7em;
+    left: 1em;
+  }
 `;
 
 export const PreviewTitle = styled.h2`
@@ -186,5 +210,9 @@ export const PreviewTitle = styled.h2`
   &,
   a {
     color: ${({ index }) => (isHighlightedPreview(index) ? white : black)};
+    @media (max-width: 575px) {
+      color: ${black};
+      font-size: 1.2rem;
+    }
   }
 `;
