@@ -147,10 +147,13 @@ export const BlogPreviewImage = styled.div`
   background-repeat: no-repeat;
   background-image: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.2)
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.25)
     ),
-    url(${({ bgImage }) => bgImage});
+    url(${({ bgImage }) => {
+    if (!/res.cloudinary.com/.test(bgImage)) return bgImage;
+    return bgImage.replace('/upload/', '/upload/c_scale,w_750/');
+  }});
 
   @media (max-width: 575px) {
     background-image: url(${({ bgImage }) => bgImage});
