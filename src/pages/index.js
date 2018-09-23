@@ -2,15 +2,21 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import InfiniteScroll from 'react-infinite-scroller';
 import Layout from 'components/Layout';
 import Link from 'components/Link';
 import {
+  BlogPostPreviewGrid,
   BlogPreviewContainer,
-  BlogPreviewCard,
-  BlogPreviewBG,
-  LinkButton,
+  PreviewTitle,
+  PreviewTextContainer,
+  BlogType,
 } from 'styles/components';
+
+const formatConverter = {
+  standard: `blog`,
+  audio: `podcast`,
+  video: `video`,
+};
 
 export default class IndexPage extends Component {
   static propTypes = {
@@ -21,68 +27,41 @@ export default class IndexPage extends Component {
     }).isRequired,
   };
 
-  state = {
-    numberOfPosts: 4,
-  };
-
-  loadMore = () => {
-    const { numberOfPosts } = this.state;
-    this.setState({ numberOfPosts: numberOfPosts + 2 });
-  };
-
   renderPosts() {
-    const { numberOfPosts } = this.state;
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
 
-    return _(posts)
-      .take(numberOfPosts)
-      .map(({ node: post }) => {
-        const {
-          id,
-          frontmatter: {
-            image,
-            imageURL,
-            // imageAlt,
-            title,
-            date,
-          },
-          fields: { slug },
-          excerpt,
-        } = post;
-        return (
-          <BlogPreviewContainer key={id}>
-            <BlogPreviewBG
-              style={{ backgroundImage: `url(${image || imageURL})` }}
-            />
-            <BlogPreviewCard>
-              {/* <img src={image || imageURL} alt={imageAlt || ''} /> */}
-              <h2>
-                <Link to={slug}>{title}</Link>
-              </h2>
-              <small>{date}</small>
-              <p>{excerpt}</p>
-              <LinkButton to={slug}>Keep Reading →</LinkButton>
-            </BlogPreviewCard>
-          </BlogPreviewContainer>
-        );
-      })
-      .value();
+    return _.map(posts, ({ node: post }, index) => {
+      const {
+        id,
+        frontmatter: {
+          image,
+          imageURL,
+          // imageAlt,
+          title,
+          // date,
+          format,
+        },
+        fields: { slug },
+        // excerpt,
+      } = post;
+      return (
+        <BlogPreviewContainer key={id} bgImage={image || imageURL} to={slug}>
+          <PreviewTextContainer index={index}>
+            <BlogType>{formatConverter[format]}</BlogType>
+            <PreviewTitle index={index}>
+              <Link to={slug}>{title}</Link>
+            </PreviewTitle>
+          </PreviewTextContainer>
+        </BlogPreviewContainer>
+      );
+    });
   }
 
   render() {
-    const { numberOfPosts } = this.state;
-    const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
-
     return (
       <Layout>
-        <InfiniteScroll
-          hasMore={numberOfPosts < posts.length}
-          loadMore={this.loadMore}
-        >
-          {this.renderPosts()}
-        </InfiniteScroll>
+        <BlogPostPreviewGrid>{this.renderPosts()}</BlogPostPreviewGrid>
       </Layout>
     );
   }
@@ -101,6 +80,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+      limit: 8
     ) {
       edges {
         node {

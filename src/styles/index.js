@@ -11,4 +11,12 @@ injectGlobal`
     ${onDesktop} { font-size: 18px; }
     @media screen and (min-width: 1400px) { font-size: 20px; }
   }
+
+  a, button {
+    cursor: pointer;
+  }
+
+  *:disabled {
+    cursor: not-allowed;
+  }
 `;
