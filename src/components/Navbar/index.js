@@ -25,6 +25,9 @@ class Navbar extends Component {
         <MenuItem>
           <NavLink to="/products">Products</NavLink>
         </MenuItem>
+        <MenuItem>
+          <NavLink to="/tags">Tags</NavLink>
+        </MenuItem>
       </Menu>
     );
   }

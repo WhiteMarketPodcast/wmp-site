@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
-import Link from 'components/Link';
 import {
   BlogPostPreviewGrid,
   BlogPreviewContainer,
@@ -51,9 +50,7 @@ export default class IndexPage extends Component {
           <BlogPreviewImage bgImage={image || imageURL} />
           <PreviewTextContainer index={index}>
             <BlogType>{formatConverter[format]}</BlogType>
-            <PreviewTitle index={index}>
-              <Link to={slug}>{title}</Link>
-            </PreviewTitle>
+            <PreviewTitle index={index}>{title}</PreviewTitle>
           </PreviewTextContainer>
         </BlogPreviewContainer>
       );

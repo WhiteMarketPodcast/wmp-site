@@ -12,6 +12,7 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: ${white};
   min-height: 5rem;
   padding: 0;
   flex-wrap: wrap;
@@ -27,11 +28,12 @@ export const Nav = styled.nav`
 export const Logo = styled.img`
   height: 5rem;
   padding: 0 1rem;
+  transition: all 0.3s ease;
+  z-index: 1001;
+
   &:not(.open) {
     filter: invert(1);
   }
-  z-index: 1001;
-  transition: all 0.3s ease;
 `;
 
 export const Button = styled.button`
@@ -52,15 +54,15 @@ export const FlexRow = styled.div`
   justify-content: flex-end;
 `;
 
+const easeInOut = { ease: 'easeInOut' };
 const ul = posed.ul({
   open: {
-    x: 0,
-    opacity: 1,
-    zIndex: 1000,
-    delayChildren: 200,
-    staggerChildren: 200,
+    scaleX: 1,
+    delayChildren: 300,
+    staggerChildren: 80,
+    transition: easeInOut,
   },
-  closed: { x: '100%', opacity: 1, zIndex: 1000, delayChildren: 500 },
+  closed: { scaleX: 0, transition: easeInOut },
 });
 
 export const Menu = styled(ul)`
@@ -75,16 +77,15 @@ export const Menu = styled(ul)`
   background-color: ${emerald};
   list-style: none;
   margin: 0;
-  opacity: 0;
   padding: 0;
-  transition: all 0.3s ease;
-  width: 100%;
-  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  z-index: 1000;
 `;
 
 const li = posed.li({
-  open: { opacity: 1 },
-  closed: { opacity: 0 },
+  open: { opacity: 1, y: 0 },
+  closed: { opacity: 0, y: 5, transition: { duration: 0 } },
 });
 
 export const MenuItem = styled(li)`
