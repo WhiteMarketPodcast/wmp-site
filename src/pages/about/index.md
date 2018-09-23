@@ -1,19 +1,17 @@
 ---
 templateKey: 'about-page'
 path: /about
-title: About our values
+title: White Market Podcast
 ---
-### Shade-grown coffee
-Coffee is a small tree or shrub that grows in the forest understory in its wild form, and traditionally was grown commercially under other trees that provided shade. The forest-like structure of shade coffee farms provides habitat for a great number of migratory and resident species.
 
-### Single origin
-Single-origin coffee is coffee grown within a single known geographic origin. Sometimes, this is a single farm or a specific collection of beans from a single country. The name of the coffee is then usually the place it was grown to whatever degree available.
+**White Market Podcast** is an award-winning\* show about **free music** and **free culture** by Rute Correia. While the show is mainly focused on **Creative Commons**-licenced music, since it is also naturally intertwined with other movements and ideologies such as **Open Source** and **Open Access**, it often features these and similar **forms of activism related to digital rights and freedoms**.
 
-### Sustainable farming
-Sustainable agriculture is farming in sustainable ways based on an understanding of ecosystem services, the study of relationships between organisms and their environment. What grows where and how it is grown are a matter of choice and careful consideration for nature and communities.
+Our promise to deliver netaudio music and raise free culture awareness is also stated on [our collection on **Free Music Archive**](http://freemusicarchive.org/curator/programamarcabranca/).
 
-### Direct sourcing
-Direct trade is a form of sourcing practiced by some coffee roasters. Advocates of direct trade practices promote direct communication and price negotiation between buyer and farmer, along with systems that encourage and incentivize quality.
+**White Market Podcast** is a completely **independent, non-profit and volunteer-based project**. To see our guidelines for the use of copyrighted material, check out [Creative Commons Podcasting Legal Guide](http://wiki.creativecommons.org/Podcasting_Legal_Guide). For detailed attributions, you can check our Credits page.
 
-### Reinvest profits
-We want to truly empower the communities that bring amazing coffee to you. That’s why we reinvest 20% of our profits into farms, local businesses and schools everywhere our coffee is grown. You can see the communities grow and learn more about coffee farming on our blog.
+White Market Podcast is the English-spoken successor or Programa Marca Branca. Between 2008 and 2013, Programa Marca Branca was the only regular Portuguese radio show exclusively dedicated to netaudio and free culture, with weekly podcasts and features about this digital universe. The show was broadcast on five different radio stations in Portugal and Spain. The project had to go on hold at the end of 2013.
+
+You can [like us](https://www.facebook.com/whitemarketpodcast) on Facebook, [follow us](https://twitter.com/WhiteMarketCast) on Twitter, [listen to us](https://www.mixcloud.com/whitemarketpodcast/) on Mixcloud and, last but not the least, you can also listen to some of our old podcasts on [Internet Archive](https://archive.org/search.php?query=creator%3A%22White+Market+Podcast%22).
+
+_\*We won the Silver Innovation Award of the Year at the Community Radio Awards 2016._
