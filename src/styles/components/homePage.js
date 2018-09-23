@@ -14,6 +14,7 @@ export const BlogPostPreviewGrid = styled.div`
   min-height: calc(100vh - 180px);
   max-width: 1500px;
   margin: 0 auto;
+  padding: 2rem 0;
   color: ${white};
   grid-auto-flow: dense;
   grid-template-areas:

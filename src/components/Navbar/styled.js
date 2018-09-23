@@ -12,10 +12,11 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   background-color: ${white};
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   min-height: 5rem;
   padding: 0;
-  flex-wrap: wrap;
 
   h1 {
     display: flex;

@@ -7,6 +7,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import 'styles/all.sass';
 import 'styles';
+import Footer from 'components/Footer';
 import Navbar from 'components/Navbar';
 import { Main } from './styled';
 
@@ -19,6 +20,7 @@ const TemplateWrapper = ({ children }) => (
     <Helmet title="White Market Podcast | Free Music and Free Culture" />
     <Navbar />
     <Main>{children}</Main>
+    <Footer />
   </Fragment>
 );
 
