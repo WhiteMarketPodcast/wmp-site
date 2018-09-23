@@ -30,7 +30,7 @@ class Footer extends Component {
               </Link>
               {' '}
               Creative Commons licence. Individual tracks retain their original
-              licenses and may be more restrictive. Please refer to each
+              licences and may be more restrictive. Please refer to each
               original release page for more information.
             </div>
           </div>
