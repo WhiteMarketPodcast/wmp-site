@@ -55,10 +55,12 @@ export const FlexRow = styled.div`
 const ul = posed.ul({
   open: {
     x: 0,
+    opacity: 1,
+    zIndex: 1000,
     delayChildren: 200,
     staggerChildren: 200,
   },
-  closed: { x: '100%', delayChildren: 500 },
+  closed: { x: '100%', opacity: 1, zIndex: 1000, delayChildren: 500 },
 });
 
 export const Menu = styled(ul)`
@@ -73,10 +75,11 @@ export const Menu = styled(ul)`
   background-color: ${emerald};
   list-style: none;
   margin: 0;
+  opacity: 0;
   padding: 0;
   transition: all 0.3s ease;
   width: 100%;
-  z-index: 1000;
+  z-index: -1;
 `;
 
 const li = posed.li({
