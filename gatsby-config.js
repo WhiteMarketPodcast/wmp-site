@@ -11,7 +11,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Crete Round', 'Quicksand'],
+          families: ['Crete Round', 'Montserrat'],
         },
       },
     },

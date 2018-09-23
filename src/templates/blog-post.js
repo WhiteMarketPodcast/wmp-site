@@ -78,8 +78,9 @@ export class BlogPostTemplate extends Component {
 
   renderNextAndPreviousButtons() {
     const { pageContext } = this.props;
+    if (!pageContext) return null;
+
     const { nextPost, previousPost } = pageContext;
-    console.log('nextPost, previousPost', nextPost, previousPost);
     return nextPost && previousPost && null;
   }
 

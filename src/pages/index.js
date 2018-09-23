@@ -8,10 +8,10 @@ import {
   BlogPostPreviewGrid,
   BlogPreviewContainer,
   PreviewTitle,
+  BlogPreviewImage,
   PreviewTextContainer,
   BlogType,
 } from 'styles/components';
-import { BlogPreviewImage } from '../styles/components';
 
 const formatConverter = {
   standard: `blog`,

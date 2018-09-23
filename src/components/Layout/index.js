@@ -7,7 +7,8 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import 'styles/all.sass';
 import 'styles';
-import Navbar from './Navbar';
+import Navbar from 'components/Navbar';
+import { Main } from './styled';
 
 library.add(fas, far, fab);
 // Kicks off the process of finding <i> tags and replacing with <svg>
@@ -17,7 +18,7 @@ const TemplateWrapper = ({ children }) => (
   <Fragment>
     <Helmet title="White Market Podcast | Free Music and Free Culture" />
     <Navbar />
-    <main>{children}</main>
+    <Main>{children}</Main>
   </Fragment>
 );
 
