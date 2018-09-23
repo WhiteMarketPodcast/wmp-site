@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { white, black, emerald } from '../colors';
+import { white, black, lightEmerald } from '../colors';
 import { onMobile } from '../mediaQueries';
 
 export const Title = styled.h1`
@@ -100,10 +100,11 @@ export const BlogContent = styled.div`
 
 export const TagContainer = styled.aside`
   padding: 2rem 1rem;
-  background-color: ${emerald};
+  background-color: ${lightEmerald};
 
   h4 {
     color: ${white};
+    margin-top: 0;
   }
 
   ${onMobile} {
@@ -122,7 +123,7 @@ export const TagList = styled.ul`
   }
 
   a {
-    background-color: ${emerald};
+    background-color: ${lightEmerald};
     border: 1px solid ${white};
     color: ${white};
     font-size: 0.8em;
@@ -131,7 +132,7 @@ export const TagList = styled.ul`
     padding: 0.3rem 0.8rem;
 
     &:hover {
-      filter: saturate(200%);
+      filter: brightness(110%);
     }
   }
 `;

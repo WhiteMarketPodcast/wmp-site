@@ -15,6 +15,7 @@ export const CopyrightRow = styled.div`
 
   ${onMobile} {
     flex-direction: column;
+    padding: 2rem 1rem;
 
     > div:first-child {
       margin-bottom: 1rem;
@@ -34,6 +35,7 @@ export const LicenceInfo = styled.div`
 
   ${onMobile} {
     grid-template-columns: 1fr;
+    padding: 2rem 1rem;
   }
 
   a {
