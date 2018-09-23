@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Link from 'components/Link';
 import { white, black, lightEmerald } from '../colors';
 import { onMobile } from '../mediaQueries';
 
@@ -98,13 +99,13 @@ export const BlogContent = styled.div`
   }
 `;
 
-export const TagContainer = styled.aside`
+export const Sidebar = styled.aside`
   padding: 2rem 1rem;
   background-color: ${lightEmerald};
 
   h4 {
     color: ${white};
-    margin-top: 0;
+    margin: 0.5rem 0;
   }
 
   ${onMobile} {
@@ -121,18 +122,26 @@ export const TagList = styled.ul`
   li {
     display: flex;
   }
+`;
 
-  a {
-    background-color: ${lightEmerald};
-    border: 1px solid ${white};
-    color: ${white};
-    font-size: 0.8em;
-    font-weight: 600;
-    margin: 0 0.4rem 0.4rem 0;
-    padding: 0.3rem 0.8rem;
+export const BlogPostLink = styled(Link)`
+  display: flex;
+  color: ${white};
+  margin: 0;
+  margin-bottom: 1rem;
+  padding-left: 0.8rem;
+`;
 
-    &:hover {
-      filter: brightness(110%);
-    }
+export const TagLink = styled(Link)`
+  background-color: ${lightEmerald};
+  border: 1px solid ${white};
+  color: ${white};
+  font-size: 0.8em;
+  font-weight: 600;
+  margin: 0 0.4rem 0.4rem 0;
+  padding: 0.3rem 0.8rem;
+
+  &:hover {
+    filter: brightness(110%);
   }
 `;

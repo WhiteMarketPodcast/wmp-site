@@ -49,8 +49,9 @@ exports.createPages = ({ actions, graphql }) => {
         frontmatter: { tags, templateKey },
       } = edge.node;
 
-      const previousPost = getNextOrPrevious(edge, -1);
-      const nextPost = getNextOrPrevious(edge, 1);
+      // This might seem backward, but it's "previous" as in "back in time"
+      const previousPost = getNextOrPrevious(edge, 1);
+      const nextPost = getNextOrPrevious(edge, -1);
 
       createPage({
         path: slug,

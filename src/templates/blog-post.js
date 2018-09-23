@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import {
   array,
   func,
@@ -12,7 +12,6 @@ import {
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
-import Link from 'components/Link';
 import Content, { HTMLContent } from 'components/Content';
 import {
   Hero,
@@ -21,7 +20,9 @@ import {
   BlogContent,
   Date,
   TagList,
-  TagContainer,
+  Sidebar,
+  BlogPostLink,
+  TagLink,
 } from 'styles/components/blogPostPage';
 
 export class BlogPostTemplate extends Component {
@@ -64,15 +65,24 @@ export class BlogPostTemplate extends Component {
 
     const tagList = _.map(tags, (tag) => (
       <li key={`${tag}tag`}>
-        <Link to={`/tags/${_.kebabCase(tag)}/`}>{tag}</Link>
+        <TagLink to={`/tags/${_.kebabCase(tag)}/`}>{tag}</TagLink>
       </li>
     ));
 
     return (
-      <TagContainer>
+      <Fragment>
         <h4>Tags</h4>
         <TagList>{tagList}</TagList>
-      </TagContainer>
+      </Fragment>
+    );
+  }
+
+  renderSidebar() {
+    return (
+      <Sidebar>
+        {this.renderTags()}
+        {this.renderNextAndPreviousButtons()}
+      </Sidebar>
     );
   }
 
@@ -81,7 +91,18 @@ export class BlogPostTemplate extends Component {
     if (!pageContext) return null;
 
     const { nextPost, previousPost } = pageContext;
-    return nextPost && previousPost && null;
+    console.log('nextPost, previousPost', nextPost, previousPost);
+    return _.map([previousPost, nextPost], (post, index) => {
+      if (_.isEmpty(post)) return null;
+      const { title } = post.frontmatter;
+      const { slug } = post.fields;
+      return (
+        <div key={slug}>
+          <h4>{index ? `Previous post` : `Next post`}</h4>
+          <BlogPostLink to={slug}>{title}</BlogPostLink>
+        </div>
+      );
+    });
   }
 
   render() {
@@ -110,9 +131,8 @@ export class BlogPostTemplate extends Component {
         <Column className={_.isEmpty(tags) ? 'no-aside' : ''}>
           <BlogContent>
             <PostContent content={content} />
-            {this.renderNextAndPreviousButtons()}
           </BlogContent>
-          {this.renderTags()}
+          {this.renderSidebar()}
         </Column>
       </section>
     );
