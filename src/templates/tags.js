@@ -2,7 +2,8 @@ import React from 'react';
 import { object } from 'prop-types';
 import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
-import Layout from '../components/Layout';
+import Layout from 'components/Layout';
+import { PaddedSection } from 'styles/components';
 
 class TagRoute extends React.Component {
   static propTypes = {
@@ -37,7 +38,7 @@ class TagRoute extends React.Component {
 
     return (
       <Layout>
-        <section className="section">
+        <PaddedSection>
           <Helmet title={`${tag} | ${siteMetadata.title}`} />
           <div className="container content">
             <div className="columns">
@@ -53,7 +54,7 @@ class TagRoute extends React.Component {
               </div>
             </div>
           </div>
-        </section>
+        </PaddedSection>
       </Layout>
     );
   }

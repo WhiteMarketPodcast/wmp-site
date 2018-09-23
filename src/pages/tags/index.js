@@ -1,9 +1,13 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import { object } from 'prop-types';
-import { kebabCase } from 'lodash';
 import Helmet from 'react-helmet';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
+import { PaddedSection } from 'styles/components';
+import { List, Item, TagLink } from 'styles/components/tagsPage';
+
+const getRemsFromCount = (count) => `${count * 0.05 + 1}rem`;
 
 class TagsPage extends Component {
   static propTypes = { data: object.isRequired };
@@ -18,28 +22,24 @@ class TagsPage extends Component {
 
     return (
       <Layout>
-        <section className="section">
+        <PaddedSection>
           <Helmet title={`Tags | ${siteMetadata.title}`} />
-          <div className="container content">
-            <div className="columns">
-              <div
-                className="column is-10 is-offset-1"
-                style={{ marginBottom: '6rem' }}
-              >
-                <h1 className="title is-size-2 is-bold-light">Tags</h1>
-                <ul className="taglist">
-                  {group.map((tag) => (
-                    <li key={tag.fieldValue}>
-                      <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                        {`${tag.fieldValue} (${tag.totalCount})`}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+          <h1 className="text-center">Tags</h1>
+          <List>
+            {_.map(group, ({ fieldValue, totalCount: count }) => (
+              <Item key={fieldValue}>
+                <TagLink
+                  to={`/tags/${_.kebabCase(fieldValue)}/`}
+                  style={{
+                    fontSize: getRemsFromCount(count),
+                  }}
+                >
+                  {`${fieldValue} (${count})`}
+                </TagLink>
+              </Item>
+            ))}
+          </List>
+        </PaddedSection>
       </Layout>
     );
   }
