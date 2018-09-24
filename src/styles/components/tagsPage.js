@@ -17,6 +17,7 @@ export const Item = styled.li`
 `;
 
 export const TagLink = styled(Link)`
+  display: flex;
   border: 1px solid ${emerald};
   color: ${emerald};
   padding: 0.5rem 0.8rem;

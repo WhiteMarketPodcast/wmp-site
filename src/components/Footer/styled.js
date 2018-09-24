@@ -65,9 +65,11 @@ export const SocialLink = styled(Link)`
   display: inline-block;
   margin-left: 0.6rem;
   color: ${white};
+  opacity: 0.8;
 
   &:hover {
     filter: unset;
+    opacity: 1;
 
     /* &.facebook {
       color: #3b5998;
