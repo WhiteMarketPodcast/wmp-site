@@ -47,7 +47,7 @@ export default class IndexPage extends Component {
       } = post;
       return (
         <BlogPreviewContainer key={id} to={slug}>
-          <BlogPreviewImage bgImage={image || imageURL} />
+          <BlogPreviewImage bgImage={image || imageURL} index={index} />
           <PreviewTextContainer index={index}>
             <BlogType>{formatConverter[format]}</BlogType>
             <PreviewTitle index={index}>{title}</PreviewTitle>

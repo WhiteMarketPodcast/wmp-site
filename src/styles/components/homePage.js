@@ -5,6 +5,12 @@ import { black, emerald, white } from '../colors';
 import { onMobile } from '../mediaQueries';
 
 const isHighlightedPreview = (index) => _.includes([0, 3, 5], index);
+function getImageURL(image, index, isSmall = false) {
+  if (!/res.cloudinary.com/.test(image)) return image;
+  let width = isHighlightedPreview(index) && !isSmall ? 1100 : 450;
+  if (isSmall) width = 300;
+  return image.replace('/upload/', `/upload/c_scale,w_${width}/`);
+}
 
 export const BlogPostPreviewGrid = styled.div`
   display: grid;
@@ -150,14 +156,10 @@ export const BlogPreviewImage = styled.div`
       rgba(0, 0, 0, 0.25),
       rgba(0, 0, 0, 0.25)
     ),
-    url(${({ bgImage }) => {
-    if (!/res.cloudinary.com/.test(bgImage)) return bgImage;
-    return bgImage.replace('/upload/', '/upload/c_scale,w_750/');
-  }});
+    url(${({ bgImage, index }) => getImageURL(bgImage, index)});
 
   @media (max-width: 575px) {
-    background-image: url(${({ bgImage }) => bgImage});
-
+    background-image: url(${({ bgImage, index }) => getImageURL(bgImage, index, true)});
     width: 40%;
   }
 `;
