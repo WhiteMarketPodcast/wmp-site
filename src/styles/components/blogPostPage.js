@@ -127,6 +127,7 @@ export const TagList = styled.ul`
 export const BlogPostLink = styled(Link)`
   display: flex;
   color: ${white};
+  line-height: 1.3;
   margin: 0;
   margin-bottom: 1rem;
   padding-left: 0.8rem;
