@@ -1,26 +1,27 @@
 ---
 templateKey: blog-post
-title: "Session 2.06 – 80s Flavoured Music"
+title: 'Session 2.06 – 80s Flavoured Music'
 date: 2015-08-09T21:00:27.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-NC-SA-Radio-by-Bernhard-Benke.jpg"
-imageAlt: "CC-NC-SA-Radio-by-Bernhard-Benke"
-format: "standard"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-NC-SA-Radio-by-Bernhard-Benke.jpg'
+imageAlt: 'CC-NC-SA-Radio-by-Bernhard-Benke'
+format: 'standard'
 categories:
-  - "Podcasts"
+  - 'Podcasts'
 tags:
-  - "blocSonic"
-  - "Fax Records"
-  - "Free Music Archive"
-  - "Ground 202"
-  - "Jamendo"
-  - "Kreislauf"
-  - "Latino Resiste"
-  - "Melodica Netlabel"
-  - "ShuffleBrain"
-  - "Sólo le Pido a Dior"
-  - "Starquake Records"
-  - "stereoptico"
+  - 'blocSonic'
+  - 'Fax Records'
+  - 'Free Music Archive'
+  - 'Ground 202'
+  - 'Jamendo'
+  - 'Kreislauf'
+  - 'Latino Resiste'
+  - 'Melodica Netlabel'
+  - 'ShuffleBrain'
+  - 'Sólo le Pido a Dior'
+  - 'Starquake Records'
+  - 'stereoptico'
 ---
+
 As usual, the weekly full hour of free music on **[Spark Sunderland](http://www.sparksunderland.com/)** was quite diversified. Today, however, there were some key blocks: instrumental, south american and 80s flavoured music. Quite the mix, yes, but in a land where music has no boundaries, where you can freely download every single song, the problem is always to pick the best cherries. After all, most of them are simply delicious, just like music was in the 80s.
 
 A Minha Embala – Assinatura de Sal \[[FMA](http://freemusicarchive.org/music/A_Minha_Embala_Aline_Frazo_e_Csar_Herranz/none_given_1575/)\]  

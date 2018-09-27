@@ -1,24 +1,25 @@
 ---
 templateKey: blog-post
-title: "Session 2.04 – Keeping the engine running"
+title: 'Session 2.04 – Keeping the engine running'
 date: 2015-07-19T21:00:13.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-BY-SA-Cup-of-Tea-by-Marius-Brede.jpg"
-imageAlt: "CC-BY-SA-Cup-of-Tea-by-Marius-Brede"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-BY-SA-Cup-of-Tea-by-Marius-Brede.jpg'
+imageAlt: 'CC-BY-SA-Cup-of-Tea-by-Marius-Brede'
+format: 'audio'
 categories:
-  - "Podcasts"
+  - 'Podcasts'
 tags:
-  - "aaahh records"
-  - "Eardrrums Pop"
-  - "Free Music Archive"
-  - "iD.Eology"
-  - "Jamendo"
-  - "La bèl"
-  - "Lost Children"
-  - "Merzbau"
-  - "Poni Republic"
-  - "Sundays in Spring"
+  - 'aaahh records'
+  - 'Eardrrums Pop'
+  - 'Free Music Archive'
+  - 'iD.Eology'
+  - 'Jamendo'
+  - 'La bèl'
+  - 'Lost Children'
+  - 'Merzbau'
+  - 'Poni Republic'
+  - 'Sundays in Spring'
 ---
+
 With some blasts from the past and a few treats, we kept the free music engine running, and delivered another hour of great Creative Commons-licenced tracks. And, on top of all the fun, I’ve set myself quite the challenge: every week White Market will be uploading a new record on Free Music Archive. In case you missed it, [here’s our collection](https://freemusicarchive.org/curator/programamarcabranca/) soon to be expanded on a weekly basis.
 
 Walter Benjamin – The person #3 \[[Merzbau](http://www.merzbau-label.org/cd0005_pt.htm)\]  

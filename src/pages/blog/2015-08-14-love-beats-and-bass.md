@@ -1,21 +1,22 @@
 ---
 templateKey: blog-post
-title: "Love, beats and bass"
+title: 'Love, beats and bass'
 date: 2015-08-14T18:30:56.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/Boss-Bass-Love-For-Everyone-Everywhere-album-cover.jpg"
-format: "standard"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/Boss-Bass-Love-For-Everyone-Everywhere-album-cover.jpg'
+format: 'standard'
 categories:
-  - "Blog"
-  - "Features"
-  - "FMA Collection"
+  - 'Blog'
+  - 'Features'
+  - 'FMA Collection'
 tags:
-  - "Boss Bass"
-  - "Brazil"
-  - "Free Music Archive"
-  - "Noudrags Records"
-  - "Psicotropicodelia"
-  - "Sambass"
+  - 'Boss Bass'
+  - 'Brazil'
+  - 'Free Music Archive'
+  - 'Noudrags Records'
+  - 'Psicotropicodelia'
+  - 'Sambass'
 ---
+
 Coming straight from Rio de Janeiro, [Boss Bass](http://www.bossbass.com.br/) has been bringing love, beats and bass music to the world for quite a long time now. Heavily influenced by genres such as dub, dubstep, bass music and drum & bass, he has published works on [Noudrags Records](https://www.facebook.com/noudragsrecords) and [Psicotropicodelia](http://www.psicotropicodelia.com/); both dedicated to electronic music and two of the most exciting Brazilian netlabels.
 
 “Love For Everyone Everywhere” was released in 2011 and it quickly became one of my favourite CC records. It is released under an [Attribution Non-Commercial Share Alike](http://creativecommons.org/licenses/by-nc-sa/4.0/) licence.

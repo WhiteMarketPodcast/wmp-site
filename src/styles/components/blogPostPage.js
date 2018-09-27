@@ -59,8 +59,9 @@ export const Column = styled.div`
 export const BlogContent = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 2rem 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.5rem 1rem;
 
   ${onMobile} {
     padding: 1rem;

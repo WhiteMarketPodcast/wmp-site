@@ -1,28 +1,29 @@
 ---
 templateKey: blog-post
-title: "Session 2.03 – Celebrating Netlabel Day 2015"
+title: 'Session 2.03 – Celebrating Netlabel Day 2015'
 date: 2015-07-12T21:00:58.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/logo_netlabel_day.png"
-imageAlt: "logo_netlabel_day"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/logo_netlabel_day.png'
+imageAlt: 'logo_netlabel_day'
+format: 'audio'
 categories:
-  - "Podcasts"
+  - 'Podcasts'
 tags:
-  - "56kbps"
-  - "Amalgamated Futureless Records"
-  - "bleepsequence"
-  - "blocSonic"
-  - "Disfish"
-  - "Enough Records"
-  - "FutureDraht"
-  - "Latino Resiste"
-  - "mahorka"
-  - "Mars Melons"
-  - "Sostanze Records"
+  - '56kbps'
+  - 'Amalgamated Futureless Records'
+  - 'bleepsequence'
+  - 'blocSonic'
+  - 'Disfish'
+  - 'Enough Records'
+  - 'FutureDraht'
+  - 'Latino Resiste'
+  - 'mahorka'
+  - 'Mars Melons'
+  - 'Sostanze Records'
   - "Southern City's Lab"
-  - "Subbass"
-  - "Yes No Wave Music"
+  - 'Subbass'
+  - 'Yes No Wave Music'
 ---
+
 We celebrated [Netlabel Day 2015](http://netlabelday.blogspot.co.uk/) with an exclusive playlist that only included participating netlabels. The real challenge was to pick the best ones!
 
 Nowhere Fast – &i \[[Sostanze Records](http://www.sostanzerecords.it/releases/SOSEP052)\]  

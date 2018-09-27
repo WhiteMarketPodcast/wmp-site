@@ -1,23 +1,24 @@
 ---
 templateKey: blog-post
-title: "Bossa-nova and the mellowness of the tropics"
+title: 'Bossa-nova and the mellowness of the tropics'
 date: 2015-08-08T12:05:09.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/A-Minha-Embala-album-cover-big-e1439031693892.jpg"
-imageAlt: "A-Minha-Embala-album-cover"
-format: "standard"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/A-Minha-Embala-album-cover-big-e1439031693892.jpg'
+imageAlt: 'A-Minha-Embala-album-cover'
+format: 'standard'
 categories:
-  - "Blog"
-  - "Features"
-  - "FMA Collection"
+  - 'Blog'
+  - 'Features'
+  - 'FMA Collection'
 tags:
-  - "A Minha Embala"
-  - "Aline Frazão"
-  - "bossa-nova"
-  - "César Herranz"
-  - "Free Music Archive"
-  - "Jamendo"
-  - "morna"
+  - 'A Minha Embala'
+  - 'Aline Frazão'
+  - 'bossa-nova'
+  - 'César Herranz'
+  - 'Free Music Archive'
+  - 'Jamendo'
+  - 'morna'
 ---
+
 New week, **[new upload on FMA](http://freemusicarchive.org/curator/programamarcabranca/)**. This time, I bring you **[A Minha Embala](http://freemusicarchive.org/music/A_Minha_Embala_Aline_Frazo_e_Csar_Herranz/none_given_1575)**.
 
 A Minha Embala was a project by **Aline Frazão** (vocals, guitar) and **César Herranz** (western concert flute, percussion). It was meant as a meeting between the various musical expressions of different Portuguese-speaking countries. They move their work between the musical universes of Angola, Cape Verde, Brazil, Portugal and Galicia, singing not only in Portuguese but also in Portuguese-based creole languages, kimbundu and umbundu. Their self-titled record [was released through **Jamendo**](https://www.jamendo.com/en/list/a93012/a-minha-embala) in 2011 and is a delight for those who love bossa-nova, morna and other mellow tropical genres.

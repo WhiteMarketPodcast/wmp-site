@@ -1,25 +1,26 @@
 ---
 templateKey: blog-post
-title: "Session 2.05 – Lessons on where to find CC music"
+title: 'Session 2.05 – Lessons on where to find CC music'
 date: 2015-08-02T21:00:41.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-BY-Creative-Commons-Cupcakes-by-Timothy-Vollmer.jpg"
-imageAlt: "CC-BY-Creative-Commons-Cupcakes-by-Timothy-Vollmer"
-format: "standard"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-BY-Creative-Commons-Cupcakes-by-Timothy-Vollmer.jpg'
+imageAlt: 'CC-BY-Creative-Commons-Cupcakes-by-Timothy-Vollmer'
+format: 'standard'
 categories:
-  - "Podcasts"
+  - 'Podcasts'
 tags:
-  - "23 Seconds"
-  - "Bandcamp"
-  - "Catnap"
-  - "CC Music Camp"
-  - "Free Music Archive"
-  - "Headphonica"
-  - "Jamendo"
-  - "Lo-Kiwi"
-  - "MiMi Records"
-  - "Phonocake"
-  - "Starquake Records"
+  - '23 Seconds'
+  - 'Bandcamp'
+  - 'Catnap'
+  - 'CC Music Camp'
+  - 'Free Music Archive'
+  - 'Headphonica'
+  - 'Jamendo'
+  - 'Lo-Kiwi'
+  - 'MiMi Records'
+  - 'Phonocake'
+  - 'Starquake Records'
 ---
+
 On this latest session, there were a few lessons on where to find CC music, particularly beyond the netlabel scope. So, I talked a bit more about some places where you can easily find Creative Commons-licenced music: [Free Music Archive](http://freemusicarchive.org/), [Jamendo](http://jamendo.com/) and one of my favourite blogs, [CC Music Camp](http://ccmusiccamp.tumblr.com/).
 
 Birds Are Indie – Kitchen Morning \[[MiMi Records](http://www.clubotaku.org/mimi/pt/album151.php)\]  
