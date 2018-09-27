@@ -1,20 +1,21 @@
 ---
 templateKey: blog-post
-title: "Session 2.10 – All hail the Free Music Archive"
+title: 'Session 2.10 – All hail the Free Music Archive'
 date: 2015-09-06T20:55:34.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/09/CC-BY-NC-2009-in-music-FMA-by-erin-m-e1441146727804.jpg"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/09/CC-BY-NC-2009-in-music-FMA-by-erin-m-e1441146727804.jpg'
+format: 'audio'
 categories:
-  - "Interviews"
-  - "Podcasts"
+  - 'Interviews'
+  - 'Podcasts'
 tags:
-  - "blocSonic"
-  - "Free Music Archive"
-  - "Lost Children"
+  - 'blocSonic'
+  - 'Free Music Archive'
+  - 'Lost Children'
 ---
-> _The **Free Music Archive** is an interactive library of high-quality, legal audio downloads directed by [WFMU](https://en.wikipedia.org/wiki/WFMU "WFMU"), the longest-running freeform radio station in the United States.[\[1\]](https://en.wikipedia.org/wiki/Free_Music_Archive#cite_note-1) Every mp3 on the Free Music Archive is pre-cleared for certain types of uses that would otherwise be prohibited by copyright laws that were not designed for the digital era. These uses vary and are determined by the rightsholders themselves.[\[2\]](https://en.wikipedia.org/wiki/Free_Music_Archive#cite_note-2)_
-> 
-> _<small>in Wikipedia</small>_
+
+> The **Free Music Archive** is an interactive library of high-quality, legal audio downloads directed by [WFMU](https://en.wikipedia.org/wiki/WFMU), the longest-running freeform radio station in the United States.[\[1\]](https://en.wikipedia.org/wiki/Free_Music_Archive#cite_note-1) Every mp3 on the Free Music Archive is pre-cleared for certain types of uses that would otherwise be prohibited by copyright laws that were not designed for the digital era. These uses vary and are determined by the rightsholders themselves.[\[2\]](https://en.wikipedia.org/wiki/Free_Music_Archive#cite_note-2)
+
+<cite>Wikipedia</cite>
 
 It was founded in 2009 and it’s still running. And now, every Friday, I upload a [new record to Free Music Archive](http://www.whitemarketpodcast.co.uk/free-music-archive-collection/). Being a [curator](http://freemusicarchive.org/curator/programamarcabranca/) there is a fundamental piece of White Market’s quest to spread the word on free music. So, this latest session I had the great pleasure of talking to **Cheyenne Hohman**, the **director of [Free Music Archive](http://freemusicarchive.org)**. Not only did we talk about their work, mission and challenges, we also had time to share some cool tracks and share other thoughts on free culture and copyright. As you may have guessed by now, all the tracks we played today can be found on Free Music Archive.
 
