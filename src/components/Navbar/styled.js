@@ -3,7 +3,12 @@ import posed from 'react-pose';
 import Link from 'components/Link';
 import { emerald, white } from 'styles/colors';
 
-export const Nav = styled.nav`
+const nav = posed.nav({
+  show: { y: 0, transition: { ease: 'easeInOut' } },
+  hide: { y: '-100%', transition: { ease: 'easeInOut' } },
+});
+
+export const Nav = styled(nav)`
   position: fixed;
   top: 0;
   left: 0;

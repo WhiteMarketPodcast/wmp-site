@@ -5,11 +5,40 @@ import logo from 'img/White-market-transp-logo.png';
 import { Button, Logo, Menu, MenuItem, Nav, NavLink } from './styled';
 
 class Navbar extends Component {
-  state = { open: false };
+  state = { open: false, position: 0, hideNav: false, interval: null };
+
+  componentDidMount() {
+    this.setState({ interval: setInterval(this.listenForScroll, 600) });
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.state.interval);
+  }
 
   getClassName = () => (this.state.open ? `open` : ``);
 
+  getNavPose = () => {
+    const { hideNav, open } = this.state;
+    return hideNav && !open ? `hide` : `show`;
+  };
+
   getPose = () => (this.state.open ? `open` : `closed`);
+
+  listenForScroll = () => {
+    const { position, hideNav } = this.state;
+    const newPosition = window.scrollY;
+    if (newPosition === position) return;
+
+    const stateChange = { position: newPosition };
+
+    if (position < newPosition && !hideNav) {
+      stateChange.hideNav = true;
+    } else if (hideNav && position > newPosition) {
+      stateChange.hideNav = false;
+    }
+
+    this.setState(stateChange);
+  };
 
   toggleNavbar = () => {
     const { open } = this.state;
@@ -38,7 +67,7 @@ class Navbar extends Component {
     const className = this.getClassName();
 
     return (
-      <Nav className={className}>
+      <Nav className={className} pose={this.getNavPose()} initialPose="show">
         <div>
           <Link to="/">
             <h1>
