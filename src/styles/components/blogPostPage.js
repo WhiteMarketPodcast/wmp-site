@@ -45,7 +45,7 @@ export const CoverImage = styled.img`
 
 export const Column = styled.div`
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr minmax(min-content, 250px);
 
   &.no-aside {
     grid-template-columns: 1fr;

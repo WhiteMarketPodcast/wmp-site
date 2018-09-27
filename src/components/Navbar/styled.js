@@ -15,7 +15,6 @@ export const Nav = styled.nav`
   flex-wrap: wrap;
   background-color: ${white};
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  min-height: 5rem;
   padding: 0;
 
   h1 {
@@ -27,7 +26,7 @@ export const Nav = styled.nav`
 `;
 
 export const Logo = styled.img`
-  height: 5rem;
+  height: 80px;
   padding: 0 1rem;
   transition: all 0.3s ease;
   z-index: 1001;
