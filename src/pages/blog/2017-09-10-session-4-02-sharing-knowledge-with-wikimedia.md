@@ -27,6 +27,6 @@ Taseh – Down Roller \[[Monster Jinx](http://music.monsterjinx.com/album/monste
 Luck & Doc – To My Recollection \[[blocSonic](http://blocsonic.com/releases/bsmx0164)\] // [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
 Oranjada vs. North Beach Crew – Zora (2010 Druzhba session) \[[mahorka](http://mahorka.org/release/187p2)\] // [CC BY-NC](https://creativecommons.org/licenses/by-nc/3.0/)
 
-<small>_All the songs from “*Plays Guitar*” and “*Plays Guitar Again*” by *Gillicuddy* have been used as background music for the interview. All tracks available under a [CC BY-NC](https://creativecommons.org/licenses/by-nc/3.0/) licence; download on [Bandcamp](https://gillicuddy.bandcamp.com/music) or [FMA](http://freemusicarchive.org/music/gillicuddy)._</small>
+<small>_All the songs from “**Plays Guitar**” and “**Plays Guitar Again**” by **Gillicuddy** have been used as background music for the interview. All tracks available under a [CC BY-NC](https://creativecommons.org/licenses/by-nc/3.0/) licence; download on [Bandcamp](https://gillicuddy.bandcamp.com/music) or [FMA](http://freemusicarchive.org/music/gillicuddy)._</small>
 
 <small>.: Photo by [Wikimedia Foundation](https://en.wikipedia.org/wiki/File:10_sharing_book_cover_background.jpg) :. [CC BY](https://creativecommons.org/licenses/by/4.0/)</small>
