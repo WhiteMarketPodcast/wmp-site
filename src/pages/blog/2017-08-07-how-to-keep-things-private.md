@@ -63,4 +63,4 @@ Based in Paris, Qwant presents itself as “the European search engine that resp
 
 Before Qwant, there was [DuckDuckGo](https://duckduckgo.com). The privacy-focused search engine launched back in 2008 as “the search engine that doesn’t track you” and it has been a popular choice among privacy-concerned users ever since. So much so that it has been included as a default search option on both Safari and Firefox since 2014. Some of its source code is available on Github, but the software is not fully open source. Combined with Tor, it was the first search engine to allow end to end anonymous search.
 
-<small>.: Photo by <a href="https://www.flickr.com/photos/111692634@N04/11406964665/">Blue Coat Photos</a> :. <a href="https://creativecommons.org/licenses/by/4.0/" target="blank">CC BY</a></small>
+<small>.: Photo by [Blue Coat Photos](https://www.flickr.com/photos/111692634@N04/11406964665/) :. [CC BY](https://creativecommons.org/licenses/by/4.0/)</small>

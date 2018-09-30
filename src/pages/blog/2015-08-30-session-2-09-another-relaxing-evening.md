@@ -1,25 +1,26 @@
 ---
 templateKey: blog-post
-title: "Session 2.09 – Another relaxing evening"
+title: 'Session 2.09 – Another relaxing evening'
 date: 2015-08-30T20:55:04.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-NC-ND-night-sky-by-Miska-Saarikko.jpg"
-imageAlt: "CC-NC-ND-night-sky-by-Miska-Saarikko"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-NC-ND-night-sky-by-Miska-Saarikko.jpg'
+imageAlt: 'CC-NC-ND-night-sky-by-Miska-Saarikko'
+format: 'audio'
 categories:
-  - "Podcasts"
+  - 'Podcasts'
 tags:
-  - "23 Seconds"
-  - "8bitpeoples"
-  - "aerotone"
-  - "Fax Records"
-  - "Free Music Archive"
-  - "Fwonk*"
-  - "iD.Eology"
-  - "la-pikki-pikki"
-  - "Mimonot"
-  - "Tanukineiri Records"
-  - "Yes No Wave Music"
+  - '23 Seconds'
+  - '8bitpeoples'
+  - 'aerotone'
+  - 'Fax Records'
+  - 'Free Music Archive'
+  - 'Fwonk*'
+  - 'iD.Eology'
+  - 'la-pikki-pikki'
+  - 'Mimonot'
+  - 'Tanukineiri Records'
+  - 'Yes No Wave Music'
 ---
+
 Another relaxing evening on Spark Sunderland with a delightful soundtrack, straight from some of coolest netlabels around (even if some of them stopped publishing records). While I decided to let summer fade away smoothly, I also didn’t resist to add some more powered tracks into the mix. Also, September will be packed with surprises and great things on White Market, including some next week’s interview with FMA director, Cheyenne Hohman. Stay tuned!
 
 Stereoshape – So Hot \[[iD.Eology](https://stereoshape.bandcamp.com/album/hello-city-ep) / [FMA](http://freemusicarchive.org/music/Stereoshape/Hello_City_EP/)\]  
@@ -37,4 +38,4 @@ Andrey Nailer – Blanket \[[Mimonot](http://mimonot.net/album/venta-ep-2009)\]
 Frenchie – Hey Hey Brother \[[Fwonk\*](http://fwonk.co.uk/116/)\]  
 Suburbanism – Sneakerbox (Chesavom Dream mix) \[[la-pikki-pikki](http://www.la-pikki-pikki.de/)\]
 
-<small>.: Photo by <a href="https://www.flickr.com/photos/miskasaarikko/15073316739//" target="blank">Miska Saarikko</a> :. <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="blank">CC BY-NC-ND</a></small>
+<small>.: Photo by [Miska Saarikko](https://www.flickr.com/photos/miskasaarikko/15073316739/) :. [CC BY-NC-ND](https://creativecommons.org/licenses/by-nc-nd/2.0/)</small>

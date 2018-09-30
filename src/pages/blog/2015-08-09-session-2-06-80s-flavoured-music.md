@@ -37,4 +37,4 @@ The Last Port – Layers \[[Ground 202](http://www.ground202.com/review/the-last
 João Picoito – Heavy Falling Feather \[[Jamendo](https://www.jamendo.com/en/list/a44061/omission)\]  
 Blackdaylight – Sampieri (feat. Christina Marie and Drunken Monkee) \[[Kreislauf](https://kreislauf.org/blackdaylight-lava-music-kreislauf-151/)\]
 
-<small>.: Photo by <a href="https://www.flickr.com/photos/bernhardbenke/2370811833/" target="blank">Bernhard Benke</a> :. <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="blank">CC-NC-ND</a></small>
+<small>.: Photo by [Bernhard Benke](https://www.flickr.com/photos/bernhardbenke/2370811833/) :. [CC-NC-ND](https://creativecommons.org/licenses/by-nc-nd/2.0/)</small>

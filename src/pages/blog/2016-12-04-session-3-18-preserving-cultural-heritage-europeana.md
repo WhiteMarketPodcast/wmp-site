@@ -1,20 +1,21 @@
 ---
 templateKey: blog-post
-title: "Session 3.18 – Preserving cultural heritage with Europeana"
+title: 'Session 3.18 – Preserving cultural heritage with Europeana'
 date: 2016-12-04T21:15:48.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-0-Bookcase-by-Patrik-Gothe.jpg"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-0-Bookcase-by-Patrik-Gothe.jpg'
+format: 'audio'
 categories:
-  - "Interviews"
-  - "Podcasts"
+  - 'Interviews'
+  - 'Podcasts'
 tags:
-  - "Auboutdufil"
-  - "Bandcamp"
-  - "blocSonic"
-  - "Club Coral"
-  - "Europeana"
-  - "Soundcloud"
+  - 'Auboutdufil'
+  - 'Bandcamp'
+  - 'blocSonic'
+  - 'Club Coral'
+  - 'Europeana'
+  - 'Soundcloud'
 ---
+
 This week, I had the opportunity to talk to Joris Pekel, Community Coordinator for Cultural Heritage at [**Europeana**](http://www.europeana.eu/portal/en). On top of talking about their wider work of making artworks and cultural piece from all over Europe accessible to the public online. During the interview, we also talked about the [**Europeana Sounds Conference 2016**](http://www.europeanasounds.eu/europeana-sounds-conference-2016), their [**Policy Recommendations for improving online access to audio and audio-related heritage in Europe**](http://www.europeanasounds.eu/wp-content/uploads/2016/11/160430-D3.4-policy-recommendations-eSounds.pdf) and their [brand new page on Soundcloud](https://soundcloud.com/europeana).
 
 On a side note, **White Market Podcast** is becoming a fortnight event. Our slots on Soundart Radio and Spark Sunderland remain the same, though. The next episode will be online on December 18th and regular broadcasts can be expected every fortnight from that date onwards.
@@ -29,4 +30,4 @@ Ruido Selecto – Talismán \[[Monofonicos](http://monofonicos.net/mns006-va-col
 
 All the tracks used as background music during the interview are taken from Jon Luc Hefferman’s album “[Elian Mor](http://freemusicarchive.org/music/Jon_Luc_Hefferman/Production_Music_2/)“. These tracks are available under a [CC BY-NC licence](https://creativecommons.org/licenses/by-nc/3.0/).
 
-<small><p style="text-align: justify;">*<a href="https://starfrosch.com/hot-100/" target="_blank"><strong>Starfrosch</strong></a> Hot Track of the Week</p></small>
+<small>\***[Starfrosch](https://starfrosch.com/hot-100/)** Hot Track of the Week</small>

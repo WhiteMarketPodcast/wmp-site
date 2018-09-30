@@ -32,4 +32,4 @@ You still have an opportunity to speak your mind on why we need to #fixcopyright
 
 - [**Intellectual Property  Rights Enforcement**](http://ec.europa.eu/growth/tools-databases/newsroom/cf/itemdetail.cfm?item_id=8580) – This might be the trickier one, but you have more than enough time to go through it. It’s mostly about the [Digital Single Market](http://ec.europa.eu/priorities/digital-single-market/) and how we can create a proper cross-borders economy that fosters transparency, fairness and accessibility. This is open to views from all interested parties, in particular rightholders, the judiciary and legal profession, intermediaries, public authorities, consumers and civil society.
 
-<small>.: Featured photo by <a href="https://www.flickr.com/photos/howardlake/5540462170/" target="blank">Howard Lake</a> :. <a href="https://creativecommons.org/licenses/by-sa/2.0/" target="blank">CC BY-SA</a></small>
+<small>.: Featured photo by [Howard Lake](https://www.flickr.com/photos/howardlake/5540462170/) :. [CC BY-SA](https://creativecommons.org/licenses/by-sa/2.0/)</small>

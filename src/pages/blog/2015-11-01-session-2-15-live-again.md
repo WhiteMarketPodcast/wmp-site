@@ -1,27 +1,28 @@
 ---
 templateKey: blog-post
-title: "Session 2.16 – Live Again"
+title: 'Session 2.16 – Live Again'
 date: 2015-11-01T20:59:15.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/11/3642074604_03ac355706_z.jpg"
-format: "standard"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/11/3642074604_03ac355706_z.jpg'
+format: 'standard'
 categories:
-  - "Podcasts"
+  - 'Podcasts'
 tags:
-  - "23 Seconds"
-  - "8bitpeoples"
-  - "Bandcamp"
-  - "bumpfoot"
-  - "Enough Records"
-  - "Free Music Archive"
-  - "Headphonica"
-  - "Jamendo"
-  - "La bèl"
-  - "ShuffleBrain"
-  - "Soundcloud"
-  - "Southern City Lab"
-  - "Yarn Audio"
-  - "ZigurArtists"
+  - '23 Seconds'
+  - '8bitpeoples'
+  - 'Bandcamp'
+  - 'bumpfoot'
+  - 'Enough Records'
+  - 'Free Music Archive'
+  - 'Headphonica'
+  - 'Jamendo'
+  - 'La bèl'
+  - 'ShuffleBrain'
+  - 'Soundcloud'
+  - 'Southern City Lab'
+  - 'Yarn Audio'
+  - 'ZigurArtists'
 ---
+
 After a few weeks of pre-recorded sessions, we live again from Spark’s studio with a full hour of carefully selected free music. A bit more on edge than usual, I explored different sound landscapes in a set that had space for dubstep, improvised music, lo-fi folk, trip-hop and more. I visited some of my favourites, but also opened doors for some new music to walk in.
 
 Zack Linton – Maybe I’m In Love \[[Jamendo](https://www.jamendo.com/track/1220628/maybe-i-m-in-love)\]  
@@ -37,4 +38,4 @@ Knife City – Precious Jewel (Sabrepulse remix) \[[8bitpeoples](http://www.8bit
 Mikk Rebane – Love is Dither \[[Bump Foot](http://www.bumpfoot.net/foot250.html)\]  
 Keecho – Stars \[[Soundcloud](https://soundcloud.com/snowy-man-2/tracks)\]
 
-<small>.: Photo by <a href="https://www.flickr.com/photos/curtiskennington/3642074604/">Curtis Kennington</a> :. <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC-BY</a></small>
+<small>.: Photo by [Curtis Kennington](https://www.flickr.com/photos/curtiskennington/3642074604/) :. [CC-BY](https://creativecommons.org/licenses/by/2.0/)</small>

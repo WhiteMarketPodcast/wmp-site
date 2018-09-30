@@ -32,4 +32,4 @@ On top of these two, I couldn’t talk about free photos without mentioning the 
 
 Next time you need some free photos, you know where to look for them.
 
-<small>.: Photo by <a href="https://www.flickr.com/photos/jeffslinker/5337240537/" target="blank">Jeff Slinker</a> :. <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="blank">CC BY-NC-ND</a></small>
+<small>.: Photo by [Jeff Slinker](https://www.flickr.com/photos/jeffslinker/5337240537/) :. [CC BY-NC-ND](https://creativecommons.org/licenses/by-nc-nd/2.0/)</small>

@@ -1,22 +1,23 @@
 ---
 templateKey: blog-post
-title: "Session 3.17 – Rain, technical issues and music"
+title: 'Session 3.17 – Rain, technical issues and music'
 date: 2016-11-25T11:20:13.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/mvjo-amrwke-jack-catterall.jpg"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/mvjo-amrwke-jack-catterall.jpg'
+format: 'audio'
 categories:
-  - "Podcasts"
+  - 'Podcasts'
 tags:
-  - "Advanced Materials"
-  - "Bandcamp"
-  - "Broque"
-  - "ccMixter"
-  - "Free Music Archive"
-  - "Jamendo"
-  - "Kahvi Collective"
-  - "Sólo le Pido a Dior"
-  - "Soundcloud"
+  - 'Advanced Materials'
+  - 'Bandcamp'
+  - 'Broque'
+  - 'ccMixter'
+  - 'Free Music Archive'
+  - 'Jamendo'
+  - 'Kahvi Collective'
+  - 'Sólo le Pido a Dior'
+  - 'Soundcloud'
 ---
+
 After many technical difficulties, a lot of travelling and a week of unstoppable rain in the North East of England, the show is finally online. Being very honest, I would have liked it to have some extra content, but it was impossible after a series of unfortunate events. In a near future there’s still a European Commons Assembly special to come and a Europeana special as well!
 
 For now, here’s this week’s free music mix for you.
@@ -33,4 +34,4 @@ François – Bem-Vindo \[[Sólo Le Pido A Dior](https://sololepidoadior.bandcam
 ](https://creativecommons.org/licenses/by-nc-sa/3.0/)Woodland Associates – Cheap Date \[[Advanced Materials](https://advancedmaterials.bandcamp.com/album/affairs-and-engagements)\] // [CC BY-NC  
 ](https://creativecommons.org/licenses/by-nc/3.0/)Alex – Disconnect (feat. ducket) \[[CC Mixter](http://dig.ccmixter.org/files/AlexBeroza/55012)\] // [CC BY-NC](https://creativecommons.org/licenses/by-nc/3.0/)
 
-_<small>*<strong><a href="https://starfrosch.com/hot-100/" target="_blank">Starfrosch</a> Hot Track of The Week</strong></small>_
+<small>_\***[Starfrosch](https://starfrosch.com/hot-100/) Hot Track of The Week**_</small>

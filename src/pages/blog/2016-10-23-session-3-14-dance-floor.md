@@ -1,24 +1,25 @@
 ---
 templateKey: blog-post
-title: "Session 3.14 – On to the Dance Floor"
+title: 'Session 3.14 – On to the Dance Floor'
 date: 2016-10-23T21:15:36.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-BY-Mirror-Ball-by-Ewan-Topping.jpg"
-imageAlt: "cc-by-mirror-ball-by-ewan-topping"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-BY-Mirror-Ball-by-Ewan-Topping.jpg'
+imageAlt: 'cc-by-mirror-ball-by-ewan-topping'
+format: 'audio'
 categories:
-  - "Podcasts"
+  - 'Podcasts'
 tags:
-  - "Bandcamp"
-  - "blocSonic"
-  - "Cassette Blog"
-  - "Free Music Archive"
-  - "Jamendo"
-  - "Monofonicos"
-  - "Plain Productions"
-  - "Soundcloud"
-  - "Toucan Music"
-  - "Yarn Audio"
+  - 'Bandcamp'
+  - 'blocSonic'
+  - 'Cassette Blog'
+  - 'Free Music Archive'
+  - 'Jamendo'
+  - 'Monofonicos'
+  - 'Plain Productions'
+  - 'Soundcloud'
+  - 'Toucan Music'
+  - 'Yarn Audio'
 ---
+
 This week, White Market Podcast steps on the dance floor with classy beats and groovy bass lines. Between hip-hop, house and even a bit of drum ‘n’ bass, there’s a bit for almost every dance move set.
 
 Cheese N Pot C – Home Base (feat. Long John) \[[blocSonic](http://blocsonic.com/releases/bsmx0145)\] // [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/)  
@@ -34,4 +35,4 @@ SWIM – We Are Young \[[Soundcloud](https://soundcloud.com/swim_music/we-are-yo
 Neon Niteclub – I Want You \[[Jamendo](https://www.jamendo.com/album/142959/after-hours)\] // [CC BY-SA](https://creativecommons.org/licenses/by-sa/3.0/)  
 Chump Change – Footage \[[Yarn Audio](http://yarnaudio.com/releases/yarn014)\] // [CC BY](https://creativecommons.org/licenses/by/4.0/)
 
-<small>.: Photo by <a href="https://www.flickr.com/photos/yozza/286942958">Ewan Topping</a> :. <a href="https://creativecommons.org/licenses/by/4.0/" target="blank">CC BY</a></small>
+<small>.: Photo by [Ewan Topping](https://www.flickr.com/photos/yozza/286942958) :. [CC BY](https://creativecommons.org/licenses/by/4.0/)</small>

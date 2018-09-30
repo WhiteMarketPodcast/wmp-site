@@ -1,23 +1,24 @@
 ---
 templateKey: blog-post
-title: "White Market turns 8! – From free music to the open web"
+title: 'White Market turns 8! – From free music to the open web'
 date: 2016-03-22T16:51:15.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/03/CC-BY-NC-Freedom-by-Curly-e1458665020766.jpg"
-imageAlt: "CC-BY-NC-Freedom-by-Curly"
-format: "standard"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/03/CC-BY-NC-Freedom-by-Curly-e1458665020766.jpg'
+imageAlt: 'CC-BY-NC-Freedom-by-Curly'
+format: 'standard'
 categories:
-  - "Blog"
+  - 'Blog'
 tags:
-  - "activism"
-  - "anniversary"
-  - "Creative Commons"
-  - "free culture"
-  - "Free Music Archive"
-  - "freedom"
-  - "Jamendo"
-  - "open web"
-  - "Phlow Magazine"
+  - 'activism'
+  - 'anniversary'
+  - 'Creative Commons'
+  - 'free culture'
+  - 'Free Music Archive'
+  - 'freedom'
+  - 'Jamendo'
+  - 'open web'
+  - 'Phlow Magazine'
 ---
+
 Somehow I nearly let this slip, but White Market just turned 8 years old on March 10th.
 
 The whole thing started in 2008, when I was part of [**Rádio Zero**](http://radiozero.pt/)‘s family. After a full year of discovering the wonderful world of underground Portuguese music, I felt comfortable (and adventurous) enough to start a full one-hour weekly show about netaudio called [**Programa Marca Branca**](http://programamarcabranca.blogspot.com).
@@ -32,4 +33,4 @@ As times change, so will White Market. We will still showcase great free music [
 
 White Market’s content is currently licenced under a [**Creative Commons Attribution Non-Commercial licence**](http://creativecommons.org/licenses/by-nc/4.0/), which means **you can** **freely share and adapt it** so long as you give the appropriate credit and you’re not using it with commercial purposes. However, we will soon start releasing extra resources with less strict permissions, so you can share and reuse it more easily.
 
-<small>.: Photo by <a href="https://www.flickr.com/photos/staycurly/13461141885/" target="blank">-Curly-</a> :. <a href="https://creativecommons.org/licenses/by-nc/2.0//" target="blank">CC BY-NC</a></small>
+<small>.: Photo by [-Curly-](https://www.flickr.com/photos/staycurly/13461141885/) :. [CC BY-NC](https://creativecommons.org/licenses/by-nc/2.0/)</small>

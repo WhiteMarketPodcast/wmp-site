@@ -54,4 +54,4 @@ Last but not least, there are some other podcasts about Creative Commons music b
 
 I will make an article about some of the most exciting netlabels out there soon enough. For now, do you have other favourite free music sources? Share them with us! Comment below or start the conversation on twitter [@WhiteMarketCast](https://twitter.com/WhiteMarketCast).
 
-<small>&nbsp;.: Featured photo available under Public Domain, by <a href="https://www.flickr.com/photos/21435077@N03/20573964043/in/dateposted/" target="_blank">Atul Srivastava :.</a></small>
+<small>.: Featured photo available under Public Domain, by [Atul Srivastava](https://www.flickr.com/photos/21435077@N03/20573964043/in/dateposted/) :.</small>

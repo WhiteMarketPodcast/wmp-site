@@ -41,4 +41,4 @@ Glassio – Try Much Harder \[[Soundcloud](https://soundcloud.com/glassiomusic/t
 Neon Nite Club – The Dream Machine \[[Jamendo](https://www.jamendo.com/en/list/a152205/the-dream-machine)\]  
 BitBurner – Not Any Kind of Program \[[Soundcloud](https://soundcloud.com/bitburner/not-any-kind-of-program)\]
 
-<small>.: Photo by <a href="https://www.flickr.com/photos/kalexanderson/6709759539/" target="blank">Kristina Alexanderson</a> :. <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="blank">CC-BY-NC-ND</a></small>
+<small>.: Photo by [Kristina Alexanderson](https://www.flickr.com/photos/kalexanderson/6709759539/) :. [CC-BY-NC-ND](https://creativecommons.org/licenses/by-nc-nd/2.0/)</small>

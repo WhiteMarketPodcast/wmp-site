@@ -37,4 +37,4 @@ Josh Woodward – 20/20 \[[FMA](http://freemusicarchive.org/music/Josh_Woodward/
 Dan Tindall – The Folks Underground \[[Bandcamp](http://dantindall.bandcamp.com/album/the-folks-underground)\]  
 Tiago Sousa – The Writer \[[Resting Bell](http://www.restingbell.net/releases/rb030-the-western-lands)\]
 
-<small>.: Photo by <a href="https://www.flickr.com/photos/sixteenmilesofstring/8256206923" target="blank">Timothy Vollmer</a> :. <a target="blank">CC-BY</a></small>
+<small>.: Photo by [Timothy Vollmer](https://www.flickr.com/photos/sixteenmilesofstring/8256206923) :. [CC-BY](https://creativecommons.org/licenses/by/4.0/)</small>

@@ -39,4 +39,4 @@ Good thing you ask! We are currently looking for contributions regarding **conte
 
 ### Thank you for this amazing decade.
 
-<small>Photo by <a href="https://unsplash.com/photos/GwsXX--WwjU">rawpixel.com</a> on <a href="https://unsplash.com">Unsplash</a></small>
+<small>Photo by [rawpixel.com](https://unsplash.com/photos/GwsXX--WwjU) on [Unsplash](https://unsplash.com)</small>

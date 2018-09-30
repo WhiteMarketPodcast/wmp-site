@@ -42,6 +42,6 @@ Morsa – Belly Buton \[[ZigurArtists](https://archive.org/details/ZA0004)\]
 Orquestra Popular de Paio Pires – Cinnamon Walls \[[Clinical Archives](https://archive.org/details/ca262_o)\]  
 3DTorus – Sleak \[[Fwonk\*](http://fwonk.co.uk/156/)\]
 
-_<small>\*This song is not available under Creative Commons. The artist has agreed to release it for free for non-profit usage and subject to prior approval. Please refer to <a href="http://www.mobygratis.com/">Moby Gratis</a> for more information.</small>_
+_<small>\*This song is not available under Creative Commons. The artist has agreed to release it for free for non-profit usage and subject to prior approval. Please refer to [Moby Gratis](http://www.mobygratis.com/) for more information.</small>_
 
-<small>.: Photo by <a href="https://www.flickr.com/photos/ch-weidinger/14466557338/" target="blank">Christian Weidiger</a> :. <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="blank">CC BY-NC-ND</a>&nbsp;:.</small>
+<small>.: Photo by [Christian Weidiger](https://www.flickr.com/photos/ch-weidinger/14466557338/) :. [CC BY-NC-ND](https://creativecommons.org/licenses/by-nc-nd/2.0/) :.</small>

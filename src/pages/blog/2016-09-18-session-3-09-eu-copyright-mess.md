@@ -1,25 +1,26 @@
 ---
 templateKey: blog-post
-title: "Session 3.09 – EU Copyright Mess"
+title: 'Session 3.09 – EU Copyright Mess'
 date: 2016-09-18T21:00:14.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/09/CC-BY-ND-Copyright-by-Dennis-Skley.jpg"
-imageAlt: "cc-by-nd-copyright-by-dennis-skley"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/09/CC-BY-ND-Copyright-by-Dennis-Skley.jpg'
+imageAlt: 'cc-by-nd-copyright-by-dennis-skley'
+format: 'audio'
 categories:
-  - "Podcasts"
+  - 'Podcasts'
 tags:
-  - "Bandcamp"
-  - "Bunkai-Kei"
-  - "Cassette Blog"
-  - "copyright reform"
-  - "Foof Records"
-  - "Free Music Archive"
-  - "Jamendo"
-  - "Needle Drop"
-  - "OMEAC"
+  - 'Bandcamp'
+  - 'Bunkai-Kei'
+  - 'Cassette Blog'
+  - 'copyright reform'
+  - 'Foof Records'
+  - 'Free Music Archive'
+  - 'Jamendo'
+  - 'Needle Drop'
+  - 'OMEAC'
   - "Southern City's Lab"
-  - "ZigurArtists"
+  - 'ZigurArtists'
 ---
+
 Following the reveal of the [**EU Copyright Reform Proposal**](http://www.whitemarketpodcast.co.uk/blog/2016/09/16/2016-eu-copyright-reform-proposal/), this show had to feature it. The text is a disappointment, but there’s still a lot that can be done to make it change. The piece is [available for separate download](https://archive.org/details/2016EUCopyrightProposalReform) in a variety of formats, so make sure you share it, remix it, use it for whatever you need, just spread the word!
 
 We also went aboard the public domain ship, once again, and found a bit more about “The Little Prince”. Last but not the least, we brought you more than a handful of awesome free tracks – most of them with permissions for remixing.
@@ -36,7 +37,6 @@ Chicocorrea – Zum Zum \[[Cassette Blog](http://www.cassetteblog.com/2016/08/ch
 Tab & Anitek – ToyNBee \[[Jamendo](https://www.jamendo.com/track/1174889/tab-and-anitek-toynbee)\] // [CC BY-NC-ND](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 Jasmine Jordan – Smile \[[Jamendo](https://www.jamendo.com/track/1300140/smile)\] // [CC BY-NC-ND](https://creativecommons.org/licenses/by-nc-nd/3.0/)  
 Ziegler Co. – Waking Up At Sunset \[[Foof Records](http://www.foofrecords.com/releases/single/the_righteous_few_waking_up_at_sunset)\] // [CC BY-NC-SA  
-](https://creativecommons.org/licenses/by-nc-sa/3.0/)notforme! – These Words Are Now Colours \[[Southern City’s Lab](http://www.southerncitylab.net/2016/08/SCL185.html)\] // [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
-  
-  
-<small>.: Photo by <a href="https://www.flickr.com/photos/dskley/15741575661">Dennis Skley</a> :. <a href="https://creativecommons.org/licenses/by-nd/2.0/" target="blank">CC BY-ND</a></small>
+](https://creativecommons.org/licenses/by-nc-sa/3.0/)notforme! – These Words Are Now Colours \[[Southern City’s Lab](http://www.southerncitylab.net/2016/08/SCL185.html)\] // [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/3.0/)
+
+<small>.: Photo by [Dennis Skley](https://www.flickr.com/photos/dskley/15741575661) :. [CC BY-ND](https://creativecommons.org/licenses/by-nd/2.0/)</small>

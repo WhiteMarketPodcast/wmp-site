@@ -26,4 +26,4 @@ Lucas Perný & Miloslav Kollar – [Vishnu Meets Funk](http://freemusicarchive.o
 Juanitos – [Bailando Boogaloo](http://freemusicarchive.org/music/Juanitos/Welcome_in_the_House_of_FUN/)  
 Breakbeat Chemists – [Two](http://freemusicarchive.org/music/BreakBeat_Chemists/BreakBeat_Chemists_I/) \[blocSonic\]
 
-<small>.: Photo by <a href="https://www.flickr.com/photos/erin_m/4226405549/" target="blank">erin m</a> :. <a href="https://creativecommons.org/licenses/by-nc/2.0/" target="blank">CC BY-NC</a></small>
+<small>.: Photo by [erin m](https://www.flickr.com/photos/erin_m/4226405549/) :. [CC BY-NC](https://creativecommons.org/licenses/by-nc/2.0/)</small>

@@ -1,24 +1,25 @@
 ---
 templateKey: blog-post
-title: "Session 2.12 – Back to the music"
+title: 'Session 2.12 – Back to the music'
 date: 2015-09-27T21:00:31.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/10/CC-BY-SA-tape-by-Dennis-Skley-e1443709158866.jpg"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/10/CC-BY-SA-tape-by-Dennis-Skley-e1443709158866.jpg'
+format: 'audio'
 categories:
-  - "Podcasts"
+  - 'Podcasts'
 tags:
-  - "23 Seconds"
-  - "Bandcamp"
-  - "blocSonic"
-  - "Cabeza Netlabel"
-  - "Free Music Archive"
-  - "Local Records"
-  - "Microwave Netlabel"
-  - "No Copyright Sounds"
-  - "Records on Ribs"
-  - "Soundcloud"
-  - "Tanukieri Records"
+  - '23 Seconds'
+  - 'Bandcamp'
+  - 'blocSonic'
+  - 'Cabeza Netlabel'
+  - 'Free Music Archive'
+  - 'Local Records'
+  - 'Microwave Netlabel'
+  - 'No Copyright Sounds'
+  - 'Records on Ribs'
+  - 'Soundcloud'
+  - 'Tanukieri Records'
 ---
+
 We’re back to the music after two wonderful sessions with interviews – one with **[MEP Julia Reda](http://www.whitemarketpodcast.co.uk/podcasts/2015/09/08/session-2-11-julia-reda-and-how-you-can-help-fixcopyright/)**, the other one with the **[director of the Free Music Archive](http://www.whitemarketpodcast.co.uk/podcasts/2015/09/06/session-2-10-all-hail-the-free-music-archive/)**, Cheyenne Hohman. This means netlabels are back, Bandcamp is back and basically I am offering you a full hour of unbelievably amazing free music.
 
 Emerald Park – GO! GO! GO! \[[23 Seconds](http://www.23seconds.org/)/[blocSonic](http://blocsonic.com/releases/bscomp0048)\]  
@@ -35,4 +36,4 @@ Hot Diggity Dog – You fool \[[Bandcamp](http://hotdiggitydog.bandcamp.com/albu
 Gi Gi Giraffe – Picture \[[Tanukineiri Records](https://tanukineirirecords.bandcamp.com/album/home-made-works)\]  
 Nación Funk – Psychosoul \[[Bandcamp](http://nacionfunk.bandcamp.com/album/snf-1-cardova)\]
 
-<small>.: Photo by <a href="https://www.flickr.com/photos/dskley/16296784188" target="blank">Dennis Skley</a> :. <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a></small>
+<small>.: Photo by [Dennis Skley](https://www.flickr.com/photos/dskley/16296784188) :. [CC-BY-SA](https://creativecommons.org/licenses/by-sa/2.0/)</small>

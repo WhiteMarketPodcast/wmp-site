@@ -1,21 +1,22 @@
 ---
 templateKey: blog-post
-title: "Session 3.10 – All We Need Is Free Music Archive"
+title: 'Session 3.10 – All We Need Is Free Music Archive'
 date: 2016-09-25T22:05:20.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/09/CC0-Free-Music-2-e1474890099877.jpeg"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/09/CC0-Free-Music-2-e1474890099877.jpeg'
+format: 'audio'
 categories:
-  - "Interviews"
-  - "Podcasts"
+  - 'Interviews'
+  - 'Podcasts'
 tags:
-  - "Free Music Archive"
-  - "Interview"
-  - "Monster Jinx"
-  - "Needle Drop"
+  - 'Free Music Archive'
+  - 'Interview'
+  - 'Monster Jinx'
+  - 'Needle Drop'
 ---
+
 This week, we dedicate some time and love to highlight the wonderful work of [**Free Music Archive**](http://freemusicarchive.org/). We only featured tracks that can be found on FMA, and we sat down to talk to **Cheyenne Hohman**, the Free Music Archive’s director. We talked about [their current fundraiser](https://freemusicarchive.org/donate), their work with curators and artists, the challenges they face and how anyone can help them.
 
-<a href="https://freemusicarchive.org/donate" target="\_blank">Support the Free Music Archive!</a>
+[Support the Free Music Archive!](https://freemusicarchive.org/donate)
 
 Taseh – [Caramella Peak](http://freemusicarchive.org/music/Monster_Jinx/Payday_Vol01/) // [CC BY-NC-SA  
 ](https://creativecommons.org/licenses/by-nc-sa/4.0/)Broke For Free – [Night Owl](http://freemusicarchive.org/music/Broke_For_Free/Directionless_EP/) // [CC BY](https://creativecommons.org/licenses/by/3.0/)  
