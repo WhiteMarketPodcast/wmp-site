@@ -11,7 +11,7 @@ import {
   PreviewTextContainer,
   BlogType,
   DateText,
-  PaddedFlexCenter,
+  FlexCenterWithMargin,
   LinkButton,
 } from 'styles/components';
 
@@ -65,9 +65,9 @@ export default class IndexPage extends Component {
     return (
       <Layout>
         <BlogPostPreviewGrid>{this.renderPosts()}</BlogPostPreviewGrid>
-        <PaddedFlexCenter>
+        <FlexCenterWithMargin>
           <LinkButton to="/blog/">See more posts</LinkButton>
-        </PaddedFlexCenter>
+        </FlexCenterWithMargin>
       </Layout>
     );
   }

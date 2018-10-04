@@ -1,7 +1,13 @@
 import _ from 'lodash';
 import styled from 'styled-components';
 import Link from 'components/Link';
-import { black, emerald, translucentEmerald, white } from '../colors';
+import {
+  black,
+  emerald,
+  translucentEmerald,
+  translucentWhite,
+  white,
+} from '../colors';
 import { onMobile } from '../mediaQueries';
 
 const isHighlightedPreview = (index) => _.includes([0, 3, 5], index);
@@ -19,8 +25,7 @@ export const BlogPostPreviewGrid = styled.div`
   grid-gap: 5px;
   min-height: calc(100vh - 180px);
   max-width: 1500px;
-  margin: 0 auto;
-  padding: 2rem 0;
+  margin: 2rem auto;
   color: ${white};
   grid-auto-flow: dense;
   grid-template-areas:
@@ -38,7 +43,8 @@ export const BlogPostPreviewGrid = styled.div`
   }
 
   @media (min-width: 576px) {
-    padding: 30px 10px;
+    margin: 30px auto;
+    padding: 0 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 40px repeat(4, 250px);
     grid-template-areas:
@@ -171,7 +177,7 @@ export const PreviewTextContainer = styled.div`
   ${({ index }) => {
     const [bgColor, n] = isHighlightedPreview(index)
       ? [translucentEmerald, `1.5`]
-      : [white, `1`];
+      : [translucentWhite, `1`];
     return `
       background-color: ${bgColor};
       padding: ${n}rem;

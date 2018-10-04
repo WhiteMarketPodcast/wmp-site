@@ -23,8 +23,8 @@ export const FlexCenter = styled.div`
   align-items: center;
 `;
 
-export const PaddedFlexCenter = styled(FlexCenter)`
-  padding: 1.5rem 1rem;
+export const FlexCenterWithMargin = styled(FlexCenter)`
+  margin: 1.5rem 1rem;
 `;
 
 export const LinkButton = styled(Link)`
