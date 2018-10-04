@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Public Money? Public Code!'
 date: 2017-09-14T15:44:29.000Z
-imageURL: 'https://i.vimeocdn.com/video/653993506.jpg?mw=800&mh=450'
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/public-money-public-code.jpg'
 imageAlt: 'public-money-public-code'
 format: 'video'
 categories:
