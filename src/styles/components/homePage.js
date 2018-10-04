@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import styled from 'styled-components';
 import Link from 'components/Link';
-import { black, emerald, white } from '../colors';
+import { black, emerald, translucentEmerald, white } from '../colors';
 import { onMobile } from '../mediaQueries';
 
 const isHighlightedPreview = (index) => _.includes([0, 3, 5], index);
@@ -15,7 +15,7 @@ function getImageURL(image, index, isSmall = false) {
 export const BlogPostPreviewGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(8, 150px);
+  grid-template-rows: repeat(8, minmax(150px, min-content));
   grid-gap: 5px;
   min-height: calc(100vh - 180px);
   max-width: 1500px;
@@ -33,6 +33,10 @@ export const BlogPostPreviewGrid = styled.div`
     'big2'
     'small5';
 
+  > a::before {
+    opacity: 0;
+  }
+
   @media (min-width: 576px) {
     padding: 30px 10px;
     grid-template-columns: repeat(3, 1fr);
@@ -43,10 +47,14 @@ export const BlogPostPreviewGrid = styled.div`
       'small2  big1    big1  '
       'big2    big2    small3'
       'small4  small5  .     ';
+
+    > a::before {
+      opacity: 1;
+    }
   }
 
   @media (min-width: 576px) and (max-width: 991px) {
-    div:nth-child(8)::before {
+    a:nth-child(8)::before {
       border: 0 solid transparent;
       border-right-color: ${white};
       border-width: 15px 15px 0 0;
@@ -68,7 +76,7 @@ export const BlogPostPreviewGrid = styled.div`
       'big2    big2  small4  small5'
       '.       .     small4  small5';
 
-    div:nth-child(7)::before {
+    a:nth-child(7)::before {
       border: 0 solid transparent;
       border-left-color: ${white};
       border-width: 20px 0 0 20px;
@@ -93,14 +101,6 @@ export const BlogPostPreviewGrid = styled.div`
       top: 0;
       z-index: 5;
     }
-  }
-
-  .big {
-    background-color: #00b2ca;
-  }
-
-  .small {
-    background-color: #7dcfb6;
   }
 
   > a:nth-child(2) {
@@ -146,7 +146,6 @@ export const BlogPreviewImage = styled.div`
   top: 0;
   bottom: 0;
   left: 0;
-  width: 100%;
   background-color: ${emerald};
   background-position: center;
   background-size: cover;
@@ -157,6 +156,7 @@ export const BlogPreviewImage = styled.div`
       rgba(0, 0, 0, 0.25)
     ),
     url(${({ bgImage, index }) => getImageURL(bgImage, index)});
+  width: 100%;
 
   @media (max-width: 575px) {
     background-image: url(${({ bgImage, index }) => getImageURL(bgImage, index, true)});
@@ -169,15 +169,12 @@ export const PreviewTextContainer = styled.div`
   width: 100%;
 
   ${({ index }) => {
-    if (isHighlightedPreview(index)) {
-      return `
-        background-color: transparent;
-        padding: 1.5rem;
-      `;
-    }
+    const [bgColor, n] = isHighlightedPreview(index)
+      ? [translucentEmerald, `1.5`]
+      : [white, `1`];
     return `
-      background-color: ${white};
-      padding: 1rem;
+      background-color: ${bgColor};
+      padding: ${n}rem;
     `;
   }};
 
@@ -186,6 +183,7 @@ export const PreviewTextContainer = styled.div`
   }
 
   @media (max-width: 575px) {
+    align-self: center;
     background-color: ${white};
     padding: 0 1rem;
     margin-left: 40%;
@@ -220,5 +218,17 @@ export const PreviewTitle = styled.h2`
       color: ${black};
       font-size: 1.2rem;
     }
+  }
+`;
+
+export const DateText = styled.div`
+  color: ${black};
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: right;
+  margin-top: 0.5rem;
+
+  @media (min-width: 576px) {
+    color: ${({ index }) => (isHighlightedPreview(index) ? white : black)};
   }
 `;

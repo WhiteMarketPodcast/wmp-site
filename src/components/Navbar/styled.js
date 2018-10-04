@@ -2,11 +2,15 @@ import styled from 'styled-components';
 import posed from 'react-pose';
 import Link from 'components/Link';
 import { emerald, white } from 'styles/colors';
+import { onMobile } from 'styles/mediaQueries';
 
 const nav = posed.nav({
   show: { y: 0, transition: { ease: 'easeInOut' } },
   hide: { y: '-100%', transition: { ease: 'easeInOut' } },
 });
+
+export const MOBILE_NAV_HEIGHT = `50px`;
+export const DESKTOP_NAV_HEIGHT = `80px`;
 
 export const Nav = styled(nav)`
   position: fixed;
@@ -18,9 +22,13 @@ export const Nav = styled(nav)`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background-color: ${white};
+  background-color: ${emerald};
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   padding: 0;
+
+  @supports (filter: invert(0.7)) {
+    background-color: ${white};
+  }
 
   h1 {
     display: flex;
@@ -31,13 +39,21 @@ export const Nav = styled(nav)`
 `;
 
 export const Logo = styled.img`
-  height: 80px;
+  height: ${DESKTOP_NAV_HEIGHT};
   padding: 0 1rem;
   transition: all 0.3s ease;
   z-index: 1001;
 
-  &:not(.open) {
-    filter: invert(1);
+  @supports (filter: invert(0.7)) {
+    filter: invert(0);
+
+    &:not(.open) {
+      filter: invert(0.7);
+    }
+  }
+
+  ${onMobile} {
+    height: ${MOBILE_NAV_HEIGHT};
   }
 `;
 
@@ -51,6 +67,13 @@ export const Button = styled.button`
 
   .open {
     fill: ${white};
+  }
+
+  ${onMobile} {
+    svg {
+      height: 30px;
+      width: 30px;
+    }
   }
 `;
 
@@ -101,6 +124,6 @@ export const MenuItem = styled(li)`
 
 export const NavLink = styled(Link)`
   color: ${white};
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
 `;

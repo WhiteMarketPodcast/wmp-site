@@ -10,6 +10,9 @@ import {
   BlogPreviewImage,
   PreviewTextContainer,
   BlogType,
+  DateText,
+  PaddedFlexCenter,
+  LinkButton,
 } from 'styles/components';
 
 const formatConverter = {
@@ -39,7 +42,7 @@ export default class IndexPage extends Component {
           imageURL,
           // imageAlt,
           title,
-          // date,
+          date,
           format,
         },
         fields: { slug },
@@ -51,6 +54,7 @@ export default class IndexPage extends Component {
           <PreviewTextContainer index={index}>
             <BlogType>{formatConverter[format]}</BlogType>
             <PreviewTitle index={index}>{title}</PreviewTitle>
+            <DateText index={index}>{date}</DateText>
           </PreviewTextContainer>
         </BlogPreviewContainer>
       );
@@ -61,6 +65,9 @@ export default class IndexPage extends Component {
     return (
       <Layout>
         <BlogPostPreviewGrid>{this.renderPosts()}</BlogPostPreviewGrid>
+        <PaddedFlexCenter>
+          <LinkButton to="/blog/">See more posts</LinkButton>
+        </PaddedFlexCenter>
       </Layout>
     );
   }

@@ -52,7 +52,7 @@ class Navbar extends Component {
           <NavLink to="/about">About</NavLink>
         </MenuItem>
         <MenuItem>
-          <NavLink to="/products">Products</NavLink>
+          <NavLink to="/blog">Blog posts</NavLink>
         </MenuItem>
         <MenuItem>
           <NavLink to="/tags">Tags</NavLink>

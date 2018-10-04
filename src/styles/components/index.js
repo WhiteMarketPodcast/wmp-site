@@ -17,12 +17,28 @@ export const PaddedSection = styled.section`
   }
 `;
 
+export const FlexCenter = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const PaddedFlexCenter = styled(FlexCenter)`
+  padding: 1.5rem 1rem;
+`;
+
 export const LinkButton = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid ${emerald};
   padding: 0.8em 1.5em;
+`;
+
+export const BrandH1 = styled.h1`
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
 `;
 
 export * from './blogPostPage';
