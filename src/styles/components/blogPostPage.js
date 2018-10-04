@@ -97,6 +97,7 @@ export const BlogContent = styled.div`
   img {
     display: flex;
     margin: 1rem auto;
+    max-width: 100%;
   }
 `;
 
