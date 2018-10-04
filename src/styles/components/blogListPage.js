@@ -54,7 +54,7 @@ export const BlogPreviewContainer = styled(Link)`
       & {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: minmax(150px, min-content) auto;
+        grid-template-rows: minmax(180px, min-content) auto;
         grid-template-areas: '. .' 'excerpt excerpt';
         grid-auto-flow: dense;
       }
