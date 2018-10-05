@@ -8,7 +8,7 @@ class Navbar extends Component {
   state = { open: false, position: 0, hideNav: false, interval: null };
 
   componentDidMount() {
-    this.setState({ interval: setInterval(this.listenForScroll, 600) });
+    this.setState({ interval: setInterval(this.listenForScroll, 500) });
   }
 
   componentWillUnmount() {
@@ -28,12 +28,13 @@ class Navbar extends Component {
     const { position, hideNav } = this.state;
     const newPosition = window.scrollY;
     if (newPosition === position) return;
+    const isNearTheTop = newPosition <= 80;
 
     const stateChange = { position: newPosition };
 
-    if (position < newPosition && !hideNav) {
+    if (!isNearTheTop && position < newPosition && !hideNav) {
       stateChange.hideNav = true;
-    } else if (hideNav && position > newPosition) {
+    } else if (hideNav && (isNearTheTop || position > newPosition)) {
       stateChange.hideNav = false;
     }
 

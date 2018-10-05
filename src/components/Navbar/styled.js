@@ -6,7 +6,7 @@ import { onMobile } from 'style/mediaQueries';
 
 const nav = posed.nav({
   show: { y: 0, transition: { ease: 'easeInOut' } },
-  hide: { y: '-100%', transition: { ease: 'easeInOut' } },
+  hide: { y: '-100%', delay: 300, transition: { ease: 'easeInOut' } },
 });
 
 export const MOBILE_NAV_HEIGHT = `50px`;
