@@ -7,7 +7,7 @@ import Layout from 'components/Layout';
 import { PaddedSection } from 'style/components';
 import { List, Item, TagLink } from 'style/components/tagsPage';
 
-const getRemsFromCount = (count) => `${count * 0.05 + 1}rem`;
+const getRemsFromCount = (count) => `${count * 0.05 + 0.8}rem`;
 
 class TagsPage extends Component {
   static propTypes = { data: object.isRequired };

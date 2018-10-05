@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Link from 'components/Link';
-import { emerald } from '../colors';
+import { onMobile } from 'style/mediaQueries';
+import { emerald } from 'style/colors';
 
 export const List = styled.ul`
   display: flex;
@@ -8,18 +9,32 @@ export const List = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+
+  ${onMobile} {
+    justify-content: center;
+  }
 `;
 
 export const Item = styled.li`
   display: inline-block;
-  padding: 0 0.5rem 0.5rem 0;
+  margin: 0.3rem;
+
+  ${onMobile} {
+    margin: 0.2rem;
+  }
 `;
 
 export const TagLink = styled(Link)`
   display: flex;
   border: 1px solid ${emerald};
   color: ${emerald};
+  line-height: 1.2;
   padding: 0.5rem 0.8rem;
+
+  ${onMobile} {
+    padding: 0.3rem 0.5rem;
+    text-align: center;
+  }
 
   &:hover {
     filter: brightness(110%);

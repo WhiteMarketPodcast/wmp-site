@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import Link from 'components/Link';
 import { CloseIcon, MenuIcon } from 'mdi-react';
 import logo from 'img/White-market-transp-logo.png';
-import { Button, Logo, Menu, MenuItem, Nav, NavLink } from './styled';
+import { Button, Logo, LogoLink, Menu, MenuItem, Nav, NavLink } from './styled';
 
 class Navbar extends Component {
   state = { open: false, position: 0, hideNav: false, interval: null };
@@ -69,17 +68,11 @@ class Navbar extends Component {
 
     return (
       <Nav className={className} pose={this.getNavPose()} initialPose="show">
-        <div>
-          <Link to="/">
-            <h1>
-              <Logo
-                className={className}
-                src={logo}
-                alt="White Market Podcast"
-              />
-            </h1>
-          </Link>
-        </div>
+        <LogoLink to="/">
+          <h1>
+            <Logo className={className} src={logo} alt="White Market Podcast" />
+          </h1>
+        </LogoLink>
         <Button type="button" onClick={this.toggleNavbar}>
           <Icon className={className} size={35} />
         </Button>

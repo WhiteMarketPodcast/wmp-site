@@ -38,11 +38,14 @@ export const Nav = styled(nav)`
   }
 `;
 
+export const LogoLink = styled(Link)`
+  z-index: 1001;
+`;
+
 export const Logo = styled.img`
   height: ${DESKTOP_NAV_HEIGHT};
   padding: 0 1rem;
   transition: all 0.3s ease;
-  z-index: 1001;
 
   @supports (filter: invert(0.7)) {
     filter: invert(0);
