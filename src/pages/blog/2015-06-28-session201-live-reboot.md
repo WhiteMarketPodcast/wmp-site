@@ -4,8 +4,9 @@ title: Session 2.01 – Live Reboot
 date: 2015-06-28T21:00:11.000Z
 imageURL: >-
   https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-BY-Restart-by-Acid-Pix.jpg
+format: audio
 podcastURL: >-
-  http://media.blubrry.com/white_market/s/ia601500.us.archive.org/28/items/WhiteMarket20150628Session201_201508/WhiteMarket-20150628-Session201.mp3
+  https://media.blubrry.com/white_market/s/ia601500.us.archive.org/28/items/WhiteMarket20150628Session201_201508/WhiteMarket-20150628-Session201.mp3
 tags:
   - aaahh records
   - Bandcamp

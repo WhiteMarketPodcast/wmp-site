@@ -1,29 +1,31 @@
 ---
 templateKey: blog-post
-title: "Session 3.13 – Exceptions are not the Rule"
+title: 'Session 3.13 – Exceptions are not the Rule'
 date: 2016-10-16T21:33:36.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-0-Messy-Ruler.jpeg"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-0-Messy-Ruler.jpeg'
+format: 'audio'
+podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/WhiteMarket-20161016-Session313/WhiteMarket-20161016-Session313.mp3
 categories:
-  - "Interviews"
-  - "Podcasts"
+  - 'Interviews'
+  - 'Podcasts'
 tags:
-  - "Archaich Horizon"
-  - "Bandcamp"
-  - "blocSonic"
-  - "Copyright Exceptions"
-  - "European Union"
-  - "Foof Records"
-  - "Free Music Archive"
-  - "Fwonk*"
-  - "Jamendo"
-  - "Kennisland"
-  - "Lost Children"
-  - "Musique Libre"
-  - "Needle Drop"
-  - "Starfrosch"
-  - "Z Tapes"
+  - 'Archaich Horizon'
+  - 'Bandcamp'
+  - 'blocSonic'
+  - 'Copyright Exceptions'
+  - 'European Union'
+  - 'Foof Records'
+  - 'Free Music Archive'
+  - 'Fwonk*'
+  - 'Jamendo'
+  - 'Kennisland'
+  - 'Lost Children'
+  - 'Musique Libre'
+  - 'Needle Drop'
+  - 'Starfrosch'
+  - 'Z Tapes'
 ---
+
 This week, I had the chance to talk to **Maarten Zeinstra**, from Amsterdam-based think tank [Kennisland](https://www.kl.nl/en/), to find out more about the project [**Copyright Exceptions**](http://copyrightexceptions.eu). We already know copyright law is particularly complex, but things do get even more confusing once you look at the different regulations each one of the 28 European Union countries has.
 
 On a completely different side note, I would like to thank to [**Starfrosch**](http://starfrosch.com) and [**Musique Libre**](http://dogmazic.net) for helping me out in finding the CC licence of This Mess is Mine release, which allowed me to play it on the show. They are both great resources if you’re into Creative Commons music, so make sure you check them out.

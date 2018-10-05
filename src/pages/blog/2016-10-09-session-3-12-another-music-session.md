@@ -1,24 +1,26 @@
 ---
 templateKey: blog-post
-title: "Session 3.12 – Another Music Session"
+title: 'Session 3.12 – Another Music Session'
 date: 2016-10-09T21:01:42.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-0-RecordNeedle-1.jpg"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-0-RecordNeedle-1.jpg'
+format: 'audio'
+podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/WhiteMarket20161009Session312/WhiteMarket-20161009-Session312.mp3
 categories:
-  - "Podcasts"
+  - 'Podcasts'
 tags:
-  - "Bad Panda Records"
-  - "Fax Records"
-  - "Free Music Archive"
-  - "Jamendo"
-  - "La bèl"
-  - "Lixo Records"
-  - "Monster Jinx"
-  - "Phonocake"
-  - "rec72"
-  - "Soundcloud"
-  - "Z Tapes"
+  - 'Bad Panda Records'
+  - 'Fax Records'
+  - 'Free Music Archive'
+  - 'Jamendo'
+  - 'La bèl'
+  - 'Lixo Records'
+  - 'Monster Jinx'
+  - 'Phonocake'
+  - 'rec72'
+  - 'Soundcloud'
+  - 'Z Tapes'
 ---
+
 After two very [special](http://www.whitemarketpodcast.co.uk/podcasts/2016/09/25/session-3-10-need-free-music-archive/) [episodes](http://www.whitemarketpodcast.co.uk/podcasts/2016/10/02/session-3-11-experimentalism-pilot-eleven/), today we go back to a full music session. We have bedroom pop and undiscovered netlabels, as well as some older loves.
 
 As my [dissertation is coming to an end](http://www.whitemarketpodcast.co.uk/blog/2016/07/06/white-market-becomes-syndication-platform/), I will continue to release new epiosdes of White Market Podcast on a weekly basis. I have a few interviews and features planned, and I still have a [White Market in Context](http://www.whitemarketpodcast.co.uk/blog/2016/09/27/white-market-context-i-production-effort-production-values/) I’d like to share about the show in relation to its community. For now, I would like to express my tremendous gratitude towards all the interviewees in this season (so far), to [**Soundart Radio**](http://soundartradio.org.uk/) and Diane Gray for their immense help with the radio broadcast side of it, and, of course, to all the artists and labels that keep releasing their music under **Creative Commons**.

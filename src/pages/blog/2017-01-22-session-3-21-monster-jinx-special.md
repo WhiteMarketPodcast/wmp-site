@@ -1,16 +1,18 @@
 ---
 templateKey: blog-post
-title: "Session 3.21 – Monster Jinx Special"
+title: 'Session 3.21 – Monster Jinx Special'
 date: 2017-01-22T23:30:02.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/Monster-Jinx-e1485339008611.jpg"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/Monster-Jinx-e1485339008611.jpg'
+format: 'audio'
+podcastURL: https://media.blubrry.com/white_market/archive.org/download/WhiteMarket20170122Session321/WhiteMarket-20170122-Session321.mp3
 categories:
-  - "Interviews"
-  - "Podcasts"
+  - 'Interviews'
+  - 'Podcasts'
 tags:
-  - "Interview"
-  - "Monster Jinx"
+  - 'Interview'
+  - 'Monster Jinx'
 ---
+
 I have been wanting to do this for a long time, but somehow the opportunity only arrived now. This week’s show is a [**Monster Jinx**](http://www.monsterjinx.com/) special! Monster Jinx is a Portugal/Internet-based label specialised in hip-hop and electronic music. They are also an artist collective, and identify themselves as an indie label, having [dropped their first record back in 2009](https://monstrorobot.bandcamp.com/album/monstro-robot). In the last few years, they managed to grab the attention of the Portuguese media, get some airplay on national radio stations and play at big festivals. Despite these big achievements, they remain humble and focused on putting out great music. With an [enviable roster of MCs and producers](http://www.monsterjinx.com/artistas/), Monster Jinx are a great example of how Creative Commons licenses can boost the reach of a work, and how releasing music for free doesn’t mean a product is any less appealing.
 
 If you’re a regular listener of the show, you probably know at least part of their work by now, as I have been a long time supporter of their work. In the last few years, I have been uploading a great part of their music to [WMP’s curator collection at Free Music Archive](http://freemusicarchive.org/curator/programamarcabranca/).

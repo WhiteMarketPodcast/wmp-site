@@ -4,7 +4,8 @@ title: 'Session 2.06 – 80s Flavoured Music'
 date: 2015-08-09T21:00:27.000Z
 imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-NC-SA-Radio-by-Bernhard-Benke.jpg'
 imageAlt: 'CC-NC-SA-Radio-by-Bernhard-Benke'
-format: 'standard'
+format: 'audio'
+podcastURL: https://archive.org/download/WhiteMarket20150809Session206/WhiteMarket-20150809-Session206.mp3
 categories:
   - 'Podcasts'
 tags:

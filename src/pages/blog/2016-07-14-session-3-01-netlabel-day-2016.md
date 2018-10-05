@@ -1,26 +1,28 @@
 ---
 templateKey: blog-post
-title: "Session 3.01 – Netlabel Day 2016"
+title: 'Session 3.01 – Netlabel Day 2016'
 date: 2016-07-14T21:20:34.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/07/NetlabelDay2016.jpg"
-imageAlt: "NetlabelDay2016"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/07/NetlabelDay2016.jpg'
+imageAlt: 'NetlabelDay2016'
+format: 'audio'
+podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/WhiteMarket20160715Session301/WhiteMarket-20160715-Session301.mp3
 categories:
-  - "Interviews"
-  - "Podcasts"
+  - 'Interviews'
+  - 'Podcasts'
 tags:
-  - "blocSonic"
-  - "Caballito Netlabel"
-  - "CeroUno Records"
-  - "Fax Records"
-  - "FutureDraht"
-  - "mahorka"
-  - "netlabel day"
-  - "Netlabel Day 2016"
-  - "OMEAC"
-  - "rec72"
-  - "Sólo le Pido a Dior"
+  - 'blocSonic'
+  - 'Caballito Netlabel'
+  - 'CeroUno Records'
+  - 'Fax Records'
+  - 'FutureDraht'
+  - 'mahorka'
+  - 'netlabel day'
+  - 'Netlabel Day 2016'
+  - 'OMEAC'
+  - 'rec72'
+  - 'Sólo le Pido a Dior'
 ---
+
 Today is [**Netlabel Day**](http://netlabelday.blogspot.co.uk/p/home.html) and we are, of course, celebrating it properly. This week’s session featured exclusively music that was released for this year’s most exciting netlabel event, and we even had an interview with Manuel Silva, from [M.I.S.T. Records](http://mistrecords.blogspot.co.uk/p/home.html), who is the main person behind the initiative.
 
 ELYA – Chinese Calendar \[[La bèl](https://labelnetlabel.bandcamp.com/album/glaciers)\] _\[[CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/3.0/)\]_  

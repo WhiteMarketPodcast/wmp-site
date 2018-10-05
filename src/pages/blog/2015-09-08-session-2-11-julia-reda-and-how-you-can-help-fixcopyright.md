@@ -5,6 +5,7 @@ date: 2015-09-08T17:00:25.000Z
 imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/09/CC-BY-SA-JuliaReda-by-ActuaLitté.jpg'
 imageAlt: 'CC-BY-SA-JuliaReda-by-ActuaLitté'
 format: 'audio'
+podcastURL: https://media.blubrry.com/white_market/s/ia601500.us.archive.org/17/items/WhiteMarket20150920Session211/WhiteMarket-20150920-Session211.mp3
 categories:
   - 'Interviews'
   - 'Podcasts'

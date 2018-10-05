@@ -5,6 +5,7 @@ date: 2015-07-05T21:00:24.000Z
 imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-NC-SA-Beach-Sky-by-Darren-Flinders.jpg'
 imageAlt: 'CC-NC-SA-Beach-Sky-by-Darren-Flinders'
 format: 'audio'
+podcastURL: https://media.blubrry.com/white_market/s/ia601509.us.archive.org/27/items/WhiteMarket20150705Session202/WhiteMarket-20150705-Session202.mp3
 categories:
   - 'Podcasts'
 tags:

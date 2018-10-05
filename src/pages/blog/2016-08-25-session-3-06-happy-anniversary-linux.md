@@ -1,26 +1,28 @@
 ---
 templateKey: blog-post
-title: "Session 3.06 – Happy Anniversary, Linux!"
+title: 'Session 3.06 – Happy Anniversary, Linux!'
 date: 2016-08-25T23:00:58.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/08/CC-0-Birthday-3.jpeg"
-imageAlt: "CC-0-Birthday-by-Annie-Sprat"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/08/CC-0-Birthday-3.jpeg'
+imageAlt: 'CC-0-Birthday-by-Annie-Sprat'
+format: 'audio'
+podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/WhiteMarket20160825Session306/WhiteMarket-20160825-Session306.mp3
 categories:
-  - "Podcasts"
+  - 'Podcasts'
 tags:
-  - "2419 Record Label"
-  - "Bandcamp"
-  - "Bunkai-Kei"
-  - "Cassette Blog"
-  - "documentary"
-  - "Headphonica"
-  - "Jamendo"
-  - "Kreislauf"
-  - "Linux"
-  - "Linux 25"
-  - "Nostress"
-  - "Picpack"
+  - '2419 Record Label'
+  - 'Bandcamp'
+  - 'Bunkai-Kei'
+  - 'Cassette Blog'
+  - 'documentary'
+  - 'Headphonica'
+  - 'Jamendo'
+  - 'Kreislauf'
+  - 'Linux'
+  - 'Linux 25'
+  - 'Nostress'
+  - 'Picpack'
 ---
+
 This week, we celebrated **Linux’s 25th anniversary**. So, on top of the usual free music playlist, there was also a  brand new segment. For the first time ever on the show, we played a **documentary**.
 
 “[**Linux 25 – The Story of Linux**](http://www.whitemarketpodcast.co.uk/features/documentaries/2016/08/25/linux-25-story-linux/)” is a White Market Podcast production and it is available for free download in a variety of formats as a stand-alone piece. As usual, it is also free to share and use, as it is available under a [**Creative Commons Attribution Share-Alike**](https://creativecommons.org/licenses/by-sa/3.0/) licence.

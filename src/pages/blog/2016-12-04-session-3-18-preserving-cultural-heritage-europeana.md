@@ -4,6 +4,7 @@ title: 'Session 3.18 – Preserving cultural heritage with Europeana'
 date: 2016-12-04T21:15:48.000Z
 imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-0-Bookcase-by-Patrik-Gothe.jpg'
 format: 'audio'
+podcastURL: https://media.blubrry.com/white_market/archive.org/download/WhiteMarket-20161204-Session318/WhiteMarket-20161204-Session318.mp3
 categories:
   - 'Interviews'
   - 'Podcasts'

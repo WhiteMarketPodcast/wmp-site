@@ -1,24 +1,26 @@
 ---
 templateKey: blog-post
-title: "Session 3.07 – FSFE Summit 2016 and Some Tunes"
+title: 'Session 3.07 – FSFE Summit 2016 and Some Tunes'
 date: 2016-09-01T22:20:07.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/09/fsfe-summit-header-e1472761010649.jpg"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/09/fsfe-summit-header-e1472761010649.jpg'
+format: 'audio'
+podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/WhiteMarket20160901Session307/WhiteMarket-20160901-Session307.mp3
 categories:
-  - "Interviews"
-  - "Podcasts"
+  - 'Interviews'
+  - 'Podcasts'
 tags:
-  - "Bandcamp"
-  - "coletivomarte"
-  - "Free Music Archive"
-  - "Free Software Foundation Europe"
-  - "FSFE"
-  - "Interview"
-  - "Jamendo"
-  - "LibreCommeLair"
-  - "mahorka"
-  - "Monster Jinx"
+  - 'Bandcamp'
+  - 'coletivomarte'
+  - 'Free Music Archive'
+  - 'Free Software Foundation Europe'
+  - 'FSFE'
+  - 'Interview'
+  - 'Jamendo'
+  - 'LibreCommeLair'
+  - 'mahorka'
+  - 'Monster Jinx'
 ---
+
 This week, I had the pleasure of talking to **Jonas Öberg**, Executive Director of **[Free Software Foundation Europe](https://fsfe.org/)**. **Free Software Foundation Europe** **(FSFE)** is an organisation that advocates for the right of users to control technology, which can be achieved by using free software. On top of taking about FSFE’s work and its 15th anniversary (yeay!), we also talked a bit about [**FSFE Summit 2016**](https://fsfe.org/community/events/2016/summit/frontpage), and exciting gathering happening this weekend in Berlin.
 
 As if all this was not enough, on this episode, there was also time for some of the finest free music out there.

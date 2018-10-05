@@ -1,15 +1,17 @@
 ---
 templateKey: blog-post
-title: "Session 3.11 – Experimentalism with Pilot Eleven"
+title: 'Session 3.11 – Experimentalism with Pilot Eleven'
 date: 2016-10-02T21:05:31.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-0-Wires.jpg"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-0-Wires.jpg'
+format: 'audio'
+podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/WhiteMarket20161002Session311/WhiteMarket-20161002-Session311.mp3
 categories:
-  - "Interviews"
-  - "Podcasts"
+  - 'Interviews'
+  - 'Podcasts'
 tags:
-  - "Pilot Eleven"
+  - 'Pilot Eleven'
 ---
+
 [**Pilot Eleven**](http://www.pilot11.co.uk/index.php) is a British netlabel that often swings its way towards also being a podcast about **Creative Commons** music. I found out about it last year, because of Netlabel Day and I was ever since quite intrigued with their work.  This week, I sat down to talk to **Graeme Gill**, who is the person behind Pilot Eleven to find out a bit more about the project’s past, present and future. Of course, we also talked about music.
 
 Our Pilot Eleven special is also an experimental approach to the show. Hope you like it.

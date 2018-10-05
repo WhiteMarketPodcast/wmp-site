@@ -4,7 +4,8 @@ title: 'Session 2.05 – Lessons on where to find CC music'
 date: 2015-08-02T21:00:41.000Z
 imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-BY-Creative-Commons-Cupcakes-by-Timothy-Vollmer.jpg'
 imageAlt: 'CC-BY-Creative-Commons-Cupcakes-by-Timothy-Vollmer'
-format: 'standard'
+format: 'audio'
+podcastURL: https://archive.org/download/WhiteMarket20150802Session205/WhiteMarket-20150802.mp3
 categories:
   - 'Podcasts'
 tags:

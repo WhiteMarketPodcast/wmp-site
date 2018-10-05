@@ -3,7 +3,8 @@ templateKey: blog-post
 title: 'Session 2.16 – Live Again'
 date: 2015-11-01T20:59:15.000Z
 imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/11/3642074604_03ac355706_z.jpg'
-format: 'standard'
+format: 'audio'
+podcastURL: https://ia800202.us.archive.org/23/items/WhiteMarket20151101Session216/WhiteMarket-20151101-Session216.mp3
 categories:
   - 'Podcasts'
 tags:

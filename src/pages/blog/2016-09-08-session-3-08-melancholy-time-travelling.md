@@ -1,25 +1,27 @@
 ---
 templateKey: blog-post
-title: "Session 3.08 – Melancholy and Time Travelling"
+title: 'Session 3.08 – Melancholy and Time Travelling'
 date: 2016-09-08T22:15:04.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/09/CC-0-Melancholy.jpeg"
-imageAlt: "cc-0-melancholy"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/09/CC-0-Melancholy.jpeg'
+imageAlt: 'cc-0-melancholy'
+format: 'audio'
+podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/WhiteMarket20160902Session308/WhiteMarket-20160902-Session308.mp3
 categories:
-  - "Podcasts"
+  - 'Podcasts'
 tags:
-  - "aerotone"
-  - "Bandcamp"
-  - "Broque"
-  - "bumpfoot"
-  - "Clinical Archives"
-  - "Free Music Archive"
-  - "iD.Eology"
-  - "Insub"
-  - "Pilot Eleven"
-  - "Resting Bell"
-  - "Test Tube"
+  - 'aerotone'
+  - 'Bandcamp'
+  - 'Broque'
+  - 'bumpfoot'
+  - 'Clinical Archives'
+  - 'Free Music Archive'
+  - 'iD.Eology'
+  - 'Insub'
+  - 'Pilot Eleven'
+  - 'Resting Bell'
+  - 'Test Tube'
 ---
+
 On this week’s show we wandered between [some of our favourite old picks](http://programamarcabranca.blogspot.co.uk/), which somehow ended up on a session full of melancholic vibes. On top of the carefully picked music, we also premiered a brand **new feature** dedicated to **works in the public domain** called “**All Aboard**“. The feature will be available for separate download soon.
 
 Last but not least, a very important message: our friends at [**Free Music Archive**](http://freemusicarchive.com/) are running a [fundraiser to help them support the bandwidth costs](https://freemusicarchive.org/donate) of hosting so much amazing music. If you can, by all means do make a donation. If you’re particularly generous, you can grab one of some merch, like their newest t-shirts (and they look proper swish).

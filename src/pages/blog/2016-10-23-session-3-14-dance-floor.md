@@ -5,6 +5,7 @@ date: 2016-10-23T21:15:36.000Z
 imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-BY-Mirror-Ball-by-Ewan-Topping.jpg'
 imageAlt: 'cc-by-mirror-ball-by-ewan-topping'
 format: 'audio'
+podcastURL: https://media.blubrry.com/white_market/archive.org/download/WhiteMarket20161023Session314/WhiteMarket-20161023-Session314.mp3
 categories:
   - 'Podcasts'
 tags:

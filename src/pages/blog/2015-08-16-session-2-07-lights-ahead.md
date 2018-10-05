@@ -5,6 +5,7 @@ date: 2015-08-16T20:57:13.000Z
 imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-BY-SA-Retro-Light-by-Christian-Weidinger-e1439740533329.jpg'
 imageAlt: 'CC-BY-NC-ND-Retro-Light-by-Christian-Weidinger'
 format: 'audio'
+podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/WhiteMarket201508Session207/WhiteMarket-201508-Session207.mp3
 categories:
   - 'Podcasts'
 tags:

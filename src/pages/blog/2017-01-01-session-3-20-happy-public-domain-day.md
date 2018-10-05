@@ -1,21 +1,23 @@
 ---
 templateKey: blog-post
-title: "Session 3.20 – Happy Public Domain Day!"
+title: 'Session 3.20 – Happy Public Domain Day!'
 date: 2017-01-01T21:00:58.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC0-Bookcase-by-janko-ferlic.jpg"
-format: "audio"
+imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC0-Bookcase-by-janko-ferlic.jpg'
+format: 'audio'
+podcastURL: https://media.blubrry.com/white_market/archive.org/download/WhiteMarket20170101Session320/WhiteMarket-20170101-Session320.mp3
 categories:
-  - "Podcasts"
+  - 'Podcasts'
 tags:
-  - "Auboutdufil"
-  - "Bandcamp"
-  - "Free Music Archive"
-  - "Musopen"
-  - "public domain"
-  - "Public Domain Day"
-  - "Wowa Music"
+  - 'Auboutdufil'
+  - 'Bandcamp'
+  - 'Free Music Archive'
+  - 'Musopen'
+  - 'public domain'
+  - 'Public Domain Day'
+  - 'Wowa Music'
 ---
-On this week’s show, WMP celebrated **[Public Domain Day](https://en.wikipedia.org/wiki/Public_Domain_Day)**. Public Domain Day has been happening as an initiative for some years now, being held on January 1st every year, as this is the date when each year new works go under the public domain. _Except, of course, if you’re in the US – sadly, [there won’t be any works going into the public domain there before 2019 at least](https://web.law.duke.edu/cspd/publicdomainday)._  In the European Union, though, the rights of authors are protected within their lifetime and for seventy years after their death. This means that after that period the works become available for anybody to use them for any purpose. This year, for instance, this included the works of HG Wells and of the economist John Keynes.
+
+On this week’s show, WMP celebrated **[Public Domain Day](https://en.wikipedia.org/wiki/Public_Domain_Day)**. Public Domain Day has been happening as an initiative for some years now, being held on January 1st every year, as this is the date when each year new works go under the public domain. *Except, of course, if you’re in the US – sadly, [there won’t be any works going into the public domain there before 2019 at least](https://web.law.duke.edu/cspd/publicdomainday).*  In the European Union, though, the rights of authors are protected within their lifetime and for seventy years after their death. This means that after that period the works become available for anybody to use them for any purpose. This year, for instance, this included the works of HG Wells and of the economist John Keynes.
 
 As a celebration, the music played on the show was mostly published under [**Creative Commons Zero**](https://creativecommons.org/publicdomain/zero/1.0/), the public domain licence.
 

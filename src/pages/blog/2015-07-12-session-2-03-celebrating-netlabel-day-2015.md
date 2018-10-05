@@ -5,6 +5,7 @@ date: 2015-07-12T21:00:58.000Z
 imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/logo_netlabel_day.png'
 imageAlt: 'logo_netlabel_day'
 format: 'audio'
+podcastURL: https://media.blubrry.com/white_market/s/ia601505.us.archive.org/6/items/WhiteMarket20150712Session203/WhiteMarket-20150712-Session203.mp3
 categories:
   - 'Podcasts'
 tags:
