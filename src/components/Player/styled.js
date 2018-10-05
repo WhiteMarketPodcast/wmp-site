@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const PlyrContainer = styled.div`
-  .plyr {
-    min-width: 60vw;
-  }
+  padding: 1rem 0;
+  min-width: 300px;
+  max-width: 50ch;
+  width: 100%;
 `;

@@ -14,7 +14,6 @@ import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
 import Player from 'components/Player';
 import Content, { HTMLContent } from 'components/Content';
-import { FlexCenterWithMargin } from 'style/components';
 import {
   Hero,
   Title,
@@ -112,11 +111,7 @@ export class BlogPostTemplate extends Component {
     const url = podcastURL || videoURL;
     if (!_.includes([`audio`, `video`], format) || !url) return null;
 
-    return (
-      <FlexCenterWithMargin>
-        <Player url={url} type={format} />
-      </FlexCenterWithMargin>
-    );
+    return <Player url={url} type={format} />;
   }
 
   render() {
