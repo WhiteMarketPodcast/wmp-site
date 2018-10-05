@@ -10,7 +10,7 @@ import {
   PreviewTitle,
   BlogPreviewImage,
   PreviewTextContainer,
-  BlogType,
+  PostType,
   DateText,
   FlexCenterWithMargin,
   LinkButton,
@@ -65,7 +65,7 @@ export default class IndexPage extends Component {
       <BlogPreviewContainer key={id} to={slug}>
         <BlogPreviewImage bgImage={image || imageURL} index={index} />
         <PreviewTextContainer index={index}>
-          <BlogType>{formatConverter[format]}</BlogType>
+          <PostType format={format}>{formatConverter[format]}</PostType>
           <PreviewTitle index={index}>{title}</PreviewTitle>
           <DateText index={index}>{date}</DateText>
         </PreviewTextContainer>

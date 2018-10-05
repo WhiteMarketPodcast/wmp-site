@@ -156,8 +156,7 @@ export const BlogPreviewImage = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: 
-    url(${({ bgImage, index }) => getImageURL(bgImage, index)});
+  background-image: url(${({ bgImage, index }) => getImageURL(bgImage, index)});
   width: 100%;
 
   @media (max-width: 575px) {
@@ -192,9 +191,10 @@ export const PreviewTextContainer = styled.div`
   }
 `;
 
-export const BlogType = styled.div`
+export const PostType = styled.div`
   display: inline;
   background-color: ${emerald};
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.15);
   color: ${white};
   font-size: 0.75rem;
   letter-spacing: 1px;

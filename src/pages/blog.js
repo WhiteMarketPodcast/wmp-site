@@ -10,7 +10,7 @@ import {
   PreviewTitle,
   BlogPreviewImage,
   PreviewTextContainer,
-  BlogType,
+  PostType,
   ExcerptContainer,
   DateText,
 } from 'style/components/blogListPage';
@@ -99,7 +99,7 @@ export default class BlogList extends Component {
           >
             <BlogPreviewImage bgImage={image || imageURL} index={index} />
             <PreviewTextContainer index={index}>
-              <BlogType>{formatConverter[format]}</BlogType>
+              <PostType format={format}>{formatConverter[format]}</PostType>
               <PreviewTitle index={index}>{title}</PreviewTitle>
               <DateText>{date}</DateText>
             </PreviewTextContainer>

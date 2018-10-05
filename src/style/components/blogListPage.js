@@ -103,12 +103,13 @@ export const PreviewTextContainer = styled.div`
   }
 `;
 
-export const BlogType = styled.div`
+export const PostType = styled.div`
   position: absolute;
   top: -0.7em;
   left: 1em;
   display: inline;
   background-color: ${emerald};
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.15);
   color: ${white};
   font-size: 0.75rem;
   letter-spacing: 1px;
