@@ -129,11 +129,11 @@ export const PreviewTitle = styled.h2`
 
 export const ExcerptContainer = styled.div`
   grid-area: excerpt;
+  font-size: 0.8rem;
 
   @media (max-width: 575px) {
     background-color: ${white};
     color: ${black};
-    font-size: 0.8rem;
     padding: 0.8rem 1rem;
   }
 
@@ -145,7 +145,6 @@ export const ExcerptContainer = styled.div`
     bottom: 0;
     background-color: ${emerald};
     color: ${white};
-    font-size: 0.7rem;
     line-height: 1.5;
     overflow-y: scroll;
     padding: 0.5rem 0.5rem 1rem 0.5rem;
