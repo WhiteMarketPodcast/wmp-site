@@ -11,7 +11,7 @@ import {
 import { onMobile } from '../mediaQueries';
 
 const isHighlightedPreview = (index) => _.includes([0, 3, 5], index);
-function getImageURL(image, index, isSmall = false) {
+function getImageURL(image, index = 0, isSmall = false) {
   if (!/res.cloudinary.com/.test(image)) return image;
   let width = isHighlightedPreview(index) && !isSmall ? 1100 : 450;
   if (isSmall) width = 300;
@@ -156,11 +156,7 @@ export const BlogPreviewImage = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.25),
-      rgba(0, 0, 0, 0.25)
-    ),
+  background-image: 
     url(${({ bgImage, index }) => getImageURL(bgImage, index)});
   width: 100%;
 
@@ -237,4 +233,61 @@ export const DateText = styled.div`
   @media (min-width: 576px) {
     color: ${({ index }) => (isHighlightedPreview(index) ? white : black)};
   }
+`;
+
+export const PodcastContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: ${emerald};
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(${({ bgImage }) => getImageURL(bgImage)});
+  min-height: 50vh;
+  padding: 1rem;
+  width: 100%;
+
+  .plyr--audio .plyr__controls {
+    background-color: transparent;
+    border: 0;
+    box-shadow: unset;
+    color: ${white};
+  }
+`;
+
+export const PodcastTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem 0;
+
+  ${onMobile} {
+    padding-bottom: 0;
+  }
+`;
+
+export const PodcastSmallText = styled.div`
+  background-color: ${emerald};
+  color: ${white};
+  line-height: 1;
+  margin-bottom: 0.2rem;
+  padding: 0.3rem 0.5rem;
+  text-transform: uppercase;
+
+  ${onMobile} {
+    font-size: 0.75rem;
+  }
+`;
+
+export const PodcastTitle = styled.h2`
+  color: ${white};
+  max-width: 50ch;
+  margin: 0 auto;
 `;

@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Layout from 'components/Layout';
 import Player from 'components/Player';
 import {
@@ -14,6 +14,10 @@ import {
   DateText,
   FlexCenterWithMargin,
   LinkButton,
+  PodcastContainer,
+  PodcastTextContainer,
+  PodcastSmallText,
+  PodcastTitle,
 } from 'style/components';
 
 const formatConverter = {
@@ -34,12 +38,19 @@ export default class IndexPage extends Component {
   renderPodcast() {
     const { data } = this.props;
     const podcast = data.podcast.edges[0].node;
-    const { podcastURL } = podcast.frontmatter;
+    const { slug } = podcast.fields;
+    const { title, podcastURL, image, imageURL } = podcast.frontmatter;
 
     return (
-      <FlexCenterWithMargin>
+      <PodcastContainer bgImage={image || imageURL}>
+        <PodcastTextContainer>
+          <PodcastSmallText>Latest session</PodcastSmallText>
+          <Link to={slug}>
+            <PodcastTitle>{title}</PodcastTitle>
+          </Link>
+        </PodcastTextContainer>
         <Player url={podcastURL} />
-      </FlexCenterWithMargin>
+      </PodcastContainer>
     );
   }
 

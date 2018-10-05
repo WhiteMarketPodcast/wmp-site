@@ -22,8 +22,8 @@ export const Hero = styled.div`
   background-repeat: no-repeat;
   background-image: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.35),
-      rgba(0, 0, 0, 0.35)
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
     ),
     url(${({ src }) => src});
   min-height: 60vh;

@@ -67,12 +67,7 @@ export const BlogPreviewImage = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.25),
-      rgba(0, 0, 0, 0.25)
-    ),
-    url(${({ bgImage, index }) => getImageURL(bgImage, index)});
+  background-image: url(${({ bgImage, index }) => getImageURL(bgImage, index)});
   width: 100%;
 
   @media (max-width: 575px) {
