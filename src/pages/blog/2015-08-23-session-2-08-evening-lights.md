@@ -5,8 +5,11 @@ date: 2015-08-23T20:57:58.000Z
 format: audio
 imageURL: >-
   https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/11368969736_a022818f99_k-e1440357496329.jpg
+imageAlt: 'CC-BY-SA-Evening-Lights-by-Takashi-Hososhima'
 podcastURL: >-
   https://media.blubrry.com/white_market/s/ia601500.us.archive.org/9/items/WhiteMarket20150823Session208/WhiteMarket-20150823-Session208.mp3
+categories:
+  - Podcasts
 tags:
   - Bandcamp
   - BFW Recordings

@@ -54,6 +54,12 @@ collections:
           required: false,
         }
       - {
+          label: 'Image alt text',
+          name: 'imageAlt',
+          widget: 'string',
+          required: false,
+        }
+      - {
           label: 'Image credit',
           name: 'imageCredit',
           widget: 'string',
@@ -75,6 +81,12 @@ collections:
           label: 'Body',
           name: 'body',
           widget: 'markdown',
+        }
+      - {
+          label: 'Categories',
+          name: 'categories',
+          widget: 'list',
+          default: [],
         }
       - {
           label: 'Tags',
