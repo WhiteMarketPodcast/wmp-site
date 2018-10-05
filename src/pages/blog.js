@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
-import { BrandH1 } from 'styles/components';
+import { BrandH1 } from 'style/components';
 import {
   BlogListGrid,
   BlogPreviewContainer,

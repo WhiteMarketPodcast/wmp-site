@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
 import Content, { HTMLContent } from 'components/Content';
-import { PaddedSection } from 'styles/components';
+import { PaddedSection } from 'style/components';
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;

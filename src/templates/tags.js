@@ -3,7 +3,7 @@ import { object } from 'prop-types';
 import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import Layout from 'components/Layout';
-import { PaddedSection } from 'styles/components';
+import { PaddedSection } from 'style/components';
 
 class TagRoute extends React.Component {
   static propTypes = {

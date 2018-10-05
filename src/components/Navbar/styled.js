@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import posed from 'react-pose';
 import Link from 'components/Link';
-import { emerald, white } from 'styles/colors';
-import { onMobile } from 'styles/mediaQueries';
+import { emerald, white } from 'style/colors';
+import { onMobile } from 'style/mediaQueries';
 
 const nav = posed.nav({
   show: { y: 0, transition: { ease: 'easeInOut' } },

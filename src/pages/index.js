@@ -34,7 +34,6 @@ export default class IndexPage extends Component {
   renderPodcast() {
     const { data } = this.props;
     const podcast = data.podcast.edges[0].node;
-    console.log('podcast', podcast);
     const { podcastURL } = podcast.frontmatter;
 
     return (

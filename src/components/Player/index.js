@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Plyr from 'react-plyr';
 import { string, bool } from 'prop-types';
-import 'styles/sass/plyr/plyr.scss';
+import 'style/sass/plyr/plyr.scss';
 import { PlyrContainer } from './styled';
 
 class Player extends Component {

@@ -14,7 +14,7 @@ import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
 import Player from 'components/Player';
 import Content, { HTMLContent } from 'components/Content';
-import { FlexCenterWithMargin } from 'styles/components';
+import { FlexCenterWithMargin } from 'style/components';
 import {
   Hero,
   Title,
@@ -93,7 +93,7 @@ export class BlogPostTemplate extends Component {
     if (!pageContext) return null;
 
     const { nextPost, previousPost } = pageContext;
-    console.log('nextPost, previousPost', nextPost, previousPost);
+
     return _.map([previousPost, nextPost], (post, index) => {
       if (_.isEmpty(post)) return null;
       const { title } = post.frontmatter;

@@ -4,8 +4,8 @@ import { object } from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
-import { PaddedSection } from 'styles/components';
-import { List, Item, TagLink } from 'styles/components/tagsPage';
+import { PaddedSection } from 'style/components';
+import { List, Item, TagLink } from 'style/components/tagsPage';
 
 const getRemsFromCount = (count) => `${count * 0.05 + 1}rem`;
 
