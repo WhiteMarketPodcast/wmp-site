@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Link from 'components/Link';
 import InfiniteScroll from 'react-infinite-scroller';
 import { black, emerald, translucentEmerald, white } from '../colors';
-import { onMobile } from '../mediaQueries';
+import { onMobile, onDesktop } from '../mediaQueries';
 
 function getImageURL(image, index, isSmall = false) {
   if (!/res.cloudinary.com/.test(image)) return image;
@@ -15,22 +15,16 @@ export const BlogListGrid = styled(InfiniteScroll)`
   grid-template-columns: 1fr;
   grid-auto-rows: auto;
   grid-gap: 5px;
+  justify-content: center;
   min-height: calc(100vh - 180px);
-  max-width: 1500px;
   margin: 0 auto;
   padding-bottom: 2rem;
   color: ${white};
   grid-auto-flow: dense;
 
-  @media (min-width: 576px) {
-    padding: 30px 10px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 250px;
-  }
-
-  @media (min-width: 992px) {
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 300px;
+  ${onDesktop} {
+    grid-template-columns: repeat(auto-fill, 18rem);
+    grid-auto-rows: 16rem;
   }
 `;
 
@@ -45,7 +39,7 @@ export const BlogPreviewContainer = styled(Link)`
     filter: inherit;
   }
 
-  @media (max-width: 575px) {
+  ${onMobile} {
     align-items: flex-start;
     margin: 0.5rem 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -70,14 +64,14 @@ export const BlogPreviewImage = styled.div`
   background-image: url(${({ bgImage, index }) => getImageURL(bgImage, index)});
   width: 100%;
 
-  @media (max-width: 575px) {
+  ${onMobile} {
     background-image: url(${({ bgImage, index }) => getImageURL(bgImage, index, true)});
     height: 100%;
     grid-column: 1 / 3;
     grid-row: 1;
   }
 
-  @media (min-width: 576px) {
+  ${onDesktop} {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -92,10 +86,6 @@ export const PreviewTextContainer = styled.div`
   padding: 1rem 1.5rem;
 
   ${onMobile} {
-    padding: 1rem;
-  }
-
-  @media (max-width: 575px) {
     padding: 1rem 1rem 0.5rem 1rem;
     grid-column: 1 / 3;
     grid-row: 1;
@@ -132,13 +122,13 @@ export const ExcerptContainer = styled.div`
   grid-area: excerpt;
   font-size: 0.8rem;
 
-  @media (max-width: 575px) {
+  ${onMobile} {
     background-color: ${white};
     color: ${black};
     padding: 0.8rem 1rem;
   }
 
-  @media (min-width: 576px) {
+  ${onDesktop} {
     position: absolute;
     top: 0;
     left: 0;
@@ -148,7 +138,7 @@ export const ExcerptContainer = styled.div`
     color: ${white};
     line-height: 1.5;
     overflow-y: scroll;
-    padding: 0.5rem 0.5rem 1rem 0.5rem;
+    padding: 0.8rem;
     transform: translateY(100%);
     transition: all 0.2s ease;
 
