@@ -13,7 +13,7 @@ import {
   BlogType,
   ExcerptContainer,
   DateText,
-} from 'styles/components/blogListPage';
+} from 'style/components/blogListPage';
 
 const formatConverter = {
   standard: `blog`,

@@ -14,7 +14,7 @@ import {
   DateText,
   FlexCenterWithMargin,
   LinkButton,
-} from 'styles/components';
+} from 'style/components';
 
 const formatConverter = {
   standard: `blog`,

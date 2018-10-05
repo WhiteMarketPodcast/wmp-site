@@ -25,7 +25,7 @@ import {
   Sidebar,
   BlogPostLink,
   TagLink,
-} from 'styles/components/blogPostPage';
+} from 'style/components/blogPostPage';
 
 export class BlogPostTemplate extends Component {
   static propTypes = {
