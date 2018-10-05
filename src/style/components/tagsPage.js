@@ -13,7 +13,6 @@ export const List = styled.ul`
 export const Item = styled.li`
   display: inline-block;
   padding: 0 0.5rem 0.5rem 0;
-  margin: 0 0.5rem 0.5rem 0;
 `;
 
 export const TagLink = styled(Link)`

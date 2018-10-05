@@ -12,6 +12,19 @@ const getRemsFromCount = (count) => `${count * 0.05 + 1}rem`;
 class TagsPage extends Component {
   static propTypes = { data: object.isRequired };
 
+  renderTag = ({ fieldValue, totalCount: count }) => (
+    <Item key={fieldValue}>
+      <TagLink
+        to={`/tags/${_.kebabCase(fieldValue)}/`}
+        style={{
+          fontSize: getRemsFromCount(count),
+        }}
+      >
+        {`${fieldValue} (${count})`}
+      </TagLink>
+    </Item>
+  );
+
   render() {
     const {
       data: {
@@ -26,18 +39,10 @@ class TagsPage extends Component {
           <Helmet title={`Tags | ${siteMetadata.title}`} />
           <h1 className="text-center">Tags</h1>
           <List>
-            {_.map(group, ({ fieldValue, totalCount: count }) => (
-              <Item key={fieldValue}>
-                <TagLink
-                  to={`/tags/${_.kebabCase(fieldValue)}/`}
-                  style={{
-                    fontSize: getRemsFromCount(count),
-                  }}
-                >
-                  {`${fieldValue} (${count})`}
-                </TagLink>
-              </Item>
-            ))}
+            {_(group)
+              .sortBy(({ fieldValue }) => fieldValue.toLowerCase())
+              .map(this.renderTag)
+              .value()}
           </List>
         </PaddedSection>
       </Layout>
