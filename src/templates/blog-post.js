@@ -12,7 +12,9 @@ import {
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
+import Player from 'components/Player';
 import Content, { HTMLContent } from 'components/Content';
+import { FlexCenterWithMargin } from 'styles/components';
 import {
   Hero,
   Title,
@@ -32,9 +34,9 @@ export class BlogPostTemplate extends Component {
     description: string,
     format: string.isRequired,
     image: string,
-    imageAlt: string,
+    // imageAlt: string,
     imageURL: string,
-    imageCredit: string,
+    // imageCredit: string,
     podcastURL: string,
     videoURL: string,
     date: string.isRequired,
@@ -50,8 +52,8 @@ export class BlogPostTemplate extends Component {
     helmet: null,
     description: '',
     image: '',
-    imageAlt: '',
-    imageCredit: '',
+    // imageAlt: '',
+    // imageCredit: '',
     imageURL: '',
     podcastURL: '',
     videoURL: '',
@@ -105,6 +107,18 @@ export class BlogPostTemplate extends Component {
     });
   }
 
+  renderMedia() {
+    const { format, podcastURL, videoURL } = this.props;
+    const url = podcastURL || videoURL;
+    if (!_.includes([`audio`, `video`], format) || !url) return null;
+
+    return (
+      <FlexCenterWithMargin>
+        <Player url={url} type={format} />
+      </FlexCenterWithMargin>
+    );
+  }
+
   render() {
     const {
       content,
@@ -130,6 +144,7 @@ export class BlogPostTemplate extends Component {
 
         <Column className={_.isEmpty(tags) ? 'no-aside' : ''}>
           <BlogContent>
+            {this.renderMedia()}
             <PostContent content={content} />
           </BlogContent>
           {this.renderSidebar()}
@@ -178,6 +193,7 @@ export const pageQuery = graphql`
         format
         tags
         podcastURL
+        videoURL
       }
     }
   }

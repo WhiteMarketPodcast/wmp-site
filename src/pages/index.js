@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
+import Player from 'components/Player';
 import {
   BlogPostPreviewGrid,
   BlogPreviewContainer,
@@ -30,41 +31,52 @@ export default class IndexPage extends Component {
     }).isRequired,
   };
 
+  renderPodcast() {
+    const { data } = this.props;
+    const podcast = data.podcast.edges[0].node;
+    console.log('podcast', podcast);
+    const { podcastURL } = podcast.frontmatter;
+
+    return (
+      <FlexCenterWithMargin>
+        <Player url={podcastURL} />
+      </FlexCenterWithMargin>
+    );
+  }
+
+  renderPost = ({ node: post }, index) => {
+    const {
+      id,
+      frontmatter: { image, imageURL, title, date, format },
+      fields: { slug },
+    } = post;
+
+    return (
+      <BlogPreviewContainer key={id} to={slug}>
+        <BlogPreviewImage bgImage={image || imageURL} index={index} />
+        <PreviewTextContainer index={index}>
+          <BlogType>{formatConverter[format]}</BlogType>
+          <PreviewTitle index={index}>{title}</PreviewTitle>
+          <DateText index={index}>{date}</DateText>
+        </PreviewTextContainer>
+      </BlogPreviewContainer>
+    );
+  };
+
   renderPosts() {
     const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
+    const { edges: posts } = data.posts;
 
-    return _.map(posts, ({ node: post }, index) => {
-      const {
-        id,
-        frontmatter: {
-          image,
-          imageURL,
-          // imageAlt,
-          title,
-          date,
-          format,
-        },
-        fields: { slug },
-        // excerpt,
-      } = post;
-      return (
-        <BlogPreviewContainer key={id} to={slug}>
-          <BlogPreviewImage bgImage={image || imageURL} index={index} />
-          <PreviewTextContainer index={index}>
-            <BlogType>{formatConverter[format]}</BlogType>
-            <PreviewTitle index={index}>{title}</PreviewTitle>
-            <DateText index={index}>{date}</DateText>
-          </PreviewTextContainer>
-        </BlogPreviewContainer>
-      );
-    });
+    return (
+      <BlogPostPreviewGrid>{_.map(posts, this.renderPost)}</BlogPostPreviewGrid>
+    );
   }
 
   render() {
     return (
       <Layout>
-        <BlogPostPreviewGrid>{this.renderPosts()}</BlogPostPreviewGrid>
+        {this.renderPodcast()}
+        {this.renderPosts()}
         <FlexCenterWithMargin>
           <LinkButton to="/blog/">See more posts</LinkButton>
         </FlexCenterWithMargin>
@@ -75,15 +87,22 @@ export default class IndexPage extends Component {
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
-    allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
+    posts: PropTypes.shape({
+      allMarkdownRemark: PropTypes.shape({
+        edges: PropTypes.array,
+      }),
+    }),
+    podcast: PropTypes.shape({
+      allMarkdownRemark: PropTypes.shape({
+        edges: PropTypes.array,
+      }),
     }),
   }).isRequired,
 };
 
 export const pageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(
+    posts: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
       limit: 8
@@ -103,6 +122,27 @@ export const pageQuery = graphql`
             imageURL
             imageAlt
             format
+          }
+        }
+      }
+    }
+    podcast: allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { format: { eq: "audio" } } }
+      limit: 1
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            image
+            imageURL
+            imageAlt
+            podcastURL
           }
         }
       }

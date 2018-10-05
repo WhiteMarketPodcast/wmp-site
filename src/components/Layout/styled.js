@@ -6,9 +6,9 @@ import {
 import { onMobile } from 'styles/mediaQueries';
 
 export const Main = styled.main`
-  margin-top: ${DESKTOP_NAV_HEIGHT};
+  padding-top: ${DESKTOP_NAV_HEIGHT};
 
   ${onMobile} {
-    margin-top: ${MOBILE_NAV_HEIGHT};
+    padding-top: ${MOBILE_NAV_HEIGHT};
   }
 `;
