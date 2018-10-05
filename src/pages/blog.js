@@ -61,7 +61,7 @@ export default class BlogList extends Component {
 
   loadMore = () => {
     const { numberToShow } = this.state;
-    this.setState({ numberToShow: numberToShow + 3 });
+    this.setState({ numberToShow: numberToShow + 4 });
   };
 
   renderPosts() {
