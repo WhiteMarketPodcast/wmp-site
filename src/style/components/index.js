@@ -6,10 +6,11 @@ import { onMobile } from '../mediaQueries';
 export const PaddedSection = styled.section`
   margin: 0 auto;
   padding: 2rem;
+  padding-top: 0;
   max-width: 60ch;
 
   ${onMobile} {
-    padding: 2rem 1rem;
+    padding: 0 1rem 2rem 1rem;
   }
 
   * {

@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
 import Content, { HTMLContent } from 'components/Content';
-import { PaddedSection } from 'style/components';
+import { PaddedSection, BrandH1 } from 'style/components';
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
     <PaddedSection>
-      <h1 className="text-center">{title}</h1>
+      <BrandH1>{title}</BrandH1>
       <PageContent className="content" content={content} />
     </PaddedSection>
   );

@@ -1,9 +1,10 @@
 import React from 'react';
 import { object } from 'prop-types';
 import Helmet from 'react-helmet';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
-import { PaddedSection } from 'style/components';
+import BlogGrid from 'components/BlogGrid';
+import { FlexCenterWithMargin, LinkButton, BrandH1 } from 'style/components';
 
 class TagRoute extends React.Component {
   static propTypes = {
@@ -21,40 +22,17 @@ class TagRoute extends React.Component {
     } = this.props;
 
     const tagHeader = `Posts tagged with “${tag}”: ${totalCount}`;
-    const postLinks = posts.map(({ node: post }) => {
-      const {
-        fields: { slug },
-        frontmatter: { title },
-      } = post;
-
-      return (
-        <li key={slug}>
-          <Link to={slug}>
-            <h2 className="is-size-2">{title}</h2>
-          </Link>
-        </li>
-      );
-    });
 
     return (
       <Layout>
-        <PaddedSection>
+        <section>
           <Helmet title={`${tag} | ${siteMetadata.title}`} />
-          <div className="container content">
-            <div className="columns">
-              <div
-                className="column is-10 is-offset-1"
-                style={{ marginBottom: '6rem' }}
-              >
-                <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
-                <ul className="taglist">{postLinks}</ul>
-                <p>
-                  <Link to="/tags/">Browse all tags</Link>
-                </p>
-              </div>
-            </div>
-          </div>
-        </PaddedSection>
+          <BrandH1>{tagHeader}</BrandH1>
+          <BlogGrid posts={posts} />
+          <FlexCenterWithMargin>
+            <LinkButton to="/tags/">Browse all tags</LinkButton>
+          </FlexCenterWithMargin>
+        </section>
       </Layout>
     );
   }
@@ -77,11 +55,20 @@ export const tagPageQuery = graphql`
       totalCount
       edges {
         node {
+          excerpt(pruneLength: 400)
+          id
           fields {
             slug
           }
           frontmatter {
             title
+            image
+            imageURL
+            date(formatString: "DD MMMM YYYY")
+            image
+            imageURL
+            imageAlt
+            format
           }
         }
       }

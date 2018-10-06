@@ -4,7 +4,7 @@ import { object } from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
-import { PaddedSection } from 'style/components';
+import { PaddedSection, BrandH1 } from 'style/components';
 import { List, Item, TagLink } from 'style/components/tagsPage';
 
 const getRemsFromCount = (count) => `${count * 0.05 + 0.8}rem`;
@@ -37,7 +37,7 @@ class TagsPage extends Component {
       <Layout>
         <PaddedSection>
           <Helmet title={`Tags | ${siteMetadata.title}`} />
-          <h1 className="text-center">Tags</h1>
+          <BrandH1>Tags</BrandH1>
           <List>
             {_(group)
               .sortBy(({ fieldValue }) => fieldValue.toLowerCase())

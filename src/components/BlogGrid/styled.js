@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import Link from 'components/Link';
 import InfiniteScroll from 'react-infinite-scroller';
-import { black, emerald, translucentEmerald, white } from '../colors';
-import { onMobile, onDesktop } from '../mediaQueries';
+import { black, emerald, translucentEmerald, white } from 'style/colors';
+import { onMobile, onDesktop } from 'style/mediaQueries';
 
 function getImageURL(image) {
   if (!/res.cloudinary.com/.test(image)) return image;
@@ -13,13 +13,13 @@ export const BlogListGrid = styled(InfiniteScroll)`
   display: grid;
   grid-template-columns: 1fr;
   grid-auto-rows: auto;
+  grid-auto-flow: dense;
   grid-gap: 5px;
   justify-content: center;
-  min-height: calc(100vh - 180px);
+  color: ${white};
   margin: 0 auto;
   padding-bottom: 2rem;
-  color: ${white};
-  grid-auto-flow: dense;
+  max-width: 1500px;
 
   ${onDesktop} {
     grid-template-columns: repeat(auto-fill, 18rem);
