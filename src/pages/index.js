@@ -12,6 +12,7 @@ import {
   PreviewTextContainer,
   PostType,
   DateText,
+  FlexCenter,
   FlexCenterWithMargin,
   LinkButton,
   PodcastSection,
@@ -80,10 +81,14 @@ export default class IndexPage extends Component {
 
     return (
       <section>
-        <BrandH2>Latest Posts</BrandH2>
+        <FlexCenter>
+          <BrandH2>Latest Posts</BrandH2>
+        </FlexCenter>
+
         <BlogPostPreviewGrid>
           {_.map(posts, this.renderPost)}
         </BlogPostPreviewGrid>
+
         <FlexCenterWithMargin>
           <LinkButton to="/blog/">See more posts</LinkButton>
         </FlexCenterWithMargin>

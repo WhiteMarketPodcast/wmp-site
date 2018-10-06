@@ -4,7 +4,12 @@ import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
 import BlogGrid from 'components/BlogGrid';
-import { FlexCenterWithMargin, LinkButton, BrandH1 } from 'style/components';
+import {
+  BrandH1,
+  FlexCenter,
+  FlexCenterWithMargin,
+  LinkButton,
+} from 'style/components';
 
 class TagRoute extends React.Component {
   static propTypes = {
@@ -27,7 +32,9 @@ class TagRoute extends React.Component {
       <Layout>
         <section>
           <Helmet title={`${tag} | ${siteMetadata.title}`} />
-          <BrandH1>{tagHeader}</BrandH1>
+          <FlexCenter>
+            <BrandH1>{tagHeader}</BrandH1>
+          </FlexCenter>
           <BlogGrid posts={posts} />
           <FlexCenterWithMargin>
             <LinkButton to="/tags/">Browse all tags</LinkButton>

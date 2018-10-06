@@ -24,7 +24,6 @@ export const BlogPostPreviewGrid = styled.div`
   grid-template-columns: 1fr;
   grid-auto-rows: minmax(180px, min-content);
   grid-gap: 1rem;
-  min-height: calc(100vh - 180px);
   max-width: 1500px;
   margin: 0 auto 2rem auto;
   color: ${white};
@@ -45,7 +44,7 @@ export const BlogPostPreviewGrid = styled.div`
 
   @media (min-width: 576px) {
     grid-gap: 5px;
-    margin: 1.5rem auto;
+    margin: 0 auto;
     padding: 0 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 40px repeat(4, 250px);
