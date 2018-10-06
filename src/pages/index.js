@@ -14,7 +14,7 @@ import {
   DateText,
   FlexCenterWithMargin,
   LinkButton,
-  PodcastContainer,
+  PodcastSection,
   PodcastTextContainer,
   PodcastSmallText,
   PodcastTitle,
@@ -42,7 +42,7 @@ export default class IndexPage extends Component {
     const { title, podcastURL, image, imageURL } = podcast.frontmatter;
 
     return (
-      <PodcastContainer bgImage={image || imageURL}>
+      <PodcastSection bgImage={image || imageURL}>
         <PodcastTextContainer>
           <PodcastSmallText>Latest session</PodcastSmallText>
           <Link to={slug}>
@@ -50,7 +50,7 @@ export default class IndexPage extends Component {
           </Link>
         </PodcastTextContainer>
         <Player url={podcastURL} />
-      </PodcastContainer>
+      </PodcastSection>
     );
   }
 
@@ -78,7 +78,14 @@ export default class IndexPage extends Component {
     const { edges: posts } = data.posts;
 
     return (
-      <BlogPostPreviewGrid>{_.map(posts, this.renderPost)}</BlogPostPreviewGrid>
+      <section>
+        <BlogPostPreviewGrid>
+          {_.map(posts, this.renderPost)}
+        </BlogPostPreviewGrid>
+        <FlexCenterWithMargin>
+          <LinkButton to="/blog/">See more posts</LinkButton>
+        </FlexCenterWithMargin>
+      </section>
     );
   }
 
@@ -87,9 +94,6 @@ export default class IndexPage extends Component {
       <Layout>
         {this.renderPodcast()}
         {this.renderPosts()}
-        <FlexCenterWithMargin>
-          <LinkButton to="/blog/">See more posts</LinkButton>
-        </FlexCenterWithMargin>
       </Layout>
     );
   }

@@ -8,20 +8,21 @@ import {
   translucentWhite,
   white,
 } from '../colors';
+import { sansSerif } from '../fonts';
 import { onMobile } from '../mediaQueries';
 
 const isHighlightedPreview = (index) => _.includes([0, 3, 5], index);
 function getImageURL(image, index = 0, isSmall = false) {
   if (!/res.cloudinary.com/.test(image)) return image;
   let width = isHighlightedPreview(index) && !isSmall ? 1100 : 450;
-  if (isSmall) width = 300;
+  if (isSmall) width = 600;
   return image.replace('/upload/', `/upload/c_scale,w_${width}/`);
 }
 
 export const BlogPostPreviewGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(8, minmax(150px, min-content));
+  grid-auto-rows: minmax(200px, min-content);
   grid-gap: 5px;
   min-height: calc(100vh - 180px);
   max-width: 1500px;
@@ -161,7 +162,6 @@ export const BlogPreviewImage = styled.div`
 
   @media (max-width: 575px) {
     background-image: url(${({ bgImage, index }) => getImageURL(bgImage, index, true)});
-    width: 40%;
   }
 `;
 
@@ -184,14 +184,15 @@ export const PreviewTextContainer = styled.div`
   }
 
   @media (max-width: 575px) {
-    align-self: center;
-    background-color: ${white};
-    padding: 0 1rem;
-    margin-left: 40%;
+    align-self: end;
+    background-color: ${translucentEmerald};
   }
 `;
 
 export const PostType = styled.div`
+  position: absolute;
+  top: -0.7em;
+  left: 1em;
   display: inline;
   background-color: ${emerald};
   box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.15);
@@ -201,15 +202,9 @@ export const PostType = styled.div`
   line-height: 1;
   padding: 0.2rem 0.5rem;
   text-transform: uppercase;
-
-  @media (min-width: 576px) {
-    position: absolute;
-    top: -0.7em;
-    left: 1em;
-  }
 `;
 
-export const PreviewTitle = styled.h2`
+export const PreviewTitle = styled.h3`
   font-size: ${({ index }) => (isHighlightedPreview(index) ? `1.5` : `1.2`)}rem;
   margin: 0;
 
@@ -217,25 +212,26 @@ export const PreviewTitle = styled.h2`
   a {
     color: ${({ index }) => (isHighlightedPreview(index) ? white : black)};
     @media (max-width: 575px) {
-      color: ${black};
+      color: ${white};
       font-size: 1.2rem;
     }
   }
 `;
 
 export const DateText = styled.div`
-  color: ${black};
+  color: ${white};
   font-size: 0.75rem;
   font-weight: 600;
-  text-align: right;
+  line-height: 1;
   margin-top: 0.5rem;
+  text-align: right;
 
   @media (min-width: 576px) {
     color: ${({ index }) => (isHighlightedPreview(index) ? white : black)};
   }
 `;
 
-export const PodcastContainer = styled.div`
+export const PodcastSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -273,9 +269,12 @@ export const PodcastTextContainer = styled.div`
   }
 `;
 
-export const PodcastSmallText = styled.div`
+export const PodcastSmallText = styled.h2`
   background-color: ${emerald};
   color: ${white};
+  font-family: ${sansSerif};
+  font-size: 0.8rem;
+  letter-spacing: 1px;
   line-height: 1;
   margin-bottom: 0.2rem;
   padding: 0.3rem 0.5rem;
@@ -286,7 +285,7 @@ export const PodcastSmallText = styled.div`
   }
 `;
 
-export const PodcastTitle = styled.h2`
+export const PodcastTitle = styled.h3`
   color: ${white};
   max-width: 50ch;
   margin: 0 auto;
