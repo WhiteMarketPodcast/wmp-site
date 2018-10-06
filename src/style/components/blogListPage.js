@@ -40,7 +40,7 @@ export const BlogPreviewContainer = styled(Link)`
 
   ${onMobile} {
     align-items: flex-start;
-    margin: 0.5rem 0;
+    margin: 0.5rem 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
     @supports (display: grid) {

@@ -18,6 +18,7 @@ import {
   PodcastTextContainer,
   PodcastSmallText,
   PodcastTitle,
+  BrandH2,
 } from 'style/components';
 
 const formatConverter = {
@@ -79,6 +80,7 @@ export default class IndexPage extends Component {
 
     return (
       <section>
+        <BrandH2>Latest Posts</BrandH2>
         <BlogPostPreviewGrid>
           {_.map(posts, this.renderPost)}
         </BlogPostPreviewGrid>

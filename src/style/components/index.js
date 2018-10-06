@@ -41,5 +41,11 @@ export const BrandH1 = styled.h1`
   text-align: center;
 `;
 
+export const BrandH2 = styled.h2`
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
+`;
+
 export * from './blogPostPage';
 export * from './homePage';

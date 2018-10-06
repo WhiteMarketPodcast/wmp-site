@@ -22,11 +22,11 @@ function getImageURL(image, index = 0, isSmall = false) {
 export const BlogPostPreviewGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: minmax(200px, min-content);
-  grid-gap: 5px;
+  grid-auto-rows: minmax(180px, min-content);
+  grid-gap: 1rem;
   min-height: calc(100vh - 180px);
   max-width: 1500px;
-  margin: 2rem auto;
+  margin: 0 auto 2rem auto;
   color: ${white};
   grid-auto-flow: dense;
   grid-template-areas:
@@ -44,7 +44,8 @@ export const BlogPostPreviewGrid = styled.div`
   }
 
   @media (min-width: 576px) {
-    margin: 30px auto;
+    grid-gap: 5px;
+    margin: 1.5rem auto;
     padding: 0 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 40px repeat(4, 250px);
@@ -162,6 +163,7 @@ export const BlogPreviewImage = styled.div`
 
   @media (max-width: 575px) {
     background-image: url(${({ bgImage, index }) => getImageURL(bgImage, index, true)});
+    width: 40%;
   }
 `;
 
@@ -179,20 +181,15 @@ export const PreviewTextContainer = styled.div`
     `;
   }};
 
-  ${onMobile} {
-    padding: 1rem;
-  }
-
   @media (max-width: 575px) {
-    align-self: end;
-    background-color: ${translucentEmerald};
+    align-self: center;
+    background-color: ${white};
+    margin-left: 40%;
+    padding: 0 1rem;
   }
 `;
 
 export const PostType = styled.div`
-  position: absolute;
-  top: -0.7em;
-  left: 1em;
   display: inline;
   background-color: ${emerald};
   box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.15);
@@ -202,6 +199,12 @@ export const PostType = styled.div`
   line-height: 1;
   padding: 0.2rem 0.5rem;
   text-transform: uppercase;
+
+  @media (min-width: 576px) {
+    position: absolute;
+    top: -0.7em;
+    left: 1em;
+  }
 `;
 
 export const PreviewTitle = styled.h3`
@@ -212,14 +215,14 @@ export const PreviewTitle = styled.h3`
   a {
     color: ${({ index }) => (isHighlightedPreview(index) ? white : black)};
     @media (max-width: 575px) {
-      color: ${white};
+      color: ${black};
       font-size: 1.2rem;
     }
   }
 `;
 
 export const DateText = styled.div`
-  color: ${white};
+  color: ${black};
   font-size: 0.75rem;
   font-weight: 600;
   line-height: 1;
@@ -249,6 +252,10 @@ export const PodcastSection = styled.section`
   min-height: 50vh;
   padding: 1rem;
   width: 100%;
+
+  @media (max-width: 575px) {
+    min-height: 400px;
+  }
 
   .plyr--audio .plyr__controls {
     background-color: transparent;
