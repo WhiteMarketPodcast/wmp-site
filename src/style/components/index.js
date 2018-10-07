@@ -24,6 +24,10 @@ export const FlexCenter = styled.div`
   align-items: center;
 `;
 
+export const FlexCenterColumn = styled(FlexCenter)`
+  flex-direction: column;
+`;
+
 export const FlexCenterWithMargin = styled(FlexCenter)`
   margin: 1.5rem 1rem;
 `;

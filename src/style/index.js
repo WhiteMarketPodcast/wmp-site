@@ -1,7 +1,6 @@
 import { injectGlobal } from 'styled-components';
 import { onMobile, onDesktop } from './mediaQueries';
-import { emerald, lightGrey } from './colors';
-// import { black, white, darkGrey, emerald } from './colors';
+import { emerald, lightGrey, lightEmerald } from './colors';
 
 // eslint-disable-next-line
 injectGlobal`
@@ -47,5 +46,16 @@ injectGlobal`
       content: "—";
       padding-right: 0.5rem;
     }
+  }
+
+  #___gatsby > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+
+  body.four-oh-four {
+    background-color: ${lightEmerald};
   }
 `;
