@@ -7,6 +7,7 @@ import { onMobile } from 'style/mediaQueries';
 
 export const Main = styled.main`
   padding-top: ${DESKTOP_NAV_HEIGHT};
+  flex: 1 1 auto;
 
   ${onMobile} {
     padding-top: ${MOBILE_NAV_HEIGHT};
