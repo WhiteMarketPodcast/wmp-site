@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:slash="http://purl.org/rss/1.0/modules/slash/" 
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" 
+  xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/" 
+  xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0">
+  <channel>
+    <title>White Market Podcast</title>
+    <atom:link href="http://www.whitemarketpodcast.co.uk/feed/podcast/" rel="self" type="application/rss+xml" />
+    <link>https://www.whitemarketpodcast.co.uk</link>
+    <description>Free music and free culture</description>
+    <lastBuildDate>Wed, 21 Mar 2018 10:22:13 +0000</lastBuildDate>
+    <language>en-GB</language>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <generator>https://wordpress.org/?v=4.9.8</generator>
+    <!-- podcast_generator="Blubrry PowerPress/7.2" mode="advanced" feedslug="podcast" Blubrry PowerPress Podcasting plugin for WordPress (https://www.blubrry.com/powerpress/) -->
+    <itunes:summary>White Market Podcast is show about free music and free culture by Rute Correia. While the show is mainly focused on Creative Commons-licenced music, since it is also naturally intertwined with other movements and ideologies such as Open Source and Open Access, it often features these and similar forms of activism related to digital rights and freedom.</itunes:summary>
+    <itunes:author>White Market Podcast</itunes:author>
+    <itunes:explicit>clean</itunes:explicit>
+    <itunes:image href="http://www.whitemarketpodcast.co.uk/wp-content/uploads/powerpress/White_market_logo_1400x1400.jpg" />
+    <itunes:type>episodic</itunes:type>
+    <itunes:owner>
+      <itunes:name>White Market Podcast</itunes:name>
+      <itunes:email>whitemarketpodcast@gmail.com</itunes:email>
+    </itunes:owner>
+    <managingEditor>whitemarketpodcast@gmail.com (White Market Podcast)</managingEditor>
+    <itunes:subtitle>Free music and free culture</itunes:subtitle>
+    <image>
+      <title>White Market Podcast</title>
+      <url>http://www.whitemarketpodcast.co.uk/wp-content/uploads/powerpress/White_market_logo_1400x1400.jpg</url>
+      <link>https://www.whitemarketpodcast.co.uk</link>
+    </image>
+    <itunes:category text="Society &amp; Culture">
+    </itunes:category>
+    <itunes:category text="Music">
+    </itunes:category>
+    <itunes:category text="Technology">
+    </itunes:category>
+    <rawvoice:subscribe feed="http://www.whitemarketpodcast.co.uk/feed/podcast/" itunes="http://www.whitemarketpodcast.co.uk/feed/podcast/"></rawvoice:subscribe>
+    <site xmlns="com-wordpress:feed-additions:1">97022188</site>
+    <item>
+      <title>Session 4.02 &#8211; Sharing knowledge with Wikimedia</title>
+      <link>https://www.whitemarketpodcast.co.uk/podcasts/2017/09/10/session-4-02-sharing-knowledge-with-wikimedia/</link>
+      <pubDate>Sun, 10 Sep 2017 20:17:54 +0000</pubDate>
+      <guid isPermaLink="false">https://www.whitemarketpodcast.co.uk/?p=1015</guid>
+      <comments>https://www.whitemarketpodcast.co.uk/podcasts/2017/09/10/session-4-02-sharing-knowledge-with-wikimedia/#respond</comments>
+      <wfw:commentRss>https://www.whitemarketpodcast.co.uk/podcasts/2017/09/10/session-4-02-sharing-knowledge-with-wikimedia/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <category><![CDATA[Interviews]]></category>
+      <category><![CDATA[Podcasts]]></category>
+      <category><![CDATA[blocSonic]]></category>
+      <category><![CDATA[Free Music Archive]]></category>
+      <category><![CDATA[Interview]]></category>
+      <category><![CDATA[mahorka]]></category>
+      <category><![CDATA[Soundcloud]]></category>
+      <category><![CDATA[wikimedia]]></category>
+      <description>&lt;p&gt;Back in August, I had the chance of talking to Dimitar Dimitrov, EU Policy Director at Wikimedia. On their website, Wikimedia is described as a global movement whose mission is to bring free educational content...&lt;/p&gt;
+&lt;p&gt;The post &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk/podcasts/2017/09/10/session-4-02-sharing-knowledge-with-wikimedia/&quot;&gt;Session 4.02 – Sharing knowledge with Wikimedia&lt;/a&gt; appeared first on &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk&quot;&gt;White Market Podcast&lt;/a&gt;.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p style="text-align: justify;">Back in August, I had the chance of talking to <strong>Dimitar Dimitrov</strong>, EU Policy Director at <a href="https://www.wikimedia.org/" target="_blank" rel="noopener"><strong>Wikimedia</strong></a>. On their website, <strong>Wikimedia</strong> is described as a global movement whose mission is to bring free educational content to the world. By now, it is one of the top 10 websites traffic-wise globally and it is arguably the biggest community-driven project online. It all started with the amazing <a href="https://www.wikipedia.org/" target="_blank" rel="noopener"><strong>Wikipedia</strong></a>, but as knowledge kept getting compiled, their projects also kept on multiplying. Today, the <strong>Wikimedia Foundation</strong> hosts a dozen projects with the joint goal of sharing knowledge &#8211; <a href="https://www.wiktionary.org/" target="_blank" rel="noopener">Wiktionary</a>, <a href="https://commons.wikimedia.org/wiki/Main_Page" target="_blank" rel="noopener">Wikimedia Commons</a> and their latest baby <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page" target="_blank" rel="noopener">Wikidata</a> are just a few of them.</p>
+<p style="text-align: justify;">Being a content superpower is not easy, though. Surely a hot topic at the minute, the upcoming EU copyright reform is something under their radar but this legislation is far from being the only thing with a deep impact on Wikimedia&#8217;s work. For a long time now, they have been facing a variety of challenges that go from censorship in certain countries to court rulings that place double-standards in terms of what people can do with content online and offline. To find out more about these things and, of course, how you can get involved with Wikimedia, just press play.</p>
+<p>Aritus &#8211; For you [<a href="https://soundcloud.com/aritusmusic/4you" target="_blank" rel="noopener">Soundcloud</a>] // <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY</a><br />
+YeahRight! &#8211; San Francisco [<a href="https://soundcloud.com/yeahright-edm/san-francisco" target="blank">Soundcloud</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="blank">CC BY-NC-SA</a><br />
+Taseh &#8211; Down Roller [<a href="http://music.monsterjinx.com/album/monster-jinx-beat-camp-01" target="_blank" rel="noopener">Monster Jinx</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" rel="noopener">CC BY-NC-SA</a><br />
+Luck &amp; Doc &#8211; To My Recollection [<a href="http://blocsonic.com/releases/bsmx0164" target="_blank" rel="noopener">blocSonic</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" rel="noopener">CC BY-NC-SA</a><br />
+Oranjada vs. North Beach Crew &#8211; Zora (2010 Druzhba session) [<a href="http://mahorka.org/release/187p2" target="_blank" rel="noopener">mahorka</a>] // <a href="https://creativecommons.org/licenses/by-nc/3.0/" target="_blank" rel="noopener">CC BY-NC</a></p>
+<p><em><small>All the songs from “<strong>Plays Guitar</strong>” and &#8220;<strong>Plays Guitar Again</strong>&#8221; by <strong>Gillicuddy</strong> have been used as background music for the interview. All tracks available under a <a href="https://creativecommons.org/licenses/by-nc/3.0/" target="_blank" rel="noopener">CC BY-NC</a> licence; download on <a href="https://gillicuddy.bandcamp.com/music" target="_blank" rel="noopener">Bandcamp</a> or <a href="http://freemusicarchive.org/music/gillicuddy/" target="_blank" rel="noopener">FMA</a>.</small></em></p>
+<p><small>.: Photo by <a href="https://en.wikipedia.org/wiki/File:10_sharing_book_cover_background.jpg">Wikimedia Foundation</a> :. <a href="https://creativecommons.org/licenses/by/4.0/" target="blank">CC BY</a></small></p>
+<p>The post <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk/podcasts/2017/09/10/session-4-02-sharing-knowledge-with-wikimedia/">Session 4.02 &#8211; Sharing knowledge with Wikimedia</a> appeared first on <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk">White Market Podcast</a>.</p>
+]]>      </content:encoded>
+      <enclosure url="https://media.blubrry.com/white_market/archive.org/download/WhiteMarketPodcastSession402/WhiteMarketPodcast-Session402.mp3" length="147728384" type="audio/mpeg" />
+      <itunes:subtitle>Back in August, I had the chance of talking to Dimitar Dimitrov, EU Policy Director at Wikimedia. On their website, Wikimedia is described as a global movement whose mission is to bring free educational content...</itunes:subtitle>
+      <itunes:summary>Back in August, I had the chance of talking to Dimitar Dimitrov, EU Policy Director at Wikimedia. On their website, Wikimedia is described as a global movement whose mission is to bring free educational content...</itunes:summary>
+      <itunes:author>White Market Podcast</itunes:author>
+      <itunes:explicit>clean</itunes:explicit>
+      <itunes:duration>1:01:32</itunes:duration>
+      <post-id xmlns="com-wordpress:feed-additions:1">1015</post-id>
+    </item>
+    <item>
+      <title>Session 4.01 &#8211; Talking copyright with EDRi</title>
+      <link>https://www.whitemarketpodcast.co.uk/podcasts/2017/07/30/session-4-01-talking-copyright-edri/</link>
+      <pubDate>Sun, 30 Jul 2017 21:29:17 +0000</pubDate>
+      <guid isPermaLink="false">https://www.whitemarketpodcast.co.uk/?p=987</guid>
+      <comments>https://www.whitemarketpodcast.co.uk/podcasts/2017/07/30/session-4-01-talking-copyright-edri/#respond</comments>
+      <wfw:commentRss>https://www.whitemarketpodcast.co.uk/podcasts/2017/07/30/session-4-01-talking-copyright-edri/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <category><![CDATA[Interviews]]></category>
+      <category><![CDATA[Podcasts]]></category>
+      <category><![CDATA[amblis records]]></category>
+      <category><![CDATA[Bad Panda Records]]></category>
+      <category><![CDATA[copyright reform]]></category>
+      <category><![CDATA[EDRi]]></category>
+      <category><![CDATA[Free Music Archive]]></category>
+      <category><![CDATA[La bèl]]></category>
+      <category><![CDATA[mahorka]]></category>
+      <category><![CDATA[netlabel day]]></category>
+      <category><![CDATA[Sólo le Pido a Dior]]></category>
+      <category><![CDATA[Yes No Wave Music]]></category>
+      <category><![CDATA[Z Tapes]]></category>
+      <description>&lt;p&gt;WMP is finally back and what a way to start this fourth season! This week, I talked to Diego Naranjo, Senior Policy Advisor at EDRi, to know more about the copyright reform that is still...&lt;/p&gt;
+&lt;p&gt;The post &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk/podcasts/2017/07/30/session-4-01-talking-copyright-edri/&quot;&gt;Session 4.01 – Talking copyright with EDRi&lt;/a&gt; appeared first on &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk&quot;&gt;White Market Podcast&lt;/a&gt;.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p style="text-align: justify;">WMP is finally back and what a way to start this fourth season! This week, I talked to <a href="https://twitter.com/DNBSevilla" target="_blank" rel="noopener"><strong>Diego Naranjo</strong></a>, Senior Policy Advisor at <a href="https://edri.org/" target="_blank" rel="noopener"><strong>EDRi</strong></a>, to know more about the copyright reform that is still in the making in the EU. EDRi (European Digital Rights) is an association of civil and human rights organizations that advocates for the protection of our rights and freedoms online. On top of working directly with high instances in the EU, they also work in public campaigns, providing ordinary citizens with tools to engage with policy making, such as the <a href="https://savethememe.net/en" target="_blank" rel="noopener"><strong>Save the Meme</strong></a> website and <strong>The School of Rock(ing) EU Copyright</strong> workshop (happening <a href="https://www.direitosdigitais.pt/comunicacao/22-noticias/26-save-the-date-the-school-of-rock-ing-eu-copyright" target="_blank" rel="noopener">in Lisbon</a>, Slovenia and Hungary later this year).</p>
+<p style="text-align: justify;">On the music side of things, the celebration was on in big style for this year&#8217;s <a href="http://netlabelday.blogspot.com" target="_blank" rel="noopener"><strong>Netlabel Day</strong></a>. With more than 200 free records out on July 14th, I picked some of my favourites of 2017 to showcase how inspiring the initiative has been.</p>
+<p style="text-align: left;">Lasers &#8211; Amsterdam [<a href="http://freemusicarchive.org/music/LASERS/LASERS_EP/" target="_blank" rel="noopener">Bad Panda Records</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" rel="noopener">CC BY-NC-SA</a><br />
+Fog Lake &#8211; Push [<a href="http://freemusicarchive.org/music/Fog_Lake/Dragonchaser/" target="_blank" rel="noopener">FMA</a>] // <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY</a><br />
+Go Ask Alice &#8211; The Shout [<a href="https://labelnetlabel.bandcamp.com/album/perfection-is-terrible" target="_blank" rel="noopener">La bèl netlabel</a>] // <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA</a><br />
+Michael Keefe &#8211; Reality (Feat. Travis Paul) [<a href="https://amblisrecords.bandcamp.com/album/sounds-of-summer-volume-3-night" target="_blank" rel="noopener">Amblis Records</a>] // <a href="https://creativecommons.org/licenses/by-nc/3.0/" target="_blank" rel="noopener">CC BY-NC</a><a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener"><br />
+</a>Nüman &#8211; Sin título [<a href="https://sololepidoadior.bandcamp.com/album/spd-mixtape-04-el-pop-argentino-goza-de-buena-salud" target="_blank" rel="noopener">Sólo le Pido a Dior</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" rel="noopener">CC BY-NC-SA</a><br />
+Bottlesmoker &#8211; East Indies (feat. Kronutz) [<a href="http://yesnowave.com/yesno084/" target="_blank" rel="noopener">Yes No Wave Music</a>] // <a href="https://creativecommons.org/licenses/by-nc/3.0/" target="_blank" rel="noopener">CC BY-NC</a><br />
+Knit &#8211; A Good Chance [<a href="https://ztapes.bandcamp.com/album/summer-2017" target="_blank" rel="noopener">Z Tapes</a>] // <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY</a><br />
+Moki McFly &#8211; Zeta [<a href="http://mahorka.org/release/187" target="_blank" rel="noopener">mahorka</a>] // <a href="https://creativecommons.org/licenses/by-nc/3.0/" target="_blank" rel="noopener">CC BY-NC</a></p>
+<p style="text-align: justify;"><em><small>All the songs from &#8220;<strong>Where The Sidewalk Ends</strong>&#8221; by <strong>Roger Plexico</strong> have been used as background music for the interview. Tracks available under a  <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" rel="noopener">CC BY-NC-SA</a> licence; download on <a href="https://rogerplexico.bandcamp.com/album/where-the-sidewalk-ends" target="_blank" rel="noopener">Bandcamp</a> or <a href="http://freemusicarchive.org/music/Roger_Plexico/Where_The_Sidewalk_Ends/" target="_blank" rel="noopener">FMA</a>.</small></em></p>
+<p>&nbsp;</p>
+<p>The post <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk/podcasts/2017/07/30/session-4-01-talking-copyright-edri/">Session 4.01 &#8211; Talking copyright with EDRi</a> appeared first on <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk">White Market Podcast</a>.</p>
+]]>      </content:encoded>
+      <enclosure url="https://media.blubrry.com/white_market/archive.org/download/WhiteMarketPodcastSession401/WhiteMarketPodcast-Session401.mp3" length="144058368" type="audio/mpeg" />
+      <itunes:subtitle>WMP is finally back and what a way to start this fourth season! This week, I talked to Diego Naranjo, Senior Policy Advisor at EDRi, to know more about the copyright reform that is still...</itunes:subtitle>
+      <itunes:summary>WMP is finally back and what a way to start this fourth season! This week, I talked to Diego Naranjo, Senior Policy Advisor at EDRi, to know more about the copyright reform that is still...</itunes:summary>
+      <itunes:author>White Market Podcast</itunes:author>
+      <itunes:explicit>clean</itunes:explicit>
+      <itunes:duration>1:00:00</itunes:duration>
+      <post-id xmlns="com-wordpress:feed-additions:1">987</post-id>
+    </item>
+    <item>
+      <title>Session 3.21 &#8211; Monster Jinx Special</title>
+      <link>https://www.whitemarketpodcast.co.uk/podcasts/2017/01/22/session-3-21-monster-jinx-special/</link>
+      <pubDate>Sun, 22 Jan 2017 23:30:02 +0000</pubDate>
+      <guid isPermaLink="false">http://www.whitemarketpodcast.co.uk/?p=946</guid>
+      <comments>https://www.whitemarketpodcast.co.uk/podcasts/2017/01/22/session-3-21-monster-jinx-special/#respond</comments>
+      <wfw:commentRss>https://www.whitemarketpodcast.co.uk/podcasts/2017/01/22/session-3-21-monster-jinx-special/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <category><![CDATA[Interviews]]></category>
+      <category><![CDATA[Podcasts]]></category>
+      <category><![CDATA[Interview]]></category>
+      <category><![CDATA[Monster Jinx]]></category>
+      <description>&lt;p&gt;I have been wanting to do this for a long time, but somehow the opportunity only arrived now. This week’s show is a Monster Jinx special! Monster Jinx is a Portugal/Internet-based label specialised in hip-hop...&lt;/p&gt;
+&lt;p&gt;The post &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk/podcasts/2017/01/22/session-3-21-monster-jinx-special/&quot;&gt;Session 3.21 – Monster Jinx Special&lt;/a&gt; appeared first on &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk&quot;&gt;White Market Podcast&lt;/a&gt;.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p style="text-align: justify;">I have been wanting to do this for a long time, but somehow the opportunity only arrived now. This week&#8217;s show is a <a href="http://www.monsterjinx.com/" target="_blank" rel="noopener"><strong>Monster Jinx</strong></a> special! Monster Jinx is a Portugal/Internet-based label specialised in hip-hop and electronic music. They are also an artist collective, and identify themselves as an indie label, having <a href="https://monstrorobot.bandcamp.com/album/monstro-robot" target="_blank" rel="noopener">dropped their first record back in 2009</a>. In the last few years, they managed to grab the attention of the Portuguese media, get some airplay on national radio stations and play at big festivals. Despite these big achievements, they remain humble and focused on putting out great music. With an <a href="http://www.monsterjinx.com/artistas/" target="_blank" rel="noopener">enviable roster of MCs and producers</a>, Monster Jinx are a great example of how Creative Commons licenses can boost the reach of a work, and how releasing music for free doesn&#8217;t mean a product is any less appealing.</p>
+<p style="text-align: justify;">If you&#8217;re a regular listener of the show, you probably know at least part of their work by now, as I have been a long time supporter of their work. In the last few years, I have been uploading a great part of their music to <a href="http://freemusicarchive.org/curator/programamarcabranca/" target="_blank" rel="noopener">WMP&#8217;s curator collection at Free Music Archive</a>.</p>
+<p style="text-align: justify;">Putting Lisbon&#8217;s great weather to good use, I sat down with <a href="https://www.facebook.com/darksunn.mj" target="_blank" rel="noopener">Darksunn</a> (co-founder, manager and do-it-all) to find out more about how the label started, why they picked Creative Commons as their licencing system, the challenges ahead and their strategy for the future. For the first time in White Market Podcast&#8217;s history, this interview was actually recorded on location, which may explain some of the sound issues on this episode. Nonetheless, please sit back and enjoy the vibes of the purple monster.</p>
+<p style="text-align: justify;">Darksunn &#8211; <a href="http://music.monsterjinx.com/album/roxo-02" target="_blank" rel="noopener">Sidestep</a><br />
+NO FUTURE &#8211; <a href="http://music.monsterjinx.com/album/payday-vol-01" target="_blank" rel="noopener">NOMONO MONEY</a><br />
+Monstro Robot &#8211; <a href="https://monstrorobot.bandcamp.com/album/monstro-robot" target="_blank" rel="noopener">Gata Borralheira (feat. Pulso) </a><br />
+Monster Jinx &#8211; <a href="http://music.monsterjinx.com/album/venera-o-diabo-faz-festas-a-gatinhos-single" target="_blank" rel="noopener">Venera o Diabo (Faz Festas a Gatinhos)</a><br />
+J-K &#8211; <a href="https://j-k-mj.bandcamp.com/album/contos-de-espadas" target="_blank" rel="noopener">Despedida</a><br />
+Pulso &#8211; <a href="https://pulso.bandcamp.com/album/gillettes-pap-is-e-outros-objectos-cortantes" target="_blank" rel="noopener">Estalo os Dedos</a></p>
+<p style="text-align: justify;">All the tracks are available under a <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" rel="noopener">CC BY-NC-SA</a> licence. I will be posting the list of background music tracks soon.</p>
+<p>The post <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk/podcasts/2017/01/22/session-3-21-monster-jinx-special/">Session 3.21 &#8211; Monster Jinx Special</a> appeared first on <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk">White Market Podcast</a>.</p>
+]]>      </content:encoded>
+      <enclosure url="https://media.blubrry.com/white_market/archive.org/download/WhiteMarket20170122Session321/WhiteMarket-20170122-Session321.mp3" length="144314603" type="audio/mpeg" />
+      <itunes:subtitle>I have been wanting to do this for a long time, but somehow the opportunity only arrived now. This week’s show is a Monster Jinx special! Monster Jinx is a Portugal/Internet-based label specialised in hip-hop...</itunes:subtitle>
+      <itunes:summary>I have been wanting to do this for a long time, but somehow the opportunity only arrived now. This week’s show is a Monster Jinx special! Monster Jinx is a Portugal/Internet-based label specialised in hip-hop...</itunes:summary>
+      <itunes:author>White Market Podcast</itunes:author>
+      <itunes:explicit>clean</itunes:explicit>
+      <itunes:duration>1:00:07</itunes:duration>
+      <post-id xmlns="com-wordpress:feed-additions:1">946</post-id>
+    </item>
+    <item>
+      <title>Session 3.20 &#8211; Happy Public Domain Day!</title>
+      <link>https://www.whitemarketpodcast.co.uk/podcasts/2017/01/01/session-3-20-happy-public-domain-day/</link>
+      <pubDate>Sun, 01 Jan 2017 21:00:58 +0000</pubDate>
+      <guid isPermaLink="false">http://www.whitemarketpodcast.co.uk/?p=939</guid>
+      <comments>https://www.whitemarketpodcast.co.uk/podcasts/2017/01/01/session-3-20-happy-public-domain-day/#respond</comments>
+      <wfw:commentRss>https://www.whitemarketpodcast.co.uk/podcasts/2017/01/01/session-3-20-happy-public-domain-day/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <category><![CDATA[Podcasts]]></category>
+      <category><![CDATA[Auboutdufil]]></category>
+      <category><![CDATA[Bandcamp]]></category>
+      <category><![CDATA[Free Music Archive]]></category>
+      <category><![CDATA[Musopen]]></category>
+      <category><![CDATA[public domain]]></category>
+      <category><![CDATA[Public Domain Day]]></category>
+      <category><![CDATA[Wowa Music]]></category>
+      <description>&lt;p&gt;On this week’s show, WMP celebrated Public Domain Day. Public Domain Day has been happening as an initiative for some years now, being held on January 1st every year, as this is the date when...&lt;/p&gt;
+&lt;p&gt;The post &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk/podcasts/2017/01/01/session-3-20-happy-public-domain-day/&quot;&gt;Session 3.20 – Happy Public Domain Day!&lt;/a&gt; appeared first on &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk&quot;&gt;White Market Podcast&lt;/a&gt;.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p style="text-align: justify;">On this week&#8217;s show, WMP celebrated <strong><a href="https://en.wikipedia.org/wiki/Public_Domain_Day" target="_blank">Public Domain Day</a></strong>. Public Domain Day has been happening as an initiative for some years now, being held on January 1<sup>st</sup> every year, as this is the date when each year new works go under the public domain. <em>Except, of course, if you’re in the US &#8211; sadly, <a href="https://web.law.duke.edu/cspd/publicdomainday" target="_blank">there won’t be any works going into the public domain there before 2019 at least</a>.</em>  In the European Union, though, the rights of authors are protected within their lifetime and for seventy years after their death. This means that after that period the works become available for anybody to use them for any purpose. This year, for instance, this included the works of HG Wells and of the economist John Keynes.</p>
+<p style="text-align: justify;">As a celebration, the music played on the show was mostly published under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"><strong>Creative Commons Zero</strong></a>, the public domain licence.</p>
+<p>Alpha Hydrae &#8211; Won&#8217;t see it comin&#8217; (Feat Aequality &amp; N&#8217;sorte d&#8217;autruche) [<a href="http://freemusicarchive.org/music/Alpha_Hydrae/uu_" target="_blank">FMA</a>] // <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a><br />
+Cuicuitte &#8211; Viville à l&#8217;horizon [<a href="http://freemusicarchive.org/music/Cuicuitte/Nous_avons_vu_le_Diable" target="_blank">FMA</a>] // <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a><br />
+Hussalonia &#8211; Like Tetanus In A Wound [<a href="http://www.auboutdufil.com/index.php?id=267#downloads" target="_blank">Auboutdufil</a>] // <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a><br />
+Wowa &amp; eckskwisit &#8211; Just Cool [<a href="http://www.wowa.me/post/151397163517/just-cool-hip-hop-meidum-by-wowa" target="_blank">Wowa.me</a>]  // <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a><br />
+ZAIRE &#8211; Twitter de Amor entre Androides [<a href="http://freemusicarchive.org/music/ZAIRE/zaire" target="_blank">FMA</a>] // <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a><br />
+MANWOMANCHILD &#8211; Bach Prelude in C BWV 846 [<a href="http://freemusicarchive.org/music/Masters_Remastered/Masters_Remastered" target="_blank">FMA</a>] // <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a><br />
+Accou &#8211; Gymnopedie No.1 (Erik Satie) [<a href="https://musopen.org/music/2034/erik-satie/gymnopedie-no-1-guitar-arr/" target="_blank">Musopen</a>] // <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a><br />
+Kimiko Ishizaka &#8211; Prelude No. 1 in C major, BWV 846 [<a href="http://music.kimiko-piano.com/album/bach-well-tempered-clavier-book-1" target="_blank">Bandcamp</a>] // <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY</a><br />
+Future Sauce &#8211; Gymnopedie No. 1 (Erik Satie) [<a href="http://freemusicarchive.org/music/Masters_Remastered/Masters_Remastered" target="_blank">FMA</a>] // <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a><br />
+<span class="subh1"><span class="playtxt">Katapulto &#8211; Zero Rythm Dollar Boy [<a href="http://freemusicarchive.org/music/Katapulto/Purity_and_Danger" target="_blank">FMA</a>] // <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a></span><br />
+Breuss Arrizabalaga Quintet &#8211; Mount Fuji [<a href="http://freemusicarchive.org/music/Breuss_Arrizabalaga_Quintet/Nfamoudou-Boudougou" target="_blank">FMA</a>] <span class="playtxt">// <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a></span></span><br />
+Psalms &#8211; Hideaway (feat. Tinariwen) [<a href="http://freemusicarchive.org/music/Psalters/us_vs_us" target="_blank">FMA</a>] <span class="subh1"><span class="playtxt">// <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0</a></span></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>The post <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk/podcasts/2017/01/01/session-3-20-happy-public-domain-day/">Session 3.20 &#8211; Happy Public Domain Day!</a> appeared first on <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk">White Market Podcast</a>.</p>
+]]>      </content:encoded>
+      <enclosure url="https://media.blubrry.com/white_market/archive.org/download/WhiteMarket20170101Session320/WhiteMarket-20170101-Session320.mp3" length="129173203" type="audio/mpeg" />
+      <itunes:subtitle>On this week’s show, WMP celebrated Public Domain Day. Public Domain Day has been happening as an initiative for some years now, being held on January 1st every year, as this is the date when...</itunes:subtitle>
+      <itunes:summary>On this week’s show, WMP celebrated Public Domain Day. Public Domain Day has been happening as an initiative for some years now, being held on January 1st every year, as this is the date when...</itunes:summary>
+      <itunes:author>White Market Podcast</itunes:author>
+      <itunes:explicit>clean</itunes:explicit>
+      <itunes:duration>53:48</itunes:duration>
+      <post-id xmlns="com-wordpress:feed-additions:1">939</post-id>
+    </item>
+    <item>
+      <title>Session 3.19 &#8211; WMP&#8217;s Best Moments of 2016</title>
+      <link>https://www.whitemarketpodcast.co.uk/podcasts/2016/12/19/session-3-19-wmps-best-moments-2016/</link>
+      <pubDate>Mon, 19 Dec 2016 12:29:45 +0000</pubDate>
+      <guid isPermaLink="false">http://www.whitemarketpodcast.co.uk/?p=915</guid>
+      <comments>https://www.whitemarketpodcast.co.uk/podcasts/2016/12/19/session-3-19-wmps-best-moments-2016/#respond</comments>
+      <wfw:commentRss>https://www.whitemarketpodcast.co.uk/podcasts/2016/12/19/session-3-19-wmps-best-moments-2016/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <category><![CDATA[Interviews]]></category>
+      <category><![CDATA[Podcasts]]></category>
+      <category><![CDATA[best of 2016]]></category>
+      <category><![CDATA[blocSonic]]></category>
+      <category><![CDATA[Copy-Me]]></category>
+      <category><![CDATA[Copyright Exceptions]]></category>
+      <category><![CDATA[Europeana]]></category>
+      <category><![CDATA[Free Music Archive]]></category>
+      <category><![CDATA[Free Software Foundation Europe]]></category>
+      <category><![CDATA[netlabel day]]></category>
+      <category><![CDATA[Pilot Eleven]]></category>
+      <category><![CDATA[Starfrosch]]></category>
+      <description>&lt;p&gt;As this is our very last show of 2016, I thought it’d be cool to do a recap of White Market Podcast’s best moments of 2016. In case you haven’t listened to all the episodes,...&lt;/p&gt;
+&lt;p&gt;The post &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk/podcasts/2016/12/19/session-3-19-wmps-best-moments-2016/&quot;&gt;Session 3.19 – WMP’s Best Moments of 2016&lt;/a&gt; appeared first on &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk&quot;&gt;White Market Podcast&lt;/a&gt;.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p style="text-align: justify;">As this is our very last show of 2016, I thought it&#8217;d be cool to do a recap of White Market Podcast’s best moments of 2016. In case you haven’t listened to all the episodes, this can be sort of your guide to go back and catch up with something you might have missed and be of your interest. With 8 interviews, a couple of special features and even a mini-documentary, I&#8217;m sure there will be something up your street.</p>
+<p style="text-align: justify;">This has probably been probably the best season of White Market Podcast so far. Since July, I have celebrated the <a href="http://www.whitemarketpodcast.co.uk/features/documentaries/2016/08/25/linux-25-story-linux/" target="_blank"><strong>25<sup>th</sup> anniversary of Linux</strong></a> and the 2<sup>nd</sup> edition of Netlabel Day, I have talked to netlabel managers and representatives of different institutions linked to free music and free culture, and, of course, I talked <strong>a lot</strong> about copyright. However, the big learning curve happened mainly due to our guests, so I decided to highlight them all, as sort of an appreciation gesture. You can find them all on our website, along with detailed credits on background music. Here&#8217;s a a list of all the guests on the show this season in order of appearance on this week&#8217;s show.</p>
+<ul>
+<li style="text-align: justify;">Cheyenne Hohman, director of <a href="http://freemusicarchive.com/" target="_blank">Free Music Archive</a> &#8211; <em><a href="http://www.whitemarketpodcast.co.uk/podcasts/2016/09/25/session-3-10-need-free-music-archive/" target="_blank">Session 3.10</a></em></li>
+<li style="text-align: justify;">Manuel Silva, founder of <a href="http://netlabelday.blogspot.pt/p/home.html" target="_blank"><strong>Netlabel Day</strong></a> and <a href="http://en-mistrecords.blogspot.pt/p/home.html" target="_blank">M.I.S.T. Records</a> &#8211; <em><a href="http://www.whitemarketpodcast.co.uk/podcasts/2016/07/14/session-3-01-netlabel-day-2016/" target="_blank">Session 3.01</a></em></li>
+<li style="text-align: justify;">Maarten Zeinstra, from think tank <a href="https://www.kl.nl/en/">Kennisland;</a> project manager at <a href="http://copyrightexceptions.eu/" target="_blank"><strong>CopyrightExceptions.Eu</strong></a> &#8211; <em><a href="http://www.whitemarketpodcast.co.uk/podcasts/2016/10/16/session-3-13-exceptions-not-rule/" target="_blank">Session 3.13</a></em></li>
+<li style="text-align: justify;">Alex Lungu, founder of the <a href="http://copy-me.org/" target="_blank"><strong>Copy-Me</strong></a> webseries and website- <em><a href="http://www.whitemarketpodcast.co.uk/podcasts/2016/07/28/3-03-copy-me-copy-you/" target="_blank">Session 3.03</a></em></li>
+<li style="text-align: justify;">Jonas Öberg, executive director of <a href="https://fsfe.org/" target="_blank"><strong>Free Software Foundation Europe</strong></a> &#8211; <em><a href="http://www.whitemarketpodcast.co.uk/podcasts/2016/09/01/session-3-07-fsfe-summit-2016-and-some-tunes/" target="_blank">Session 3.07</a></em></li>
+<li style="text-align: justify;">Joris Pekel, community manager for cultural heritage at <strong><a href="http://europeana.eu/" target="_blank">Europeana</a></strong> &#8211; <em><a href="http://www.whitemarketpodcast.co.uk/podcasts/2016/12/04/session-3-18-preserving-cultural-heritage-europeana/" target="_blank">Session 3.18</a></em></li>
+<li style="text-align: justify;">Markus Koller, founder and manager of <a href="https://starfrosch.com/hot-100/" target="_blank"><strong>Starfrosch</strong></a> &#8211; <em><a href="http://www.whitemarketpodcast.co.uk/podcasts/2016/10/30/session-3-15-starfrosch-hot100/" target="_blank">Session 3.15</a></em></li>
+<li style="text-align: justify;">Graeme Gill, founder and manager of <strong><a href="http://www.pilot11.co.uk/" target="_blank">Pilot Eleven</a></strong> &#8211; <em><a href="http://www.whitemarketpodcast.co.uk/podcasts/2016/10/02/session-3-11-experimentalism-pilot-eleven/" target="_blank">Session 3.11</a></em></li>
+</ul>
+<p style="text-align: justify;">Oh, and since it&#8217;s Christmas time, I also played the holiday tune of the season. Merry Xmas, everyone!</p>
+<p style="text-align: justify;">Donnie Ozone &#8211; Christmas Shopping at the Dollar Store [<a href="http://blocsonic.com/releases/bs450034" target="_blank">blocSonic</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA</a></p>
+<p style="text-align: justify;">
+<p>The post <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk/podcasts/2016/12/19/session-3-19-wmps-best-moments-2016/">Session 3.19 &#8211; WMP&#8217;s Best Moments of 2016</a> appeared first on <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk">White Market Podcast</a>.</p>
+]]>      </content:encoded>
+      <enclosure url="https://media.blubrry.com/white_market/archive.org/download/WhiteMarket20161218Session319/WhiteMarket-20161218-Session319.mp3" length="141003171" type="audio/mpeg" />
+      <itunes:subtitle>As this is our very last show of 2016, I thought it’d be cool to do a recap of White Market Podcast’s best moments of 2016. In case you haven’t listened to all the episodes,...</itunes:subtitle>
+      <itunes:summary>As this is our very last show of 2016, I thought it’d be cool to do a recap of White Market Podcast’s best moments of 2016. In case you haven’t listened to all the episodes,...</itunes:summary>
+      <itunes:author>White Market Podcast</itunes:author>
+      <itunes:explicit>clean</itunes:explicit>
+      <itunes:duration>58:44</itunes:duration>
+      <post-id xmlns="com-wordpress:feed-additions:1">915</post-id>
+    </item>
+    <item>
+      <title>Session 3.18 &#8211; Preserving cultural heritage with Europeana</title>
+      <link>https://www.whitemarketpodcast.co.uk/podcasts/2016/12/04/session-3-18-preserving-cultural-heritage-europeana/</link>
+      <pubDate>Sun, 04 Dec 2016 21:15:48 +0000</pubDate>
+      <guid isPermaLink="false">http://www.whitemarketpodcast.co.uk/?p=910</guid>
+      <comments>https://www.whitemarketpodcast.co.uk/podcasts/2016/12/04/session-3-18-preserving-cultural-heritage-europeana/#respond</comments>
+      <wfw:commentRss>https://www.whitemarketpodcast.co.uk/podcasts/2016/12/04/session-3-18-preserving-cultural-heritage-europeana/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <category><![CDATA[Interviews]]></category>
+      <category><![CDATA[Podcasts]]></category>
+      <category><![CDATA[Auboutdufil]]></category>
+      <category><![CDATA[Bandcamp]]></category>
+      <category><![CDATA[blocSonic]]></category>
+      <category><![CDATA[Club Coral]]></category>
+      <category><![CDATA[Europeana]]></category>
+      <category><![CDATA[Soundcloud]]></category>
+      <description>&lt;p&gt;This week, I had the opportunity to talk to Joris Pekel, Community Coordinator for Cultural Heritage at Europeana. On top of talking about their wider work of making artworks and cultural piece from all over...&lt;/p&gt;
+&lt;p&gt;The post &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk/podcasts/2016/12/04/session-3-18-preserving-cultural-heritage-europeana/&quot;&gt;Session 3.18 – Preserving cultural heritage with Europeana&lt;/a&gt; appeared first on &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk&quot;&gt;White Market Podcast&lt;/a&gt;.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p style="text-align: justify;">This week, I had the opportunity to talk to Joris Pekel, Community Coordinator for Cultural Heritage at <a href="http://www.europeana.eu/portal/en" target="_blank"><strong>Europeana</strong></a>. On top of talking about their wider work of making artworks and cultural piece from all over Europe accessible to the public online. During the interview, we also talked about the <a href="http://www.europeanasounds.eu/europeana-sounds-conference-2016" target="_blank"><strong>Europeana Sounds Conference 2016</strong></a>, their <a href="http://www.europeanasounds.eu/wp-content/uploads/2016/11/160430-D3.4-policy-recommendations-eSounds.pdf" target="_blank"><strong>Policy Recommendations for improving online access to audio and audio-related heritage in Europe</strong></a> and their <a href="https://soundcloud.com/europeana" target="_blank">brand new page on Soundcloud</a>.</p>
+<p style="text-align: justify;">On a side note, <strong>White Market Podcast</strong> is becoming a fortnight event. Our slots on Soundart Radio and Spark Sunderland remain the same, though. The next episode will be online on December 18th and regular broadcasts can be expected every fortnight from that date onwards.</p>
+<p style="text-align: justify;">LUKA$ &#8211; PCH (feat. BUSE) [<a href="https://lukaswithadollarsign.bandcamp.com/album/eighteen" target="_blank">Bandcamp</a>] // <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">CC BY-NC-ND</a><br />
+The Impossebulls &#8211; A Roller Skating Jam Called Saturday Nite [<a href="http://blocsonic.com/releases/bsmx0151" target="_blank">blocSonic</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA</a><br />
+Conscious Thoughts &#8211; Daydreamer (feat. Le Real) [<a href="https://clubcoral.bandcamp.com/track/daydreamer-ft-le-real" target="_blank">Club Coral</a>] // <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">CC BY-NC-ND</a><br />
+*Light-foot &#8211; Reckless Elect [<a href="https://soundcloud.com/light-foot/reckless-elect?" target="_blank">Soundcloud</a>] // <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY</a><br />
+George Bizet &#8211; <span class="soundTitle__title sc-font g-type-shrinkwrap-inline g-type-shrinkwrap-large-primary">L&#8217;amour est un oiseau rebelle (Habanera)</span> [<a href="https://soundcloud.com/latvijas-nacionala-biblioteka/sets/carmen" target="_blank">LNB/NLL</a> via Europeana] // <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC BY-SA</a><br />
+Mattias Westlund &#8211; Winters Call [<a href="http://www.auboutdufil.com/index.php?id=488" target="_blank">Auboutdufil</a>] // <a href="https://creativecommons.org/licenses/by/3.0/deed.fr" target="_blank">CC BY</a><br />
+Ruido Selecto &#8211; Talismán [<a href="http://monofonicos.net/mns006-va-colores-paralelos/" target="_blank">Monofonicos</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/2.5/co/" target="_blank">CC BY-NC-SA</a></p>
+<p style="text-align: justify;">All the tracks used as background music during the interview are taken from Jon Luc Hefferman&#8217;s album &#8220;<a href="http://freemusicarchive.org/music/Jon_Luc_Hefferman/Production_Music_2/" target="_blank">Elian Mor</a>&#8220;. These tracks are available under a <a href="https://creativecommons.org/licenses/by-nc/3.0/" target="_blank">CC BY-NC licence</a>.</p>
+<p><small></p>
+<p style="text-align: justify;">*<a href="https://starfrosch.com/hot-100/" target="_blank"><strong>Starfrosch</strong></a> Hot Track of the Week</p>
+<p></small><br />
+&nbsp;</p>
+<p>The post <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk/podcasts/2016/12/04/session-3-18-preserving-cultural-heritage-europeana/">Session 3.18 &#8211; Preserving cultural heritage with Europeana</a> appeared first on <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk">White Market Podcast</a>.</p>
+]]>      </content:encoded>
+      <enclosure url="https://media.blubrry.com/white_market/archive.org/download/WhiteMarket-20161204-Session318/WhiteMarket-20161204-Session318.mp3" length="142179677" type="audio/mpeg" />
+      <itunes:subtitle>This week, I had the opportunity to talk to Joris Pekel, Community Coordinator for Cultural Heritage at Europeana. On top of talking about their wider work of making artworks and cultural piece from all over...</itunes:subtitle>
+      <itunes:summary>This week, I had the opportunity to talk to Joris Pekel, Community Coordinator for Cultural Heritage at Europeana. On top of talking about their wider work of making artworks and cultural piece from all over...</itunes:summary>
+      <itunes:author>White Market Podcast</itunes:author>
+      <itunes:explicit>clean</itunes:explicit>
+      <itunes:duration>59:13</itunes:duration>
+      <post-id xmlns="com-wordpress:feed-additions:1">910</post-id>
+    </item>
+    <item>
+      <title>Session 3.17 &#8211; Rain, technical issues and music</title>
+      <link>https://www.whitemarketpodcast.co.uk/podcasts/2016/11/25/session-3-17-rain-technical-issues-music/</link>
+      <pubDate>Fri, 25 Nov 2016 11:20:13 +0000</pubDate>
+      <guid isPermaLink="false">http://www.whitemarketpodcast.co.uk/?p=902</guid>
+      <comments>https://www.whitemarketpodcast.co.uk/podcasts/2016/11/25/session-3-17-rain-technical-issues-music/#respond</comments>
+      <wfw:commentRss>https://www.whitemarketpodcast.co.uk/podcasts/2016/11/25/session-3-17-rain-technical-issues-music/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <category><![CDATA[Podcasts]]></category>
+      <category><![CDATA[Advanced Materials]]></category>
+      <category><![CDATA[Bandcamp]]></category>
+      <category><![CDATA[Broque]]></category>
+      <category><![CDATA[ccMixter]]></category>
+      <category><![CDATA[Free Music Archive]]></category>
+      <category><![CDATA[Jamendo]]></category>
+      <category><![CDATA[Kahvi Collective]]></category>
+      <category><![CDATA[Sólo le Pido a Dior]]></category>
+      <category><![CDATA[Soundcloud]]></category>
+      <description>&lt;p&gt;After many technical difficulties, a lot of travelling and a week of unstoppable rain in the North East of England, the show is finally online. Being very honest, I would have liked it to have...&lt;/p&gt;
+&lt;p&gt;The post &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk/podcasts/2016/11/25/session-3-17-rain-technical-issues-music/&quot;&gt;Session 3.17 – Rain, technical issues and music&lt;/a&gt; appeared first on &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk&quot;&gt;White Market Podcast&lt;/a&gt;.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p style="text-align: justify;">After many technical difficulties, a lot of travelling and a week of unstoppable rain in the North East of England, the show is finally online. Being very honest, I would have liked it to have some extra content, but it was impossible after a series of unfortunate events. In a near future there&#8217;s still a European Commons Assembly special to come and a Europeana special as well!</p>
+<p style="text-align: justify;">For now, here&#8217;s this week&#8217;s free music mix for you.</p>
+<p>François &#8211; Bem-Vindo [<a href="https://sololepidoadior.bandcamp.com/album/spd-20-brazil">Sólo Le Pido A Dior</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA<br />
+</a>Matt Kelly &#8211; 4 U (Single version) [<a href="https://soundcloud.com/mattkellymusic/4u-1">Soundcloud</a>] // <a href="https://creativecommons.org/licenses/by/3.0/">CC BY<br />
+</a>Husky &#8211; I&#8217;ll be there for you [<a href="https://soundcloud.com/huskyyyy/ill-be-there-for-you">Soundcloud</a>] // <a href="https://creativecommons.org/licenses/by/3.0/">CC BY<br />
+</a>Vinze is Dead &#8211; Annexagone (What runs away never returns) [<a href="http://kahvi.org/releases.php?release_number=376">Kahvi</a>] // <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/">CC BY-NC-ND<br />
+</a>Max Jahn &#8211; Satellite Circus [<a href="http://www.broque.de/label/en/release/mp3-download-en/4093-112-max-jahn-skyrunner-2">Broque</a>] // <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND<br />
+</a>Rag and Bones &#8211; Paralyzed [<a href="https://www.jamendo.com/album/156636/when-can-your-glory-fade">Jamendo</a>] // <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA<br />
+</a>The Homeless Kids &#8211; Broadcast [<a href="http://freemusicarchive.org/music/The_Homeless_Kids/No_Karma/">FMA</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA<br />
+</a>* She-Wolf &#8211; Circles [<a href="http://freemusicarchive.org/music/She-Wolf/Circles_EP/">FMA</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA<br />
+</a>Themed Restaurant &#8211; All the time [<a href="https://mnovak.bandcamp.com/album/songs-from-a-now-dissolved-relationship">Bandcamp</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA<br />
+</a>Woodland Associates &#8211; Cheap Date [<a href="https://advancedmaterials.bandcamp.com/album/affairs-and-engagements">Advanced Materials</a>] // <a href="https://creativecommons.org/licenses/by-nc/3.0/">CC BY-NC<br />
+</a>Alex &#8211; Disconnect (feat. ducket) [<a href="http://dig.ccmixter.org/files/AlexBeroza/55012">CC Mixter</a>] // <a href="https://creativecommons.org/licenses/by-nc/3.0/">CC BY-NC</a></p>
+<p><em><small>*<strong><a href="https://starfrosch.com/hot-100/" target="_blank">Starfrosch</a> Hot Track of The Week</strong></small></em></p>
+<p>The post <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk/podcasts/2016/11/25/session-3-17-rain-technical-issues-music/">Session 3.17 &#8211; Rain, technical issues and music</a> appeared first on <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk">White Market Podcast</a>.</p>
+]]>      </content:encoded>
+      <enclosure url="https://media.blubrry.com/white_market/archive.org/download/WhiteMarket20161122Session317/WhiteMarket-20161122-Session317.mp3" length="128361989" type="audio/mpeg" />
+      <itunes:subtitle>After many technical difficulties, a lot of travelling and a week of unstoppable rain in the North East of England, the show is finally online. Being very honest, I would have liked it to have...</itunes:subtitle>
+      <itunes:summary>After many technical difficulties, a lot of travelling and a week of unstoppable rain in the North East of England, the show is finally online. Being very honest, I would have liked it to have...</itunes:summary>
+      <itunes:author>White Market Podcast</itunes:author>
+      <itunes:explicit>clean</itunes:explicit>
+      <post-id xmlns="com-wordpress:feed-additions:1">902</post-id>
+    </item>
+    <item>
+      <title>Session 3.16 &#8211; Music to Our Ears</title>
+      <link>https://www.whitemarketpodcast.co.uk/podcasts/2016/11/15/session-3-16-music-ears/</link>
+      <pubDate>Tue, 15 Nov 2016 11:45:11 +0000</pubDate>
+      <guid isPermaLink="false">http://www.whitemarketpodcast.co.uk/?p=886</guid>
+      <comments>https://www.whitemarketpodcast.co.uk/podcasts/2016/11/15/session-3-16-music-ears/#respond</comments>
+      <wfw:commentRss>https://www.whitemarketpodcast.co.uk/podcasts/2016/11/15/session-3-16-music-ears/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <category><![CDATA[Podcasts]]></category>
+      <category><![CDATA[Bad Panda Records]]></category>
+      <category><![CDATA[blocSonic]]></category>
+      <category><![CDATA[Enough Records]]></category>
+      <category><![CDATA[Foof Records]]></category>
+      <category><![CDATA[Free Music Archive]]></category>
+      <category><![CDATA[Jamendo]]></category>
+      <category><![CDATA[Lost Children]]></category>
+      <category><![CDATA[Needle Drop]]></category>
+      <category><![CDATA[Southern City's Lab]]></category>
+      <category><![CDATA[Vulpiano Records]]></category>
+      <description>&lt;p&gt;This week we dive into yet another music-only session! From hip-hop to post-rock, from new music to great throwbacks, this episode come jam-packed with amazing tunes to suit all your needs. This episode also marks...&lt;/p&gt;
+&lt;p&gt;The post &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk/podcasts/2016/11/15/session-3-16-music-ears/&quot;&gt;Session 3.16 – Music to Our Ears&lt;/a&gt; appeared first on &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk&quot;&gt;White Market Podcast&lt;/a&gt;.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p style="text-align: justify;">This week we dive into yet another music-only session! From hip-hop to post-rock, from new music to great throwbacks, this episode come jam-packed with amazing tunes to suit all your needs. This episode also marks the beginning of a new feature called &#8220;<strong>Starfrosch Hot Track of the Week</strong>&#8220;, which is a collaboration with <a href="https://starfrosch.com/hot-100/" target="_blank">Starfrosch</a>. If you want to know more about their Creative Commons chart, make sure you listen to our <a href="http://www.whitemarketpodcast.co.uk/podcasts/2016/10/30/session-3-15-starfrosch-hot100/" target="_blank">interview with Markus Koeller</a>.</p>
+<p>The Impossebulls &#8211; No Country for Old Men [<a href="http://blocsonic.com/releases/bsmx0147" target="_blank">blocSonic</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA<br />
+</a>Severin &#8211; I Really Adore You [<a href="http://freemusicarchive.org/music/Severin/Severin/" target="_blank">Needle Drop Co.</a>] // <a href="https://creativecommons.org/licenses/by-nc/3.0/" target="_blank">CC BY-NC<br />
+</a>waterpistol &#8211; The Look You&#8217;re Giving Me [<a href="https://www.jamendo.com/album/162214/bloody-people" target="_blank">Jamendo</a>] // <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">CC BY-NC-ND<br />
+</a>Monkey Warhol &#8211; Waiting [<a href="http://freemusicarchive.org/music/Monkey_Warhol/The_Darwin_LP/" target="_blank">FMA</a>] // <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY</a><br />
+Ziegler Co. &#8211; Clarity [<a href="http://www.foofrecords.com/releases/single/soap_water" target="_blank">Foof Records</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">CC BY-NC-SA</a><br />
+*meltycanon &#8211; Romeo [<a href="https://soundcloud.com/meltycanon/romeo" target="_blank">Soundcloud</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">CC BY-NC-SA</a><br />
+ALMUNIA &#8211; Nisida Shores [<a href="https://badpandarecords.bandcamp.com/album/almunia-nisida-shores" target="_blank">Bad Panda Records</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA</a><br />
+Fodiator &#8211; Fodi Scope [<a href="http://www.southerncitylab.net/2016/10/SCL188.html" target="_blank">Southern City&#8217;s Lab</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA</a><br />
+VUKOVAR &#8211; The Three Shades [<a href="https://vulpianorecords.bandcamp.com/album/the-three-shades" target="_blank">Vulpiano Records</a>] // <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">CC BY-NC-ND<br />
+</a>As Above So Below &#8211; Exile [<a href="http://enoughrecords.scene.org/release/enrmp394" target="_blank">Enough Records</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">CC BY-NC-SA</a><br />
+Time.Space.Repeat &#8211; World Awake [<a href="https://archive.org/details/LostChildren014" target="_blank">Lost Children</a>] // <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/uk/" target="_blank">CC BY-NC-ND<br />
+</a>Hermelin &#8211; &#8230;Sharp Teeth [<a href="http://freemusicarchive.org/music/Hermelin/Hermelin/" target="_blank">FMA</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA</a></p>
+<p>&nbsp;</p>
+<p>The post <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk/podcasts/2016/11/15/session-3-16-music-ears/">Session 3.16 &#8211; Music to Our Ears</a> appeared first on <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk">White Market Podcast</a>.</p>
+]]>      </content:encoded>
+      <enclosure url="https://media.blubrry.com/white_market/archive.org/download/WhiteMarket20161115Session316/WhiteMarket-20161115-Session316.mp3" length="137682944" type="audio/mpeg" />
+      <itunes:subtitle>This week we dive into yet another music-only session! From hip-hop to post-rock, from new music to great throwbacks, this episode come jam-packed with amazing tunes to suit all your needs. This episode also marks...</itunes:subtitle>
+      <itunes:summary>This week we dive into yet another music-only session! From hip-hop to post-rock, from new music to great throwbacks, this episode come jam-packed with amazing tunes to suit all your needs. This episode also marks...</itunes:summary>
+      <itunes:author>White Market Podcast</itunes:author>
+      <itunes:explicit>clean</itunes:explicit>
+      <itunes:duration>57:14</itunes:duration>
+      <post-id xmlns="com-wordpress:feed-additions:1">886</post-id>
+    </item>
+    <item>
+      <title>Session 3.15 &#8211; Starfrosch and the Hot100</title>
+      <link>https://www.whitemarketpodcast.co.uk/podcasts/2016/10/30/session-3-15-starfrosch-hot100/</link>
+      <pubDate>Sun, 30 Oct 2016 22:12:57 +0000</pubDate>
+      <guid isPermaLink="false">http://www.whitemarketpodcast.co.uk/?p=881</guid>
+      <comments>https://www.whitemarketpodcast.co.uk/podcasts/2016/10/30/session-3-15-starfrosch-hot100/#respond</comments>
+      <wfw:commentRss>https://www.whitemarketpodcast.co.uk/podcasts/2016/10/30/session-3-15-starfrosch-hot100/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <category><![CDATA[Interviews]]></category>
+      <category><![CDATA[Podcasts]]></category>
+      <category><![CDATA[Free Music Archive]]></category>
+      <category><![CDATA[Jamendo]]></category>
+      <category><![CDATA[Needle Drop]]></category>
+      <category><![CDATA[Real Audio]]></category>
+      <category><![CDATA[Soundcloud]]></category>
+      <category><![CDATA[Starfrosch]]></category>
+      <category><![CDATA[Wowa Music]]></category>
+      <description>&lt;p&gt;After mentioning the project several times on the show (and on the blog as well!), this week, I finally had the pleasure of talking to Markus Koller, the person behind the wonderful Starfrosch. Starfrosch is...&lt;/p&gt;
+&lt;p&gt;The post &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk/podcasts/2016/10/30/session-3-15-starfrosch-hot100/&quot;&gt;Session 3.15 – Starfrosch and the Hot100&lt;/a&gt; appeared first on &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk&quot;&gt;White Market Podcast&lt;/a&gt;.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p style="text-align: justify;">After mentioning the project several times on the show (<a href="http://www.whitemarketpodcast.co.uk/blog/2016/07/12/best-places-find-free-music/" target="_blank" rel="noopener">and on the blog as well</a>!), this week, I finally had the pleasure of talking to <strong>Markus Koller</strong>, the person behind the wonderful <a href="https://starfrosch.com" target="_blank" rel="noopener"><strong>Starfrosch</strong></a>. Starfrosch is a Switzerland-based project that runs simultaneously as a podcast, a blog, an automated radio playlist and, last but definitely not least, as a <a href="https://starfrosch.com/hot-100" target="_blank" rel="noopener"><strong>Hot100 chart for Creative Commons music</strong></a>.</p>
+<p style="text-align: justify;">Markus is a pioneer of Creative Commons music, having been an active member of the community for more than a decade now. So, it didn&#8217;t come as a surprise to find out that he knows quite a lot about the licences and some of the issues major CC music sharing platforms have. On top of that, we also talked about how he developed the website and the project over the years, and some of his own favourite music genres and platforms.</p>
+<p style="text-align: justify;"><a href="http://starfrosch.com/" target="_blank" rel="noopener"><strong>Starfrosch</strong></a> is currently looking for bloggers who are into the most mainstream side of Creative Commons music to help them keep their blog alive and fresh.</p>
+<p style="text-align: justify;">Let&#8217;s Eat Grandma &#8211; Deep Six Textbook [<a href="http://freemusicarchive.org/music/Lets_Eat_Grandma/Live_on_WFMUs_100_Whatever_with_Mary_Wing_-_September_20_2016/" target="_blank" rel="noopener">FMA</a>] // <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">CC BY-NC-ND</a><br />
+Francis and The Lights &#8211; See Her Out [<a href="https://soundcloud.com/francisandthelights/01-see-her-out?in=francisandthelights/sets/farewell-starlite-1" target="_blank" rel="noopener">Soundcloud</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" rel="noopener">CC BY-NC-SA</a><br />
+Starover &#8211; A Flower in Space [<a href="http://freemusicarchive.org/music/Starover_Blue/Spacegeist/" target="_blank" rel="noopener">Needle Drop Co.</a>] // <a href="https://creativecommons.org/licenses/by-nc/3.0/" target="_blank" rel="noopener">CC BY-NC</a><br />
+Starfrosch &#8211; Serie3 [<a href="https://archive.org/details/rabr006" target="_blank" rel="noopener">Real Audio</a>] // <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank" rel="noopener">CC BY-NC-ND</a><br />
+Javier Gómez Bello &#8211; Palabras [<a href="https://www.jamendo.com/track/1379393/palabras" target="_blank" rel="noopener">Jamendo</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" rel="noopener">CC BY-NC-SA</a><br />
+Wowa &amp; eckskwisit &#8211; Just Cool &#8211; [<a href="http://www.wowa.me/" target="_blank" rel="noopener">Wowa Music</a> via <a href="https://soundcloud.com/wowamusik/just-cool-cc0-free-download-use-urban-wowame" target="_blank" rel="noopener">Soundcloud</a>] // <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC-0</a></p>
+<p style="text-align: justify;">As background music for interview, you can find all the tracks of <a href="http://www.circusmarcus.net" target="_blank" rel="noopener">Circus Marcus</a> album &#8220;<a href="http://www.circusmarcus.net/kalimba-session.php" target="_blank" rel="noopener">Kalimba Session 2016-05-07</a>&#8220;; all tracks available under <a href="https://creativecommons.org/licenses/by-nc/3.0/" target="_blank" rel="noopener">CC BY-NC</a>.</p>
+<p>The post <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk/podcasts/2016/10/30/session-3-15-starfrosch-hot100/">Session 3.15 &#8211; Starfrosch and the Hot100</a> appeared first on <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk">White Market Podcast</a>.</p>
+]]>      </content:encoded>
+      <enclosure url="https://media.blubrry.com/white_market/archive.org/download/WhiteMarket20161030Session315/WhiteMarket-20161030-Session315.mp3" length="143517892" type="audio/mpeg" />
+      <itunes:subtitle>After mentioning the project several times on the show (and on the blog as well!), this week, I finally had the pleasure of talking to Markus Koller, the person behind the wonderful Starfrosch. Starfrosch is...</itunes:subtitle>
+      <itunes:summary>After mentioning the project several times on the show (and on the blog as well!), this week, I finally had the pleasure of talking to Markus Koller, the person behind the wonderful Starfrosch. Starfrosch is...</itunes:summary>
+      <itunes:author>White Market Podcast</itunes:author>
+      <itunes:explicit>clean</itunes:explicit>
+      <itunes:duration>59:47</itunes:duration>
+      <post-id xmlns="com-wordpress:feed-additions:1">881</post-id>
+    </item>
+    <item>
+      <title>Session 3.14 &#8211; On to the Dance Floor</title>
+      <link>https://www.whitemarketpodcast.co.uk/podcasts/2016/10/23/session-3-14-dance-floor/</link>
+      <pubDate>Sun, 23 Oct 2016 20:15:36 +0000</pubDate>
+      <guid isPermaLink="false">http://www.whitemarketpodcast.co.uk/?p=875</guid>
+      <comments>https://www.whitemarketpodcast.co.uk/podcasts/2016/10/23/session-3-14-dance-floor/#respond</comments>
+      <wfw:commentRss>https://www.whitemarketpodcast.co.uk/podcasts/2016/10/23/session-3-14-dance-floor/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <category><![CDATA[Podcasts]]></category>
+      <category><![CDATA[Bandcamp]]></category>
+      <category><![CDATA[blocSonic]]></category>
+      <category><![CDATA[Cassette Blog]]></category>
+      <category><![CDATA[Free Music Archive]]></category>
+      <category><![CDATA[Jamendo]]></category>
+      <category><![CDATA[Monofonicos]]></category>
+      <category><![CDATA[Plain Productions]]></category>
+      <category><![CDATA[Soundcloud]]></category>
+      <category><![CDATA[Toucan Music]]></category>
+      <category><![CDATA[Yarn Audio]]></category>
+      <description>&lt;p&gt;This week, White Market Podcast steps on the dance floor with classy beats and groovy bass lines. Between hip-hop, house and even a bit of drum ‘n’ bass, there’s a bit for almost every dance...&lt;/p&gt;
+&lt;p&gt;The post &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk/podcasts/2016/10/23/session-3-14-dance-floor/&quot;&gt;Session 3.14 – On to the Dance Floor&lt;/a&gt; appeared first on &lt;a rel=&quot;nofollow&quot; href=&quot;https://www.whitemarketpodcast.co.uk&quot;&gt;White Market Podcast&lt;/a&gt;.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p style="text-align: justify;">This week, White Market Podcast steps on the dance floor with classy beats and groovy bass lines. Between hip-hop, house and even a bit of drum &#8216;n&#8217; bass, there&#8217;s a bit for almost every dance move set.</p>
+<p style="text-align: justify;">Cheese N Pot C &#8211; Home Base (feat. Long John) [<a href="http://blocsonic.com/releases/bsmx0145" target="_blank">blocSonic</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA</a><br />
+Mokhov &#8211; Midnight Love [<a href="http://dustedwax.org/dwk085.html" target="_blank">Dusted Wax Kingdom</a>] // <a href="https://creativecommons.org/licenses/by-nc-nd/2.5/" target="_blank">CC BY-NC-ND</a><br />
+Astronaut &#8211; Nobody Knows [<a href="http://monofonicos.net/mns-005-va-colores-nublados/" target="_blank">Monofonicos</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/2.5/" target="_blank">CC BY-NC-SA</a><br />
+Miami Slice &#8211; Cloud Nine [<a href="http://freemusicarchive.org/music/Miami_Slice/Brooklyn_2_Brooklyn/" target="_blank">FMA</a>] // <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank">CC BY-NC-ND</a><br />
+Ramón León &#8211; Yeah [<a href="https://archive.org/details/pp016me" target="_blank">Plain Productions</a>] // <a href="https://creativecommons.org/licenses/by-nc-nd/2.5/" target="_blank">CC BY-NC-ND</a><br />
+Phish Funk &amp; Dave Kent &#8211; Hold On [<a href="http://redmannwww.toucanmusic.co.uk/releases/release.php?q=tou319" target="_blank">Toucan Music</a>] // <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC</a><br />
+Dany F &#8211; Casiandó [<a href="https://danyf.bandcamp.com/album/tropical-state-of-mind" target="_blank">Bandcamp</a>] // <a href="https://creativecommons.org/licenses/by-nc/3.0/" target="_blank">CC BY-NC</a><br />
+Self-Help &#8211; O Ella Me Llama [<a href="http://www.cassetteblog.com/2016/10/dj-self-help-oh-ella-me-llama-ep/" target="_blank">Cassette Blog</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">CC BY-NC-SA</a><br />
+Sunsplash &#8211; Delfines [<a href="https://sunsplash.bandcamp.com/album/13" target="_blank">Bandcamp</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">CC BY-NC-SA</a><br />
+SWIM &#8211; We Are Young [<a href="https://soundcloud.com/swim_music/we-are-young-1" target="_blank">Soundcloud</a>] // <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">CC BY-NC-SA</a><br />
+Neon Niteclub &#8211; I Want You [<a href="https://www.jamendo.com/album/142959/after-hours" target="_blank">Jamendo</a>] // <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC BY-SA</a><br />
+Chump Change &#8211; Footage [<a href="http://yarnaudio.com/releases/yarn014" target="_blank">Yarn Audio</a>] // <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY</a></p>
+<p><small>.: Photo by <a href="https://www.flickr.com/photos/yozza/286942958">Ewan Topping</a> :. <a href="https://creativecommons.org/licenses/by/4.0/" target="blank">CC BY</a></small></p>
+<p>The post <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk/podcasts/2016/10/23/session-3-14-dance-floor/">Session 3.14 &#8211; On to the Dance Floor</a> appeared first on <a rel="nofollow" href="https://www.whitemarketpodcast.co.uk">White Market Podcast</a>.</p>
+]]>      </content:encoded>
+      <enclosure url="https://media.blubrry.com/white_market/archive.org/download/WhiteMarket20161023Session314/WhiteMarket-20161023-Session314.mp3" length="136354196" type="audio/mpeg" />
+      <itunes:subtitle>This week, White Market Podcast steps on the dance floor with classy beats and groovy bass lines. Between hip-hop, house and even a bit of drum ‘n’ bass, there’s a bit for almost every dance...</itunes:subtitle>
+      <itunes:summary>This week, White Market Podcast steps on the dance floor with classy beats and groovy bass lines. Between hip-hop, house and even a bit of drum ‘n’ bass, there’s a bit for almost every dance...</itunes:summary>
+      <itunes:author>White Market Podcast</itunes:author>
+      <itunes:explicit>clean</itunes:explicit>
+      <itunes:duration>56:48</itunes:duration>
+      <post-id xmlns="com-wordpress:feed-additions:1">875</post-id>
+    </item>
+  </channel>
+</rss>

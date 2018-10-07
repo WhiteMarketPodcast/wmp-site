@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: 'White Market Podcast',
+    siteUrl: `whitemarketpodcast.netlify.com`,
+    description:
+      'White Market Podcast is show about free music and free culture by Rute Correia. While the show is mainly focused on Creative Commons-licenced music, since it is also naturally intertwined with other movements and ideologies such as Open Source and Open Access, it often features these and similar forms of activism related to digital rights and freedom.',
   },
   plugins: [
     'gatsby-plugin-resolve-src',
@@ -35,6 +38,66 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [`gatsby-remark-external-links`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+        {
+          site {
+            siteMetadata {
+              title
+              description
+              siteUrl
+            }
+          }
+        }
+      `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => allMarkdownRemark.edges.map((edge) => {
+              const {
+                frontmatter,
+                fields: { slug },
+                excerpt,
+                html,
+              } = edge.node;
+              const url = site.siteMetadata.siteUrl + slug;
+
+              return Object.assign({}, frontmatter, {
+                description: excerpt,
+                url,
+                guid: url,
+                custom_elements: [{ 'content:encoded': html }],
+              });
+            }),
+            query: `
+            {
+              allMarkdownRemark(
+                limit: 1000,
+                sort: { order: DESC, fields: [frontmatter___date] },
+                filter: {frontmatter: { format: { eq: "audio" } }}
+              ) {
+                edges {
+                  node {
+                    excerpt
+                    html
+                    fields { slug }
+                    frontmatter {
+                      title
+                      date
+                      podcastURL
+                    }
+                  }
+                }
+              }
+            }
+          `,
+            output: '/rss.xml',
+            title: 'Gatsby RSS Feed',
+          },
+        ],
       },
     },
     {
