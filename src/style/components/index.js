@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Link from 'components/Link';
-import { emerald } from '../colors';
+import { emerald, white } from '../colors';
 import { onMobile } from '../mediaQueries';
 
 export const PaddedSection = styled.section`
@@ -41,9 +41,17 @@ export const LinkButton = styled(Link)`
 `;
 
 export const BrandH1 = styled.h1`
+  position: relative;
   margin: ${({ moreMarginOnTop }) => (moreMarginOnTop ? `3rem auto 1rem auto` : `2rem auto`)};
   padding: 0 0.3em;
   text-align: center;
+`;
+
+export const TitleHighlight = styled.span`
+  display: block;
+  background-color: ${emerald};
+  color: ${white};
+  margin: 0.5rem;
 `;
 
 export const BrandH2 = styled.h2`

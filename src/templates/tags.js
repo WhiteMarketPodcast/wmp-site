@@ -9,6 +9,7 @@ import {
   FlexCenter,
   FlexCenterWithMargin,
   LinkButton,
+  TitleHighlight,
 } from 'style/components';
 
 class TagRoute extends React.Component {
@@ -20,20 +21,23 @@ class TagRoute extends React.Component {
   render() {
     const {
       data: {
-        allMarkdownRemark: { edges: posts, totalCount },
+        allMarkdownRemark: { edges: posts },
         site: { siteMetadata },
       },
       pageContext: { tag },
     } = this.props;
 
-    const tagHeader = `Posts tagged with “${tag}”: ${totalCount}`;
+    const tagHeader = `Posts tagged with`;
 
     return (
       <Layout>
         <section>
           <Helmet title={`${tag} | ${siteMetadata.title}`} />
           <FlexCenter>
-            <BrandH1>{tagHeader}</BrandH1>
+            <BrandH1 className="small">
+              <span>{tagHeader}</span>
+              <TitleHighlight>{tag}</TitleHighlight>
+            </BrandH1>
           </FlexCenter>
           <BlogGrid posts={posts} />
           <FlexCenterWithMargin>

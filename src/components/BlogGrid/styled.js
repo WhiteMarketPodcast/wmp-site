@@ -22,7 +22,7 @@ export const BlogListGrid = styled(InfiniteScroll)`
   max-width: 1500px;
 
   ${onDesktop} {
-    grid-template-columns: repeat(auto-fill, 18rem);
+    grid-template-columns: repeat(auto-fit, 18rem);
     grid-auto-rows: 16rem;
   }
 `;
