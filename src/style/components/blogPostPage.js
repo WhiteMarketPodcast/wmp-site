@@ -6,7 +6,7 @@ import { onMobile } from '../mediaQueries';
 export const Title = styled.h1`
   color: ${white};
   max-width: 26ch;
-  margin: 0 auto;
+  margin: 0 auto 0.5rem auto;
   text-align: center;
 `;
 
@@ -36,7 +36,7 @@ export const Hero = styled.div`
 export const Date = styled.div`
   color: ${white};
   font-weight: 600;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 `;
 
 export const CoverImage = styled.img`

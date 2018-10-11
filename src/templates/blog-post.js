@@ -1,17 +1,10 @@
 import _ from 'lodash';
 import React, { Component, Fragment } from 'react';
-import {
-  array,
-  func,
-  node,
-  string,
-  instanceOf,
-  shape,
-  object,
-} from 'prop-types';
+import { array, func, node, string, shape, object } from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
+import PlayButton from 'components/PlayButton';
 import Player from 'components/Player';
 import Content, { HTMLContent } from 'components/Content';
 import {
@@ -40,7 +33,7 @@ export class BlogPostTemplate extends Component {
     videoURL: string,
     date: string.isRequired,
     title: string.isRequired,
-    helmet: instanceOf(Helmet),
+    helmet: node,
     pageContext: object.isRequired,
     tags: array,
   };
@@ -58,7 +51,27 @@ export class BlogPostTemplate extends Component {
     videoURL: '',
   };
 
-  state = {};
+  state = {
+    showMedia: false,
+    isPlaying: false,
+  };
+
+  getMediaURL = () => {
+    const { podcastURL, videoURL } = this.props;
+    return podcastURL || videoURL;
+  };
+
+  handlePlayClick = () => {
+    const { showMedia } = this.state;
+
+    if (!showMedia) {
+      this.setState({ showMedia: true, isPlaying: true });
+    }
+
+    const playButton = document.querySelector(`button.plyr__control`);
+    if (!playButton) return;
+    playButton.click();
+  };
 
   renderTags() {
     const { tags } = this.props;
@@ -107,37 +120,55 @@ export class BlogPostTemplate extends Component {
   }
 
   renderMedia() {
-    const { format, podcastURL, videoURL } = this.props;
-    const url = podcastURL || videoURL;
-    if (!_.includes([`audio`, `video`], format) || !url) return null;
+    const { format } = this.props;
+    console.log('format', format);
+    const { showMedia } = this.state;
+    const url = this.getMediaURL();
+    if (!showMedia || !_.includes([`audio`, `video`], format) || !url) return null;
 
-    return <Player url={url} type={format} />;
+    return (
+      <Player
+        url={url}
+        type={format}
+        onPlay={() => this.setState({ isPlaying: true })}
+        onPause={() => this.setState({ isPlaying: false })}
+        autoplay
+      />
+    );
+  }
+
+  renderTitle() {
+    const { format, image, imageURL, title, description, date } = this.props;
+    const { showMedia } = this.state;
+    if (showMedia && format === `video`) return null;
+
+    return (
+      <Hero src={image || imageURL}>
+        <Title>{title}</Title>
+        {description && <p>{description}</p>}
+        {this.renderPlayButton()}
+        <Date>{date}</Date>
+      </Hero>
+    );
+  }
+
+  renderPlayButton() {
+    const url = this.getMediaURL();
+    const { isPlaying } = this.state;
+    if (!url) return null;
+
+    return <PlayButton onClick={this.handlePlayClick} isPlaying={isPlaying} />;
   }
 
   render() {
-    const {
-      content,
-      contentComponent,
-      date,
-      description,
-      image,
-      imageURL,
-      tags,
-      title,
-      helmet,
-    } = this.props;
+    const { content, contentComponent, helmet } = this.props;
     const PostContent = contentComponent || Content;
 
     return (
       <section>
         {helmet}
-        <Hero src={image || imageURL}>
-          <Title>{title}</Title>
-          {description && <p>{description}</p>}
-          <Date>{date}</Date>
-        </Hero>
-
-        <Column className={_.isEmpty(tags) ? 'no-aside' : ''}>
+        {this.renderTitle()}
+        <Column>
           <BlogContent>
             {this.renderMedia()}
             <PostContent content={content} />

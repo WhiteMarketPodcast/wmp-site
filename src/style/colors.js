@@ -3,6 +3,7 @@ export const white = `#F7F7F7`;
 export const translucentWhite = `rgba(247, 247, 247, 0.8)`;
 export const green = `#4FC77B`;
 export const lightEmerald = `#35AE9E`;
+export const translucentlightEmerald = `rgba(53,174,158, 0.8)`;
 export const emerald = `#3F8F85`;
 export const translucentEmerald = `rgba(63, 143, 133, 0.7)`;
 export const lightGrey = `#E9E9E9`;

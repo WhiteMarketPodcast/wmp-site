@@ -26,11 +26,12 @@ class Player extends Component {
   };
 
   render() {
-    const { url, autoplay } = this.props;
+    const { url, autoplay, ...rest } = this.props;
 
     return (
       <PlyrContainer>
         <Plyr
+          {...rest}
           url={url}
           videoId={url}
           type={this.getType()}
