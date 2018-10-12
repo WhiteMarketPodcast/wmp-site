@@ -7,6 +7,7 @@ export const Button = styled.button`
   align-items: center;
   background-color: ${translucentlightEmerald};
   border: 0;
+  border-radius: 0;
   color: ${white};
   line-height: 1;
   margin: 0.5rem;

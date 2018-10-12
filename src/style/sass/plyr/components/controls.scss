@@ -58,8 +58,8 @@
   border-radius: inherit;
   color: $plyr-audio-control-color;
   padding: $plyr-control-spacing;
-  border: 1px solid $plyr-color-heather;
-  box-shadow: 0 4px 4px -3px rgba(0, 0, 0, 0.15);
+  border: 0;
+  border-top: 1px solid $plyr-color-heather;
 }
 
 // Video controls
