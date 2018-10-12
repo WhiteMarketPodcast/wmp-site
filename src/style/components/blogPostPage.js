@@ -1,7 +1,16 @@
 import styled from 'styled-components';
+import posed from 'react-pose';
 import Link from 'components/Link';
-import { white, black, lightEmerald } from '../colors';
+import {
+  MOBILE_NAV_HEIGHT,
+  DESKTOP_NAV_HEIGHT,
+} from 'components/Navbar/constants';
+import { white, black, lightEmerald, darkGrey } from '../colors';
 import { onMobile } from '../mediaQueries';
+
+function getImageURL(image) {
+  return image.replace('/upload/', `/upload/c_scale,w_${1100}/`);
+}
 
 export const Title = styled.h1`
   color: ${white};
@@ -146,5 +155,41 @@ export const TagLink = styled(Link)`
 
   &:hover {
     filter: brightness(110%);
+  }
+`;
+
+const audioDiv = posed.div({
+  enter: { y: 0, transition: { ease: 'easeInOut' }, opacity: 1 },
+  exit: { y: `100%`, opacity: 0 },
+});
+
+export const AudioPlyrContainer = styled(audioDiv)`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+`;
+
+export const VideoPlyrContainer = styled.div`
+  background-color: ${darkGrey};
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(${({ bgImage }) => bgImage && getImageURL(bgImage)});
+
+  > div {
+    margin: 0 auto;
+    max-width: calc((100vh - ${DESKTOP_NAV_HEIGHT}) / 9 * 16);
+  }
+
+  ${onMobile} {
+    > div {
+      max-width: calc((100vh - ${MOBILE_NAV_HEIGHT}) / 9 * 16);
+    }
   }
 `;

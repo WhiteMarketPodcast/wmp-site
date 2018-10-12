@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Plyr from 'react-plyr';
 import { string, bool } from 'prop-types';
 import 'style/sass/plyr/plyr.scss';
-import { PlyrContainer } from './styled';
 
 class Player extends Component {
   static propTypes = {
@@ -29,15 +28,13 @@ class Player extends Component {
     const { url, autoplay, ...rest } = this.props;
 
     return (
-      <PlyrContainer>
-        <Plyr
-          {...rest}
-          url={url}
-          videoId={url}
-          type={this.getType()}
-          autoplay={autoplay}
-        />
-      </PlyrContainer>
+      <Plyr
+        {...rest}
+        url={url}
+        videoId={url}
+        type={this.getType()}
+        autoplay={autoplay}
+      />
     );
   }
 }

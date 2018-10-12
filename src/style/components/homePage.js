@@ -296,3 +296,8 @@ export const PodcastTitle = styled.h3`
   max-width: 50ch;
   margin: 0 auto;
 `;
+
+export const PlyrContainer = styled.div`
+  width: 50ch;
+  max-width: 100%;
+`;

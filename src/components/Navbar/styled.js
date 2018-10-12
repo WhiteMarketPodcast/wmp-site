@@ -3,14 +3,12 @@ import posed from 'react-pose';
 import Link from 'components/Link';
 import { emerald, white } from 'style/colors';
 import { onMobile } from 'style/mediaQueries';
+import { DESKTOP_NAV_HEIGHT, MOBILE_NAV_HEIGHT } from './constants';
 
 const nav = posed.nav({
   show: { y: 0, transition: { ease: 'easeInOut' } },
   hide: { y: '-100%', delay: 300, transition: { ease: 'easeInOut' } },
 });
-
-export const MOBILE_NAV_HEIGHT = `50px`;
-export const DESKTOP_NAV_HEIGHT = `80px`;
 
 export const Nav = styled(nav)`
   position: fixed;

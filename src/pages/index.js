@@ -19,6 +19,7 @@ import {
   PodcastTextContainer,
   PodcastSmallText,
   PodcastTitle,
+  PlyrContainer,
   BrandH2,
 } from 'style/components';
 
@@ -51,7 +52,9 @@ export default class IndexPage extends Component {
             <PodcastTitle>{title}</PodcastTitle>
           </Link>
         </PodcastTextContainer>
-        <Player url={podcastURL} />
+        <PlyrContainer>
+          <Player url={podcastURL} />
+        </PlyrContainer>
       </PodcastSection>
     );
   }

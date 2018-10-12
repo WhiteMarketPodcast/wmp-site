@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React, { Component, Fragment } from 'react';
 import { array, func, node, string, shape, object } from 'prop-types';
+import { PoseGroup } from 'react-pose';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from 'components/Layout';
@@ -17,6 +18,8 @@ import {
   Sidebar,
   BlogPostLink,
   TagLink,
+  VideoPlyrContainer,
+  AudioPlyrContainer,
 } from 'style/components/blogPostPage';
 
 export class BlogPostTemplate extends Component {
@@ -120,20 +123,26 @@ export class BlogPostTemplate extends Component {
   }
 
   renderMedia() {
-    const { format } = this.props;
-    console.log('format', format);
+    const { format, image, imageURL } = this.props;
     const { showMedia } = this.state;
     const url = this.getMediaURL();
-    if (!showMedia || !_.includes([`audio`, `video`], format) || !url) return null;
+    if (!_.includes([`audio`, `video`], format) || !url) return null;
+    const PlyrContainer = format === `video` ? VideoPlyrContainer : AudioPlyrContainer;
 
     return (
-      <Player
-        url={url}
-        type={format}
-        onPlay={() => this.setState({ isPlaying: true })}
-        onPause={() => this.setState({ isPlaying: false })}
-        autoplay
-      />
+      <PoseGroup>
+        {showMedia && (
+          <PlyrContainer className={format} key={url} bgImage={image || imageURL}>
+            <Player
+              url={url}
+              type={format}
+              onPlay={() => this.setState({ isPlaying: true })}
+              onPause={() => this.setState({ isPlaying: false })}
+              autoplay
+            />
+          </PlyrContainer>
+        )}
+      </PoseGroup>
     );
   }
 
@@ -169,10 +178,12 @@ export class BlogPostTemplate extends Component {
         {helmet}
         {this.renderTitle()}
         <Column>
-          <BlogContent>
+          <div>
             {this.renderMedia()}
-            <PostContent content={content} />
-          </BlogContent>
+            <BlogContent>
+              <PostContent content={content} />
+            </BlogContent>
+          </div>
           {this.renderSidebar()}
         </Column>
       </section>
