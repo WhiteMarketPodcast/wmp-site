@@ -9,7 +9,7 @@ import { white, black, lightEmerald, darkGrey } from '../colors';
 import { onMobile } from '../mediaQueries';
 
 function getImageURL(image) {
-  return image.replace('/upload/', `/upload/c_scale,w_${1100}/`);
+  return image.replace(`/upload/`, `/upload/c_scale,w_1100/`);
 }
 
 export const Title = styled.h1`
