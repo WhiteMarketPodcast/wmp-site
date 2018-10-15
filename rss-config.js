@@ -1,25 +1,13 @@
 const _ = require('lodash');
+const fetch = require('node-fetch');
+const RSS = require('rss');
+const fs = require('fs');
+const pify = require('pify');
 
-const generalQuery = `
-  {
-    site {
-      siteMetadata {
-        title
-        subtitle
-        podcastName
-        description
-        siteUrl
-        owner
-        ownerEmail
-        podcastImageUrl
-        categories
-      }
-    }
-  }
-`;
+const writeFile = pify(fs.writeFile);
 
 // This creates the overall channel info
-function setup({ query }) {
+function setup(data) {
   const {
     subtitle,
     podcastName,
@@ -29,7 +17,7 @@ function setup({ query }) {
     owner,
     ownerEmail,
     categories,
-  } = query.site.siteMetadata;
+  } = data.siteMetadata;
   const imageUrl = podcastImageUrl || ``;
 
   return {
@@ -68,7 +56,7 @@ function setup({ query }) {
   };
 }
 
-const episodeQuery = `
+const podcastQuery = `
   {
     site {
       siteMetadata {
@@ -104,26 +92,32 @@ const episodeQuery = `
   }
 `;
 
+async function getPodcastSize(url) {
+  try {
+    const { headers } = await fetch(url, { method: 'head' });
+    return headers.get('content-length');
+  } catch (e) {
+    console.log(`getPodcastSize error:`, e.toString());
+    return 0;
+  }
+}
+
 // This creates each item in the feed
-function serialize({ query }) {
-  const { site, allMarkdownRemark } = query;
+async function serialize(site, allMarkdownRemark) {
   const { siteUrl, podcastImageUrl, owner } = site.siteMetadata;
-  return allMarkdownRemark.edges.map(({ node }) => {
+
+  return allMarkdownRemark.edges.map(async ({ node }) => {
     const { frontmatter, fields, excerpt, html } = node;
     const { podcastURL } = frontmatter;
     const url = siteUrl + fields.slug;
+    const size = await getPodcastSize(podcastURL);
 
     return Object.assign({}, frontmatter, {
       description: excerpt,
       url,
       guid: url,
-      enclosure: {
-        url: podcastURL,
-        // length,
-        type: 'audio/mp3',
-      },
+      enclosure: { url: podcastURL, size, type: 'audio/mpeg' },
       custom_elements: [
-        // { pubDate: new Date(date).toUTCString() },
         { 'itunes:author': owner },
         { 'itunes:subtitle': excerpt },
         { 'itunes:summary': excerpt },
@@ -131,23 +125,22 @@ function serialize({ query }) {
         { 'itunes:explicit': 'clean' },
         { 'itunes:image': { _attr: { href: podcastImageUrl } } },
         // { 'itunes:duration': duration },
-        // { 'content:encoded': html },
       ],
     });
   });
 }
 
-const options = {
-  query: generalQuery,
-  setup,
-  feeds: [
-    {
-      serialize,
-      query: episodeQuery,
-      output: '/rss.xml',
-      title: 'Gatsby RSS Feed',
-    },
-  ],
-};
+async function createRSSFeed(podcastData) {
+  const { site, allMarkdownRemark } = podcastData.data;
+  const podcastSetup = setup(site);
+  const episodes = await Promise.all(serialize(site, allMarkdownRemark));
+  const feed = new RSS(podcastSetup);
+  episodes.forEach((episode) => feed.item(episode));
 
-module.exports = options;
+  await writeFile(`./public/rss.xml`, feed.xml());
+}
+
+module.exports = {
+  podcastQuery,
+  createRSSFeed,
+};

@@ -1,5 +1,3 @@
-const rssConfig = require('./rss-config.js');
-
 module.exports = {
   siteMetadata: {
     siteUrl: `https://whitemarketpodcast.netlify.com`,
@@ -48,10 +46,6 @@ module.exports = {
       options: {
         plugins: [`gatsby-remark-external-links`],
       },
-    },
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: rssConfig,
     },
     {
       resolve: `gatsby-plugin-netlify-cms`,
