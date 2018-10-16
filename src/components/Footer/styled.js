@@ -14,11 +14,11 @@ export const CopyrightRow = styled.div`
   align-items: center;
 
   ${onMobile} {
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 2rem 1rem;
 
     > div:first-child {
-      margin-bottom: 1rem;
+      margin-top: 1rem;
     }
   }
 `;
