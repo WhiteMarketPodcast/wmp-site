@@ -1,10 +1,8 @@
 module.exports = {
   siteMetadata: {
     siteUrl: `https://whitemarketpodcast.netlify.com`,
+    // This is both the title of the site and of the podcast
     title: `White Market Podcast`,
-    // in case you don't want the site title and podcast name
-    // to be exactly the same
-    podcastName: `White Market Podcast`,
     subtitle: `Free music and free culture`,
     description: `White Market Podcast is show about free music and free culture by Rute Correia. While the show is mainly focused on Creative Commons-licenced music, since it is also naturally intertwined with other movements and ideologies such as Open Source and Open Access, it often features these and similar forms of activism related to digital rights and freedom.`,
     owner: `White Market Podcast`,

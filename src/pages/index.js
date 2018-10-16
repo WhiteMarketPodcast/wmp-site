@@ -1,7 +1,8 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { array, shape, string } from 'prop-types';
 import { graphql, Link } from 'gatsby';
+import Helmet from 'react-helmet';
 import Layout from 'components/Layout';
 import Player from 'components/Player';
 import {
@@ -30,10 +31,15 @@ const formatConverter = {
 
 export default class IndexPage extends Component {
   static propTypes = {
-    data: PropTypes.shape({
-      allMarkdownRemark: PropTypes.shape({
-        edges: PropTypes.array,
+    data: shape({
+      site: shape({
+        siteMetadata: shape({
+          title: string.isRequired,
+          siteUrl: string.isRequired,
+        }),
       }),
+      podcast: shape({ edges: array }),
+      posts: shape({ edges: array }),
     }).isRequired,
   };
 
@@ -97,8 +103,21 @@ export default class IndexPage extends Component {
   }
 
   render() {
+    const { data } = this.props;
+    console.log('data', data);
+    const { title, subtitle, siteUrl } = data.site.siteMetadata;
+
     return (
       <Layout>
+        <Helmet>
+          <title>{`${title} | ${subtitle}`}</title>
+          <link
+            type="application/rss+xml"
+            rel="alternate"
+            title={title}
+            href={`${siteUrl}/rss.xml`}
+          />
+        </Helmet>
         {this.renderPodcast()}
         {this.renderPosts()}
       </Layout>
@@ -107,15 +126,15 @@ export default class IndexPage extends Component {
 }
 
 IndexPage.propTypes = {
-  data: PropTypes.shape({
-    posts: PropTypes.shape({
-      allMarkdownRemark: PropTypes.shape({
-        edges: PropTypes.array,
+  data: shape({
+    posts: shape({
+      allMarkdownRemark: shape({
+        edges: array,
       }),
     }),
-    podcast: PropTypes.shape({
-      allMarkdownRemark: PropTypes.shape({
-        edges: PropTypes.array,
+    podcast: shape({
+      allMarkdownRemark: shape({
+        edges: array,
       }),
     }),
   }).isRequired,
@@ -123,6 +142,13 @@ IndexPage.propTypes = {
 
 export const pageQuery = graphql`
   query IndexQuery {
+    site {
+      siteMetadata {
+        title
+        subtitle
+        siteUrl
+      }
+    }
     posts: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
