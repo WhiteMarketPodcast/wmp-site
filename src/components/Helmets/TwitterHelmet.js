@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 class TwitterHelmet extends Component {
   static propTypes = {
     title: string.isRequired,
-    description: string.isRequired,
+    description: string,
     image: string.isRequired,
     imageAlt: string,
     cardType: string,
@@ -16,6 +16,7 @@ class TwitterHelmet extends Component {
     cardType: `summary`,
     imageAlt: ``,
     children: null,
+    description: ``,
   };
 
   render() {
@@ -33,7 +34,9 @@ class TwitterHelmet extends Component {
         <meta name="twitter:card" content={cardType} />
         <meta name="twitter:site" content="@WhiteMarketCast" />
         <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
+        {description && (
+          <meta name="twitter:description" content={description} />
+        )}
         <meta name="twitter:image" content={image} />
         <meta name="twitter:image:imageAlt" content={imageAlt} />
         {children}

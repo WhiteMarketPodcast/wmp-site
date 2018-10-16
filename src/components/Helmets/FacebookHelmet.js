@@ -7,7 +7,7 @@ class FacebookHelmet extends Component {
     url: string.isRequired,
     type: string,
     title: string.isRequired,
-    description: string.isRequired,
+    description: string,
     image: string.isRequired,
     children: node,
   };
@@ -15,6 +15,7 @@ class FacebookHelmet extends Component {
   static defaultProps = {
     type: `article`,
     children: null,
+    description: ``,
   };
 
   render() {
@@ -25,7 +26,9 @@ class FacebookHelmet extends Component {
         <meta property="og:url" content={url} />
         <meta property="og:type" content={type} />
         <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
+        {description && (
+          <meta property="og:description" content={description} />
+        )}
         <meta property="og:image" content={image} />
         {children}
       </Helmet>
