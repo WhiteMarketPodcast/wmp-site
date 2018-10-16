@@ -194,6 +194,7 @@ export class BlogPostTemplate extends Component {
         <TwitterHelmet
           {...commonMetaTags}
           imageAlt={imageAlt}
+          cardType="summary_large_image"
         />
       </Fragment>
     );
