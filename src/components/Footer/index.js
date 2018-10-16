@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { string } from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
 import Link from 'components/Link';
 import {
   StyledFooter,
@@ -12,7 +14,11 @@ import {
 } from './styled';
 
 class Footer extends Component {
+  static propTypes = { siteUrl: string.isRequired };
+
   render() {
+    const { siteUrl } = this.props;
+
     return (
       <StyledFooter>
         <LicenceInfo>
@@ -45,7 +51,7 @@ class Footer extends Component {
               <SocialIcon className="fas fa-envelope" />
             </SocialLink>
 
-            <SocialLink className="rss" to="/still-need-to-do-this">
+            <SocialLink className="rss" to={`${siteUrl}/rss.xml`}>
               <SocialIcon className="fas fa-rss" />
             </SocialLink>
 
@@ -90,4 +96,19 @@ class Footer extends Component {
   }
 }
 
-export default Footer;
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
+  }
+`;
+
+export default () => (
+  <StaticQuery
+    query={query}
+    render={({ site }) => <Footer siteUrl={site.siteMetadata.siteUrl} />}
+  />
+);

@@ -107,7 +107,6 @@ export default class IndexPage extends Component {
 
   render() {
     const { data } = this.props;
-    console.log('data', data);
     const { title, subtitle, siteUrl } = data.site.siteMetadata;
 
     return (
@@ -127,21 +126,6 @@ export default class IndexPage extends Component {
     );
   }
 }
-
-IndexPage.propTypes = {
-  data: shape({
-    posts: shape({
-      allMarkdownRemark: shape({
-        edges: array,
-      }),
-    }),
-    podcast: shape({
-      allMarkdownRemark: shape({
-        edges: array,
-      }),
-    }),
-  }).isRequired,
-};
 
 export const pageQuery = graphql`
   query IndexQuery {
