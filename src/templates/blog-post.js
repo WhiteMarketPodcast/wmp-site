@@ -8,6 +8,7 @@ import Layout from 'components/Layout';
 import PlayButton from 'components/PlayButton';
 import Player from 'components/Player';
 import Content, { HTMLContent } from 'components/Content';
+import { FacebookHelmet, TwitterHelmet } from 'components/Helmets';
 import {
   Hero,
   Title,
@@ -33,7 +34,7 @@ export class BlogPostTemplate extends Component {
     description: string,
     format: string.isRequired,
     image: string,
-    // imageAlt: string,
+    imageAlt: string,
     imageURL: string,
     // imageCredit: string,
     podcastURL: string,
@@ -53,7 +54,7 @@ export class BlogPostTemplate extends Component {
     helmet: null,
     description: '',
     image: '',
-    // imageAlt: '',
+    imageAlt: '',
     // imageCredit: '',
     imageURL: '',
     podcastURL: '',
@@ -167,6 +168,37 @@ export class BlogPostTemplate extends Component {
     );
   }
 
+  renderHelmet() {
+    const {
+      helmet,
+      title,
+      description,
+      image,
+      imageURL,
+      imageAlt,
+      siteUrl,
+      slug,
+    } = this.props;
+    const imageSrc = image || imageURL;
+    const commonMetaTags = { title, description, image: imageSrc };
+
+    if (!helmet) return null;
+
+    return (
+      <Fragment>
+        {helmet}
+        <FacebookHelmet
+          {...commonMetaTags}
+          url={`${siteUrl}${slug}`}
+        />
+        <TwitterHelmet
+          {...commonMetaTags}
+          imageAlt={imageAlt}
+        />
+      </Fragment>
+    );
+  }
+
   renderMedia() {
     const { format, image, imageURL } = this.props;
     const { showMedia } = this.state;
@@ -219,12 +251,12 @@ export class BlogPostTemplate extends Component {
   }
 
   render() {
-    const { content, contentComponent, helmet } = this.props;
+    const { content, contentComponent } = this.props;
     const PostContent = contentComponent || Content;
 
     return (
       <section>
-        {helmet}
+        {this.renderHelmet()}
         {this.renderTitle()}
         <Column>
           <div>
@@ -243,7 +275,7 @@ export class BlogPostTemplate extends Component {
 const BlogPost = ({ data, pageContext }) => {
   const {
     site: {
-      siteMetadata: { siteUrl },
+      siteMetadata: { siteUrl, title },
     },
     markdownRemark: {
       html,
@@ -257,7 +289,7 @@ const BlogPost = ({ data, pageContext }) => {
       <BlogPostTemplate
         content={html}
         contentComponent={HTMLContent}
-        helmet={<Helmet title={`${frontmatter.title} | Blog`} />}
+        helmet={<Helmet title={`${frontmatter.title} | ${title} Blog`} />}
         pageContext={pageContext}
         siteUrl={siteUrl}
         slug={slug}
@@ -298,6 +330,7 @@ export const pageQuery = graphql`
     }
     site {
       siteMetadata {
+        title
         siteUrl
       }
     }
