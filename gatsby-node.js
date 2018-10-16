@@ -1,11 +1,12 @@
 const _ = require('lodash');
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
+const { podcastQuery, createRSSFeed } = require('./rss-config.js');
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  return graphql(`
+  const pagesPromise = graphql(`
     {
       allMarkdownRemark(limit: 1000) {
         edges {
@@ -26,7 +27,8 @@ exports.createPages = ({ actions, graphql }) => {
   `).then((result) => {
     if (result.errors) {
       result.errors.forEach((e) => console.error(e.toString()));
-      return Promise.reject(result.errors);
+      Promise.reject(result.errors);
+      return;
     }
 
     const pages = result.data.allMarkdownRemark.edges;
@@ -84,6 +86,10 @@ exports.createPages = ({ actions, graphql }) => {
       });
     });
   });
+
+  const rssPromise = graphql(podcastQuery).then(async (podcastData) => createRSSFeed(podcastData));
+
+  return Promise.all([pagesPromise, rssPromise]);
 };
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
