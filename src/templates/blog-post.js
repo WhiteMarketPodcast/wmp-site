@@ -17,10 +17,14 @@ import {
   TagList,
   Sidebar,
   BlogPostLink,
+  BlogPostLinksContainer,
   TagLink,
   VideoPlyrContainer,
   AudioPlyrContainer,
+  ShareLink,
+  ShareLinksContainer,
 } from 'style/components/blogPostPage';
+import { getShareURLs } from 'utils/sharing';
 
 export class BlogPostTemplate extends Component {
   static propTypes = {
@@ -36,6 +40,8 @@ export class BlogPostTemplate extends Component {
     videoURL: string,
     date: string.isRequired,
     title: string.isRequired,
+    siteUrl: string.isRequired,
+    slug: string.isRequired,
     helmet: node,
     pageContext: object.isRequired,
     tags: array,
@@ -76,6 +82,35 @@ export class BlogPostTemplate extends Component {
     playButton.click();
   };
 
+  renderShareLinks() {
+    const { title, slug, siteUrl } = this.props;
+
+    const { facebookURL, twitterURL, whatsAppURL, mailto } = getShareURLs({
+      url: `${siteUrl}${slug}`,
+      text: title,
+    });
+
+    return (
+      <Fragment>
+        <h4>Share</h4>
+        <ShareLinksContainer>
+          <ShareLink to={twitterURL}>
+            <i className="fab fa-twitter" />
+          </ShareLink>
+          <ShareLink to={facebookURL}>
+            <i className="fab fa-facebook" />
+          </ShareLink>
+          <ShareLink to={whatsAppURL}>
+            <i className="fab fa-whatsapp" />
+          </ShareLink>
+          <ShareLink to={mailto}>
+            <i className="fas fa-envelope" />
+          </ShareLink>
+        </ShareLinksContainer>
+      </Fragment>
+    );
+  }
+
   renderTags() {
     const { tags } = this.props;
     if (_.isEmpty(tags)) return null;
@@ -98,28 +133,38 @@ export class BlogPostTemplate extends Component {
     return (
       <Sidebar>
         {this.renderTags()}
-        {this.renderNextAndPreviousButtons()}
+        {this.renderShareLinks()}
+        {this.renderLinksToOtherPosts()}
       </Sidebar>
     );
   }
 
-  renderNextAndPreviousButtons() {
+  renderLinksToOtherPosts() {
     const { pageContext } = this.props;
     if (!pageContext) return null;
 
     const { nextPost, previousPost } = pageContext;
 
-    return _.map([previousPost, nextPost], (post, index) => {
+    const links = _.map([previousPost, nextPost], (post) => {
       if (_.isEmpty(post)) return null;
       const { title } = post.frontmatter;
       const { slug } = post.fields;
       return (
-        <div key={slug}>
-          <h4>{index ? `Previous post` : `Next post`}</h4>
-          <BlogPostLink to={slug}>{title}</BlogPostLink>
-        </div>
+        <li key={slug}>
+          <BlogPostLink to={slug}>
+            <i className="fas fa-caret-right" />
+            {title}
+          </BlogPostLink>
+        </li>
       );
     });
+
+    return (
+      <div>
+        <h4>More from the blog</h4>
+        <BlogPostLinksContainer>{links}</BlogPostLinksContainer>
+      </div>
+    );
   }
 
   renderMedia() {
@@ -132,7 +177,11 @@ export class BlogPostTemplate extends Component {
     return (
       <PoseGroup>
         {showMedia && (
-          <PlyrContainer className={format} key={url} bgImage={image || imageURL}>
+          <PlyrContainer
+            className={format}
+            key={url}
+            bgImage={image || imageURL}
+          >
             <Player
               url={url}
               type={format}
@@ -192,7 +241,16 @@ export class BlogPostTemplate extends Component {
 }
 
 const BlogPost = ({ data, pageContext }) => {
-  const { html, frontmatter } = data.markdownRemark;
+  const {
+    site: {
+      siteMetadata: { siteUrl },
+    },
+    markdownRemark: {
+      html,
+      frontmatter,
+      fields: { slug },
+    },
+  } = data;
 
   return (
     <Layout>
@@ -201,6 +259,8 @@ const BlogPost = ({ data, pageContext }) => {
         contentComponent={HTMLContent}
         helmet={<Helmet title={`${frontmatter.title} | Blog`} />}
         pageContext={pageContext}
+        siteUrl={siteUrl}
+        slug={slug}
         {...frontmatter}
       />
     </Layout>
@@ -231,6 +291,14 @@ export const pageQuery = graphql`
         tags
         podcastURL
         videoURL
+      }
+      fields {
+        slug
+      }
+    }
+    site {
+      siteMetadata {
+        siteUrl
       }
     }
   }

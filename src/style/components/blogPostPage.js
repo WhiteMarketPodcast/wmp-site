@@ -128,6 +128,7 @@ export const TagList = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  margin: 1rem 0;
   padding: 0;
 
   li {
@@ -135,13 +136,28 @@ export const TagList = styled.ul`
   }
 `;
 
+export const BlogPostLinksContainer = styled.ul`
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+`;
+
 export const BlogPostLink = styled(Link)`
   display: flex;
   color: ${white};
+  font-size: 0.8rem;
+  font-weight: 600;
   line-height: 1.3;
   margin: 0;
-  margin-bottom: 1rem;
-  padding-left: 0.8rem;
+  margin-bottom: 0.5rem;
+
+  i,
+  svg {
+    font-size: 1rem;
+    margin-right: 0.4rem;
+  }
 `;
 
 export const TagLink = styled(Link)`
@@ -191,5 +207,25 @@ export const VideoPlyrContainer = styled.div`
     > div {
       max-width: calc((100vh - ${MOBILE_NAV_HEIGHT}) / 9 * 16);
     }
+  }
+`;
+
+export const ShareLinksContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0 1.4rem 0;
+`;
+
+export const ShareLink = styled(Link)`
+  display: inline-block;
+  color: ${white};
+  font-size: 1.25rem;
+  line-height: 1;
+  margin-right: 0.8rem;
+  opacity: 0.9;
+
+  &:hover {
+    filter: unset;
+    opacity: 1;
   }
 `;
