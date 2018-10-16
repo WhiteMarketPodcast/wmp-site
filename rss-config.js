@@ -7,6 +7,42 @@ const mp3Duration = require('mp3-duration');
 
 const writeFile = pify(fs.writeFile);
 
+const ARCHIVE_ORG_BASE_URL = `https://archive.org/details/`;
+const getArchiveURL = (episodeId) => `${ARCHIVE_ORG_BASE_URL}${episodeId}?output=json`;
+
+const getMp3FromURL = (url) => _.last(url.split('/'));
+
+function getSizeAndDurationFromJson(json, mp3Path) {
+  const { size, length } = json.files[`/${mp3Path}`];
+  return { size, duration: convertSecondsToTime(length) };
+}
+
+async function callArchiveAPI(mp3Path, isFirstAttempt) {
+  let mp3Id = mp3Path.split(`.`)[0];
+  if (isFirstAttempt) mp3Id = mp3Id.replace(/\W/g, '');
+  const response = await fetch(getArchiveURL(mp3Id));
+  const json = await response.json();
+  return getSizeAndDurationFromJson(json, mp3Path);
+}
+
+async function getDetailsFromArchive(podcastURL) {
+  const mp3Path = getMp3FromURL(podcastURL);
+  try {
+    const details = await callArchiveAPI(mp3Path, true);
+    return details;
+  } catch (e) {
+    try {
+      const details = await callArchiveAPI(mp3Path, false);
+      return details;
+    } catch (secondError) {
+      console.log(`!!! failed: ${podcastURL}`);
+      console.log(`First error:`, e.toString());
+      console.log(`Second error:`, secondError.toString());
+      return {};
+    }
+  }
+}
+
 function deleteLocalFile(filepath) {
   fs.unlink(filepath, (err) => {
     if (err) throw err;
@@ -23,7 +59,7 @@ function convertSecondsToTime(seconds) {
 
 async function getDuration(url) {
   try {
-    const mp3Path = _.last(url.split('/'));
+    const mp3Path = getMp3FromURL(url);
     const response = await fetch(url);
 
     // write file data locally
@@ -110,7 +146,7 @@ const podcastQuery = `
       }
     }
     allMarkdownRemark(
-      limit: 10,
+      limit: 15,
       sort: { order: DESC, fields: [frontmatter___date] },
       filter: {frontmatter: { format: { eq: "audio" } }}
     ) {
@@ -150,8 +186,9 @@ async function serialize(site, allMarkdownRemark) {
     const url = siteUrl + fields.slug;
 
     console.log(`===== getting ${title} info =====`);
-    const size = await getFileSize(podcastURL);
-    const duration = await getDuration(podcastURL);
+    let { size, duration } = await getDetailsFromArchive(podcastURL);
+    if (!size) size = await getFileSize(podcastURL);
+    if (!duration) duration = await getDuration(podcastURL);
     console.log(`===== finished ${title} =====`);
 
     return Object.assign({}, frontmatter, {
