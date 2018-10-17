@@ -1,7 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import { node, string } from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
+import { Location } from '@reach/router';
 import Helmet from 'react-helmet';
+import { PoseGroup } from 'react-pose';
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
@@ -11,7 +13,7 @@ import Footer from 'components/Footer';
 import Navbar from 'components/Navbar';
 import 'style/sass/all.sass';
 import 'style';
-import { Main } from './styled';
+import { PageFade } from './styled';
 
 library.add(fas, far, fab);
 // Kicks off the process of finding <i> tags and replacing with <svg>
@@ -54,7 +56,15 @@ class TemplateWrapper extends Component {
         <TwitterHelmet {...helmetProps} />
 
         <Navbar />
-        <Main>{children}</Main>
+        <Location>
+          {({ location }) => (
+            <PoseGroup animateOnMount preEnterPose="initial">
+              <PageFade key={location.key}>
+                <main>{children}</main>
+              </PageFade>
+            </PoseGroup>
+          )}
+        </Location>
         <Footer />
       </Fragment>
     );

@@ -133,8 +133,8 @@ export class BlogPostTemplate extends Component {
   renderSidebar() {
     return (
       <Sidebar>
-        {this.renderTags()}
         {this.renderShareLinks()}
+        {this.renderTags()}
         {this.renderLinksToOtherPosts()}
       </Sidebar>
     );
