@@ -23,12 +23,7 @@ import {
   PlyrContainer,
   BrandH2,
 } from 'style/components';
-
-const formatConverter = {
-  standard: `blog`,
-  audio: `podcast`,
-  video: `video`,
-};
+import { formatConverter } from 'utils';
 
 export default class IndexPage extends Component {
   static propTypes = {
