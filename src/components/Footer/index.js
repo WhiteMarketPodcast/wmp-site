@@ -97,7 +97,7 @@ class Footer extends Component {
 }
 
 const query = graphql`
-  query {
+  query FooterQuery {
     site {
       siteMetadata {
         siteUrl

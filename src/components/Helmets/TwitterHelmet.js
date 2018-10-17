@@ -34,9 +34,7 @@ class TwitterHelmet extends Component {
         <meta name="twitter:card" content={cardType} />
         <meta name="twitter:site" content="@WhiteMarketCast" />
         <meta name="twitter:title" content={title} />
-        {description && (
-          <meta name="twitter:description" content={description} />
-        )}
+        <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={image} />
         <meta name="twitter:image:imageAlt" content={imageAlt} />
         {children}

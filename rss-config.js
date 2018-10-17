@@ -89,14 +89,14 @@ function createChannelSetup(data) {
     subtitle,
     description,
     siteUrl,
-    podcastImageUrl,
+    siteLogo,
     owner,
     ownerEmail,
     categories,
   } = data.siteMetadata;
 
   console.log(`========== running RSS setup ==========`);
-  const imageUrl = podcastImageUrl || ``;
+  const imageUrl = siteLogo || ``;
 
   return {
     title,
@@ -147,7 +147,7 @@ function createChannelSetup(data) {
 
 // This creates each item in the feed
 async function createEpisodes(site, allMarkdownRemark) {
-  const { siteUrl, podcastImageUrl, owner } = site.siteMetadata;
+  const { siteUrl, siteLogo, owner } = site.siteMetadata;
 
   return allMarkdownRemark.edges.map(async ({ node }) => {
     const { frontmatter, fields, excerpt, html } = node;
@@ -178,7 +178,7 @@ async function createEpisodes(site, allMarkdownRemark) {
         { 'itunes:subtitle': excerpt },
         { 'itunes:summary': excerpt },
         { 'itunes:explicit': 'clean' },
-        { 'itunes:image': { _attr: { href: podcastImageUrl } } },
+        { 'itunes:image': { _attr: { href: siteLogo } } },
         { 'itunes:duration': duration },
       ],
     });
@@ -210,7 +210,7 @@ const podcastQuery = `
         siteUrl
         owner
         ownerEmail
-        podcastImageUrl
+        siteLogo
         categories
       }
     }
