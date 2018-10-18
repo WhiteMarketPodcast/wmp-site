@@ -9,7 +9,7 @@ import Footer from 'components/Footer';
 import Navbar from 'components/Navbar';
 import { TopLevelHelmet } from 'components/Helmets';
 import 'style/sass/all.sass';
-import 'style';
+import GlobalStyle from 'style';
 import { PageFade } from './styled';
 
 library.add(fas, far, fab);
@@ -27,6 +27,7 @@ class TemplateWrapper extends Component {
 
     return (
       <>
+        <GlobalStyle />
         <TopLevelHelmet />
         <Navbar locationKey={location.key} />
         <PoseGroup animateOnMount preEnterPose="initial">

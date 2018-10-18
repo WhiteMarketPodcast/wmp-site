@@ -1,9 +1,9 @@
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { onMobile, onDesktop } from './mediaQueries';
 import { emerald, lightGrey, lightEmerald } from './colors';
 
 // eslint-disable-next-line
-injectGlobal`
+const GlobalStyle = createGlobalStyle`
   html {
     font-size: 18px;
     
@@ -59,3 +59,5 @@ injectGlobal`
     background-color: ${lightEmerald};
   }
 `;
+
+export default GlobalStyle;
