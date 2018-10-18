@@ -1,10 +1,35 @@
 import React, { Component } from 'react';
+import { string } from 'prop-types';
+import isEmpty from 'lodash/isEmpty';
 import { CloseIcon, MenuIcon } from 'mdi-react';
 import logo from 'img/White-market-transp-logo.png';
 import { Button, Logo, LogoLink, Menu, MenuItem, Nav, NavLink } from './styled';
 
 class Navbar extends Component {
-  state = { open: false, position: 0, hideNav: false, interval: null };
+  static propTypes = {
+    locationKey: string.isRequired,
+  };
+
+  state = {
+    open: false,
+    position: 0,
+    hideNav: false,
+    interval: null,
+    locationKey: this.props.locationKey, // eslint-disable-line
+  };
+
+  static getDerivedStateFromProps(props, state) {
+    const { locationKey: newKey } = props;
+    const { locationKey: oldKey, open } = state;
+    const change = {};
+
+    if (newKey !== oldKey) {
+      change.locationKey = newKey;
+      if (open) change.open = false;
+    }
+
+    return isEmpty(change) ? null : change;
+  }
 
   componentDidMount() {
     this.setState({ interval: setInterval(this.listenForScroll, 500) });

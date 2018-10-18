@@ -27,14 +27,14 @@ class TemplateWrapper extends Component {
 
     return (
       <>
-        <TopLevelHelmet key="helmet" />
-        <Navbar key="nav" />
+        <TopLevelHelmet />
+        <Navbar locationKey={location.key} />
         <PoseGroup animateOnMount preEnterPose="initial">
           <PageFade key={location.pathname}>
             <main>{children}</main>
           </PageFade>
         </PoseGroup>
-        <Footer key="footer" />
+        <Footer />
       </>
     );
   }
