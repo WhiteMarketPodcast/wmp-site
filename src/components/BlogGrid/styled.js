@@ -135,7 +135,7 @@ export const ExcerptContainer = styled.div`
     background-color: ${emerald};
     color: ${white};
     line-height: 1.5;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding: 0.8rem;
     transform: translateY(100%);
     transition: all 0.2s ease;

@@ -24,6 +24,7 @@ import {
   ShareLink,
   ShareLinksContainer,
   Fade,
+  CenteredFade,
 } from 'style/components/blogPostPage';
 import { getShareURLs } from 'utils/sharing';
 
@@ -232,10 +233,12 @@ export class BlogPostTemplate extends Component {
 
     return (
       <Hero src={image || imageURL}>
-        <Title>{title}</Title>
-        {description && <p>{description}</p>}
-        {this.renderPlayButton()}
-        <Date>{date}</Date>
+        <CenteredFade>
+          <Title>{title}</Title>
+          {description && <p>{description}</p>}
+          {this.renderPlayButton()}
+          <Date>{date}</Date>
+        </CenteredFade>
       </Hero>
     );
   }

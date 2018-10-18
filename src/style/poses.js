@@ -1,5 +1,5 @@
 const duration = 300;
-export const delay = 350;
+export const delay = duration + 50;
 const stagger = duration / 2;
 
 export const pageFade = {
@@ -35,6 +35,11 @@ export const slideUp = {
   },
 };
 
+export const slideUpWithDelay = {
+  ...slideUp,
+  enter: { ...slideUp.enter, delay },
+};
+
 export const fade = {
   initial: { opacity: 0 },
   enter: {
@@ -43,11 +48,4 @@ export const fade = {
   },
 };
 
-export const fadeWithDelay = {
-  initial: { opacity: 0 },
-  enter: {
-    opacity: 1,
-    delay,
-    transition: { duration },
-  },
-};
+export const fadeWithDelay = { ...fade, enter: { ...fade.enter, delay } };

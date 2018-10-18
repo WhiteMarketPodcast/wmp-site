@@ -14,7 +14,6 @@ class Navbar extends Component {
     open: false,
     position: 0,
     hideNav: false,
-    interval: null,
     locationKey: this.props.locationKey, // eslint-disable-line
   };
 
@@ -32,11 +31,17 @@ class Navbar extends Component {
   }
 
   componentDidMount() {
-    this.setState({ interval: setInterval(this.listenForScroll, 500) });
+    window.addEventListener('scroll', this.listenForScroll);
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    const { open, hideNav } = this.state;
+
+    return open !== nextState.open || hideNav !== nextState.hideNav;
   }
 
   componentWillUnmount() {
-    clearInterval(this.state.interval);
+    window.removeEventListener('scroll', this.listenForScroll);
   }
 
   getClassName = () => (this.state.open ? `open` : ``);

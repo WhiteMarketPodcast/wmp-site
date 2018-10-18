@@ -7,17 +7,16 @@ import {
 } from 'components/Navbar/constants';
 import { white, black, lightEmerald, darkGrey } from '../colors';
 import { onMobile } from '../mediaQueries';
-import { fade, slideUp } from '../poses';
+import { fade, slideUpWithDelay } from '../poses';
 
 function getImageURL(image) {
   return image.replace(`/upload/`, `/upload/c_scale,w_1100/`);
 }
 
-const title = posed.h1(fade);
-export const Title = styled(title)`
+export const Title = styled.h1`
   color: ${white};
   max-width: 26ch;
-  margin: 0 auto 0.5rem auto;
+  margin: 0 auto 1rem auto;
   text-align: center;
 `;
 
@@ -45,10 +44,18 @@ export const Hero = styled.div`
 `;
 
 export const Fade = posed.div(fade);
-export const Date = styled(Fade)`
+export const CenteredFade = styled(Fade)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  will-change: opacity;
+`;
+
+export const Date = styled.div`
   color: ${white};
   font-weight: 600;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 `;
 
 export const CoverImage = styled.img`
@@ -68,7 +75,7 @@ export const Column = styled.div`
   }
 `;
 
-const SlideUp = posed.div(slideUp);
+const SlideUp = posed.div(slideUpWithDelay);
 export const BlogContent = styled(SlideUp)`
   display: flex;
   flex-direction: column;

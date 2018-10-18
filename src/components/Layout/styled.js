@@ -10,8 +10,9 @@ import { onMobile } from 'style/mediaQueries';
 const div = posed.div(pageFade);
 
 export const PageFade = styled(div)`
-  padding-top: ${DESKTOP_NAV_HEIGHT};
   flex: 1 1 auto;
+  padding-top: ${DESKTOP_NAV_HEIGHT};
+  will-change: opacity;
 
   ${onMobile} {
     padding-top: ${MOBILE_NAV_HEIGHT};s
