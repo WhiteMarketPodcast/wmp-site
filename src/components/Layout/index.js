@@ -16,9 +16,6 @@ library.add(fas, far, fab);
 // Kicks off the process of finding <i> tags and replacing with <svg>
 dom.watch();
 
-const show = { opacity: 1 };
-const hide = { opacity: 0 };
-
 class TemplateWrapper extends Component {
   static propTypes = {
     children: node.isRequired,
@@ -40,9 +37,9 @@ class TemplateWrapper extends Component {
         <GlobalStyle />
         <TopLevelHelmet />
         <Navbar locationKey={location.key} />
-        <PoseGroup animateOnMount preEnterPose="initial">
+        <PoseGroup animateOnMount preEnterPose={mounted ? `initial` : `enter`}>
           <PageFade key={location.pathname}>
-            <main style={mounted ? show : hide}>{children}</main>
+            <main>{children}</main>
           </PageFade>
         </PoseGroup>
         <Footer />
