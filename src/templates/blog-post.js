@@ -4,7 +4,6 @@ import { array, func, node, string, shape, object } from 'prop-types';
 import { PoseGroup } from 'react-pose';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import Layout from 'components/Layout';
 import PlayButton from 'components/PlayButton';
 import Player from 'components/Player';
 import Content, { HTMLContent } from 'components/Content';
@@ -24,6 +23,7 @@ import {
   AudioPlyrContainer,
   ShareLink,
   ShareLinksContainer,
+  Fade,
 } from 'style/components/blogPostPage';
 import { getShareURLs } from 'utils/sharing';
 
@@ -133,8 +133,8 @@ export class BlogPostTemplate extends Component {
   renderSidebar() {
     return (
       <Sidebar>
-        {this.renderTags()}
         {this.renderShareLinks()}
+        {this.renderTags()}
         {this.renderLinksToOtherPosts()}
       </Sidebar>
     );
@@ -187,10 +187,7 @@ export class BlogPostTemplate extends Component {
     return (
       <Fragment>
         {helmet}
-        <FacebookHelmet
-          {...commonMetaTags}
-          url={`${siteUrl}${slug}`}
-        />
+        <FacebookHelmet {...commonMetaTags} url={`${siteUrl}${slug}`} />
         <TwitterHelmet
           {...commonMetaTags}
           imageAlt={imageAlt}
@@ -248,7 +245,11 @@ export class BlogPostTemplate extends Component {
     const { isPlaying } = this.state;
     if (!url) return null;
 
-    return <PlayButton onClick={this.handlePlayClick} isPlaying={isPlaying} />;
+    return (
+      <Fade>
+        <PlayButton onClick={this.handlePlayClick} isPlaying={isPlaying} />
+      </Fade>
+    );
   }
 
   render() {
@@ -286,17 +287,15 @@ const BlogPost = ({ data, pageContext }) => {
   } = data;
 
   return (
-    <Layout>
-      <BlogPostTemplate
-        content={html}
-        contentComponent={HTMLContent}
-        helmet={<Helmet title={`${frontmatter.title} | ${title} Blog`} />}
-        pageContext={pageContext}
-        siteUrl={siteUrl}
-        slug={slug}
-        {...frontmatter}
-      />
-    </Layout>
+    <BlogPostTemplate
+      content={html}
+      contentComponent={HTMLContent}
+      helmet={<Helmet title={`${frontmatter.title} | ${title}`} />}
+      pageContext={pageContext}
+      siteUrl={siteUrl}
+      slug={slug}
+      {...frontmatter}
+    />
   );
 };
 

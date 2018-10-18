@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { object } from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
-import Layout from 'components/Layout';
 import { PaddedSection, BrandH1 } from 'style/components';
 import { List, Item, TagLink } from 'style/components/tagsPage';
 
@@ -34,7 +33,7 @@ class TagsPage extends Component {
     } = this.props;
 
     return (
-      <Layout>
+      <>
         <PaddedSection>
           <Helmet title={`Tags | ${siteMetadata.title}`} />
           <BrandH1>Tags</BrandH1>
@@ -45,7 +44,7 @@ class TagsPage extends Component {
               .value()}
           </List>
         </PaddedSection>
-      </Layout>
+      </>
     );
   }
 }
