@@ -1,5 +1,6 @@
 const duration = 300;
-const delay = 150;
+export const delay = 350;
+const stagger = duration / 2;
 
 export const pageFade = {
   initial: {
@@ -12,14 +13,13 @@ export const pageFade = {
     beforeChildren: true,
   },
   exit: {
-    // opacity: 0,
-    scale: 2,
+    opacity: 0,
     transition: { duration },
   },
 };
 
 export const staggerChildren = {
-  enter: { staggerChildren: 50 },
+  enter: { staggerChildren: stagger },
 };
 
 export const delayChildren = {
@@ -27,11 +27,6 @@ export const delayChildren = {
 };
 
 export const slideUp = {
-  initial: { y: '110%' },
-  enter: { y: 0, transition: { duration } },
-};
-
-export const appear = {
   initial: { opacity: 0, y: 10 },
   enter: {
     opacity: 1,
@@ -44,6 +39,15 @@ export const fade = {
   initial: { opacity: 0 },
   enter: {
     opacity: 1,
+    transition: { duration },
+  },
+};
+
+export const fadeWithDelay = {
+  initial: { opacity: 0 },
+  enter: {
+    opacity: 1,
+    delay,
     transition: { duration },
   },
 };

@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { array, shape, string } from 'prop-types';
 import { graphql, Link } from 'gatsby';
 import Helmet from 'react-helmet';
-import Layout from 'components/Layout';
 import Player from 'components/Player';
 import {
   BlogPostPreviewGrid,
@@ -105,7 +104,7 @@ export default class IndexPage extends Component {
     const { title, subtitle, siteUrl } = data.site.siteMetadata;
 
     return (
-      <Layout>
+      <>
         <Helmet>
           <title>{`${title} | ${subtitle}`}</title>
           <link
@@ -117,7 +116,7 @@ export default class IndexPage extends Component {
         </Helmet>
         {this.renderPodcast()}
         {this.renderPosts()}
-      </Layout>
+      </>
     );
   }
 }

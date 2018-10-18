@@ -7,12 +7,14 @@ import {
 } from 'components/Navbar/constants';
 import { white, black, lightEmerald, darkGrey } from '../colors';
 import { onMobile } from '../mediaQueries';
+import { fade, slideUp } from '../poses';
 
 function getImageURL(image) {
   return image.replace(`/upload/`, `/upload/c_scale,w_1100/`);
 }
 
-export const Title = styled.h1`
+const title = posed.h1(fade);
+export const Title = styled(title)`
   color: ${white};
   max-width: 26ch;
   margin: 0 auto 0.5rem auto;
@@ -42,7 +44,8 @@ export const Hero = styled.div`
   }
 `;
 
-export const Date = styled.div`
+export const Fade = posed.div(fade);
+export const Date = styled(Fade)`
   color: ${white};
   font-weight: 600;
   margin-top: 0.5rem;
@@ -65,7 +68,8 @@ export const Column = styled.div`
   }
 `;
 
-export const BlogContent = styled.div`
+const SlideUp = posed.div(slideUp);
+export const BlogContent = styled(SlideUp)`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

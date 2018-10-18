@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import BlogGrid from 'components/BlogGrid';
-import Layout from 'components/Layout';
 import { BrandH1 } from 'style/components';
 
 export default class BlogList extends Component {
@@ -19,10 +18,10 @@ export default class BlogList extends Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      <Layout>
+      <>
         <BrandH1>Blog Posts</BrandH1>
         <BlogGrid posts={posts} />
-      </Layout>
+      </>
     );
   }
 }
