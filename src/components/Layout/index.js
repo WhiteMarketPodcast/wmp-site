@@ -16,14 +16,24 @@ library.add(fas, far, fab);
 // Kicks off the process of finding <i> tags and replacing with <svg>
 dom.watch();
 
+const show = { opacity: 1 };
+const hide = { opacity: 0 };
+
 class TemplateWrapper extends Component {
   static propTypes = {
     children: node.isRequired,
     location: object.isRequired,
   };
 
+  state = { mounted: false };
+
+  componentDidMount() {
+    this.setState({ mounted: true });
+  }
+
   render() {
     const { children, location } = this.props;
+    const { mounted } = this.state;
 
     return (
       <>
@@ -32,7 +42,7 @@ class TemplateWrapper extends Component {
         <Navbar locationKey={location.key} />
         <PoseGroup animateOnMount preEnterPose="initial">
           <PageFade key={location.pathname}>
-            <main>{children}</main>
+            <main style={mounted ? show : hide}>{children}</main>
           </PageFade>
         </PoseGroup>
         <Footer />
