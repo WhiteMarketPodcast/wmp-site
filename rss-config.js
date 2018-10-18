@@ -187,6 +187,7 @@ async function createEpisodes(site, allMarkdownRemark) {
 
 // ~~~ exports ~~~
 async function createRSSFeed(podcastData) {
+  if (process.env.NODE_ENV === 'development') return;
   const { site, allMarkdownRemark } = podcastData.data;
 
   console.time(`*** got all info ***`);
