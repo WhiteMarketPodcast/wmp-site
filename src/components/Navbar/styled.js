@@ -86,12 +86,12 @@ export const FlexRow = styled.div`
 const easeInOut = { ease: 'easeInOut' };
 const ul = posed.ul({
   open: {
-    x: 0,
+    scaleX: 1,
     delayChildren: 300,
     staggerChildren: 100,
     transition: easeInOut,
   },
-  closed: { x: `100%`, transition: easeInOut },
+  closed: { scaleX: 0, transition: easeInOut },
 });
 
 export const Menu = styled(ul)`
@@ -107,6 +107,8 @@ export const Menu = styled(ul)`
   list-style: none;
   margin: 0;
   padding: 0;
+  transform: scaleX(0);
+  transform-origin: right;
   z-index: 1000;
 `;
 
