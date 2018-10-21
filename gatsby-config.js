@@ -11,18 +11,6 @@ module.exports = {
     categories: [`Society & Culture`, `Music`, `Technology`],
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `White Market Podcast`,
-        short_name: `White Market Podcast`,
-        start_url: `/`,
-        background_color: `#F7F7F7`,
-        theme_color: `#3F8F85`,
-        display: `minimal-ui`,
-        icon: `src/img/White_market_favicon.jpg`, // This path is relative to the root of the site.
-      },
-    },
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
@@ -33,6 +21,18 @@ module.exports = {
         google: {
           families: [`Crete Round`, `Montserrat`],
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `White Market Podcast`,
+        short_name: `White Market Podcast`,
+        start_url: `/`,
+        background_color: `#F7F7F7`,
+        theme_color: `#3F8F85`,
+        display: `minimal-ui`,
+        icon: `src/img/White_market_favicon.jpg`, // This path is relative to the root of the site.
       },
     },
     {
@@ -57,12 +57,7 @@ module.exports = {
         plugins: [`gatsby-remark-external-links`],
       },
     },
-    {
-      resolve: `gatsby-plugin-netlify-cms`,
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
-    },
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-plugin-eslint`,
       options: {
