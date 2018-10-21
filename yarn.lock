@@ -6121,10 +6121,10 @@ gatsby-plugin-manifest@^2.0.5:
     bluebird "^3.5.0"
     sharp "^0.20.2"
 
-gatsby-plugin-netlify-cms@next:
-  version "3.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-3.0.0-rc.1.tgz#89a9e324c87d420205b65c96d5921e3fc404baab"
-  integrity sha512-QH9+wmLiU66SXVxRbueXbZ+wYvL5PylWpZmdbAtNOP9cPb/pqCgXR5NKWP+JEvan9haGKguHAhGf/agQlRitaw==
+gatsby-plugin-netlify-cms@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify-cms/-/gatsby-plugin-netlify-cms-3.0.4.tgz#48800cc146af8323cd7cb7174ec0747deef37fc6"
+  integrity sha512-JKv3MczxXfLL8u2W8rw0zjGNdYCyDTqO90/MJ3xX/z0Em+C7nS7Uobe4rChfQzk2UvTg8wYBow3zGYoergxLuw==
   dependencies:
     friendly-errors-webpack-plugin "^1.7.0"
     html-webpack-exclude-assets-plugin "^0.0.7"
@@ -6134,15 +6134,15 @@ gatsby-plugin-netlify-cms@next:
     netlify-identity-widget "^1.4.11"
     webpack "^4.16.0"
 
-gatsby-plugin-netlify@next:
-  version "2.0.0-rc.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.0.0-rc.2.tgz#03695002a4a24c44cf055974342f126d99416122"
-  integrity sha512-j1MwpqEUlhhcjCV7Do/Z8EHekNRlO5o0vEs30CGOrPSr9oeYtJTQYhWafqL5uZEV9iotYLRnEtx2oTmNDSuMEQ==
+gatsby-plugin-netlify@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-netlify/-/gatsby-plugin-netlify-2.0.1.tgz#285fc47296d6eaa21c3329181bcf44f4173df3a5"
+  integrity sha512-rEqn8C6LTZffSEs0PmC3iiQqF93L/dR0JD/ecYTVQQy74Fh0dVJCT/s7qwUyR5ksbdHT2MOK8kOkXrm5eBDo4w==
   dependencies:
     "@babel/runtime" "^7.0.0"
     fs-extra "^4.0.2"
     kebab-hash "^0.1.2"
-    lodash "^4.17.4"
+    lodash "^4.17.10"
     webpack-assets-manifest "^3.0.2"
 
 gatsby-plugin-page-creator@^2.0.0:
@@ -6199,10 +6199,10 @@ gatsby-plugin-sharp@next:
     sharp "^0.20.2"
     svgo "^0.7.2"
 
-gatsby-plugin-styled-components@@3.0.0:
-  version "3.0.0-rc.5"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-3.0.0-rc.5.tgz#19e2ab9c73f7c873a3171e73d487266f388eedc4"
-  integrity sha512-keuoCBdtj5Wkxmwe23azK0aTYRzOSgKVcWfvVSR0EAavSBhJOamoMYGBfskZY9w5Xjq/eLlyCQwcbFSdI4GZfQ==
+gatsby-plugin-styled-components@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-3.0.0.tgz#f78f3e2ca5e20651a32b5c8b4deb46c3e7a4d743"
+  integrity sha512-d0XF3Echi9jkSCkxDZLoDJCx3nhIk6gkvrDNnohyHtDffdScodOfdvyTig7Vj8atSfUEZZhcnxtwbhRVYsR55w==
   dependencies:
     "@babel/runtime" "^7.0.0"
 
@@ -9700,10 +9700,10 @@ netlify-cms-backend-test@^2.0.6:
   dependencies:
     uuid "^3.3.2"
 
-netlify-cms-core@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/netlify-cms-core/-/netlify-cms-core-2.1.0.tgz#4a80789925b1ffca01d434a79c51d7f240f841c7"
-  integrity sha512-WNwd/F68DDQjfadSJI1t+e8dPkoqO+pvsUMZiYW6aS63xv19YdqtmAr9sQiwfitrnGPZtLyH6hPr1vHQxHet4Q==
+netlify-cms-core@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/netlify-cms-core/-/netlify-cms-core-2.1.1.tgz#07d4986604ac510310cd02897294e61c52ced922"
+  integrity sha512-McrNxvbY+cy6sPbQD0SEm411njIhqkeomntM2zyKa3U9iG7bSUPNTlWsjswxWkHXV7xq94gzreM+L95r+ZEQ6g==
   dependencies:
     ajv "^6.4.0"
     ajv-errors "^1.0.0"
@@ -9886,10 +9886,10 @@ netlify-cms-widget-text@^2.0.5:
   dependencies:
     react-textarea-autosize "^5.2.0"
 
-netlify-cms@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/netlify-cms/-/netlify-cms-2.1.2.tgz#6905bf351b5b869ff3205cefa01863a367a98476"
-  integrity sha512-+LaJphsnc9/CeCaHnfW78GwpRqM1TG8D20MZkBWYa1vxBbn6TpNWMjuK0JcJEkLXFoLH8QFgjgQ81j6QvnZZxA==
+netlify-cms@^2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/netlify-cms/-/netlify-cms-2.1.3.tgz#2437d2b8de9f07aebac12182a1e04a1baeb99816"
+  integrity sha512-4/HGwyYzfXYw/Q4JdtVCmNAdHYwzkDDEyuaXtzzYg5lyT9e9cWdPlImSw8+DZ3ff3Ann9z8/zcc6K1jUWtBpWw==
   dependencies:
     emotion "^9.2.6"
     netlify-cms-backend-bitbucket "^2.0.7"
@@ -9897,7 +9897,7 @@ netlify-cms@^2.1.2:
     netlify-cms-backend-github "^2.0.9"
     netlify-cms-backend-gitlab "^2.0.6"
     netlify-cms-backend-test "^2.0.6"
-    netlify-cms-core "^2.1.0"
+    netlify-cms-core "^2.1.1"
     netlify-cms-editor-component-image "^2.0.4"
     netlify-cms-media-library-uploadcare "^0.2.0"
     netlify-cms-widget-boolean "^2.0.4"

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://whitemarketpodcast.netlify.com`,
+    siteUrl: `https://www.whitemarketpodcast.eu`,
     // This is both the title of the site and of the podcast
     title: `White Market Podcast`,
     subtitle: `Free music and free culture`,
@@ -11,10 +11,6 @@ module.exports = {
     categories: [`Society & Culture`, `Music`, `Technology`],
   },
   plugins: [
-    `gatsby-plugin-resolve-src`,
-    `gatsby-plugin-styled-components`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -27,6 +23,10 @@ module.exports = {
         icon: `src/img/White_market_favicon.jpg`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-resolve-src`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
