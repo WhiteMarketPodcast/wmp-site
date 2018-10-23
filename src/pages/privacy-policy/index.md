@@ -6,7 +6,7 @@ title: Privacy Policy
 
 Privacy is a huge deal to us. As such, we do not collect or keep any information about your visit to this site.
 
-However, this site does use some external services to keep it running smoothly, and the providers of those services typically do collect information (e.g. your IP address and the browser you use) when you use this site. Here is a list of the main external services we use and links to their respective privacy policies:
+However, this site does use some external services to keep it running smoothly, and the providers of those services typically do collect information (for example, your IP address and the browser you use) when you use this site. Here is a list of the main external services we use and links to their respective privacy policies:
 
 ### Hosting
 
@@ -24,14 +24,14 @@ Most images are hosted on Cloudinary. Their service allows us to reduce image-fi
 
 The videos we show/link to on this site are typically hosted on [Vimeo](https://vimeo.com).
 
-- [View Vimeo's privacy policy here](https://vimeo.com/privacy)
+- [View Vimeo's privacy policy](https://vimeo.com/privacy)
 
 ### Podcasts
 
 Podcast episodes are hosted on the Internet Archive: [archive.org](https://archive.org).
 
-- [View Internet Archive's terms and conditions here](https://archive.org/about/terms.php)
-- [Read Internet Archive's comments on GDPR here](https://archive.org/about/faqs.php#Accounts__Information)
+- [View Internet Archive's terms and conditions](https://archive.org/about/terms.php)
+- [Read Internet Archive's comments on GDPR](https://archive.org/about/faqs.php#Accounts__Information)
 
 ### Fonts
 
