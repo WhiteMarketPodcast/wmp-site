@@ -11,14 +11,24 @@ export const CopyrightRow = styled.div`
   padding: 2rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 
   ${onMobile} {
     flex-direction: column-reverse;
+    align-items: center;
     padding: 2rem 1rem;
+    text-align: center;
+    font-size: 0.9rem;
 
-    > div:first-child {
-      margin-top: 1rem;
+    > div {
+      margin: 0.33rem 0;
+
+      &:first-child {
+        margin-bottom: 0;
+      }
+      &:last-child {
+        margin-top: 0;
+      }
     }
   }
 `;
@@ -59,6 +69,10 @@ export const CCIconContainer = styled.div`
 
 export const SocialIconContainer = styled.div`
   text-align: right;
+
+  ${onMobile} {
+    text-align: center;
+  }
 `;
 
 export const SocialLink = styled(Link)`
@@ -94,5 +108,17 @@ export const SocialLink = styled(Link)`
     &.rss {
       color: #f26522;
     } */
+  }
+`;
+
+export const PrivacyLink = styled(Link)`
+  color: ${white};
+  font-size: 0.8rem;
+  text-align: center;
+  opacity: 0.8;
+
+  &:hover {
+    filter: unset;
+    opacity: 1;
   }
 `;

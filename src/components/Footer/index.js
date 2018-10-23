@@ -11,6 +11,7 @@ import {
   SocialIcon,
   SocialIconContainer,
   SocialLink,
+  PrivacyLink,
 } from './styled';
 
 class Footer extends Component {
@@ -42,7 +43,10 @@ class Footer extends Component {
           </div>
         </LicenceInfo>
         <CopyrightRow>
-          <div>White Market Podcast - CC BY-NC</div>
+          <div>
+            <div>White Market Podcast - CC BY-NC</div>
+            <PrivacyLink to="/privacy-policy">Privacy</PrivacyLink>
+          </div>
           <SocialIconContainer>
             <SocialLink
               className="email"
