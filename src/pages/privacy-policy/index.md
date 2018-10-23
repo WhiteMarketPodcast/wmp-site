@@ -22,7 +22,7 @@ Most images are hosted on Cloudinary. Their service allows us to reduce image-fi
 
 ### Videos
 
-The videos we link to on this site are typically hosted on [Vimeo](https://vimeo.com).
+The videos we show/link to on this site are typically hosted on [Vimeo](https://vimeo.com).
 
 - [View Vimeo's privacy policy here](https://vimeo.com/privacy)
 
