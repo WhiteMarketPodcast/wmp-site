@@ -27,7 +27,6 @@
     "gatsby-plugin-sass": "^2.0.1",
     "gatsby-plugin-sharp": "^2.0.7",
     "gatsby-plugin-styled-components": "^3.0.0",
-    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-images": "^2.0.4",
     "gatsby-source-filesystem": "^2.0.5",
@@ -53,6 +52,8 @@
     "react-pose": "^3.3.4",
     "rss": "^1.2.2",
     "styled-components": "^4.0.2",
+    "typeface-crete-round": "^0.0.54",
+    "typeface-montserrat": "^0.0.54",
     "uuid": "^3.2.1"
   },
   "keywords": [

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { node, object } from 'prop-types';
 import { PoseGroup } from 'react-pose';
+import 'typeface-crete-round';
+import 'typeface-montserrat';
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';

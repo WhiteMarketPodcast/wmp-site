@@ -16,14 +16,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
-      resolve: `gatsby-plugin-web-font-loader`,
-      options: {
-        google: {
-          families: [`Crete Round`, `Montserrat`],
-        },
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `White Market Podcast`,
