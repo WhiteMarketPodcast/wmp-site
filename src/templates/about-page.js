@@ -2,18 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Content, { HTMLContent } from 'components/Content';
-import { PaddedSection, BrandH1, FlexCenter } from 'style/components';
+import { TitleBG, Title, Section } from 'style/components/aboutPage';
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content;
 
   return (
-    <PaddedSection>
-      <FlexCenter>
-        <BrandH1 moreMarginOnTop>{title}</BrandH1>
-      </FlexCenter>
-      <PageContent className="content" content={content} />
-    </PaddedSection>
+    <>
+      <TitleBG>
+        <Title>{title}</Title>
+      </TitleBG>
+      <Section>
+        <PageContent className="content" content={content} />
+      </Section>
+    </>
   );
 };
 
