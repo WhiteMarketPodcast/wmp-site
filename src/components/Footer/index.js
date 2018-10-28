@@ -27,24 +27,29 @@ class Footer extends Component {
             <CCIconContainer>
               <CCIcon className="fab fa-creative-commons" />
               <CCIcon className="fab fa-creative-commons-by" />
-              <CCIcon className="fab fa-creative-commons-nc" />
+              <CCIcon className="fab fa-creative-commons-sa" />
             </CCIconContainer>
             <div>
-              Unless otherwise noted, this blog is published under an
+              Unless otherwise noted, this blog is published under a
               {' '}
-              <Link to="https://creativecommons.org/licenses/by-nc/4.0/">
-                Attribution Non-Commercial
+              <Link to="https://creativecommons.org/licenses/by-sa/4.0/">
+                Creative Commons Attribution-ShareAlike 4.0 International
+                License
               </Link>
-              {' '}
-              Creative Commons licence. Individual tracks retain their original
-              licences and may be more restrictive. Please refer to each
-              original release page for more information.
+              . Individual tracks retain their original licences and may be more
+              restrictive. Please refer to each original release page for more
+              information.
             </div>
           </div>
         </LicenceInfo>
         <CopyrightRow>
           <div>
-            <div>White Market Podcast - CC BY-NC</div>
+            <div>
+              <span>White Market Podcast – </span>
+              <Link to="https://creativecommons.org/licenses/by-sa/4.0/">
+                CC BY-SA
+              </Link>
+            </div>
             <PrivacyLink to="/privacy-policy">Privacy</PrivacyLink>
           </div>
           <SocialIconContainer>

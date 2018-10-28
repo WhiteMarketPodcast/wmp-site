@@ -3,7 +3,11 @@ import Link from 'components/Link';
 import { black, white, emerald } from 'style/colors';
 import { onMobile } from 'style/mediaQueries';
 
-export const StyledFooter = styled.footer``;
+export const StyledFooter = styled.footer`
+a {
+  color: ${white};
+}
+`;
 
 export const CopyrightRow = styled.div`
   background-color: ${black};
