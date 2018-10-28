@@ -30,10 +30,12 @@ class Player extends Component {
     return (
       <Plyr
         {...rest}
+        autoplay={autoplay}
+        loadSprite={false}
+        storage={{ enabled: false }}
+        type={this.getType()}
         url={url}
         videoId={url}
-        type={this.getType()}
-        autoplay={autoplay}
       />
     );
   }

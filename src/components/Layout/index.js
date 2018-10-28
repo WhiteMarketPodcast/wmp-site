@@ -9,6 +9,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import Footer from 'components/Footer';
 import Navbar from 'components/Navbar';
+import PlyrSvgSprite from 'components/misc/PlyrSvgSprite';
 import { TopLevelHelmet } from 'components/Helmets';
 import 'style/sass/all.sass';
 import GlobalStyle from 'style';
@@ -38,6 +39,7 @@ class TemplateWrapper extends Component {
       <>
         <GlobalStyle />
         <TopLevelHelmet />
+        <PlyrSvgSprite />
         <Navbar locationKey={location.key} />
         <PoseGroup animateOnMount preEnterPose={mounted ? `initial` : `enter`}>
           <PageFade key={location.pathname}>
