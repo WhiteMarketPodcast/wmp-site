@@ -58,6 +58,10 @@ const GlobalStyle = createGlobalStyle`
   body.four-oh-four {
     background-color: ${lightEmerald};
   }
+
+  strong {
+    font-weight: 600;
+  }
 `;
 
 export default GlobalStyle;
