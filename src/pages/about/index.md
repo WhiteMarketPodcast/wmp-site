@@ -1,10 +1,8 @@
 ---
-templateKey: 'about-page'
-path: /about
+templateKey: about-page
 title: White Market Podcast
 ---
-
-**White Market Podcast** is an award-winning\* show about **free music** and **free culture** by Rute Correia. While the show is mainly focused on **Creative Commons**-licenced music, since it is also naturally intertwined with other movements and ideologies such as **Open Source** and **Open Access**, it often features these and similar **forms of activism related to digital rights and freedoms**.
+**White Market Podcast** is an award-winning* show about **free music** and **free culture** by Rute Correia. While the show is mainly focused on **Creative Commons**-licensed music, since it is also naturally intertwined with other movements and ideologies such as **open source** and **open access**, it often features these and similar **forms of activism related to digital rights and freedoms**.
 
 Our promise to deliver netaudio music and raise free culture awareness is also stated on [our collection on **Free Music Archive**](http://freemusicarchive.org/curator/programamarcabranca/).
 
