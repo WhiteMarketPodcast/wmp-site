@@ -33,12 +33,6 @@ Podcast episodes are hosted on the Internet Archive: [archive.org](https://archi
 - [View Internet Archive's terms and conditions](https://archive.org/about/terms.php)
 - [Read Internet Archive's comments on GDPR](https://archive.org/about/faqs.php#Accounts__Information)
 
-### Fonts
-
-We use the Google Fonts API to load the fonts used on this website.
-
-- [Google Fonts API and Privacy](https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users)
-
 ---
 
 ## Contacting us
