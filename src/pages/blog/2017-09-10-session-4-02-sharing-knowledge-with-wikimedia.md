@@ -4,6 +4,11 @@ title: 'Session 4.02 – Sharing knowledge with Wikimedia'
 date: 2017-09-10T21:17:54.000Z
 imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/CCBY-WikipediaByWikimedia.jpg'
 imageAlt: 'CCBY-WikipediaByWikimedia'
+imageCredit:
+  author:
+    name: Wikimedia Foundation
+    url: https://en.wikipedia.org/wiki/File:10_sharing_book_cover_background.jpg
+  licence: CC BY
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/archive.org/download/WhiteMarketPodcastSession402/WhiteMarketPodcast-Session402.mp3
 categories:

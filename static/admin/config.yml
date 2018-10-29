@@ -55,7 +55,58 @@ collections:
       - {
           label: 'Image credit',
           name: 'imageCredit',
-          widget: 'string',
+          widget: 'object',
+          fields:
+            [
+              {
+                label: 'Author',
+                name: 'author',
+                widget: 'object',
+                fields:
+                  [
+                    {
+                      label: 'Name',
+                      name: 'name',
+                      widget: 'string',
+                      required: false,
+                    },
+                    {
+                      label: 'URL',
+                      name: 'url',
+                      widget: 'string',
+                      required: false,
+                    },
+                    {
+                      label: 'Site name',
+                      name: 'site',
+                      widget: 'string',
+                      required: false,
+                    },
+                    {
+                      label: 'Site URL',
+                      name: 'siteURL',
+                      widget: 'string',
+                      required: false,
+                    },
+                  ],
+                required: false,
+              },
+              {
+                label: 'Licence',
+                name: 'licence',
+                widget: 'select',
+                options:
+                  [
+                    'CC BY',
+                    'CC BY-SA',
+                    'CC BY-ND',
+                    'CC BY-NC',
+                    'CC BY-NC-SA',
+                    'CC BY-NC-ND',
+                  ],
+                required: false,
+              },
+            ],
           required: false,
         }
       - {

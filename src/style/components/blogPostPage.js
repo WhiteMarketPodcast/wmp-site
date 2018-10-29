@@ -5,7 +5,7 @@ import {
   MOBILE_NAV_HEIGHT,
   DESKTOP_NAV_HEIGHT,
 } from 'components/Navbar/constants';
-import { white, black, lightEmerald, darkGrey } from '../colors';
+import { white, black, lightEmerald, darkGrey, grey } from '../colors';
 import { onMobile } from '../mediaQueries';
 import { fade, slideUpWithDelay } from '../poses';
 
@@ -239,4 +239,13 @@ export const ShareLink = styled(Link)`
     filter: unset;
     opacity: 1;
   }
+`;
+
+export const ImageCredit = styled.div`
+  border-bottom: 1px solid ${grey};
+  color: ${darkGrey};
+  font-size: 0.8rem;
+  font-style: italic;
+  margin: 0 1rem;
+  margin-top: 0.3rem;
 `;

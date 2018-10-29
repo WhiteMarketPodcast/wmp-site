@@ -4,6 +4,7 @@ import { array, func, node, string, shape, object } from 'prop-types';
 import { PoseGroup } from 'react-pose';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
+import Link from 'components/Link';
 import PlayButton from 'components/PlayButton';
 import Player from 'components/Player';
 import Content, { HTMLContent } from 'components/Content';
@@ -13,6 +14,7 @@ import {
   Title,
   Column,
   BlogContent,
+  ImageCredit,
   Date,
   TagList,
   Sidebar,
@@ -26,7 +28,17 @@ import {
   Fade,
   CenteredFade,
 } from 'style/components/blogPostPage';
+import { licenceURLs } from 'utils';
 import { getShareURLs } from 'utils/sharing';
+
+function renderImageInfoSpan(text, name, url) {
+  return (
+    <span>
+      {text}
+      {url ? <Link to={url}>{name}</Link> : name}
+    </span>
+  );
+}
 
 export class BlogPostTemplate extends Component {
   static propTypes = {
@@ -198,6 +210,26 @@ export class BlogPostTemplate extends Component {
     );
   }
 
+  renderImageCredit() {
+    const { imageCredit } = this.props;
+    if (!_.isObject(imageCredit)) return null;
+    const { author, licence } = imageCredit;
+    const { name, url, site, siteURL } = author || {};
+    const licenceURL = licence && licenceURLs[licence];
+
+    const photoBy = renderImageInfoSpan(`Photo by `, name, url);
+    const where = site && renderImageInfoSpan(` on `, site, siteURL);
+    const licenceInfo = licence && renderImageInfoSpan(` – `, licence, licenceURL);
+
+    return (
+      <ImageCredit>
+        {photoBy}
+        {where}
+        {licenceInfo}
+      </ImageCredit>
+    );
+  }
+
   renderMedia() {
     const { format, image, imageURL } = this.props;
     const { showMedia } = this.state;
@@ -266,6 +298,7 @@ export class BlogPostTemplate extends Component {
         <Column>
           <div>
             {this.renderMedia()}
+            {this.renderImageCredit()}
             <BlogContent>
               <PostContent content={content} />
             </BlogContent>
@@ -321,6 +354,15 @@ export const pageQuery = graphql`
         description
         image
         imageURL
+        imageCredit {
+          author {
+            name
+            url
+            site
+            siteURL
+          }
+          licence
+        }
         imageAlt
         format
         tags
