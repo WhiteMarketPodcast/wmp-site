@@ -4,6 +4,13 @@ title: 10 Years of White Market Podcast
 date: 2018-03-21T10:12:50.000Z
 imageURL: https://res.cloudinary.com/thekdizzler/image/upload/white_market/rawpixel-com-574835-unsplash.jpg
 imageAlt: rawpixel-com-574835-unsplash
+imageCredit:
+  author:
+    name: rawpixel.com
+    url: https://unsplash.com/photos/GwsXX--WwjU
+    site: Unsplash
+    siteURL: https://unsplash.com
+  licence: ''
 format: standard
 categories:
   - Blog
