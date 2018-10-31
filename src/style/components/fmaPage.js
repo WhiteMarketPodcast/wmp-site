@@ -8,7 +8,6 @@ const CLOUDINARY_URL = `https://res.cloudinary.com/thekdizzler/image/upload/whit
 
 function getImageURL(image) {
   if (/^\/img\//.test(image)) {
-    console.log('yep, this works');
     const newURL = `${CLOUDINARY_URL}${image.replace(`/img/`, ``)}`;
     return newURL.replace(`/upload/`, `/upload/c_scale,w_600/`);
   }
