@@ -1,7 +1,9 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
-import { array, func, object, string } from 'prop-types';
+import { array, func, node, object, string } from 'prop-types';
 import { graphql } from 'gatsby';
+import Helmet from 'react-helmet';
+import { FacebookHelmet, TwitterHelmet } from 'components/Helmets';
 import Content, { HTMLContent } from 'components/Content';
 import { TitleBG, Title, Section } from 'style/components/aboutPage';
 import {
@@ -17,11 +19,13 @@ export class FMACollectionTemplate extends Component {
     title: string.isRequired,
     content: string,
     contentComponent: func,
+    helmet: node,
   };
 
   static defaultProps = {
     content: '',
     contentComponent: undefined,
+    helmet: null,
   };
 
   state = { numberToShow: 4 };
@@ -81,11 +85,12 @@ export class FMACollectionTemplate extends Component {
   }
 
   render() {
-    const { title, content, contentComponent } = this.props;
+    const { title, content, contentComponent, helmet } = this.props;
     const PageContent = contentComponent || Content;
 
     return (
       <>
+        {helmet}
         <TitleBG>
           <Title>{title}</Title>
         </TitleBG>
@@ -101,7 +106,14 @@ export class FMACollectionTemplate extends Component {
 }
 
 const FMACollection = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const {
+    markdownRemark: post,
+    site: {
+      siteMetadata: { title, siteLogo, siteUrl },
+    },
+  } = data;
+  const description = post.excerpt.replace(/\s{2}/g, ` `).replace(/\s\./g, `.`);
+  const pageTitle = `${post.frontmatter.title} | ${title}`;
 
   return (
     <FMACollectionTemplate
@@ -109,6 +121,25 @@ const FMACollection = ({ data }) => {
       title={post.frontmatter.title}
       collection={post.frontmatter.collection}
       content={post.html}
+      helmet={
+        <>
+          <Helmet>
+            <title>{pageTitle}</title>
+            <meta name="description" content={description} />
+          </Helmet>
+          <FacebookHelmet
+            title={pageTitle}
+            description={description}
+            url={`${siteUrl}/fma-collection`}
+            image={siteLogo}
+          />
+          <TwitterHelmet
+            title={pageTitle}
+            description={description}
+            image={siteLogo}
+          />
+        </>
+      }
     />
   );
 };
@@ -121,8 +152,16 @@ export default FMACollection;
 
 export const fmaCollectionQuery = graphql`
   query FMACollection($id: String!) {
+    site {
+      siteMetadata {
+        title
+        siteLogo
+        siteUrl
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       html
+      excerpt(pruneLength: 5000)
       frontmatter {
         title
         collection {
