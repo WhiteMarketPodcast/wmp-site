@@ -82,10 +82,10 @@ class Navbar extends Component {
           <NavLink to="/about">About</NavLink>
         </MenuItem>
         <MenuItem>
-          <NavLink to="/blog">Blog posts</NavLink>
+          <NavLink to="/blog">Blog</NavLink>
         </MenuItem>
         <MenuItem>
-          <NavLink to="/tags">Tags</NavLink>
+          <NavLink to="/fma-collection">FMA Collection</NavLink>
         </MenuItem>
       </Menu>
     );

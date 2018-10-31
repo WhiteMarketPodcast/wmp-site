@@ -152,3 +152,24 @@ collections:
             }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
+      - file: 'src/pages/fma-collection/index.md'
+        label: 'FMA Collection'
+        name: 'fma-collection'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'privacy-policy',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Collection', name: 'collection', widget: 'list', fields:
+            [
+              { label: 'Title', name: title, widget: string },
+              { label: 'Artist', name: artist, widget: string },
+              { label: 'Album art', name: image, widget: image },
+              { label: 'Genres', name: genres, widget: list },
+              { label: 'URL', name: url, widget: string },
+            ]
+          }
