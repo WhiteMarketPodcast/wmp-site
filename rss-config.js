@@ -153,6 +153,10 @@ async function createEpisodes(site, allMarkdownRemark) {
     const { frontmatter, fields, excerpt, html } = node;
     const { podcastURL, title } = frontmatter;
     const url = siteUrl + fields.slug;
+    const description = excerpt
+      .replace(/\s{2,}/g, ` `)
+      .replace(/\s,/g, `,`)
+      .replace(/\s\./g, `.`);
 
     console.log(`~~~ getting ${title} info`);
     let { size, duration } = await getDetailsFromArchive(podcastURL);
@@ -161,7 +165,7 @@ async function createEpisodes(site, allMarkdownRemark) {
     console.log(`~~~ finished ${title}`);
 
     return Object.assign({}, frontmatter, {
-      description: excerpt,
+      description,
       url,
       guid: url,
       enclosure: { url: podcastURL, size, type: 'audio/mpeg' },
@@ -170,13 +174,13 @@ async function createEpisodes(site, allMarkdownRemark) {
 
         // Google fields
         { 'googleplay:author': owner },
-        { 'googleplay:description': excerpt },
+        { 'googleplay:description': description },
         { 'googleplay:explicit': 'no' },
 
         // iTunes fields
         { 'itunes:author': owner },
-        { 'itunes:subtitle': excerpt },
-        { 'itunes:summary': excerpt },
+        { 'itunes:subtitle': description },
+        { 'itunes:summary': description },
         { 'itunes:explicit': 'clean' },
         { 'itunes:image': { _attr: { href: siteLogo } } },
         { 'itunes:duration': duration },
@@ -222,7 +226,7 @@ const podcastQuery = `
     ) {
       edges {
         node {
-          excerpt(pruneLength: 1000)
+          excerpt(pruneLength: 2000)
           html
           fields { slug }
           frontmatter {
