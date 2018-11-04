@@ -222,7 +222,7 @@ const podcastQuery = `
     ) {
       edges {
         node {
-          excerpt
+          excerpt(pruneLength: 1000)
           html
           fields { slug }
           frontmatter {
