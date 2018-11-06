@@ -2,7 +2,9 @@
 templateKey: blog-post
 title: The legacy of Free Music Archive
 date: 2018-11-06T14:21:13.959Z
-description: ''
+description: >-
+  As the Free Music Archive prepares to shut down, we reflect on its importance
+  for the show and the legacy for openly-licensed music.
 format: standard
 image: /img/mr-cup-fabien-barral-86068-unsplash-1920.jpg
 imageURL: ''
@@ -10,7 +12,9 @@ imageAlt: record-archive
 imageCredit:
   author:
     name: Mr Cup / Fabien Barral
-    url: 'https://unsplash.com/photos/o6GEPQXnqMY'
+    site: Unsplash
+    siteURL: 'https://unsplash.com/photos/o6GEPQXnqMY'
+    url: ''
 categories:
   - blog
 tags:
@@ -24,7 +28,7 @@ A couple of weeks ago, I attended a Creative Commons event in Lisbon where I had
 
 ## The end of an era
 
-When WMP started in 2008, there was no FMA, but its existence allowed the show to survive past the decade. Our new [tag page](https://www.whitemarketpodcast.eu/tags/) makes it very clear: since our 2015 comeback, FMA was mentioned on this blog 42 times; almost twice as much as the second runner-up. It's also no coincidence that Cheyenne Hohman, FMA's director in the last few years, is the only guest to have been featured twice on the show (in [2015](https://www.whitemarketpodcast.eu/blog/2015-09-06-session-2-10-all-hail-the-free-music-archive/) and [2016](https://www.whitemarketpodcast.eu/blog/2016-09-25-session-3-10-need-free-music-archive/)) so far. FMA was one of the most valuable resources in the search for openly-licensed music not only for WMP, but also for other projects such as [Starfrosch](https://www.whitemarketpodcast.eu/blog/2016-10-30-session-3-15-starfrosch-hot100/). As the FMA prepares to say goodbye, there is this feeling of uneasiness that comes with knowing that nothing will be the same for open music, even if their [catalogue becomes available in other places](https://archive.org/details/freemusicarchive).
+When WMP started in 2008, there was no FMA, but its existence allowed the show to survive past the decade. Our new [tag page](https://www.whitemarketpodcast.eu/tags/) makes it very clear: since our 2015 comeback, FMA was mentioned on this blog 42 times; almost twice as much as the second runner-up. It's also no coincidence that Cheyenne Hohman, FMA's director in the last few years, is the only guest to have been featured twice on the show so far, in [2015](https://www.whitemarketpodcast.eu/blog/2015-09-06-session-2-10-all-hail-the-free-music-archive/) and [2016](https://www.whitemarketpodcast.eu/blog/2016-09-25-session-3-10-need-free-music-archive/). With an incredible search engine and a music-oriented design (even if a bit outdated by now), FMA was one of the most valuable resources in the hunt for openly-licensed music not only for WMP, but also for other projects such as [Starfrosch](https://www.whitemarketpodcast.eu/blog/2016-10-30-session-3-15-starfrosch-hot100/). As the FMA prepares to say goodbye, there is this feeling of uneasiness that comes with knowing that nothing will be the same for open music, even if their [catalogue becomes available in other places](https://archive.org/details/freemusicarchive).
 
 As for the legacy of what WMP achieved as an FMA curator, you can **find an index table of all the records uploaded** on our **[GitHub repo](https://github.com/WhiteMarketPodcast/whitemarketpodcast-repo/blob/master/indexes/fma_wmp_index.md)**. The table currently includes [Wayback Machine](https://archive.org/web/) links for each record page on FMA and will be updated with the respective download links on Archive.org, once the migration is complete. The index file also lists number of plays and downloads, as well as the attached license to each work.
 
