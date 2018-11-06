@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { BlogPostTemplate } from 'templates/blog-post';
-// import injectStyle from '../injectStyle';
+import injectStyle from '../injectStyle';
 
 const BlogPostPreview = ({ entry, widgetFor }) => {
   // TODO: Find a better fix for this
@@ -31,5 +31,4 @@ BlogPostPreview.propTypes = {
   widgetFor: PropTypes.func.isRequired,
 };
 
-// export default injectStyle(BlogPostPreview);
-export default BlogPostPreview;
+export default injectStyle(BlogPostPreview);
