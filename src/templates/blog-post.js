@@ -200,6 +200,11 @@ export class BlogPostTemplate extends Component {
     return (
       <Fragment>
         {helmet}
+        {description && (
+          <Helmet>
+            <meta name="description" content={description} />
+          </Helmet>
+        )}
         <FacebookHelmet {...commonMetaTags} url={`${siteUrl}${slug}`} />
         <TwitterHelmet
           {...commonMetaTags}
@@ -259,7 +264,7 @@ export class BlogPostTemplate extends Component {
   }
 
   renderTitle() {
-    const { format, image, imageURL, title, description, date } = this.props;
+    const { format, image, imageURL, title, date } = this.props;
     const { showMedia } = this.state;
     if (showMedia && format === `video`) return null;
 
@@ -267,7 +272,6 @@ export class BlogPostTemplate extends Component {
       <Hero src={image || imageURL}>
         <CenteredFade>
           <Title>{title}</Title>
-          {description && <p>{description}</p>}
           {this.renderPlayButton()}
           <Date>{date}</Date>
         </CenteredFade>

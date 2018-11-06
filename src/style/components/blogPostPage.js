@@ -9,7 +9,13 @@ import { white, black, lightEmerald, darkGrey, grey } from '../colors';
 import { onMobile } from '../mediaQueries';
 import { fade, slideUpWithDelay } from '../poses';
 
+const CLOUDINARY_URL = `https://res.cloudinary.com/thekdizzler/image/upload/whitemarket_eu/`;
+
 function getImageURL(image) {
+  if (/^\/img\//.test(image)) {
+    const newURL = `${CLOUDINARY_URL}${image.replace(`/img/`, ``)}`;
+    return newURL.replace(`/upload/`, `/upload/c_scale,w_1100/`);
+  }
   return image.replace(`/upload/`, `/upload/c_scale,w_1100/`);
 }
 
@@ -35,7 +41,7 @@ export const Hero = styled.div`
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url(${({ src }) => src});
+    url(${({ src }) => getImageURL(src)});
   min-height: 60vh;
 
   ${onMobile} {
