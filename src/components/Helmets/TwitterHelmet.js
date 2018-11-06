@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { node, string } from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 
 class TwitterHelmet extends Component {
   static propTypes = {
+    siteUrl: string.isRequired,
     title: string.isRequired,
     description: string,
     image: string.isRequired,
@@ -26,8 +28,10 @@ class TwitterHelmet extends Component {
       description,
       image,
       imageAlt,
+      siteUrl,
       title,
     } = this.props;
+    const imageURL = /^\/img\//.test(image) ? `${siteUrl}${image}` : image;
 
     return (
       <Helmet>
@@ -35,7 +39,7 @@ class TwitterHelmet extends Component {
         <meta name="twitter:site" content="@WhiteMarketCast" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description || ``} />
-        <meta name="twitter:image" content={image} />
+        <meta name="twitter:image" content={imageURL} />
         <meta name="twitter:image:imageAlt" content={imageAlt || ``} />
         {children}
       </Helmet>
@@ -43,4 +47,19 @@ class TwitterHelmet extends Component {
   }
 }
 
-export default TwitterHelmet;
+const query = graphql`
+  query TwitterHelmetQuery {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
+  }
+`;
+
+export default (props) => (
+  <StaticQuery
+    query={query}
+    render={({ site }) => <TwitterHelmet {...site.siteMetadata} {...props} />}
+  />
+);
