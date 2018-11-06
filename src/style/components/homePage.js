@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import styled from 'styled-components';
 import Link from 'components/Link';
+import { getImageURL } from 'utils/images';
 import {
   black,
   emerald,
@@ -9,14 +10,13 @@ import {
   white,
 } from '../colors';
 import { sansSerif } from '../fonts';
-import { onMobile } from '../mediaQueries';
+import { onMobile, onMassiveScreen } from '../mediaQueries';
 
 const isHighlightedPreview = (index) => _.includes([0, 3, 5], index);
-function getImageURL(image, index = 0, isSmall = false) {
-  if (!/res.cloudinary.com/.test(image)) return image;
-  let width = isHighlightedPreview(index) && !isSmall ? 1100 : 450;
-  if (isSmall) width = 600;
-  return image.replace('/upload/', `/upload/c_scale,w_${width}/`);
+
+function getBGImageURL(image, index = 0) {
+  const width = isHighlightedPreview(index) ? 1100 : 450;
+  return getImageURL({ image, width });
 }
 
 export const BlogPostPreviewGrid = styled.div`
@@ -157,11 +157,11 @@ export const BlogPreviewImage = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(${({ bgImage, index }) => getImageURL(bgImage, index)});
+  background-image: url(${({ bgImage, index }) => getBGImageURL(bgImage, index)});
   width: 100%;
 
   @media (max-width: 575px) {
-    background-image: url(${({ bgImage, index }) => getImageURL(bgImage, index, true)});
+    background-image: url(${({ bgImage }) => getImageURL({ image: bgImage, width: 300 })});
     width: 40%;
   }
 `;
@@ -247,13 +247,28 @@ export const PodcastSection = styled.section`
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url(${({ bgImage }) => getImageURL(bgImage)});
+    url(${({ bgImage }) => getImageURL({ image: bgImage })});
   min-height: 50vh;
   padding: 1rem;
   width: 100%;
 
   @media (max-width: 575px) {
     min-height: 400px;
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url(${({ bgImage }) => getImageURL({ image: bgImage, width: 600 })});
+  }
+
+  ${onMassiveScreen} {
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url(${({ bgImage }) => getImageURL({ image: bgImage, width: 1700 })});
   }
 
   .plyr--audio .plyr__controls {

@@ -3,11 +3,7 @@ import Link from 'components/Link';
 import InfiniteScroll from 'react-infinite-scroller';
 import { black, emerald, translucentEmerald, white } from 'style/colors';
 import { onMobile, onDesktop } from 'style/mediaQueries';
-
-function getImageURL(image) {
-  if (!/res.cloudinary.com/.test(image)) return image;
-  return image.replace('/upload/', `/upload/c_scale,w_600/`);
-}
+import { getImageURL } from 'utils/images';
 
 export const BlogListGrid = styled(InfiniteScroll)`
   display: grid;
@@ -60,7 +56,7 @@ export const BlogPreviewImage = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(${({ bgImage }) => getImageURL(bgImage)});
+  background-image: url(${({ bgImage }) => getImageURL({ image: bgImage, width: 600 })});
   width: 100%;
 
   ${onMobile} {

@@ -5,19 +5,10 @@ import {
   MOBILE_NAV_HEIGHT,
   DESKTOP_NAV_HEIGHT,
 } from 'components/Navbar/constants';
+import { getImageURL } from 'utils/images';
 import { white, black, lightEmerald, darkGrey, grey } from '../colors';
-import { onMobile } from '../mediaQueries';
+import { onMobile, onMassiveScreen } from '../mediaQueries';
 import { fade, slideUpWithDelay } from '../poses';
-
-const CLOUDINARY_URL = `https://res.cloudinary.com/thekdizzler/image/upload/whitemarket_eu/`;
-
-function getImageURL(image) {
-  if (/^\/img\//.test(image)) {
-    const newURL = `${CLOUDINARY_URL}${image.replace(`/img/`, ``)}`;
-    return newURL.replace(`/upload/`, `/upload/c_scale,w_1100/`);
-  }
-  return image.replace(`/upload/`, `/upload/c_scale,w_1100/`);
-}
 
 export const Title = styled.h1`
   color: ${white};
@@ -41,11 +32,26 @@ export const Hero = styled.div`
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url(${({ src }) => getImageURL(src)});
+    url(${({ src }) => getImageURL({ image: src })});
   min-height: 60vh;
 
   ${onMobile} {
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url(${({ src }) => getImageURL({ image: src, width: 700 })});
     padding: 1rem;
+  }
+
+  ${onMassiveScreen} {
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url(${({ src }) => getImageURL({ image: src, width: 1700 })});
   }
 `;
 
@@ -213,7 +219,7 @@ export const VideoPlyrContainer = styled.div`
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url(${({ bgImage }) => bgImage && getImageURL(bgImage)});
+    url(${({ bgImage }) => bgImage && getImageURL({ image: bgImage })});
 
   > div {
     margin: 0 auto;
@@ -221,6 +227,13 @@ export const VideoPlyrContainer = styled.div`
   }
 
   ${onMobile} {
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url(${({ bgImage }) => bgImage && getImageURL({ image: bgImage, width: 700 })});
+
     > div {
       max-width: calc((100vh - ${MOBILE_NAV_HEIGHT}) / 9 * 16);
     }

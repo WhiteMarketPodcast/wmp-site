@@ -3,21 +3,7 @@ import Link from 'components/Link';
 import InfiniteScroll from 'react-infinite-scroller';
 import { emerald, white } from 'style/colors';
 import { onMobile, onDesktop } from 'style/mediaQueries';
-
-const CLOUDINARY_URL = `https://res.cloudinary.com/thekdizzler/image/upload/whitemarket_eu/`;
-
-function getImageURL(image) {
-  if (/^\/img\//.test(image)) {
-    const newURL = `${CLOUDINARY_URL}${image.replace(`/img/`, ``)}`;
-    return newURL.replace(`/upload/`, `/upload/c_scale,w_600/`);
-  }
-
-  if (/res.cloudinary.com/.test(image)) {
-    return image.replace(`/upload/`, `/upload/c_scale,w_600/`);
-  }
-
-  return image;
-}
+import { getImageURL } from 'utils/images';
 
 export const Grid = styled(InfiniteScroll)`
   display: grid;
@@ -45,18 +31,19 @@ export const AlbumContainer = styled(Link)`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('${({ bgImage }) => getImageURL(bgImage)}');
+  background-image: url('${({ bgImage }) => getImageURL({ image: bgImage, width: 400 })}');
   overflow: hidden;
   opacity: 0.8;
-
+  
   &:hover {
     filter: inherit;
     opacity: 1;
   }
-
+  
   ${onMobile} {
     opacity: 1;
     font-weight: 600;
+    background-image: url('${({ bgImage }) => getImageURL({ image: bgImage, width: 600 })}');
   }
 `;
 
