@@ -7,6 +7,7 @@ const setWidth = (url, width) => url.replace(`/upload/`, `/upload/f_auto,c_scale
 const fetchViaCloudinary = (url, width) => `${FETCH_URL}f_auto,c_scale,w_${width}/${url}`;
 
 export function getImageURL({ image = ``, width = 1100 }) {
+  if (!image) return ``;
   let url = image.trim();
   if (isLocal(url)) url = `${CLOUDINARY_URL}${url.replace(`/img/`, ``)}`;
 
