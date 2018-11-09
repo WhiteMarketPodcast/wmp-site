@@ -5,6 +5,7 @@ import { PoseGroup } from 'react-pose';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Link from 'components/Link';
+import PodcastContext from 'components/PodcastContext';
 import PlayButton from 'components/PlayButton';
 import Player from 'components/Player';
 import Content, { HTMLContent } from 'components/Content';
@@ -22,7 +23,6 @@ import {
   BlogPostLinksContainer,
   TagLink,
   VideoPlyrContainer,
-  AudioPlyrContainer,
   ShareLink,
   ShareLinksContainer,
   Fade,
@@ -49,7 +49,15 @@ export class BlogPostTemplate extends Component {
     image: string,
     imageAlt: string,
     imageURL: string,
-    // imageCredit: string,
+    imageCredit: shape({
+      licence: string,
+      author: shape({
+        name: string,
+        url: string,
+        site: string,
+        siteURL: string,
+      }),
+    }),
     podcastURL: string,
     videoURL: string,
     date: string.isRequired,
@@ -65,18 +73,19 @@ export class BlogPostTemplate extends Component {
     contentComponent: undefined,
     tags: [],
     helmet: null,
-    description: '',
-    image: '',
-    imageAlt: '',
-    // imageCredit: '',
-    imageURL: '',
-    podcastURL: '',
-    videoURL: '',
+    description: ``,
+    image: ``,
+    imageAlt: ``,
+    imageCredit: undefined,
+    imageURL: ``,
+    podcastURL: ``,
+    videoURL: ``,
   };
+
+  static contextType = PodcastContext;
 
   state = {
     showMedia: false,
-    isPlaying: false,
   };
 
   getMediaURL = () => {
@@ -85,16 +94,31 @@ export class BlogPostTemplate extends Component {
   };
 
   handlePlayClick = () => {
+    const { format, title } = this.props;
     const { showMedia } = this.state;
+    const { setPodcastState, url: currentURL } = this.context;
+    const url = this.getMediaURL();
 
-    if (!showMedia) {
-      this.setState({ showMedia: true, isPlaying: true });
+    if (format === `audio`) {
+      if (url !== currentURL) {
+        setPodcastState({ url, title, changingURL: true });
+      } else {
+        const plyrButton = document.querySelector(`button.plyr__control`);
+        if (plyrButton) plyrButton.click();
+      }
     }
-
-    const playButton = document.querySelector(`button.plyr__control`);
-    if (!playButton) return;
-    playButton.click();
+    if (!showMedia) {
+      this.setState({ showMedia: true });
+    }
   };
+
+  isPlaying = () => {
+    const { isPlaying } = this.context;
+    const mediaURL = this.getMediaURL();
+    const { url } = this.context;
+
+    return url === mediaURL && isPlaying;
+  }
 
   renderShareLinks() {
     const { title, slug, siteUrl } = this.props;
@@ -235,17 +259,16 @@ export class BlogPostTemplate extends Component {
     );
   }
 
-  renderMedia() {
+  renderVideo() {
     const { format, image, imageURL } = this.props;
     const { showMedia } = this.state;
     const url = this.getMediaURL();
-    if (!_.includes([`audio`, `video`], format) || !url) return null;
-    const PlyrContainer = format === `video` ? VideoPlyrContainer : AudioPlyrContainer;
+    if (format !== `video` || !url) return null;
 
     return (
       <PoseGroup>
         {showMedia && (
-          <PlyrContainer
+          <VideoPlyrContainer
             className={format}
             key={url}
             bgImage={image || imageURL}
@@ -253,11 +276,9 @@ export class BlogPostTemplate extends Component {
             <Player
               url={url}
               type={format}
-              onPlay={() => this.setState({ isPlaying: true })}
-              onPause={() => this.setState({ isPlaying: false })}
               autoplay
             />
-          </PlyrContainer>
+          </VideoPlyrContainer>
         )}
       </PoseGroup>
     );
@@ -281,12 +302,11 @@ export class BlogPostTemplate extends Component {
 
   renderPlayButton() {
     const url = this.getMediaURL();
-    const { isPlaying } = this.state;
     if (!url) return null;
 
     return (
       <Fade>
-        <PlayButton onClick={this.handlePlayClick} isPlaying={isPlaying} />
+        <PlayButton onClick={this.handlePlayClick} isPlaying={this.isPlaying()} />
       </Fade>
     );
   }
@@ -301,7 +321,7 @@ export class BlogPostTemplate extends Component {
         {this.renderTitle()}
         <Column>
           <div>
-            {this.renderMedia()}
+            {this.renderVideo()}
             {this.renderImageCredit()}
             <BlogContent>
               <PostContent content={content} />

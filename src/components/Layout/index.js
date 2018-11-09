@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-state */
 import React, { Component } from 'react';
 import { node, object } from 'prop-types';
 import { PoseGroup } from 'react-pose';
@@ -9,6 +10,8 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import Footer from 'components/Footer';
 import Navbar from 'components/Navbar';
+import PodcastContext from 'components/PodcastContext';
+import PodcastPlayer from 'components/PodcastPlayer';
 import PlyrSvgSprite from 'components/misc/PlyrSvgSprite';
 import { TopLevelHelmet } from 'components/Helmets';
 import 'style/sass/all.sass';
@@ -25,7 +28,14 @@ class TemplateWrapper extends Component {
     location: object.isRequired,
   };
 
-  state = { mounted: false };
+  state = {
+    mounted: false,
+    isPlaying: false,
+    url: ``,
+    title: ``,
+    setPodcastState: (changes) => this.setState(changes),
+    setPlayState: (isPlaying) => this.setState({ isPlaying }),
+  };
 
   componentDidMount() {
     this.setState({ mounted: true });
@@ -36,7 +46,7 @@ class TemplateWrapper extends Component {
     const { mounted } = this.state;
 
     return (
-      <>
+      <PodcastContext.Provider value={this.state}>
         <GlobalStyle />
         <TopLevelHelmet />
         <PlyrSvgSprite />
@@ -47,7 +57,8 @@ class TemplateWrapper extends Component {
           </PageFade>
         </PoseGroup>
         <Footer />
-      </>
+        <PodcastPlayer />
+      </PodcastContext.Provider>
     );
   }
 }

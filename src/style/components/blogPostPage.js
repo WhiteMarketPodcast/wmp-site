@@ -197,18 +197,6 @@ export const TagLink = styled(Link)`
   }
 `;
 
-const audioDiv = posed.div({
-  enter: { y: 0, transition: { ease: 'easeInOut' }, opacity: 1 },
-  exit: { y: `100%`, opacity: 0 },
-});
-
-export const AudioPlyrContainer = styled(audioDiv)`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-`;
-
 export const VideoPlyrContainer = styled.div`
   background-color: ${darkGrey};
   background-position: center;
