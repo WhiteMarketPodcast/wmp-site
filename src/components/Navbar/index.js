@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { string } from 'prop-types';
 import isEmpty from 'lodash/isEmpty';
 import { CloseIcon, MenuIcon } from 'mdi-react';
+import { SrText } from 'style/components';
 import logo from 'img/White-market-transp-logo.png';
 import { Button, Logo, LogoLink, Menu, MenuItem, Nav, NavLink } from './styled';
 
@@ -93,7 +94,9 @@ class Navbar extends Component {
 
   render() {
     const { open } = this.state;
-    const Icon = open ? CloseIcon : MenuIcon;
+    const [Icon, srText] = open
+      ? [CloseIcon, `Close menu`]
+      : [MenuIcon, `Open menu`];
     const className = this.getClassName();
 
     return (
@@ -103,8 +106,9 @@ class Navbar extends Component {
             <Logo className={className} src={logo} alt="White Market Podcast" />
           </h1>
         </LogoLink>
-        <Button type="button" onClick={this.toggleNavbar}>
+        <Button type="button" onClick={this.toggleNavbar} aria-label={srText}>
           <Icon className={className} size={35} />
+          <SrText>{srText}</SrText>
         </Button>
         {this.renderMenu()}
       </Nav>
