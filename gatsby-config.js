@@ -21,7 +21,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `White Market Podcast`,
-        short_name: `White Market Podcast`,
+        short_name: `White Market`,
         start_url: `/`,
         background_color: `#F7F7F7`,
         theme_color: `#3F8F85`,
@@ -29,6 +29,7 @@ module.exports = {
         icon: `src/img/White_market_favicon.jpg`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -62,7 +63,6 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-offline`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify`, // make sure to keep it last in the array
   ],
