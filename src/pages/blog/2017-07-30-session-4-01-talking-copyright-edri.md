@@ -29,8 +29,8 @@ On the music side of things, the celebration was on in big style for this year�
 Lasers – Amsterdam \[[Bad Panda Records](http://freemusicarchive.org/music/LASERS/LASERS_EP/)\] // [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
 Fog Lake – Push \[[FMA](http://freemusicarchive.org/music/Fog_Lake/Dragonchaser/)\] // [CC BY](https://creativecommons.org/licenses/by/3.0/)  
 Go Ask Alice – The Shout \[[La bèl netlabel](https://labelnetlabel.bandcamp.com/album/perfection-is-terrible)\] // [CC BY-SA](https://creativecommons.org/licenses/by-sa/3.0/)  
-Michael Keefe – Reality (Feat. Travis Paul) \[[Amblis Records](https://amblisrecords.bandcamp.com/album/sounds-of-summer-volume-3-night)\] // [CC BY-NC](https://creativecommons.org/licenses/by-nc/3.0/)[  
-](https://creativecommons.org/licenses/by-sa/3.0/)Nüman – Sin título \[[Sólo le Pido a Dior](https://sololepidoadior.bandcamp.com/album/spd-mixtape-04-el-pop-argentino-goza-de-buena-salud)\] // [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/3.0/)  
+Michael Keefe – Reality (Feat. Travis Paul) \[[Amblis Records](https://amblisrecords.bandcamp.com/album/sounds-of-summer-volume-3-night)\] // [CC BY-NC](https://creativecommons.org/licenses/by-nc/3.0/)
+Nüman – Sin título \[[Sólo le Pido a Dior](https://sololepidoadior.bandcamp.com/album/spd-mixtape-04-el-pop-argentino-goza-de-buena-salud)\] // [CC BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/3.0/)
 Bottlesmoker – East Indies (feat. Kronutz) \[[Yes No Wave Music](http://yesnowave.com/yesno084/)\] // [CC BY-NC](https://creativecommons.org/licenses/by-nc/3.0/)  
 Knit – A Good Chance \[[Z Tapes](https://ztapes.bandcamp.com/album/summer-2017)\] // [CC BY](https://creativecommons.org/licenses/by/3.0/)  
 Moki McFly – Zeta \[[mahorka](http://mahorka.org/release/187)\] // [CC BY-NC](https://creativecommons.org/licenses/by-nc/3.0/)
