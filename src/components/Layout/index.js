@@ -12,7 +12,6 @@ import Footer from 'components/Footer';
 import Navbar from 'components/Navbar';
 import PodcastContext from 'components/PodcastContext';
 import PodcastPlayer from 'components/PodcastPlayer';
-import PlyrSvgSprite from 'components/misc/PlyrSvgSprite';
 import { TopLevelHelmet } from 'components/Helmets';
 import 'style/sass/all.sass';
 import GlobalStyle from 'style';
@@ -49,7 +48,6 @@ class TemplateWrapper extends Component {
       <PodcastContext.Provider value={this.state}>
         <GlobalStyle />
         <TopLevelHelmet />
-        <PlyrSvgSprite />
         <Navbar locationKey={location.key} />
         <PoseGroup animateOnMount preEnterPose={mounted ? `initial` : `enter`}>
           <PageFade key={location.pathname}>

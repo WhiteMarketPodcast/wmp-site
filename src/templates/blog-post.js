@@ -104,8 +104,9 @@ export class BlogPostTemplate extends Component {
       if (url !== currentURL) {
         setPodcastState({ url, title, changingURL: true });
       } else {
-        const plyrButton = document.querySelector(`button.plyr__control`);
-        if (plyrButton) plyrButton.click();
+        console.log(`handlePlayClick: change querySelector`);
+        const playerButton = document.querySelector(`button.plyr__control`);
+        if (playerButton) playerButton.click();
       }
     }
     if (!showMedia) {

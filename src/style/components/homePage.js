@@ -270,13 +270,6 @@ export const PodcastSection = styled.section`
       ),
       url(${({ bgImage }) => getImageURL({ image: bgImage, width: 1700 })});
   }
-
-  .plyr--audio .plyr__controls {
-    background-color: transparent;
-    border: 0;
-    box-shadow: unset;
-    color: ${white};
-  }
 `;
 
 export const PodcastTextContainer = styled.div`
