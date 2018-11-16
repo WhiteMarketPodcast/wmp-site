@@ -8811,6 +8811,11 @@ load-json-file@^4.0.0:
     pify "^3.0.0"
     strip-bom "^3.0.0"
 
+load-script@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/load-script/-/load-script-1.0.0.tgz#0491939e0bee5643ee494a7e3da3d2bac70c6ca4"
+  integrity sha1-BJGTngvuVkPuSUp+PaPSuscMbKQ=
+
 loader-fs-cache@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/loader-fs-cache/-/loader-fs-cache-1.0.1.tgz#56e0bf08bd9708b26a765b68509840c8dec9fdbc"
@@ -11266,7 +11271,7 @@ pluralize@^7.0.0:
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
   integrity sha512-ARhBOdzS3e41FbkW/XWrTEtukqqLoK5+Z/4UeDaLuSW+39JPeFgs4gCGqsrJHVZX0fUrx//4OF0K1CUGwlIFow==
 
-plyr@^3.3.21, plyr@^3.4.4:
+plyr@^3.4.4:
   version "3.4.6"
   resolved "https://registry.yarnpkg.com/plyr/-/plyr-3.4.6.tgz#03406ff00ec32f564eea83ce34823820f13ee357"
   integrity sha512-cau5GxXk7wcPt6kEDbdJnuCyHKnZ0cimp1qwiJKBzo4zppk/COI9Dv4c792tg4EMAVn/vfAJmbZ89Q/L9DeyZA==
@@ -12472,13 +12477,14 @@ react-onclickoutside@^6.5.0:
   resolved "https://registry.yarnpkg.com/react-onclickoutside/-/react-onclickoutside-6.7.1.tgz#6a5b5b8b4eae6b776259712c89c8a2b36b17be93"
   integrity sha512-p84kBqGaMoa7VYT0vZ/aOYRfJB+gw34yjpda1Z5KeLflg70HipZOT+MXQenEhdkPAABuE2Astq4zEPdMqUQxcg==
 
-react-plyr@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/react-plyr/-/react-plyr-2.1.1.tgz#d370b57b6cdb083c62f675f7d048a5d15682bf59"
-  integrity sha512-RhKxLClTW0CXWov7IT9stufWNjnv77fr3dekioF6c2Mgs9FvmrPagl3qGsZda8kjf4qoVVYH9pui6Cgt9FgoBA==
+react-player@^1.6.6:
+  version "1.6.6"
+  resolved "https://registry.yarnpkg.com/react-player/-/react-player-1.6.6.tgz#336de320fc8c0610d8f2292ec16b0056312a1964"
+  integrity sha512-Y9/ioqGIGomF1ydFNkqlxdkf4TOcjJ3Yw8LJmU/PXcL0glIRNRepmISP3OvVsGYs9i5omZZosy8VnvyRsd/pwg==
   dependencies:
-    plyr "^3.3.21"
-    prop-types "^15.6.2"
+    deepmerge "^2.0.1"
+    load-script "^1.0.0"
+    prop-types "^15.5.6"
 
 react-portal@^3.1.0:
   version "3.2.0"

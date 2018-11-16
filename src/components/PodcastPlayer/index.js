@@ -12,7 +12,7 @@ class PodcastPlayer extends Component {
     return (
       <PoseGroup>
         {!!url && [
-          <AudioPlyrContainer key={url}>
+          <AudioPlyrContainer key="podcast-player">
             <Player
               url={url}
               title={title}

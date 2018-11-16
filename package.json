@@ -51,7 +51,7 @@
     "react-helmet": "^5.2.0",
     "react-icons": "^3.0.5",
     "react-infinite-scroller": "^1.2.1",
-    "react-plyr": "^2.1.1",
+    "react-player": "^1.6.6",
     "react-pose": "^3.3.4",
     "rss": "^1.2.2",
     "styled-components": "^4.0.2",
