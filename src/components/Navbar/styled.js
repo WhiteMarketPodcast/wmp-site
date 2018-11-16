@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import posed from 'react-pose';
 import Link from 'components/Link';
-import { emerald, white } from 'style/colors';
+import { secondary, white } from 'style/colors';
 import { onMobile } from 'style/mediaQueries';
 import { DESKTOP_NAV_HEIGHT, MOBILE_NAV_HEIGHT } from './constants';
 
@@ -20,7 +20,7 @@ export const Nav = styled(nav)`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background-color: ${emerald};
+  background-color: ${secondary};
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   padding: 0;
 
@@ -103,7 +103,7 @@ export const Menu = styled(ul)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: ${emerald};
+  background-color: ${secondary};
   list-style: none;
   margin: 0;
   padding: 0;

@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { translucentlightEmerald, lightEmerald, white } from 'style/colors';
+import { seeThruSecondaryLight, secondaryLight, white } from 'style/colors';
 
 export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${translucentlightEmerald};
+  background-color: ${seeThruSecondaryLight};
   border: 0;
   border-radius: 0;
   color: ${white};
@@ -17,6 +17,6 @@ export const Button = styled.button`
 
   &:hover,
   &:focus {
-    background-color: ${lightEmerald};
+    background-color: ${secondaryLight};
   }
 `;

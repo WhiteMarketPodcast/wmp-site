@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Link from 'components/Link';
-import { black, white, emerald } from 'style/colors';
+import { black, white, primaryDark } from 'style/colors';
 import { onMobile } from 'style/mediaQueries';
 
 export const StyledFooter = styled.footer`
@@ -42,7 +42,7 @@ export const LicenceInfo = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 2rem;
   justify-content: space-between;
-  background-color: ${emerald};
+  background-color: ${primaryDark};
   color: ${white};
   font-size: 0.8em;
   padding: 2rem;

@@ -4,8 +4,8 @@ import Link from 'components/Link';
 import { getImageURL } from 'utils/images';
 import {
   black,
-  emerald,
-  translucentEmerald,
+  primary,
+  seeThruPrimary,
   translucentWhite,
   white,
 } from '../colors';
@@ -153,7 +153,7 @@ export const BlogPreviewImage = styled.div`
   top: 0;
   bottom: 0;
   left: 0;
-  background-color: ${emerald};
+  background-color: ${primary};
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -172,7 +172,7 @@ export const PreviewTextContainer = styled.div`
 
   ${({ index }) => {
     const [bgColor, n] = isHighlightedPreview(index)
-      ? [translucentEmerald, `1.5`]
+      ? [seeThruPrimary, `1.5`]
       : [translucentWhite, `1`];
     return `
       background-color: ${bgColor};
@@ -190,10 +190,11 @@ export const PreviewTextContainer = styled.div`
 
 export const PostType = styled.div`
   display: inline;
-  background-color: ${emerald};
+  background-color: ${primary};
   box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.15);
   color: ${white};
   font-size: 0.75rem;
+  font-weight: 500;
   letter-spacing: 1px;
   line-height: 1;
   padding: 0.2rem 0.5rem;
@@ -238,7 +239,7 @@ export const PodcastSection = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: ${emerald};
+  background-color: ${primary};
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -291,10 +292,11 @@ export const PodcastTextContainer = styled.div`
 `;
 
 export const PodcastSmallText = styled.h2`
-  background-color: ${emerald};
+  background-color: ${primary};
   color: ${white};
   font-family: ${sansSerif};
   font-size: 0.8rem;
+  font-weight: 500;
   letter-spacing: 1px;
   line-height: 1;
   margin-bottom: 0.2rem;

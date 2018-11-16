@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import { FlexCenter, BrandH1, PaddedSection } from 'style/components';
-import { emerald, white } from 'style/colors';
+import { primary, white } from 'style/colors';
 import { onMobile } from 'style/mediaQueries';
 
 export const TitleBG = styled(FlexCenter)`
-  background-color: ${emerald};
+  background-color: ${primary};
   width: 100%;
   padding: 5rem 2rem;
   text-align: center;

@@ -6,7 +6,7 @@ import {
   DESKTOP_NAV_HEIGHT,
 } from 'components/Navbar/constants';
 import { getImageURL } from 'utils/images';
-import { white, black, lightEmerald, darkGrey, grey } from '../colors';
+import { white, black, primary, darkGrey, grey } from '../colors';
 import { onMobile, onMassiveScreen } from '../mediaQueries';
 import { fade, slideUpWithDelay } from '../poses';
 
@@ -135,7 +135,7 @@ export const BlogContent = styled(SlideUp)`
 
 export const Sidebar = styled.aside`
   padding: 2rem 1rem;
-  background-color: ${lightEmerald};
+  background-color: ${primary};
 
   h4 {
     color: ${white};
@@ -184,7 +184,7 @@ export const BlogPostLink = styled(Link)`
 `;
 
 export const TagLink = styled(Link)`
-  background-color: ${lightEmerald};
+  background-color: ${primary};
   border: 1px solid ${white};
   color: ${white};
   font-size: 0.8em;

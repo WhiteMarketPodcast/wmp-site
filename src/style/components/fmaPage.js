@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Link from 'components/Link';
 import InfiniteScroll from 'react-infinite-scroller';
-import { emerald, white } from 'style/colors';
+import { primary, white } from 'style/colors';
 import { onMobile, onDesktop } from 'style/mediaQueries';
 import { getImageURL } from 'utils/images';
 
@@ -27,7 +27,7 @@ export const AlbumContainer = styled(Link)`
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  background-color: ${emerald};
+  background-color: ${primary};
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -63,7 +63,7 @@ export const InfoContainer = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: ${emerald};
+    background-color: ${primary};
     color: ${white};
     line-height: 1.5;
     overflow-y: auto;
