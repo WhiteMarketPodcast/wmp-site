@@ -4,9 +4,9 @@ import { black, white, emerald } from 'style/colors';
 import { onMobile } from 'style/mediaQueries';
 
 export const StyledFooter = styled.footer`
-a {
-  color: ${white};
-}
+  a {
+    color: ${white};
+  }
 `;
 
 export const CopyrightRow = styled.div`

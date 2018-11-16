@@ -9,6 +9,7 @@ import PodcastContext from 'components/PodcastContext';
 import PlayButton from 'components/PlayButton';
 import Player from 'components/Player';
 import Content, { HTMLContent } from 'components/Content';
+import { SrText } from 'style/components';
 import { FacebookHelmet, TwitterHelmet } from 'components/Helmets';
 import {
   Hero,
@@ -134,15 +135,19 @@ export class BlogPostTemplate extends Component {
         <ShareLinksContainer>
           <ShareLink to={twitterURL}>
             <i className="fab fa-twitter" />
+            <SrText>Share this post on Twitter</SrText>
           </ShareLink>
           <ShareLink to={facebookURL}>
             <i className="fab fa-facebook" />
+            <SrText>Share this post on Facebook</SrText>
           </ShareLink>
           <ShareLink to={whatsAppURL}>
             <i className="fab fa-whatsapp" />
+            <SrText>Share this post on WhatsApp</SrText>
           </ShareLink>
           <ShareLink to={mailto}>
             <i className="fas fa-envelope" />
+            <SrText>Email someone a link to this post</SrText>
           </ShareLink>
         </ShareLinksContainer>
       </Fragment>
@@ -302,11 +307,13 @@ export class BlogPostTemplate extends Component {
 
   renderPlayButton() {
     const url = this.getMediaURL();
+    const { format } = this.props;
+    const srText = `Play ${format === `audio` ? `podcast` : format}`;
     if (!url) return null;
 
     return (
       <Fade>
-        <PlayButton onClick={this.handlePlayClick} isPlaying={this.isPlaying()} />
+        <PlayButton onClick={this.handlePlayClick} isPlaying={this.isPlaying()} screenReaderText={srText} />
       </Fade>
     );
   }

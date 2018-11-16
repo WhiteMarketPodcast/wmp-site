@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { string } from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import Link from 'components/Link';
+import { SrText } from 'style/components';
 import {
   StyledFooter,
   LicenceInfo,
@@ -13,6 +14,15 @@ import {
   SocialLink,
   PrivacyLink,
 } from './styled';
+import {
+  emailScreenReaderText,
+  rssScreenReaderText,
+  facebookScreenReaderText,
+  twitterScreenReaderText,
+  mixcloudScreenReaderText,
+  itunesScreenReaderText,
+  githubScreenReaderText,
+} from './utils';
 
 class Footer extends Component {
   static propTypes = { siteUrl: string.isRequired };
@@ -58,10 +68,12 @@ class Footer extends Component {
               to="mailto:whitemarketpodcast@gmail.com"
             >
               <SocialIcon className="fas fa-envelope" />
+              <SrText>{emailScreenReaderText}</SrText>
             </SocialLink>
 
             <SocialLink className="rss" to={`${siteUrl}/rss.xml`}>
               <SocialIcon className="fas fa-rss" />
+              <SrText>{rssScreenReaderText}</SrText>
             </SocialLink>
 
             <SocialLink
@@ -69,6 +81,7 @@ class Footer extends Component {
               to="https://www.facebook.com/whitemarketpodcast"
             >
               <SocialIcon className="fab fa-facebook" />
+              <SrText>{facebookScreenReaderText}</SrText>
             </SocialLink>
 
             <SocialLink
@@ -76,6 +89,7 @@ class Footer extends Component {
               to="https://twitter.com/WhiteMarketCast"
             >
               <SocialIcon className="fab fa-twitter" />
+              <SrText>{twitterScreenReaderText}</SrText>
             </SocialLink>
 
             <SocialLink
@@ -83,6 +97,7 @@ class Footer extends Component {
               to="https://www.mixcloud.com/whitemarketpodcast/"
             >
               <SocialIcon className="fab fa-mixcloud" />
+              <SrText>{mixcloudScreenReaderText}</SrText>
             </SocialLink>
 
             <SocialLink
@@ -90,6 +105,7 @@ class Footer extends Component {
               to="https://itunes.apple.com/gb/podcast/white-market-podcast/id1033024096"
             >
               <SocialIcon className="fab fa-itunes" />
+              <SrText>{itunesScreenReaderText}</SrText>
             </SocialLink>
 
             <SocialLink
@@ -97,6 +113,7 @@ class Footer extends Component {
               to="https://github.com/WhiteMarketPodcast/whitemarketpodcast-repo"
             >
               <SocialIcon className="fab fa-github" />
+              <SrText>{githubScreenReaderText}</SrText>
             </SocialLink>
           </SocialIconContainer>
         </CopyrightRow>

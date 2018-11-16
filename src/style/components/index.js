@@ -73,5 +73,13 @@ export const AudioPlyrContainer = styled(audioDiv)`
   width: 100vw;
 `;
 
+export const SrText = styled.span`
+  position: absolute;
+  left: -100000px;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+`;
+
 export * from './blogPostPage';
 export * from './homePage';

@@ -15,6 +15,6 @@ export const PageFade = styled(div)`
   will-change: opacity;
 
   ${onMobile} {
-    padding-top: ${MOBILE_NAV_HEIGHT};s
+    padding-top: ${MOBILE_NAV_HEIGHT};
   }
 `;

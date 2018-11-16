@@ -28,6 +28,7 @@ class TopLevelHelmet extends Component {
     return (
       <Fragment>
         <Helmet>
+          <html lang="en" />
           <title>{`${title} | ${subtitle}"`}</title>
           <meta name="description" content={description} />
         </Helmet>
