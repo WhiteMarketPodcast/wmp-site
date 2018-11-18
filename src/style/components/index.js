@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Link from 'components/Link';
-import { emerald, white } from '../colors';
+import { primary, white } from '../colors';
 import { onMobile } from '../mediaQueries';
 
 export const PaddedSection = styled.section`
@@ -36,7 +36,8 @@ export const LinkButton = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid ${emerald};
+  border: 1px solid ${primary};
+  font-weight: 500;
   padding: 0.8em 1.5em;
 `;
 
@@ -49,7 +50,7 @@ export const BrandH1 = styled.h1`
 
 export const TitleHighlight = styled.span`
   display: block;
-  background-color: ${emerald};
+  background-color: ${primary};
   color: ${white};
   margin: 0.5rem;
 `;
