@@ -4,6 +4,7 @@ import { array, func, node, string, shape, object } from 'prop-types';
 import { PoseGroup } from 'react-pose';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
+import { FaEnvelope, FaFacebook, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import Link from 'components/Link';
 import PodcastContext from 'components/PodcastContext';
 import PlayButton from 'components/PlayButton';
@@ -120,7 +121,7 @@ export class BlogPostTemplate extends Component {
     const { url } = this.context;
 
     return url === mediaURL && isPlaying;
-  }
+  };
 
   renderShareLinks() {
     const { title, slug, siteUrl } = this.props;
@@ -135,19 +136,19 @@ export class BlogPostTemplate extends Component {
         <h4>Share</h4>
         <ShareLinksContainer>
           <ShareLink to={twitterURL}>
-            <i className="fab fa-twitter" />
+            <FaTwitter />
             <SrText>Share this post on Twitter</SrText>
           </ShareLink>
           <ShareLink to={facebookURL}>
-            <i className="fab fa-facebook" />
+            <FaFacebook />
             <SrText>Share this post on Facebook</SrText>
           </ShareLink>
           <ShareLink to={whatsAppURL}>
-            <i className="fab fa-whatsapp" />
+            <FaWhatsapp />
             <SrText>Share this post on WhatsApp</SrText>
           </ShareLink>
           <ShareLink to={mailto}>
-            <i className="fas fa-envelope" />
+            <FaEnvelope />
             <SrText>Email someone a link to this post</SrText>
           </ShareLink>
         </ShareLinksContainer>
@@ -187,18 +188,15 @@ export class BlogPostTemplate extends Component {
     const { pageContext } = this.props;
     if (!pageContext) return null;
 
-    const { nextPost, previousPost } = pageContext;
+    const { otherPosts } = pageContext;
 
-    const links = _.map([previousPost, nextPost], (post) => {
+    const links = _.map(otherPosts, (post) => {
       if (_.isEmpty(post)) return null;
       const { title } = post.frontmatter;
       const { slug } = post.fields;
       return (
         <li key={slug}>
-          <BlogPostLink to={slug}>
-            <i className="fas fa-caret-right" />
-            {title}
-          </BlogPostLink>
+          <BlogPostLink to={slug}>{`.: ${title}`}</BlogPostLink>
         </li>
       );
     });
@@ -279,11 +277,7 @@ export class BlogPostTemplate extends Component {
             key={url}
             bgImage={image || imageURL}
           >
-            <Player
-              url={url}
-              type={format}
-              autoplay
-            />
+            <Player url={url} type={format} autoplay />
           </VideoPlyrContainer>
         )}
       </PoseGroup>
@@ -314,7 +308,11 @@ export class BlogPostTemplate extends Component {
 
     return (
       <Fade>
-        <PlayButton onClick={this.handlePlayClick} isPlaying={this.isPlaying()} screenReaderText={srText} />
+        <PlayButton
+          onClick={this.handlePlayClick}
+          isPlaying={this.isPlaying()}
+          screenReaderText={srText}
+        />
       </Fade>
     );
   }

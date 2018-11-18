@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
 import { string } from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
+import {
+  FaEnvelope,
+  FaFacebook,
+  FaTwitter,
+  FaRss,
+  FaMixcloud,
+  FaItunes,
+  FaGithub,
+  FaCreativeCommons,
+  FaCreativeCommonsBy,
+  FaCreativeCommonsSa,
+} from 'react-icons/fa';
 import Link from 'components/Link';
 import { SrText } from 'style/components';
 import {
@@ -9,7 +21,6 @@ import {
   CopyrightRow,
   CCIcon,
   CCIconContainer,
-  SocialIcon,
   SocialIconContainer,
   SocialLink,
   PrivacyLink,
@@ -35,9 +46,15 @@ class Footer extends Component {
         <LicenceInfo>
           <div>
             <CCIconContainer>
-              <CCIcon className="fab fa-creative-commons" />
-              <CCIcon className="fab fa-creative-commons-by" />
-              <CCIcon className="fab fa-creative-commons-sa" />
+              <CCIcon>
+                <FaCreativeCommons />
+              </CCIcon>
+              <CCIcon>
+                <FaCreativeCommonsBy />
+              </CCIcon>
+              <CCIcon>
+                <FaCreativeCommonsSa />
+              </CCIcon>
             </CCIconContainer>
             <div>
               Unless otherwise noted, this blog is published under a
@@ -67,12 +84,12 @@ class Footer extends Component {
               className="email"
               to="mailto:whitemarketpodcast@gmail.com"
             >
-              <SocialIcon className="fas fa-envelope" />
+              <FaEnvelope size="1.4em" />
               <SrText>{emailScreenReaderText}</SrText>
             </SocialLink>
 
             <SocialLink className="rss" to={`${siteUrl}/rss.xml`}>
-              <SocialIcon className="fas fa-rss" />
+              <FaRss size="1.4em" />
               <SrText>{rssScreenReaderText}</SrText>
             </SocialLink>
 
@@ -80,7 +97,7 @@ class Footer extends Component {
               className="facebook"
               to="https://www.facebook.com/whitemarketpodcast"
             >
-              <SocialIcon className="fab fa-facebook" />
+              <FaFacebook size="1.4em" />
               <SrText>{facebookScreenReaderText}</SrText>
             </SocialLink>
 
@@ -88,7 +105,7 @@ class Footer extends Component {
               className="twitter"
               to="https://twitter.com/WhiteMarketCast"
             >
-              <SocialIcon className="fab fa-twitter" />
+              <FaTwitter size="1.4em" />
               <SrText>{twitterScreenReaderText}</SrText>
             </SocialLink>
 
@@ -96,7 +113,7 @@ class Footer extends Component {
               className="mixcloud"
               to="https://www.mixcloud.com/whitemarketpodcast/"
             >
-              <SocialIcon className="fab fa-mixcloud" />
+              <FaMixcloud size="1.7em" />
               <SrText>{mixcloudScreenReaderText}</SrText>
             </SocialLink>
 
@@ -104,7 +121,7 @@ class Footer extends Component {
               className="itunes"
               to="https://itunes.apple.com/gb/podcast/white-market-podcast/id1033024096"
             >
-              <SocialIcon className="fab fa-itunes" />
+              <FaItunes size="1.4em" />
               <SrText>{itunesScreenReaderText}</SrText>
             </SocialLink>
 
@@ -112,7 +129,7 @@ class Footer extends Component {
               className="github"
               to="https://github.com/WhiteMarketPodcast/whitemarketpodcast-repo"
             >
-              <SocialIcon className="fab fa-github" />
+              <FaGithub size="1.4em" />
               <SrText>{githubScreenReaderText}</SrText>
             </SocialLink>
           </SocialIconContainer>

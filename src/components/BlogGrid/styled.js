@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 import Link from 'components/Link';
 import InfiniteScroll from 'react-infinite-scroller';
-import { black, emerald, translucentEmerald, white } from 'style/colors';
+import {
+  black,
+  primary,
+  seeThruPrimary,
+  seeThruPrimaryDark,
+  white,
+} from 'style/colors';
 import { onMobile, onDesktop } from 'style/mediaQueries';
 import { getImageURL } from 'utils/images';
 
@@ -52,7 +58,7 @@ export const BlogPreviewContainer = styled(Link)`
 `;
 
 export const BlogPreviewImage = styled.div`
-  background-color: ${emerald};
+  background-color: ${primary};
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -76,7 +82,8 @@ export const BlogPreviewImage = styled.div`
 export const PreviewTextContainer = styled.div`
   position: relative;
   width: 100%;
-  background-color: ${translucentEmerald};
+  background-color: ${seeThruPrimary};
+  background-color: ${seeThruPrimaryDark};
   padding: 1rem 1.5rem;
 
   ${onMobile} {
@@ -92,10 +99,11 @@ export const PostType = styled.div`
   top: -0.7em;
   left: 1em;
   display: inline;
-  background-color: ${emerald};
+  background-color: ${primary};
   box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.15);
   color: ${white};
   font-size: 0.75rem;
+  font-weight: 500;
   letter-spacing: 1px;
   line-height: 1;
   padding: 0.2rem 0.5rem;
@@ -115,6 +123,7 @@ export const PreviewTitle = styled.h2`
 export const ExcerptContainer = styled.div`
   grid-area: excerpt;
   font-size: 0.8rem;
+  font-weight: 500;
 
   ${onMobile} {
     background-color: ${white};
@@ -128,7 +137,7 @@ export const ExcerptContainer = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: ${emerald};
+    background-color: ${primary};
     color: ${white};
     line-height: 1.5;
     overflow-y: auto;
