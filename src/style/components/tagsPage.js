@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Link from 'components/Link';
 import { onMobile } from 'style/mediaQueries';
-import { emerald } from 'style/colors';
+import { primary } from 'style/colors';
 
 export const List = styled.ul`
   display: flex;
@@ -26,8 +26,8 @@ export const Item = styled.li`
 
 export const TagLink = styled(Link)`
   display: flex;
-  border: 1px solid ${emerald};
-  color: ${emerald};
+  border: 1px solid ${primary};
+  color: ${primary};
   line-height: 1.2;
   padding: 0.5rem 0.8rem;
 

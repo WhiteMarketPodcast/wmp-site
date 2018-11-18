@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { onMobile, onDesktop } from './mediaQueries';
-import { emerald, lightGrey, lightEmerald } from './colors';
+import { primaryDark, lightGrey, primary } from './colors';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
 
   blockquote {
     font-style: italic;
-    border-left: 0.3rem solid ${emerald};
+    border-left: 0.3rem solid ${primaryDark};
     padding: 1px 1rem;
     background-color: ${lightGrey};
     margin: 1rem auto;
@@ -55,7 +55,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body.four-oh-four {
-    background-color: ${lightEmerald};
+    background-color: ${primary};
   }
 
   strong {
