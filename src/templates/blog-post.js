@@ -8,7 +8,7 @@ import { FaEnvelope, FaFacebook, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import Link from 'components/Link';
 import PodcastContext from 'components/PodcastContext';
 import PlayButton from 'components/PlayButton';
-import Player from 'components/Player';
+import VideoPlayer from 'components/VideoPlayer';
 import Content, { HTMLContent } from 'components/Content';
 import { SrText } from 'style/components';
 import { FacebookHelmet, TwitterHelmet } from 'components/Helmets';
@@ -103,10 +103,9 @@ export class BlogPostTemplate extends Component {
 
     if (format === `audio`) {
       if (url !== currentURL) {
-        setPodcastState({ url, title, changingURL: true });
+        setPodcastState({ url, title });
       } else {
-        console.log(`handlePlayClick: change querySelector`);
-        const playerButton = document.querySelector(`button.plyr__control`);
+        const playerButton = document.getElementById(`podcast-play-button`);
         if (playerButton) playerButton.click();
       }
     }
@@ -277,7 +276,7 @@ export class BlogPostTemplate extends Component {
             key={url}
             bgImage={image || imageURL}
           >
-            <Player url={url} type={format} autoplay />
+            <VideoPlayer url={url} />
           </VideoPlyrContainer>
         )}
       </PoseGroup>

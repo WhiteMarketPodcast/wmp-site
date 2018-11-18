@@ -2,18 +2,7 @@ import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
 import { PoseGroup } from 'react-pose';
 import PodcastContext from 'components/PodcastContext';
-import { StopIcon, PauseIcon, PlayIcon } from 'mdi-react';
-import { SrText } from 'style/components';
-import {
-  AudioPlayerContainer,
-  Button,
-  PodcastArtwork,
-  PlayButtonsContainer,
-  PodcastInfoContainer,
-  PodcastTitle,
-  ProgressContainer,
-  VolumeContainer,
-} from './styled';
+import { AudioPlyrContainer } from 'style/components';
 
 class Player extends Component {
   static contextType = PodcastContext;
@@ -124,7 +113,7 @@ class Player extends Component {
 
   renderPlayer() {
     console.log('this.context', this.context);
-    const { isPlaying, title } = this.context;
+    const { isPlaying } = this.context;
     const {
       url,
       volume,
@@ -135,13 +124,12 @@ class Player extends Component {
       duration,
       playbackRate,
     } = this.state;
-    console.log({ duration, url });
-    const [PlayPauseIcon, srText] = isPlaying
-      ? [PauseIcon, `Pause`]
-      : [PlayIcon, `Play`];
+    console.log('url', url);
 
     return (
-      <AudioPlayerContainer key="podcast-player">
+      <div
+        style={{ backgroundColor: `white`, overflow: `auto`, maxHeight: 300 }}
+      >
         <ReactPlayer
           ref={this.ref}
           className="react-player"
@@ -165,54 +153,36 @@ class Player extends Component {
           onDuration={this.onDuration}
         />
 
-        <PodcastArtwork src={console.log(`src`) || ``} />
-
-        <PlayButtonsContainer>
-          <Button
+        <div style={{ backgronudColor: `white` }}>
+          <button type="button" onClick={this.stop}>
+            Stop
+          </button>
+          <button
             id="podcast-play-button"
             type="button"
             onClick={this.playPause}
           >
-            <PlayPauseIcon />
-            <SrText>{srText}</SrText>
-          </Button>
-          <Button type="button" onClick={this.stop}>
-            <StopIcon />
-          </Button>
-        </PlayButtonsContainer>
+            {isPlaying ? 'Pause' : 'Play'}
+          </button>
+        </div>
 
-        <PodcastInfoContainer>
-          <PodcastTitle>{title}</PodcastTitle>
-          <ProgressContainer>
-            <div>
-              <strong>Seek</strong>
-              <div>
-                <input
-                  type="range"
-                  min={0}
-                  max={1}
-                  step="any"
-                  value={played}
-                  onMouseDown={this.onSeekMouseDown}
-                  onChange={this.onSeekChange}
-                  onMouseUp={this.onSeekMouseUp}
-                />
-              </div>
-            </div>
-          </ProgressContainer>
-        </PodcastInfoContainer>
-
-        <VolumeContainer>
-          <strong>Volume</strong>
-          <label htmlFor="muted">
-            Muted
+        <div>
+          <strong>Seek</strong>
+          <div>
             <input
-              id="muted"
-              type="checkbox"
-              checked={muted}
-              onChange={this.toggleMuted}
+              type="range"
+              min={0}
+              max={1}
+              step="any"
+              value={played}
+              onMouseDown={this.onSeekMouseDown}
+              onChange={this.onSeekChange}
+              onMouseUp={this.onSeekMouseUp}
             />
-          </label>
+          </div>
+        </div>
+        <div>
+          <strong>Volume</strong>
           <div>
             <input
               type="range"
@@ -223,8 +193,33 @@ class Player extends Component {
               onChange={this.setVolume}
             />
           </div>
-        </VolumeContainer>
-
+        </div>
+        <div>
+          <strong>
+            <label htmlFor="muted">
+              Muted
+              <input
+                id="muted"
+                type="checkbox"
+                checked={muted}
+                onChange={this.toggleMuted}
+              />
+            </label>
+          </strong>
+        </div>
+        <div>
+          <strong>
+            <label htmlFor="loop">
+              Loop
+              <input
+                id="loop"
+                type="checkbox"
+                checked={loop}
+                onChange={this.toggleLoop}
+              />
+            </label>
+          </strong>
+        </div>
         <div>
           <strong>Played</strong>
           <div>
@@ -239,13 +234,62 @@ class Player extends Component {
         </div>
 
         <h2>State</h2>
-      </AudioPlayerContainer>
+
+        <div>
+          <strong>url</strong>
+          <div className={!url ? 'faded' : ''}>
+            {(url instanceof Array ? 'Multiple' : url) || 'null'}
+          </div>
+        </div>
+        <div>
+          <strong>playing</strong>
+          <div>{isPlaying ? 'true' : 'false'}</div>
+        </div>
+        <div>
+          <strong>volume</strong>
+          <div>{volume.toFixed(3)}</div>
+        </div>
+        <div>
+          <strong>played</strong>
+          <div>{played.toFixed(3)}</div>
+        </div>
+        <div>
+          <strong>loaded</strong>
+          <div>{loaded.toFixed(3)}</div>
+        </div>
+        <div>
+          <strong>duration</strong>
+          <div>
+            <span>{duration}</span>
+          </div>
+        </div>
+        <div>
+          <strong>elapsed</strong>
+          <div>
+            <span>{duration * played}</span>
+          </div>
+        </div>
+        <div>
+          <strong>remaining</strong>
+          <div>
+            <span>{duration * (1 - played)}</span>
+          </div>
+        </div>
+      </div>
     );
   }
 
   render() {
     const { url } = this.context;
-    return <PoseGroup>{!!url && this.renderPlayer()}</PoseGroup>;
+    return (
+      <PoseGroup>
+        {!!url && (
+          <AudioPlyrContainer key="podcast-player">
+            <Player />
+          </AudioPlyrContainer>
+        )}
+      </PoseGroup>
+    );
   }
 }
 

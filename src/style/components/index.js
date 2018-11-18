@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import posed from 'react-pose';
 import Link from 'components/Link';
 import { primary, white } from '../colors';
 import { onMobile } from '../mediaQueries';
@@ -60,18 +59,6 @@ export const BrandH2 = styled.h2`
   margin: 2rem auto;
   padding: 0 0.3em;
   text-align: center;
-`;
-
-const audioDiv = posed.div({
-  enter: { y: 0, transition: { ease: 'easeInOut' }, opacity: 1 },
-  exit: { y: `100%`, opacity: 0 },
-});
-
-export const AudioPlyrContainer = styled(audioDiv)`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
 `;
 
 export const SrText = styled.span`
