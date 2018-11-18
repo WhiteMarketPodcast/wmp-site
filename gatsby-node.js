@@ -33,15 +33,17 @@ exports.createPages = ({ actions, graphql }) => {
 
     const pages = result.data.allMarkdownRemark.edges;
     const blogPosts = _(pages)
-      .filter((page) => _.includes(_.get(page, 'node.fields.slug'), `/blog/`))
-      .sortBy('node.fields.slug')
+      .filter((page) => _.includes(_.get(page, `node.fields.slug`), `/blog/`))
+      .sortBy(`node.fields.slug`)
       .value();
 
-    function getNextOrPrevious(post, offset) {
+    function getOtherPosts(post) {
       const index = _.indexOf(blogPosts, post);
-      const otherIndex = index + offset;
-      const otherPost = blogPosts[otherIndex];
-      return otherPost ? otherPost.node : {};
+      const postOne = index === 0 ? _.last(blogPosts) : blogPosts[index - 1];
+      const postTwo = blogPosts[index + 1] || blogPosts[0];
+      const postThree = blogPosts[index + 2] || blogPosts[1];
+
+      return _.map([postOne, postTwo, postThree], `node`);
     }
 
     pages.forEach((edge) => {
@@ -50,17 +52,14 @@ exports.createPages = ({ actions, graphql }) => {
         fields: { slug },
         frontmatter: { tags, templateKey },
       } = edge.node;
-
-      // This might seem backward, but it's "previous" as in "back in time"
-      const previousPost = getNextOrPrevious(edge, 1);
-      const nextPost = getNextOrPrevious(edge, -1);
+      const otherPosts = getOtherPosts(edge);
 
       createPage({
         path: slug,
         tags,
         component: path.resolve(`src/templates/${String(templateKey)}.js`),
         // additional data can be passed via context
-        context: { id, previousPost, nextPost },
+        context: { id, otherPosts },
       });
     });
 

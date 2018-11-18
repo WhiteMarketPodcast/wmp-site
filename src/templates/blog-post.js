@@ -162,9 +162,9 @@ export class BlogPostTemplate extends Component {
     const { pageContext } = this.props;
     if (!pageContext) return null;
 
-    const { nextPost, previousPost } = pageContext;
+    const { otherPosts } = pageContext;
 
-    const links = _.map([previousPost, nextPost], (post) => {
+    const links = _.map(otherPosts, (post) => {
       if (_.isEmpty(post)) return null;
       const { title } = post.frontmatter;
       const { slug } = post.fields;
