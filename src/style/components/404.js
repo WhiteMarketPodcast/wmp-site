@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { LinkButton as Link } from 'style/components';
-import { white, secondaryLight } from '../colors';
+import { white, primary } from '../colors';
 import { onMobile } from '../mediaQueries';
 
 export const Section404 = styled.section`
@@ -8,7 +8,7 @@ export const Section404 = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: ${secondaryLight};
+  background-color: ${primary};
   color: ${white};
   height: 100%;
   padding: 2rem 0;

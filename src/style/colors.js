@@ -1,15 +1,24 @@
+function hexToRGB(hex, alpha) {
+  const r = parseInt(hex.slice(1, 3), 16);
+  const g = parseInt(hex.slice(3, 5), 16);
+  const b = parseInt(hex.slice(5, 7), 16);
+
+  if (alpha) {
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  }
+  return `rgb(${r}, ${g}, ${b})`;
+}
+
 // When changing these colours, make sure to update the ones in colors.sass;
 export const white = `#F7F7F7`;
-export const translucentWhite = `rgba(247, 247, 247, 0.8)`;
-export const primary = `#d81b60`;
-export const seeThruPrimary = `rgba(216, 27, 96, 0.7)`;
-export const primaryDark = `#ad1457`;
-export const seeThruPrimaryDark = `rgba(173, 20, 87, 0.8)`;
-export const secondaryLight = `#35AE9E`;
-export const seeThruSecondaryLight = `rgba(53,174,158, 0.8)`;
-export const secondary = `#388278`;
-export const seeThruSecondary = `rgba(56, 130, 120, 0.7)`;
+export const primary = `#0a6b5f`;
+export const primaryDark = `#044f46`;
 export const lightGrey = `#E9E9E9`;
 export const grey = `#D2D4C8`;
 export const darkGrey = `#4A4A4A`;
 export const black = `#3A3A3A`;
+
+export const seeThruWhite = hexToRGB(white, 0.8);
+export const seeThruBlack = hexToRGB(black, 0.7);
+export const seeThruPrimary = hexToRGB(primary, 0.7);
+export const seeThruPrimaryDark = hexToRGB(primaryDark, 0.8);

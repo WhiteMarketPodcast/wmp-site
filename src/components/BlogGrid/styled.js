@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 import Link from 'components/Link';
 import InfiniteScroll from 'react-infinite-scroller';
-import { black, primary, seeThruPrimary, white } from 'style/colors';
+import {
+  black,
+  primary,
+  seeThruPrimary,
+  seeThruPrimaryDark,
+  white,
+} from 'style/colors';
 import { onMobile, onDesktop } from 'style/mediaQueries';
 import { getImageURL } from 'utils/images';
 
@@ -77,6 +83,7 @@ export const PreviewTextContainer = styled.div`
   position: relative;
   width: 100%;
   background-color: ${seeThruPrimary};
+  background-color: ${seeThruPrimaryDark};
   padding: 1rem 1.5rem;
 
   ${onMobile} {
@@ -116,6 +123,7 @@ export const PreviewTitle = styled.h2`
 export const ExcerptContainer = styled.div`
   grid-area: excerpt;
   font-size: 0.8rem;
+  font-weight: 500;
 
   ${onMobile} {
     background-color: ${white};

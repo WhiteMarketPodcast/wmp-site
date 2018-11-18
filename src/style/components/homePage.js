@@ -5,8 +5,8 @@ import { getImageURL } from 'utils/images';
 import {
   black,
   primary,
-  seeThruPrimary,
-  translucentWhite,
+  seeThruPrimaryDark,
+  seeThruWhite,
   white,
 } from '../colors';
 import { sansSerif } from '../fonts';
@@ -172,8 +172,8 @@ export const PreviewTextContainer = styled.div`
 
   ${({ index }) => {
     const [bgColor, n] = isHighlightedPreview(index)
-      ? [seeThruPrimary, `1.5`]
-      : [translucentWhite, `1`];
+      ? [seeThruPrimaryDark, `1.5`]
+      : [seeThruWhite, `1`];
     return `
       background-color: ${bgColor};
       padding: ${n}rem;
