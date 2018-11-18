@@ -58,12 +58,9 @@ export const LicenceInfo = styled.div`
   }
 `;
 
-export const SocialIcon = styled.i`
-  font-size: 1.4rem;
-`;
-
-export const CCIcon = styled.i`
+export const CCIcon = styled.span`
   font-size: 2rem;
+  line-height: 1;
   margin-right: 0.2rem;
 `;
 
@@ -72,6 +69,8 @@ export const CCIconContainer = styled.div`
 `;
 
 export const SocialIconContainer = styled.div`
+  display: flex;
+  align-items: center;
   text-align: right;
 
   ${onMobile} {
@@ -81,37 +80,14 @@ export const SocialIconContainer = styled.div`
 
 export const SocialLink = styled(Link)`
   display: inline-block;
-  margin-left: 0.6rem;
   color: ${white};
+  margin-left: 0.6rem;
+  line-height: 1.4rem;
   opacity: 0.8;
 
   &:hover {
     filter: unset;
     opacity: 1;
-
-    /* &.facebook {
-      color: #3b5998;
-    }
-
-    &.twitter {
-      color: #1da1f2;
-    }
-
-    &.mixcloud {
-      color: #52aad8;
-    }
-
-    &.email {
-      color: #1da1f2;
-    }
-
-    &.github {
-      color: #f5f5f5;
-    }
-
-    &.rss {
-      color: #f26522;
-    } */
   }
 `;
 

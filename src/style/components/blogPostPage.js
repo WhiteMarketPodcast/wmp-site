@@ -170,17 +170,11 @@ export const BlogPostLinksContainer = styled.ul`
 export const BlogPostLink = styled(Link)`
   display: flex;
   color: ${white};
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
   line-height: 1.3;
   margin: 0;
   margin-bottom: 0.5rem;
-
-  i,
-  svg {
-    font-size: 1rem;
-    margin-right: 0.4rem;
-  }
 `;
 
 export const TagLink = styled(Link)`

@@ -4,6 +4,7 @@ import { array, func, node, string, shape, object } from 'prop-types';
 import { PoseGroup } from 'react-pose';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
+import { FaEnvelope, FaFacebook, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import Link from 'components/Link';
 import PlayButton from 'components/PlayButton';
 import Player from 'components/Player';
@@ -110,19 +111,19 @@ export class BlogPostTemplate extends Component {
         <h4>Share</h4>
         <ShareLinksContainer>
           <ShareLink to={twitterURL}>
-            <i className="fab fa-twitter" />
+            <FaTwitter />
             <SrText>Share this post on Twitter</SrText>
           </ShareLink>
           <ShareLink to={facebookURL}>
-            <i className="fab fa-facebook" />
+            <FaFacebook />
             <SrText>Share this post on Facebook</SrText>
           </ShareLink>
           <ShareLink to={whatsAppURL}>
-            <i className="fab fa-whatsapp" />
+            <FaWhatsapp />
             <SrText>Share this post on WhatsApp</SrText>
           </ShareLink>
           <ShareLink to={mailto}>
-            <i className="fas fa-envelope" />
+            <FaEnvelope />
             <SrText>Email someone a link to this post</SrText>
           </ShareLink>
         </ShareLinksContainer>
@@ -171,8 +172,7 @@ export class BlogPostTemplate extends Component {
       return (
         <li key={slug}>
           <BlogPostLink to={slug}>
-            <i className="fas fa-caret-right" />
-            {title}
+            {`.: ${title}`}
           </BlogPostLink>
         </li>
       );
@@ -293,7 +293,11 @@ export class BlogPostTemplate extends Component {
 
     return (
       <Fade>
-        <PlayButton onClick={this.handlePlayClick} isPlaying={isPlaying} screenReaderText={srText} />
+        <PlayButton
+          onClick={this.handlePlayClick}
+          isPlaying={isPlaying}
+          screenReaderText={srText}
+        />
       </Fade>
     );
   }

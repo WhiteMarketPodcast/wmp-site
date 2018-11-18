@@ -49,7 +49,7 @@
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
-    "react-icons": "^3.0.5",
+    "react-icons": "^3.2.2",
     "react-infinite-scroller": "^1.2.1",
     "react-plyr": "^2.1.1",
     "react-pose": "^3.3.4",
