@@ -1,4 +1,4 @@
-function hexToRGB(hex, alpha) {
+export function hexToRGBA(hex, alpha) {
   const r = parseInt(hex.slice(1, 3), 16);
   const g = parseInt(hex.slice(3, 5), 16);
   const b = parseInt(hex.slice(5, 7), 16);
@@ -18,7 +18,7 @@ export const grey = `#D2D4C8`;
 export const darkGrey = `#4A4A4A`;
 export const black = `#3A3A3A`;
 
-export const seeThruWhite = hexToRGB(white, 0.8);
-export const seeThruBlack = hexToRGB(black, 0.7);
-export const seeThruPrimary = hexToRGB(primary, 0.7);
-export const seeThruPrimaryDark = hexToRGB(primaryDark, 0.8);
+export const seeThruWhite = hexToRGBA(white, 0.8);
+export const seeThruBlack = hexToRGBA(black, 0.7);
+export const seeThruPrimary = hexToRGBA(primary, 0.7);
+export const seeThruPrimaryDark = hexToRGBA(primaryDark, 0.8);

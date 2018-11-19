@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
-import { PoseGroup } from 'react-pose';
 import PodcastContext from 'components/PodcastContext';
-import { AudioPlyrContainer } from 'style/components';
 
 class Player extends Component {
   static contextType = PodcastContext;
@@ -111,7 +109,7 @@ class Player extends Component {
     this.player = player;
   };
 
-  renderPlayer() {
+  render() {
     console.log('this.context', this.context);
     const { isPlaying } = this.context;
     const {
@@ -276,19 +274,6 @@ class Player extends Component {
           </div>
         </div>
       </div>
-    );
-  }
-
-  render() {
-    const { url } = this.context;
-    return (
-      <PoseGroup>
-        {!!url && (
-          <AudioPlyrContainer key="podcast-player">
-            <Player />
-          </AudioPlyrContainer>
-        )}
-      </PoseGroup>
     );
   }
 }

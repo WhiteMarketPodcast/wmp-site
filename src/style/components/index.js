@@ -61,12 +61,19 @@ export const BrandH2 = styled.h2`
   text-align: center;
 `;
 
-export const SrText = styled.span`
+const screenReaderOnlyStyle = `
   position: absolute;
   left: -100000px;
   height: 1px;
   width: 1px;
   overflow: hidden;
+`;
+export const SrText = styled.span`
+  ${screenReaderOnlyStyle};
+`;
+
+export const SrOnly = styled.div`
+  ${screenReaderOnlyStyle};
 `;
 
 export * from './blogPostPage';

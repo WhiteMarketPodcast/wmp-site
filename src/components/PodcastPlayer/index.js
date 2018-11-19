@@ -1,30 +1,41 @@
 import React, { Component } from 'react';
-import ReactPlayer from 'react-player';
 import { PoseGroup } from 'react-pose';
 import PodcastContext from 'components/PodcastContext';
-import { StopIcon, PauseIcon, PlayIcon } from 'mdi-react';
-import { SrText } from 'style/components';
+import {
+  PauseIcon,
+  PlayIcon,
+  VolumeHighIcon,
+  VolumeLowIcon,
+  VolumeMediumIcon,
+  VolumeOffIcon,
+} from 'mdi-react';
+import { SrOnly, SrText } from 'style/components';
 import {
   AudioPlayerContainer,
   Button,
+  ControlsContainer,
   PodcastArtwork,
+  PlayButton,
   PlayButtonsContainer,
   PodcastInfoContainer,
   PodcastTitle,
-  ProgressContainer,
+  ProgressBG,
+  ProgressBar,
+  ReactPlayer,
   VolumeContainer,
+  VolumeSlider,
 } from './styled';
 
-class Player extends Component {
+class PodcastPlayer extends Component {
   static contextType = PodcastContext;
 
   state = {
     url: this.context.url,
-    volume: 0.8,
+    volume: 1.0,
     muted: false,
     played: 0,
-    loaded: 0,
-    duration: 0,
+    // loaded: 0,
+    // duration: 0,
     playbackRate: 1.0,
     loop: false,
   };
@@ -35,6 +46,14 @@ class Player extends Component {
     console.log(`url change`);
     this.load(url);
   }
+
+  getVolumeIcon = () => {
+    const { muted, volume } = this.state;
+    if (muted) return VolumeOffIcon;
+    if (volume <= 0.3) return VolumeLowIcon;
+    if (volume >= 0.7) return VolumeHighIcon;
+    return VolumeMediumIcon;
+  };
 
   load = (url) => {
     const { setPlayState } = this.context;
@@ -94,6 +113,18 @@ class Player extends Component {
     this.player.seekTo(parseFloat(e.target.value));
   };
 
+  onProgressMouseDown = (e) => {
+    this.setState({ seeking: true });
+  };
+
+  onProgressMouseUp = (e) => {
+    const { innerWidth } = window;
+    const played = (1 / innerWidth) * e.screenX;
+
+    this.setState({ seeking: false, played });
+    this.player.seekTo(played);
+  };
+
   onProgress = (state) => {
     console.log('onProgress', state);
     // We only want to update time slider if we are not currently seeking
@@ -123,7 +154,6 @@ class Player extends Component {
   };
 
   renderPlayer() {
-    console.log('this.context', this.context);
     const { isPlaying, title } = this.context;
     const {
       url,
@@ -131,22 +161,20 @@ class Player extends Component {
       muted,
       loop,
       played,
-      loaded,
-      duration,
+      // duration,
       playbackRate,
     } = this.state;
-    console.log({ duration, url });
+    // console.log({ duration, url });
     const [PlayPauseIcon, srText] = isPlaying
       ? [PauseIcon, `Pause`]
       : [PlayIcon, `Play`];
+    const VolumeIcon = this.getVolumeIcon();
+    const muteText = muted ? `Unmute` : `Mute`;
 
     return (
       <AudioPlayerContainer key="podcast-player">
         <ReactPlayer
           ref={this.ref}
-          className="react-player"
-          width="100%"
-          height="100%"
           url={url}
           playing={isPlaying}
           loop={loop}
@@ -165,56 +193,40 @@ class Player extends Component {
           onDuration={this.onDuration}
         />
 
-        <PodcastArtwork src={console.log(`src`) || ``} />
+        <SrOnly>
+          <input
+            type="range"
+            min={0}
+            max={1}
+            step="any"
+            value={played}
+            onMouseDown={this.onSeekMouseDown}
+            onChange={this.onSeekChange}
+            onMouseUp={this.onSeekMouseUp}
+            aria-label="Seek"
+          />
+        </SrOnly>
 
-        <PlayButtonsContainer>
-          <Button
-            id="podcast-play-button"
-            type="button"
-            onClick={this.playPause}
-          >
-            <PlayPauseIcon />
-            <SrText>{srText}</SrText>
-          </Button>
-          <Button type="button" onClick={this.stop}>
-            <StopIcon />
-          </Button>
-        </PlayButtonsContainer>
+        <ProgressBG
+          onMouseDown={this.onProgressMouseDown}
+          onMouseUp={this.onProgressMouseUp}
+        >
+          <ProgressBar style={{ width: `${played * 100}%` }} />
+        </ProgressBG>
 
-        <PodcastInfoContainer>
-          <PodcastTitle>{title}</PodcastTitle>
-          <ProgressContainer>
-            <div>
-              <strong>Seek</strong>
-              <div>
-                <input
-                  type="range"
-                  min={0}
-                  max={1}
-                  step="any"
-                  value={played}
-                  onMouseDown={this.onSeekMouseDown}
-                  onChange={this.onSeekChange}
-                  onMouseUp={this.onSeekMouseUp}
-                />
-              </div>
-            </div>
-          </ProgressContainer>
-        </PodcastInfoContainer>
+        <ControlsContainer>
+          <PodcastArtwork src={console.log(`src`)} />
 
-        <VolumeContainer>
-          <strong>Volume</strong>
-          <label htmlFor="muted">
-            Muted
-            <input
-              id="muted"
-              type="checkbox"
-              checked={muted}
-              onChange={this.toggleMuted}
-            />
-          </label>
-          <div>
-            <input
+          <PodcastInfoContainer>
+            <PodcastTitle>{title}</PodcastTitle>
+          </PodcastInfoContainer>
+
+          <VolumeContainer>
+            <Button onClick={this.toggleMuted}>
+              <VolumeIcon />
+              <SrText>{muteText}</SrText>
+            </Button>
+            <VolumeSlider
               type="range"
               min={0}
               max={1}
@@ -222,23 +234,19 @@ class Player extends Component {
               value={volume}
               onChange={this.setVolume}
             />
-          </div>
-        </VolumeContainer>
+          </VolumeContainer>
 
-        <div>
-          <strong>Played</strong>
-          <div>
-            <progress max={1} value={played} />
-          </div>
-        </div>
-        <div>
-          <strong>Loaded</strong>
-          <div>
-            <progress max={1} value={loaded} />
-          </div>
-        </div>
-
-        <h2>State</h2>
+          <PlayButtonsContainer>
+            <PlayButton
+              id="podcast-play-button"
+              type="button"
+              onClick={this.playPause}
+            >
+              <PlayPauseIcon />
+              <SrText>{srText}</SrText>
+            </PlayButton>
+          </PlayButtonsContainer>
+        </ControlsContainer>
       </AudioPlayerContainer>
     );
   }
@@ -249,4 +257,4 @@ class Player extends Component {
   }
 }
 
-export default Player;
+export default PodcastPlayer;
