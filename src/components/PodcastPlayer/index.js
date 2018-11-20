@@ -22,9 +22,11 @@ import {
   ProgressBG,
   ProgressBar,
   ReactPlayer,
+  TimeRemaining,
   VolumeContainer,
   VolumeSlider,
 } from './styled';
+import { formatTime } from './utils';
 
 class PodcastPlayer extends Component {
   static contextType = PodcastContext;
@@ -77,6 +79,7 @@ class PodcastPlayer extends Component {
   };
 
   setVolume = (e) => {
+    console.log(e);
     this.setState({ volume: parseFloat(e.target.value) });
   };
 
@@ -113,13 +116,12 @@ class PodcastPlayer extends Component {
     this.player.seekTo(parseFloat(e.target.value));
   };
 
-  onProgressMouseDown = (e) => {
+  onProgressMouseDown = () => {
     this.setState({ seeking: true });
   };
 
   onProgressMouseUp = (e) => {
-    const { innerWidth } = window;
-    const played = (1 / innerWidth) * e.screenX;
+    const played = (1 / window.innerWidth) * e.screenX;
 
     this.setState({ seeking: false, played });
     this.player.seekTo(played);
@@ -128,9 +130,8 @@ class PodcastPlayer extends Component {
   onProgress = (state) => {
     console.log('onProgress', state);
     // We only want to update time slider if we are not currently seeking
-    if (!this.state.seeking) {
-      this.setState(state);
-    }
+    if (this.state.seeking) return;
+    this.setState(state);
   };
 
   onEnded = () => {
@@ -161,10 +162,9 @@ class PodcastPlayer extends Component {
       muted,
       loop,
       played,
-      // duration,
+      duration,
       playbackRate,
     } = this.state;
-    // console.log({ duration, url });
     const [PlayPauseIcon, srText] = isPlaying
       ? [PauseIcon, `Pause`]
       : [PlayIcon, `Play`];
@@ -215,10 +215,15 @@ class PodcastPlayer extends Component {
         </ProgressBG>
 
         <ControlsContainer>
-          <PodcastArtwork src={console.log(`src`)} />
+          <PodcastArtwork src="" />
 
           <PodcastInfoContainer>
             <PodcastTitle>{title}</PodcastTitle>
+            <TimeRemaining>
+              {`-${formatTime(
+                duration * (1 - played),
+              )}`}
+            </TimeRemaining>
           </PodcastInfoContainer>
 
           <VolumeContainer>
@@ -230,9 +235,10 @@ class PodcastPlayer extends Component {
               type="range"
               min={0}
               max={1}
-              step="any"
+              step={0.1}
               value={volume}
               onChange={this.setVolume}
+              volume={volume * 100}
             />
           </VolumeContainer>
 

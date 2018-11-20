@@ -1,92 +1,88 @@
 import styled from 'styled-components';
+import { white, primary, primaryDark, hexToRGBA } from 'style/colors';
 
 export const VolumeSlider = styled.input`
   &[type='range'] {
     -webkit-appearance: none;
-    margin: 18px 0;
-    width: 100%;
+    height: 6px;
+    margin-left: 0.5rem;
+    width: 70px;
+    background-image: linear-gradient(
+      to right,
+      ${({ volume }) => `${primary} ${volume}%, rgba(0,0,0,0) ${volume}%`}
+    );
+
     &:focus {
       outline: none;
     }
     &::-webkit-slider-runnable-track {
       width: 100%;
-      height: 8.4px;
+      height: 6px;
       cursor: pointer;
-      animate: 0.2s;
-      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-      background: #3071a9;
+      background: ${hexToRGBA(primary, 0.2)};
       border-radius: 1.3px;
-      border: 0.2px solid #010101;
+      border: 0px;
     }
+
     &::-webkit-slider-thumb {
-      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-      border: 1px solid #000000;
-      height: 36px;
-      width: 16px;
-      border-radius: 3px;
-      background: #ffffff;
+      border: 1px solid ${primaryDark};
+      height: 12px;
+      width: 12px;
+      border-radius: 6px;
+      background: ${white};
       cursor: pointer;
       -webkit-appearance: none;
-      margin-top: -14px;
+      margin-top: -3px;
     }
-    &:focus::-webkit-slider-runnable-track {
-      background: #367ebd;
-    }
+
     &::-moz-range-track {
       width: 100%;
-      height: 8.4px;
+      height: 6px;
       cursor: pointer;
-      animate: 0.2s;
-      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-      background: #3071a9;
+      background: ${hexToRGBA(primary, 0.2)};
       border-radius: 1.3px;
-      border: 0.2px solid #010101;
+      border: 0px;
     }
     &::-moz-range-thumb {
-      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-      border: 1px solid #000000;
-      height: 36px;
-      width: 16px;
-      border-radius: 3px;
-      background: #ffffff;
+      border: 1px solid ${primaryDark};
+      height: 12px;
+      width: 12px;
+      border-radius: 6px;
+      background: ${white};
       cursor: pointer;
     }
     &::-ms-track {
       width: 100%;
-      height: 8.4px;
+      height: 6px;
       cursor: pointer;
-      animate: 0.2s;
       background: transparent;
       border-color: transparent;
       border-width: 16px 0;
       color: transparent;
     }
     &::-ms-fill-lower {
-      background: #2a6495;
-      border: 0.2px solid #010101;
+      background: ${primaryDark};
+      border: 0px;
       border-radius: 2.6px;
-      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
     }
     &::-ms-fill-upper {
-      background: #3071a9;
-      border: 0.2px solid #010101;
+      background: ${hexToRGBA(primary, 0.2)};
+      border: 0px;
       border-radius: 2.6px;
-      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
     }
     &::-ms-thumb {
-      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-      border: 1px solid #000000;
-      height: 36px;
-      width: 16px;
-      border-radius: 3px;
-      background: #ffffff;
+      border: 1px solid ${primaryDark};
+      height: 12px;
+      width: 12px;
+      border-radius: 6px;
+      background: ${white};
       cursor: pointer;
     }
     &:focus::-ms-fill-lower {
-      background: #3071a9;
+      background: ${hexToRGBA(primary, 0.2)};
     }
     &:focus::-ms-fill-upper {
-      background: #367ebd;
+      background: ${primary};
     }
   }
 `;

@@ -49,17 +49,28 @@ export const PlayButtonsContainer = styled(Flex)`
 `;
 export const PodcastInfoContainer = styled(Flex)`
   flex: 1 1 auto;
-  flex-direction: column;
-  align-items: start;
+  align-items: center;
 `;
 
 export const PodcastTitle = styled.div`
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 500;
-  overflow-x: hidden;
+  overflow: hidden;
   width: 100%;
-  padding: 0.5rem;
+  padding-left: 0.5rem;
   line-height: 1.2;
+  max-height: 1.8rem;
+`;
+
+export const TimeRemaining = styled.div`
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  padding-left: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 8ch;
 `;
 
 export const ProgressBG = styled.div`
@@ -82,7 +93,6 @@ export const VolumeContainer = styled(Flex)`
     display: none;
   }
 `;
-
 
 export const Button = styled.button`
   display: flex;
