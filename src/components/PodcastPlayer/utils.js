@@ -1,8 +1,6 @@
 export const tinyWMPLogo = `https://www.whitemarketpodcast.eu/icons/icon-48x48.png`;
 
-function pad(string) {
-  return `0${string}`.slice(-2);
-}
+const pad = (string) => `0${string}`.slice(-2);
 
 export function formatTime(seconds) {
   const date = new Date(seconds * 1000);
