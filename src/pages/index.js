@@ -43,12 +43,13 @@ export default class IndexPage extends Component {
   getPodcastInfo = () => this.props.data.podcast.edges[0].node;
 
   handlePlayButtonClick = () => {
-    const { podcastURL, title } = this.getPodcastInfo().frontmatter;
+    const { podcastURL } = this.getPodcastInfo().frontmatter;
     const { isPlaying, url, setPodcastState, setPlayState } = this.context;
+
     if (podcastURL === url) {
       setPlayState(!isPlaying);
     } else {
-      setPodcastState({ url: podcastURL, title });
+      setPodcastState({ url: podcastURL });
     }
   };
 

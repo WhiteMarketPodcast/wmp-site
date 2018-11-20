@@ -23,7 +23,6 @@ class TemplateWrapper extends Component {
     mounted: false,
     isPlaying: false,
     url: ``,
-    title: ``,
     setPodcastState: (changes) => this.setState(changes),
     setPlayState: (isPlaying) => this.setState({ isPlaying }),
   };

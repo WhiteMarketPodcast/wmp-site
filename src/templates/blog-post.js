@@ -96,14 +96,14 @@ export class BlogPostTemplate extends Component {
   };
 
   handlePlayClick = () => {
-    const { format, title } = this.props;
+    const { format } = this.props;
     const { showMedia } = this.state;
     const { setPodcastState, url: currentURL } = this.context;
     const url = this.getMediaURL();
 
     if (format === `audio`) {
       if (url !== currentURL) {
-        setPodcastState({ url, title });
+        setPodcastState({ url });
       } else {
         const playerButton = document.getElementById(`podcast-play-button`);
         if (playerButton) playerButton.click();
