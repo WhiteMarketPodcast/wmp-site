@@ -1,4 +1,7 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
+import { object } from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
 import { PoseGroup } from 'react-pose';
 import PodcastContext from 'components/PodcastContext';
 import {
@@ -31,6 +34,10 @@ import { formatTime } from './utils';
 class PodcastPlayer extends Component {
   static contextType = PodcastContext;
 
+  static propTypes = {
+    podcasts: object.isRequired,
+  };
+
   state = {
     url: this.context.url,
     volume: 1.0,
@@ -48,6 +55,26 @@ class PodcastPlayer extends Component {
     console.log(`url change`);
     this.load(url);
   }
+
+  getPodcast() {
+    const { edges } = this.props.podcasts;
+    console.log('edges', edges);
+    const { url } = this.context;
+    const episode = _.find(
+      edges,
+      (edge) => edge.node.frontmatter.podcastURL === url,
+    );
+    if (!episode) return {};
+    return episode.node.frontmatter;
+  }
+
+  getPodcastImage = () => {
+    const { image = ``, imageURL = `` } = this.getPodcast();
+    console.log('image = ``, imageURL', image, imageURL);
+    return image || imageURL;
+  };
+
+  getPodcastTitle = () => this.getPodcast().title || ``;
 
   getVolumeIcon = () => {
     const { muted, volume } = this.state;
@@ -155,7 +182,7 @@ class PodcastPlayer extends Component {
   };
 
   renderPlayer() {
-    const { isPlaying, title } = this.context;
+    const { isPlaying } = this.context;
     const {
       url,
       volume,
@@ -215,14 +242,12 @@ class PodcastPlayer extends Component {
         </ProgressBG>
 
         <ControlsContainer>
-          <PodcastArtwork src="" />
+          <PodcastArtwork src={this.getPodcastImage()} />
 
           <PodcastInfoContainer>
-            <PodcastTitle>{title}</PodcastTitle>
+            <PodcastTitle>{this.getPodcastTitle()}</PodcastTitle>
             <TimeRemaining>
-              {`-${formatTime(
-                duration * (1 - played),
-              )}`}
+              {formatTime(duration * (1 - played), `-`)}
             </TimeRemaining>
           </PodcastInfoContainer>
 
@@ -263,4 +288,28 @@ class PodcastPlayer extends Component {
   }
 }
 
-export default PodcastPlayer;
+const query = graphql`
+  query PodcastPlayerQuery {
+    podcasts: allMarkdownRemark(
+      filter: { frontmatter: { format: { eq: "audio" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            image
+            imageURL
+            podcastURL
+            title
+          }
+        }
+      }
+    }
+  }
+`;
+
+export default () => (
+  <StaticQuery
+    query={query}
+    render={({ podcasts }) => <PodcastPlayer podcasts={podcasts} />}
+  />
+);

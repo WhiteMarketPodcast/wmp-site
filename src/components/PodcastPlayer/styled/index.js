@@ -41,6 +41,7 @@ export const PodcastArtwork = styled.div`
   height: 50px;
   background-image: url("${({ src }) => (src ? getImageURL({ image: src, width: 110 }) : tinyWMPLogo)}");
   background-color: ${black};
+  background-position: center;
   background-size: cover;
   flex: 0 0 auto;
 `;
@@ -55,17 +56,21 @@ export const PodcastInfoContainer = styled(Flex)`
 export const PodcastTitle = styled.div`
   font-size: 0.75rem;
   font-weight: 500;
-  overflow: hidden;
-  width: 100%;
-  padding-left: 0.5rem;
   line-height: 1.2;
   max-height: 1.8rem;
+  overflow: hidden;
+  padding-left: 5px;
+  width: 100%;
+
+  ${onMobile} {
+    letter-spacing: -0.5px;
+  }
 `;
 
 export const TimeRemaining = styled.div`
   font-size: 0.7rem;
   font-weight: 500;
-  padding: 0.5rem;
+  padding: 5px;
   padding-left: 0;
   display: flex;
   justify-content: flex-end;
