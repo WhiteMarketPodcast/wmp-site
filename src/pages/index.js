@@ -3,7 +3,8 @@ import React, { Component } from 'react';
 import { array, shape, string } from 'prop-types';
 import { graphql, Link } from 'gatsby';
 import Helmet from 'react-helmet';
-import Player from 'components/Player';
+import PlayButton from 'components/PlayButton';
+import PodcastContext from 'components/PodcastContext';
 import {
   BlogPostPreviewGrid,
   BlogPreviewContainer,
@@ -19,7 +20,6 @@ import {
   PodcastTextContainer,
   PodcastSmallText,
   PodcastTitle,
-  PlyrContainer,
   BrandH2,
 } from 'style/components';
 import { formatConverter } from 'utils';
@@ -38,11 +38,26 @@ export default class IndexPage extends Component {
     }).isRequired,
   };
 
+  static contextType = PodcastContext;
+
+  getPodcastInfo = () => this.props.data.podcast.edges[0].node;
+
+  handlePlayButtonClick = () => {
+    const { podcastURL } = this.getPodcastInfo().frontmatter;
+    const { isPlaying, url, setPodcastState, setPlayState } = this.context;
+
+    if (podcastURL === url) {
+      setPlayState(!isPlaying);
+    } else {
+      setPodcastState({ url: podcastURL });
+    }
+  };
+
   renderPodcast() {
-    const { data } = this.props;
-    const podcast = data.podcast.edges[0].node;
-    const { slug } = podcast.fields;
-    const { title, podcastURL, image, imageURL } = podcast.frontmatter;
+    const { isPlaying, url } = this.context;
+    const { fields, frontmatter } = this.getPodcastInfo();
+    const { slug } = fields;
+    const { title, podcastURL, image, imageURL } = frontmatter;
 
     return (
       <PodcastSection bgImage={image || imageURL}>
@@ -52,9 +67,11 @@ export default class IndexPage extends Component {
             <PodcastTitle>{title}</PodcastTitle>
           </Link>
         </PodcastTextContainer>
-        <PlyrContainer>
-          <Player url={podcastURL} />
-        </PlyrContainer>
+        <PlayButton
+          isPlaying={url === podcastURL && isPlaying}
+          onClick={this.handlePlayButtonClick}
+          screenReaderText="Listen to the latest session"
+        />
       </PodcastSection>
     );
   }

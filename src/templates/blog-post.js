@@ -1,13 +1,13 @@
 import _ from 'lodash';
 import React, { Component, Fragment } from 'react';
 import { array, func, node, string, shape, object } from 'prop-types';
-import { PoseGroup } from 'react-pose';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { FaEnvelope, FaFacebook, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import Link from 'components/Link';
+import PodcastContext from 'components/PodcastContext';
 import PlayButton from 'components/PlayButton';
-import Player from 'components/Player';
+import VideoPlayer from 'components/VideoPlayer';
 import Content, { HTMLContent } from 'components/Content';
 import { SrText } from 'style/components';
 import { FacebookHelmet, TwitterHelmet } from 'components/Helmets';
@@ -24,7 +24,6 @@ import {
   BlogPostLinksContainer,
   TagLink,
   VideoPlyrContainer,
-  AudioPlyrContainer,
   ShareLink,
   ShareLinksContainer,
   Fade,
@@ -51,7 +50,15 @@ export class BlogPostTemplate extends Component {
     image: string,
     imageAlt: string,
     imageURL: string,
-    // imageCredit: string,
+    imageCredit: shape({
+      licence: string,
+      author: shape({
+        name: string,
+        url: string,
+        site: string,
+        siteURL: string,
+      }),
+    }),
     podcastURL: string,
     videoURL: string,
     date: string.isRequired,
@@ -67,18 +74,19 @@ export class BlogPostTemplate extends Component {
     contentComponent: undefined,
     tags: [],
     helmet: null,
-    description: '',
-    image: '',
-    imageAlt: '',
-    // imageCredit: '',
-    imageURL: '',
-    podcastURL: '',
-    videoURL: '',
+    description: ``,
+    image: ``,
+    imageAlt: ``,
+    imageCredit: undefined,
+    imageURL: ``,
+    podcastURL: ``,
+    videoURL: ``,
   };
+
+  static contextType = PodcastContext;
 
   state = {
     showMedia: false,
-    isPlaying: false,
   };
 
   getMediaURL = () => {
@@ -87,15 +95,30 @@ export class BlogPostTemplate extends Component {
   };
 
   handlePlayClick = () => {
+    const { format } = this.props;
     const { showMedia } = this.state;
+    const { setPodcastState, url: currentURL } = this.context;
+    const url = this.getMediaURL();
 
-    if (!showMedia) {
-      this.setState({ showMedia: true, isPlaying: true });
+    if (format === `audio`) {
+      if (url !== currentURL) {
+        setPodcastState({ url });
+      } else {
+        const playerButton = document.getElementById(`podcast-play-button`);
+        if (playerButton) playerButton.click();
+      }
     }
+    if (!showMedia) {
+      this.setState({ showMedia: true });
+    }
+  };
 
-    const playButton = document.querySelector(`button.plyr__control`);
-    if (!playButton) return;
-    playButton.click();
+  isPlaying = () => {
+    const { isPlaying } = this.context;
+    const mediaURL = this.getMediaURL();
+    const { url } = this.context;
+
+    return url === mediaURL && isPlaying;
   };
 
   renderShareLinks() {
@@ -171,9 +194,7 @@ export class BlogPostTemplate extends Component {
       const { slug } = post.fields;
       return (
         <li key={slug}>
-          <BlogPostLink to={slug}>
-            {`.: ${title}`}
-          </BlogPostLink>
+          <BlogPostLink to={slug}>{`.: ${title}`}</BlogPostLink>
         </li>
       );
     });
@@ -240,31 +261,19 @@ export class BlogPostTemplate extends Component {
     );
   }
 
-  renderMedia() {
+  renderVideo() {
     const { format, image, imageURL } = this.props;
     const { showMedia } = this.state;
     const url = this.getMediaURL();
-    if (!_.includes([`audio`, `video`], format) || !url) return null;
-    const PlyrContainer = format === `video` ? VideoPlyrContainer : AudioPlyrContainer;
-
+    if (format !== `video` || !showMedia || !url) return null;
     return (
-      <PoseGroup>
-        {showMedia && (
-          <PlyrContainer
-            className={format}
-            key={url}
-            bgImage={image || imageURL}
-          >
-            <Player
-              url={url}
-              type={format}
-              onPlay={() => this.setState({ isPlaying: true })}
-              onPause={() => this.setState({ isPlaying: false })}
-              autoplay
-            />
-          </PlyrContainer>
-        )}
-      </PoseGroup>
+      <VideoPlyrContainer
+        className={format}
+        key={url}
+        bgImage={image || imageURL}
+      >
+        <VideoPlayer url={url} />
+      </VideoPlyrContainer>
     );
   }
 
@@ -286,7 +295,6 @@ export class BlogPostTemplate extends Component {
 
   renderPlayButton() {
     const url = this.getMediaURL();
-    const { isPlaying } = this.state;
     const { format } = this.props;
     const srText = `Play ${format === `audio` ? `podcast` : format}`;
     if (!url) return null;
@@ -295,7 +303,7 @@ export class BlogPostTemplate extends Component {
       <Fade>
         <PlayButton
           onClick={this.handlePlayClick}
-          isPlaying={isPlaying}
+          isPlaying={this.isPlaying()}
           screenReaderText={srText}
         />
       </Fade>
@@ -312,7 +320,7 @@ export class BlogPostTemplate extends Component {
         {this.renderTitle()}
         <Column>
           <div>
-            {this.renderMedia()}
+            {this.renderVideo()}
             {this.renderImageCredit()}
             <BlogContent>
               <PostContent content={content} />

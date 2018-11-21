@@ -191,18 +191,6 @@ export const TagLink = styled(Link)`
   }
 `;
 
-const audioDiv = posed.div({
-  enter: { y: 0, transition: { ease: 'easeInOut' }, opacity: 1 },
-  exit: { y: `100%`, opacity: 0 },
-});
-
-export const AudioPlyrContainer = styled(audioDiv)`
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-`;
-
 export const VideoPlyrContainer = styled.div`
   background-color: ${darkGrey};
   background-position: center;
@@ -214,6 +202,9 @@ export const VideoPlyrContainer = styled.div`
       rgba(0, 0, 0, 0.4)
     ),
     url(${({ bgImage }) => bgImage && getImageURL({ image: bgImage })});
+  height: calc((100vw - 250px) / 16 * 9);
+  max-height: calc(100vh - ${DESKTOP_NAV_HEIGHT});
+  max-width: 100vw;
 
   > div {
     margin: 0 auto;
@@ -221,6 +212,8 @@ export const VideoPlyrContainer = styled.div`
   }
 
   ${onMobile} {
+    height: calc(100vw / 16 * 9);
+    max-height: calc(100vh - ${MOBILE_NAV_HEIGHT});
     background-image: linear-gradient(
         to top,
         rgba(0, 0, 0, 0.4),

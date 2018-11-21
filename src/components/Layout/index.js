@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-state */
 import React, { Component } from 'react';
 import { node, object } from 'prop-types';
 import { PoseGroup } from 'react-pose';
@@ -5,7 +6,8 @@ import 'typeface-crete-round';
 import 'typeface-montserrat';
 import Footer from 'components/Footer';
 import Navbar from 'components/Navbar';
-import PlyrSvgSprite from 'components/misc/PlyrSvgSprite';
+import PodcastContext from 'components/PodcastContext';
+import PodcastPlayer from 'components/PodcastPlayer';
 import { TopLevelHelmet } from 'components/Helmets';
 import 'style/sass/all.sass';
 import GlobalStyle from 'style';
@@ -17,7 +19,13 @@ class TemplateWrapper extends Component {
     location: object.isRequired,
   };
 
-  state = { mounted: false };
+  state = {
+    mounted: false,
+    isPlaying: false,
+    url: ``,
+    setPodcastState: (changes) => this.setState(changes),
+    setPlayState: (isPlaying) => this.setState({ isPlaying }),
+  };
 
   componentDidMount() {
     this.setState({ mounted: true });
@@ -28,10 +36,9 @@ class TemplateWrapper extends Component {
     const { mounted } = this.state;
 
     return (
-      <>
+      <PodcastContext.Provider value={this.state}>
         <GlobalStyle />
         <TopLevelHelmet />
-        <PlyrSvgSprite />
         <Navbar locationKey={location.key} />
         <PoseGroup animateOnMount preEnterPose={mounted ? `initial` : `enter`}>
           <PageFade key={location.pathname}>
@@ -39,7 +46,8 @@ class TemplateWrapper extends Component {
           </PageFade>
         </PoseGroup>
         <Footer />
-      </>
+        <PodcastPlayer />
+      </PodcastContext.Provider>
     );
   }
 }
