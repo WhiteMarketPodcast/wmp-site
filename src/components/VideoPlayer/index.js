@@ -9,9 +9,6 @@ class VideoPlayer extends Component {
     url: this.props.url,
     volume: 0.8,
     muted: false,
-    // played: 0,
-    // loaded: 0,
-    // duration: 0,
     playbackRate: 1.0,
     loop: false,
     playing: true,
@@ -20,8 +17,6 @@ class VideoPlayer extends Component {
   load = (url) => {
     this.setState({
       url,
-      // played: 0,
-      // loaded: 0,
       playing: true,
     });
   };
