@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import React, { Component, Fragment } from 'react';
 import { array, func, node, string, shape, object } from 'prop-types';
-import { PoseGroup } from 'react-pose';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { FaEnvelope, FaFacebook, FaTwitter, FaWhatsapp } from 'react-icons/fa';
@@ -265,21 +264,16 @@ export class BlogPostTemplate extends Component {
   renderVideo() {
     const { format, image, imageURL } = this.props;
     const { showMedia } = this.state;
-    const url = this.getMediaURL();
-    if (format !== `video` || !url) return null;
-
+    const url = this.getMediaURL(); 
+    if (format !== `video` || !showMedia || !url) return null;
     return (
-      <PoseGroup>
-        {showMedia && (
-          <VideoPlyrContainer
-            className={format}
-            key={url}
-            bgImage={image || imageURL}
-          >
-            <VideoPlayer url={url} />
-          </VideoPlyrContainer>
-        )}
-      </PoseGroup>
+      <VideoPlyrContainer
+        className={format}
+        key={url}
+        bgImage={image || imageURL}
+      >
+        <VideoPlayer url={url} />
+      </VideoPlyrContainer>
     );
   }
 
