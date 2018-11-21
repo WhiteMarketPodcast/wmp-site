@@ -1,8 +1,7 @@
 import _ from 'lodash';
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { object } from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
-import { PoseGroup } from 'react-pose';
 import PodcastContext from 'components/PodcastContext';
 import {
   PauseIcon,
@@ -31,7 +30,7 @@ import {
 } from './styled';
 import { formatTime } from './utils';
 
-class PodcastPlayer extends Component {
+class PodcastPlayer extends PureComponent {
   static contextType = PodcastContext;
 
   static propTypes = {
@@ -39,38 +38,28 @@ class PodcastPlayer extends Component {
   };
 
   state = {
-    url: this.context.url,
+    url: ``,
     title: ``,
     episodeImage: ``,
     volume: 1.0,
     muted: false,
     played: 0,
-    loop: false,
+    episodes: _.map(this.props.podcasts.edges, `node.frontmatter`),
   };
-
-  componentDidMount() {
-    this.setState({
-      title: this.getEpisodeTitle(),
-      episodeImage: this.getEpisodeImage(),
-    });
-  }
 
   componentDidUpdate() {
     const { url } = this.context;
-    if (this.state.url === url) return;
+    const { url: currentURL, changingURL } = this.state;
+    if (changingURL || currentURL === url) return;
     console.log(`url change`);
     this.load(url);
   }
 
   getEpisode() {
-    const { edges } = this.props.podcasts;
+    const { episodes } = this.state;
     const { url } = this.context;
-    const episode = _.find(
-      edges,
-      (edge) => edge.node.frontmatter.podcastURL === url,
-    );
-    if (!episode) return {};
-    return episode.node.frontmatter;
+    const episode = _.find(episodes, [`podcastURL`, url]);
+    return episode || {};
   }
 
   getEpisodeImage = () => {
@@ -99,7 +88,7 @@ class PodcastPlayer extends Component {
       title: this.getEpisodeTitle(),
       episodeImage: this.getEpisodeImage(),
     });
-    setPlayState(true);
+    setPlayState(false);
   };
 
   playPause = () => {
@@ -113,12 +102,7 @@ class PodcastPlayer extends Component {
     setPlayState(false);
   };
 
-  toggleLoop = () => {
-    this.setState(({ loop }) => ({ loop: !loop }));
-  };
-
   setVolume = (e) => {
-    console.log(e);
     this.setState({ volume: parseFloat(e.target.value) });
   };
 
@@ -126,10 +110,15 @@ class PodcastPlayer extends Component {
     this.setState(({ muted }) => ({ muted: !muted }));
   };
 
+  onReady = () => {
+    this.setState({ changingURL: false });
+    this.onPlay();
+  };
+
   onPlay = () => {
     console.log('onPlay');
-    const { setPlayState } = this.context;
-    setPlayState(true);
+    const { isPlaying, setPlayState } = this.context;
+    if (!isPlaying) setPlayState(true);
   };
 
   onPause = () => {
@@ -169,9 +158,8 @@ class PodcastPlayer extends Component {
   };
 
   onEnded = () => {
-    const { loop } = this.state;
     const { setPlayState } = this.context;
-    setPlayState(loop);
+    setPlayState(false);
   };
 
   onDuration = (duration) => {
@@ -182,7 +170,7 @@ class PodcastPlayer extends Component {
     this.player = player;
   };
 
-  renderPlayer() {
+  render() {
     const { isPlaying } = this.context;
     const {
       url,
@@ -190,10 +178,10 @@ class PodcastPlayer extends Component {
       episodeImage,
       volume,
       muted,
-      loop,
       played,
       duration,
     } = this.state;
+    if (!url) return null;
     const [PlayPauseIcon, srText] = isPlaying
       ? [PauseIcon, `Pause`]
       : [PlayIcon, `Play`];
@@ -201,22 +189,17 @@ class PodcastPlayer extends Component {
     const muteText = muted ? `Unmute` : `Mute`;
 
     return (
-      <AudioPlayerContainer key="podcast-player">
+      <AudioPlayerContainer pose="enter" initialPose="exit">
         <ReactPlayer
           ref={this.ref}
           url={url}
           playing={isPlaying}
-          loop={loop}
           volume={volume}
           muted={muted}
-          onReady={this.onPlay}
-          onStart={() => console.log('onStart')}
+          onReady={this.onReady}
           onPlay={this.onPlay}
           onPause={this.onPause}
-          onBuffer={() => console.log('onBuffer')}
-          onSeek={(e) => console.log('onSeek', e)}
           onEnded={this.onEnded}
-          onError={(e) => console.log('onError', e)}
           onProgress={this.onProgress}
           onDuration={this.onDuration}
         />
@@ -281,11 +264,6 @@ class PodcastPlayer extends Component {
         </ControlsContainer>
       </AudioPlayerContainer>
     );
-  }
-
-  render() {
-    const { url } = this.context;
-    return <PoseGroup>{!!url && this.renderPlayer()}</PoseGroup>;
   }
 }
 

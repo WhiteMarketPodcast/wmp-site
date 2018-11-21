@@ -1,11 +1,11 @@
-import React, { Component, Fragment } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import { string } from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import FacebookHelmet from './FacebookHelmet';
 import TwitterHelmet from './TwitterHelmet';
 
-class TopLevelHelmet extends Component {
+class TopLevelHelmet extends PureComponent {
   static propTypes = {
     description: string.isRequired,
     siteLogo: string.isRequired,

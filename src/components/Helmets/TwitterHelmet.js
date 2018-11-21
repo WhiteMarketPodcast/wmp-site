@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { node, string } from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 
-class TwitterHelmet extends Component {
+class TwitterHelmet extends PureComponent {
   static propTypes = {
     siteUrl: string.isRequired,
     title: string.isRequired,

@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { node, string } from 'prop-types';
 import Helmet from 'react-helmet';
 
-class FacebookHelmet extends Component {
+class FacebookHelmet extends PureComponent {
   static propTypes = {
     url: string.isRequired,
     type: string,

@@ -12,8 +12,8 @@ export const ReactPlayer = styled(Player)`
 `;
 
 const audioDiv = posed.div({
-  enter: { y: 0, transition: { ease: 'easeInOut' }, opacity: 1 },
-  exit: { y: `100%`, opacity: 0 },
+  enter: { y: 0, transition: { ease: 'easeInOut' } },
+  exit: { y: `100%` },
 });
 
 export const AudioPlayerContainer = styled(audioDiv)`
