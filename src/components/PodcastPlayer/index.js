@@ -40,14 +40,20 @@ class PodcastPlayer extends Component {
 
   state = {
     url: this.context.url,
+    title: ``,
+    episodeImage: ``,
     volume: 1.0,
     muted: false,
     played: 0,
-    // loaded: 0,
-    // duration: 0,
-    playbackRate: 1.0,
     loop: false,
   };
+
+  componentDidMount() {
+    this.setState({
+      title: this.getEpisodeTitle(),
+      episodeImage: this.getEpisodeImage(),
+    });
+  }
 
   componentDidUpdate() {
     const { url } = this.context;
@@ -56,9 +62,8 @@ class PodcastPlayer extends Component {
     this.load(url);
   }
 
-  getPodcast() {
+  getEpisode() {
     const { edges } = this.props.podcasts;
-    console.log('edges', edges);
     const { url } = this.context;
     const episode = _.find(
       edges,
@@ -68,13 +73,15 @@ class PodcastPlayer extends Component {
     return episode.node.frontmatter;
   }
 
-  getPodcastImage = () => {
-    const { image = ``, imageURL = `` } = this.getPodcast();
-    console.log('image = ``, imageURL', image, imageURL);
+  getEpisodeImage = () => {
+    const { image = ``, imageURL = `` } = this.getEpisode();
     return image || imageURL;
   };
 
-  getPodcastTitle = () => this.getPodcast().title || ``;
+  getEpisodeTitle = () => {
+    const { title = `` } = this.getEpisode();
+    return title.replace(/^session /i, ``);
+  };
 
   getVolumeIcon = () => {
     const { muted, volume } = this.state;
@@ -86,7 +93,12 @@ class PodcastPlayer extends Component {
 
   load = (url) => {
     const { setPlayState } = this.context;
-    this.setState({ url, played: 0, loaded: 0 });
+    this.setState({
+      url,
+      played: 0,
+      title: this.getEpisodeTitle(),
+      episodeImage: this.getEpisodeImage(),
+    });
     setPlayState(true);
   };
 
@@ -112,10 +124,6 @@ class PodcastPlayer extends Component {
 
   toggleMuted = () => {
     this.setState(({ muted }) => ({ muted: !muted }));
-  };
-
-  setPlaybackRate = (e) => {
-    this.setState({ playbackRate: parseFloat(e.target.value) });
   };
 
   onPlay = () => {
@@ -155,26 +163,19 @@ class PodcastPlayer extends Component {
   };
 
   onProgress = (state) => {
-    console.log('onProgress', state);
     // We only want to update time slider if we are not currently seeking
     if (this.state.seeking) return;
     this.setState(state);
   };
 
   onEnded = () => {
-    console.log('onEnded');
     const { loop } = this.state;
     const { setPlayState } = this.context;
     setPlayState(loop);
   };
 
   onDuration = (duration) => {
-    console.log('onDuration', duration);
     this.setState({ duration });
-  };
-
-  onClickFullscreen = () => {
-    console.log('onClickFullscreen');
   };
 
   ref = (player) => {
@@ -185,12 +186,13 @@ class PodcastPlayer extends Component {
     const { isPlaying } = this.context;
     const {
       url,
+      title,
+      episodeImage,
       volume,
       muted,
       loop,
       played,
       duration,
-      playbackRate,
     } = this.state;
     const [PlayPauseIcon, srText] = isPlaying
       ? [PauseIcon, `Pause`]
@@ -205,7 +207,6 @@ class PodcastPlayer extends Component {
           url={url}
           playing={isPlaying}
           loop={loop}
-          playbackRate={playbackRate}
           volume={volume}
           muted={muted}
           onReady={this.onPlay}
@@ -242,10 +243,10 @@ class PodcastPlayer extends Component {
         </ProgressBG>
 
         <ControlsContainer>
-          <PodcastArtwork src={this.getPodcastImage()} />
+          <PodcastArtwork src={episodeImage} />
 
           <PodcastInfoContainer>
-            <PodcastTitle>{this.getPodcastTitle()}</PodcastTitle>
+            <PodcastTitle>{title}</PodcastTitle>
             <TimeRemaining>
               {formatTime(duration * (1 - played), `-`)}
             </TimeRemaining>

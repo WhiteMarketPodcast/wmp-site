@@ -264,7 +264,7 @@ export class BlogPostTemplate extends Component {
   renderVideo() {
     const { format, image, imageURL } = this.props;
     const { showMedia } = this.state;
-    const url = this.getMediaURL(); 
+    const url = this.getMediaURL();
     if (format !== `video` || !showMedia || !url) return null;
     return (
       <VideoPlyrContainer

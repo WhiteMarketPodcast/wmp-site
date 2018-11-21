@@ -24,7 +24,6 @@ export const AudioPlayerContainer = styled(audioDiv)`
   display: flex;
   flex-direction: column;
   background-color: ${white};
-  box-shadow: 0 -4px -8px rgba(0, 0, 0, 0.2);
 `;
 
 const Flex = styled.div`
@@ -59,7 +58,7 @@ export const PodcastTitle = styled.div`
   line-height: 1.2;
   max-height: 1.8rem;
   overflow: hidden;
-  padding-left: 5px;
+  padding-left: 0.5rem;
   width: 100%;
 
   ${onMobile} {
@@ -68,19 +67,19 @@ export const PodcastTitle = styled.div`
 `;
 
 export const TimeRemaining = styled.div`
-  font-size: 0.7rem;
-  font-weight: 500;
-  padding: 5px;
-  padding-left: 0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1.2;
+  padding-right: 0.5rem;
   width: 8ch;
 `;
 
 export const ProgressBG = styled.div`
   width: 100%;
-  background-color: ${hexToRGBA(primary, 0.2)};
+  background-color: ${hexToRGBA(primary, 0.3)};
   cursor: pointer;
 `;
 
@@ -121,7 +120,7 @@ export const Button = styled.button`
 `;
 
 export const PlayButton = styled(Button)`
-  border: 1px solid ${hexToRGBA(primary, 0.2)};
+  border: 1px solid ${hexToRGBA(primary, 0.3)};
 `;
 
 export * from './inputRange';
