@@ -26,6 +26,7 @@ collections:
           widget: 'text',
           required: false,
         }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
       - {
           label: 'Post type',
           name: 'format',
@@ -121,7 +122,6 @@ collections:
           widget: 'string',
           required: false,
         }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
       - { label: 'Categories', name: 'categories', widget: 'list', default: [] }
       - { label: 'Tags', name: 'tags', widget: 'list', default: [] }
 
