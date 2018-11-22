@@ -1,0 +1,172 @@
+import _ from 'lodash';
+import React, { Component } from 'react';
+import { array, shape, string } from 'prop-types';
+import { graphql } from 'gatsby';
+import Helmet from 'react-helmet';
+import { HTMLContent } from 'components/Content';
+import PodcastContext from 'components/PodcastContext';
+import { SrText } from 'style/components';
+import {
+  Grid,
+  EpisodesColumn,
+  EpisodeTab,
+  TabButton,
+  CurrentEpisodeContainer,
+  SelectedEpsiodeTitle,
+  PlayButton,
+  IconContainer,
+  TitleBG,
+  Title,
+} from 'style/components/podcastPage';
+import { PlayIcon, SpeakerIcon } from 'mdi-react';
+
+export default class PodcastPage extends Component {
+  static propTypes = {
+    data: shape({
+      site: shape({
+        siteMetadata: shape({ title: string.isRequired }),
+      }),
+      podcasts: shape({ edges: array }),
+    }).isRequired,
+  };
+
+  static contextType = PodcastContext;
+
+  state = {
+    episodes: _.map(this.props.data.podcasts.edges, `node`),
+    showDetails: this.props.data.podcasts.edges[0].id,
+  };
+
+  componentDidMount() {
+    const { url } = this.context;
+    const { episodes, showDetails } = this.state;
+    const { id } = _.find(episodes, [`frontmatter.podcastURL`, url]) || episodes[0];
+    if (showDetails === id) return;
+    this.setState({ showDetails: id });
+  }
+
+  getSelectedEpisode = () => {
+    const { episodes, showDetails } = this.state;
+    return _.find(episodes, [`id`, showDetails]) || episodes[0];
+  };
+
+  setShowDetails = (id) => () => this.setState({ showDetails: id });
+
+  handlePlayButtonClick = (podcastURL) => () => {
+    const { isPlaying, url, setPodcastState, setPlayState } = this.context;
+
+    if (podcastURL === url) {
+      setPlayState(!isPlaying);
+    } else {
+      setPodcastState({ url: podcastURL });
+    }
+  };
+
+  renderEpisodeTab = (episode) => {
+    const { url } = this.context;
+    const {
+      id,
+      frontmatter: { title, podcastURL /* , date */ },
+    } = episode;
+    const { id: currentId } = this.getSelectedEpisode();
+    const selected = id === currentId;
+    const isCurrentEpisode = url === podcastURL;
+    return (
+      <EpisodeTab key={id} selected={selected}>
+        <TabButton
+          type="button"
+          selected={selected}
+          onClick={this.setShowDetails(id)}
+          title="Show episode details"
+        >
+          {title}
+        </TabButton>
+        {isCurrentEpisode ? (
+          <IconContainer>
+            <SpeakerIcon size={35} />
+          </IconContainer>
+        ) : (
+          <PlayButton
+            type="button"
+            onClick={this.handlePlayButtonClick(podcastURL)}
+          >
+            <PlayIcon size={30} />
+            <SrText>{`Listen to ${title}`}</SrText>
+          </PlayButton>
+        )}
+      </EpisodeTab>
+    );
+  };
+
+  renderEpisodes() {
+    const { episodes } = this.state;
+
+    return (
+      <EpisodesColumn>{_.map(episodes, this.renderEpisodeTab)}</EpisodesColumn>
+    );
+  }
+
+  renderSelectedEpisode() {
+    const {
+      html,
+      frontmatter: { title },
+    } = this.getSelectedEpisode();
+
+    return (
+      <CurrentEpisodeContainer>
+        <SelectedEpsiodeTitle>{title}</SelectedEpsiodeTitle>
+        <HTMLContent content={html} />
+      </CurrentEpisodeContainer>
+    );
+  }
+
+  render() {
+    const { data } = this.props;
+    const { title } = data.site.siteMetadata;
+    const { image, imageURL } = this.getSelectedEpisode().frontmatter;
+
+    return (
+      <>
+        <Helmet>
+          <title>{`Podcast Episodes | ${title}`}</title>
+        </Helmet>
+        <TitleBG image={image || imageURL}>
+          <Title>Podcast Archive</Title>
+        </TitleBG>
+        <Grid>
+          {this.renderEpisodes()}
+          {this.renderSelectedEpisode()}
+        </Grid>
+      </>
+    );
+  }
+}
+
+export const pageQuery = graphql`
+  query AllEpisodesQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    podcasts: allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { format: { eq: "audio" } } }
+    ) {
+      edges {
+        node {
+          id
+          html
+          frontmatter {
+            title
+            date(formatString: "DD MMMM YYYY")
+            image
+            imageURL
+            imageAlt
+            podcastURL
+          }
+        }
+      }
+    }
+  }
+`;

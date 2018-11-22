@@ -11,8 +11,10 @@ export function hexToRGBA(hex, alpha) {
 
 // When changing these colours, make sure to update the ones in colors.sass;
 export const white = `#F7F7F7`;
+export const primaryLight = `#5f9683`;
 export const primary = `#0a6b5f`;
 export const primaryDark = `#044f46`;
+export const offWhite = `#F2F2F2`;
 export const lightGrey = `#E9E9E9`;
 export const grey = `#D2D4C8`;
 export const darkGrey = `#4A4A4A`;

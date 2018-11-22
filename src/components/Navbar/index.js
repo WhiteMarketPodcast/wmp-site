@@ -4,6 +4,7 @@ import isEmpty from 'lodash/isEmpty';
 import { CloseIcon, MenuIcon } from 'mdi-react';
 import { SrText } from 'style/components';
 import logo from 'img/White-market-transp-logo.png';
+import { LINKS } from './constants';
 import { Button, Logo, LogoLink, Menu, MenuItem, Nav, NavLink } from './styled';
 
 class Navbar extends Component {
@@ -79,15 +80,11 @@ class Navbar extends Component {
   renderMenu() {
     return (
       <Menu pose={this.getPose()} initialPose="closed">
-        <MenuItem>
-          <NavLink to="/about">About</NavLink>
-        </MenuItem>
-        <MenuItem>
-          <NavLink to="/blog">Blog</NavLink>
-        </MenuItem>
-        <MenuItem>
-          <NavLink to="/fma-collection">FMA Collection</NavLink>
-        </MenuItem>
+        {LINKS.map(({ page, url }) => (
+          <MenuItem key={url}>
+            <NavLink to={url}>{page}</NavLink>
+          </MenuItem>
+        ))}
       </Menu>
     );
   }
