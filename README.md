@@ -1,54 +1,50 @@
-# Gatsby + Netlify CMS Starter
+# White Market Podcast's website
 
-**Note:** This starter uses the [Gatsby v2 Beta](https://www.gatsbyjs.org/blog/2018-06-16-announcing-gatsby-v2-beta-launch/).
+Welcome to the repo for the [White Market Podcast website](https://www.whitemarketpodcast.eu), built using the [Gatsby + Netlify CMS Starter](https://github.com/netlify-templates/gatsby-starter-netlify-cms). 🤗
 
-This repo contains an example business website that is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): **[Demo Link](https://gatsby-netlify-cms.netlify.com/)**.
+White Market Podcast is an open show dedicated to free music and free culture. 📻
 
-It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
+## How to get involved
 
-## Prerequisites
+If you want to get started quickly, check out our [open issues](https://github.com/WhiteMarketPodcast/WMP-website/issues). Feel free to comment or create an issue if you have any suggestions or if something is unclear.
 
-- Node (I recommend using v8.2.0 or higher)
-- [Gatsby CLI](https://www.gatsbyjs.org/docs/)
+Make sure you also read our [Code of Conduct](https://github.com/WhiteMarketPodcast/WMP-website/blob/master/CODE_OF_CONDUCT.md). If you submit any work here, we assume you read and accepted those rules.
 
-## Getting Started (Recommended)
+## Licenses
 
-Netlify CMS can run in any frontend web environment, but the quickest way to try it out is by running it on a pre-configured starter site with Netlify. The example here is the Kaldi coffee company template (adapted from [One Click Hugo CMS](https://github.com/netlify-templates/one-click-hugo-cms)). Use the button below to build and deploy your own copy of the repository:
+### The Content
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/AustinGreen/gatsby-starter-netlify-cms&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+Unless otherwise noted, this blog is published under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/). Individual tracks retain their original licences and may be more restrictive. Please refer to each original release page for more information.
 
-After clicking that button, you’ll authenticate with GitHub and choose a repository name. Netlify will then automatically create a repository in your GitHub account with a copy of the files from the template. Next, it will build and deploy the new site on Netlify, bringing you to the site dashboard when the build is complete. Next, you’ll need to set up Netlify’s Identity service to authorize users to log in to the CMS.
+### The Code
 
-### Access Locally
+The source code of this site is available under the [GNU GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) license.
+
 ```
-$ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
-$ cd [REPO_NAME]
-$ yarn
-$ npm run develop
-```
-To test the CMS locally, you'll need run a production build of the site:
-```
-$ npm run build
-$ npm run serve
-```
+Copyright (C) 2018 Ciaran Edwards
 
-## Getting Started (Without Netlify)
-```
-$ gatsby new [SITE_DIRECTORY_NAME] https://github.com/AustinGreen/gatsby-starter-netlify-cms/
-$ cd [SITE_DIRECTORY_NAME]
-$ npm run build
-$ npm run serve
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ```
 
-### Setting up the CMS
-Follow the [Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/#authentication) to set up authentication, and hosting.
+The MIT license used in the `Gatsby + Netlify CMS Starter` is included [here](https://github.com/WhiteMarketPodcast/WMP-website/blob/master/GATSBY-LICENSE).
 
-## Debugging
-Windows users might encounter ```node-gyp``` errors when trying to npm install.
-To resolve, make sure that you have both Python 2.7 and the Visual C++ build environment installed.
-```
-npm config set python python2.7
-npm install --global --production windows-build-tools
-```
+## Find out more about the show or get in touch:
 
-[Full details here](https://www.npmjs.com/package/node-gyp 'NPM node-gyp page')
+[Website](https://www.whitemarketpodcast.eu/) | Email: hello@whitemarketpodcast.eu
+
+[Facebook](https://www.facebook.com/whitemarketpodcast) | [Twitter](https://twitter.com/WhiteMarketCast) | [Mixcloud](https://www.mixcloud.com/whitemarketpodcast/)
+
+[iTunes](https://itunes.apple.com/gb/podcast/white-market-podcast/id1033024096) | [RSS feed](http://www.whitemarketpodcast.eu/rss.xml)
+
+[Archive.org](https://archive.org/details/@white_market_podcast) | [Free Music Archive](https://freemusicarchive.org/curator/programamarcabranca)

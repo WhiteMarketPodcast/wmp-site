@@ -62,7 +62,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
+  "license": "GPL-3.0",
   "main": "n/a",
   "scripts": {
     "start": "npm run develop",
