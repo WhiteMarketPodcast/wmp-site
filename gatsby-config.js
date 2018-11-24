@@ -24,7 +24,7 @@ module.exports = {
         short_name: `White Market`,
         start_url: `/`,
         background_color: `#F7F7F7`,
-        theme_color: `#0a6b5f`,
+        theme_color: `#257C6B`,
         display: `minimal-ui`,
         icon: `src/img/White_market_favicon.jpg`, // This path is relative to the root of the site.
       },
