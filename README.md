@@ -6,9 +6,9 @@ White Market Podcast is an open show dedicated to free music and free culture. ð
 
 ## How to get involved
 
-If you want to get started quickly, check out our [open issues](https://github.com/WhiteMarketPodcast/WMP-website/issues). Feel free to comment or create an issue if you have any suggestions or if something is unclear.
+If you want to get started quickly, check out our [open issues](https://github.com/WhiteMarketPodcast/wmp-site/issues). Feel free to comment or create an issue if you have any suggestions or if something is unclear.
 
-Make sure you also read our [Code of Conduct](https://github.com/WhiteMarketPodcast/WMP-website/blob/master/CODE_OF_CONDUCT.md). If you submit any work here, we assume you read and accepted those rules.
+Make sure you also read our [Code of Conduct](https://github.com/WhiteMarketPodcast/wmp-site/blob/master/CODE_OF_CONDUCT.md). If you submit any work here, we assume you read and accepted those rules.
 
 ## Licenses
 
@@ -21,7 +21,7 @@ Unless otherwise noted, this blog is published under a [Creative Commons Attribu
 The source code of this site is available under the [GNU GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) license.
 
 ```
-Copyright (C) 2018 Ciaran Edwards
+Copyright (C) 2018 White Market Podcast
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -37,7 +37,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ```
 
-The MIT license used in the `Gatsby + Netlify CMS Starter` is included [here](https://github.com/WhiteMarketPodcast/WMP-website/blob/master/GATSBY-LICENSE).
+The MIT license that came with the `Gatsby + Netlify CMS Starter` is included [here](https://github.com/WhiteMarketPodcast/wmp-site/blob/master/GATSBY-LICENSE).
 
 ## Find out more about the show or get in touch:
 
