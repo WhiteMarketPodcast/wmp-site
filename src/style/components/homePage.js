@@ -250,7 +250,6 @@ export const PodcastSection = styled.section`
     ),
     url(${({ bgImage }) => getImageURL({ image: bgImage })});
   min-height: 50vh;
-  padding: 1rem;
   width: 100%;
 
   @media (max-width: 575px) {
@@ -271,6 +270,24 @@ export const PodcastSection = styled.section`
       ),
       url(${({ bgImage }) => getImageURL({ image: bgImage, width: 1700 })});
   }
+`;
+
+export const PodcastPlayBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  padding: 1rem;
+`;
+
+export const SubscribeBox = styled.div`
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)
+  );
+  width: 100%;
 `;
 
 export const PodcastTextContainer = styled.div`
