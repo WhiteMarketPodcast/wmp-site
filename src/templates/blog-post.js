@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import React, { Component, Fragment } from 'react';
 import { array, func, node, string, shape, object } from 'prop-types';
-import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import { FaEnvelope, FaFacebook, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 import Link from 'components/Link';
@@ -10,7 +9,7 @@ import PlayButton from 'components/PlayButton';
 import VideoPlayer from 'components/VideoPlayer';
 import Content, { HTMLContent } from 'components/Content';
 import { SrText } from 'style/components';
-import { FacebookHelmet, TwitterHelmet } from 'components/Helmets';
+import PageHelmet from 'components/Helmets/PageHelmet';
 import {
   Hero,
   Title,
@@ -45,10 +44,8 @@ export class BlogPostTemplate extends Component {
   static propTypes = {
     content: node.isRequired,
     contentComponent: func,
-    description: string,
     format: string.isRequired,
     image: string,
-    imageAlt: string,
     imageURL: string,
     imageCredit: shape({
       licence: string,
@@ -207,40 +204,6 @@ export class BlogPostTemplate extends Component {
     );
   }
 
-  renderHelmet() {
-    const {
-      helmet,
-      title,
-      description,
-      image,
-      imageURL,
-      imageAlt,
-      siteUrl,
-      slug,
-    } = this.props;
-    const imageSrc = image || imageURL;
-    const commonMetaTags = { title, description, image: imageSrc };
-
-    if (!helmet) return null;
-
-    return (
-      <Fragment>
-        {helmet}
-        {description && (
-          <Helmet>
-            <meta name="description" content={description} />
-          </Helmet>
-        )}
-        <FacebookHelmet {...commonMetaTags} url={`${siteUrl}${slug}`} />
-        <TwitterHelmet
-          {...commonMetaTags}
-          imageAlt={imageAlt}
-          cardType="summary_large_image"
-        />
-      </Fragment>
-    );
-  }
-
   renderImageCredit() {
     const { imageCredit } = this.props;
     if (!_.isObject(imageCredit)) return null;
@@ -311,12 +274,12 @@ export class BlogPostTemplate extends Component {
   }
 
   render() {
-    const { content, contentComponent } = this.props;
+    const { content, contentComponent, helmet } = this.props;
     const PostContent = contentComponent || Content;
 
     return (
       <section>
-        {this.renderHelmet()}
+        {helmet}
         {this.renderTitle()}
         <Column>
           <div>
@@ -336,7 +299,7 @@ export class BlogPostTemplate extends Component {
 const BlogPost = ({ data, pageContext }) => {
   const {
     site: {
-      siteMetadata: { siteUrl, title },
+      siteMetadata: { siteUrl },
     },
     markdownRemark: {
       html,
@@ -344,12 +307,29 @@ const BlogPost = ({ data, pageContext }) => {
       fields: { slug },
     },
   } = data;
+  const {
+    title,
+    description,
+    image,
+    imageURL,
+    imageAlt,
+  } = frontmatter;
+  const imageSrc = image || imageURL;
 
   return (
     <BlogPostTemplate
       content={html}
       contentComponent={HTMLContent}
-      helmet={<Helmet title={`${frontmatter.title} | ${title}`} />}
+      helmet={(
+        <PageHelmet
+          pageTitle={title}
+          description={description}
+          path={slug}
+          image={imageSrc}
+          imageAlt={imageAlt}
+          largeTwitterCard
+        />
+      )}
       pageContext={pageContext}
       siteUrl={siteUrl}
       slug={slug}
@@ -398,7 +378,6 @@ export const pageQuery = graphql`
     }
     site {
       siteMetadata {
-        title
         siteUrl
       }
     }

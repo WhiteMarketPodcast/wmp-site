@@ -2,9 +2,9 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import { array, shape, string } from 'prop-types';
 import { graphql } from 'gatsby';
-import Helmet from 'react-helmet';
 import { HTMLContent } from 'components/Content';
 import PodcastContext from 'components/PodcastContext';
+import PageHelmet from 'components/Helmets/PageHelmet';
 import { SrText } from 'style/components';
 import {
   Grid,
@@ -20,6 +20,8 @@ import {
 } from 'style/components/podcastPage';
 import { PlayIcon, SpeakerIcon } from 'mdi-react';
 
+const pageTitle = `Podcast Archive`;
+const pageDescription = ``;
 export default class PodcastPage extends Component {
   static propTypes = {
     data: shape({
@@ -121,17 +123,18 @@ export default class PodcastPage extends Component {
   }
 
   render() {
-    const { data } = this.props;
-    const { title } = data.site.siteMetadata;
     const { image, imageURL } = this.getSelectedEpisode().frontmatter;
 
     return (
       <>
-        <Helmet>
-          <title>{`Podcast Episodes | ${title}`}</title>
-        </Helmet>
+        <PageHelmet
+          pageTitle={pageTitle}
+          description={pageDescription}
+          path="/podcast"
+        />
+
         <TitleBG image={image || imageURL}>
-          <Title>Podcast Archive</Title>
+          <Title>{pageTitle}</Title>
         </TitleBG>
         <Grid>
           {this.renderEpisodes()}
@@ -144,11 +147,6 @@ export default class PodcastPage extends Component {
 
 export const pageQuery = graphql`
   query AllEpisodesQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     podcasts: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { format: { eq: "audio" } } }

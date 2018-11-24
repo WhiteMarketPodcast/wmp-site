@@ -29,7 +29,7 @@ class TopLevelHelmet extends PureComponent {
       <Fragment>
         <Helmet>
           <html lang="en" />
-          <title>{`${title} | ${subtitle}"`}</title>
+          <title>{`${title} | ${subtitle}`}</title>
           <meta name="description" content={description} />
         </Helmet>
         <FacebookHelmet {...helmetProps} />

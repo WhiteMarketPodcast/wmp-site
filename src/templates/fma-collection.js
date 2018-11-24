@@ -2,8 +2,7 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import { array, func, node, object, string } from 'prop-types';
 import { graphql } from 'gatsby';
-import Helmet from 'react-helmet';
-import { FacebookHelmet, TwitterHelmet } from 'components/Helmets';
+import PageHelmet from 'components/Helmets/PageHelmet';
 import Content, { HTMLContent } from 'components/Content';
 import { TitleBG, Title, Section } from 'style/components/aboutPage';
 import {
@@ -109,7 +108,7 @@ const FMACollection = ({ data }) => {
   const {
     markdownRemark: post,
     site: {
-      siteMetadata: { title, siteLogo, siteUrl },
+      siteMetadata: { title },
     },
   } = data;
   const description = post.excerpt.replace(/\s{2}/g, ` `).replace(/\s\./g, `.`);
@@ -121,25 +120,13 @@ const FMACollection = ({ data }) => {
       title={post.frontmatter.title}
       collection={post.frontmatter.collection}
       content={post.html}
-      helmet={
-        <>
-          <Helmet>
-            <title>{pageTitle}</title>
-            <meta name="description" content={description} />
-          </Helmet>
-          <FacebookHelmet
-            title={pageTitle}
-            description={description}
-            url={`${siteUrl}/fma-collection`}
-            image={siteLogo}
-          />
-          <TwitterHelmet
-            title={pageTitle}
-            description={description}
-            image={siteLogo}
-          />
-        </>
-      }
+      helmet={(
+        <PageHelmet
+          pageTitle={pageTitle}
+          description={description}
+          path={post.fields.slug}
+        />
+      )}
     />
   );
 };
@@ -155,8 +142,6 @@ export const fmaCollectionQuery = graphql`
     site {
       siteMetadata {
         title
-        siteLogo
-        siteUrl
       }
     }
     markdownRemark(id: { eq: $id }) {
@@ -171,6 +156,9 @@ export const fmaCollectionQuery = graphql`
           genres
           url
         }
+      }
+      fields {
+        slug
       }
     }
   }

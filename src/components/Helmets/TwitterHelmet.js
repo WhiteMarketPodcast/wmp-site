@@ -38,9 +38,11 @@ class TwitterHelmet extends PureComponent {
         <meta name="twitter:card" content={cardType} />
         <meta name="twitter:site" content="@WhiteMarketCast" />
         <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description || ``} />
+        {description && (
+          <meta name="twitter:description" content={description} />
+        )}
         <meta name="twitter:image" content={imageURL} />
-        <meta name="twitter:image:imageAlt" content={imageAlt || ``} />
+        {imageAlt && <meta name="twitter:image:alt" content={imageAlt} />}
         {children}
       </Helmet>
     );
