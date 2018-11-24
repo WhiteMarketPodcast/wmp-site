@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { black, white, primary } from 'style/colors';
+import { white, primary } from 'style/colors';
 import { sansSerif } from 'style/fonts';
 import { onMobile } from 'style/mediaQueries';
 
@@ -16,15 +16,13 @@ export const Bar = styled.div`
     justify-content: center;
     align-items: center;
     color: ${white};
-    /* filter: saturate(0%); */
     font-weight: 500;
     line-height: 1;
     margin: 0 0.5rem;
-    transition: filter 0.2s ease;
 
     &:hover,
     &:focus {
-      /* filter: saturate(100%); */
+      filter: unset;
     }
 
     img,
@@ -53,7 +51,8 @@ export const Title = styled.h3`
   font-family: ${sansSerif};
   font-size: 0.8rem;
   font-weight: 500;
+  line-height: 1;
   margin: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
   text-transform: uppercase;
 `;

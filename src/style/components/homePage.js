@@ -282,11 +282,7 @@ export const PodcastPlayBox = styled.div`
 `;
 
 export const SubscribeBox = styled.div`
-  background-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.4)
-  );
+  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
 `;
 

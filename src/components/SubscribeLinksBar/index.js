@@ -2,13 +2,10 @@ import React, { PureComponent } from 'react';
 import { string } from 'prop-types';
 import Link from 'components/Link';
 import { StaticQuery, graphql } from 'gatsby';
-import { FaRss, FaItunes } from 'react-icons/fa';
+import { FaRss } from 'react-icons/fa';
 import { SrText } from 'style/components';
-import castboxLogo from 'assets/castbox.png';
-import itunesLogo from 'assets/itunes.png';
-import pocketCastsLogo from 'assets/pocket-casts.png';
+import { links } from './constants';
 import { Bar, Links, Title } from './styled';
-import PocketCasts from './PocketCasts';
 
 class SubscribeLinksBar extends PureComponent {
   static propTypes = {
@@ -22,36 +19,19 @@ class SubscribeLinksBar extends PureComponent {
 
     return (
       <Bar>
-        <Title>Subscribe</Title>
+        <Title>Ways to listen</Title>
         <Links>
-          <Link
-            to="https://itunes.apple.com/gb/podcast/white-market-podcast/id1033024096"
-            title="Subscribe in iTunes"
-          >
-            <img
-              src={itunesLogo}
-              alt="iTunes logo"
-              title="Subscribe in iTunes"
-            />
-            {/* <FaItunes /> */}
-            <SrText>Subscribe in iTunes</SrText>
-          </Link>
-          <Link to="https://castbox.fm/channel/White-Market-Podcast-id242607">
-            <img
-              src={castboxLogo}
-              alt="Castbox logo"
-              title="Subscribe in Castbox"
-            />
-            <SrText>Subscribe in Castbox</SrText>
-          </Link>
-          <Link to="https://pca.st/wfkj">
-            <img
-              src={pocketCastsLogo}
-              alt="Pocket Casts logo"
-              title="Subscribe in Pocket Casts"
-            />
-            <SrText>Subscribe in Pocket Casts</SrText>
-          </Link>
+          {links.map(({ provider, src, url }) => (
+            <Link key={provider} to={url} title={`Subscribe in ${provider}`}>
+              <img
+                src={src}
+                alt={`${provider} logo`}
+                title={`Subscribe in ${provider}`}
+              />
+              <SrText>{`Subscribe in ${provider}`}</SrText>
+            </Link>
+          ))}
+
           <Link to={`${siteUrl}/rss.xml`} title="Get the RSS feed" download>
             <FaRss />
             <SrText>Get the RSS feed</SrText>
