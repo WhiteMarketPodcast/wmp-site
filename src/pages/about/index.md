@@ -4,7 +4,7 @@ title: White Market Podcast
 ---
 **White Market Podcast** is an award-winning* show about **free music** and **free culture** by Rute Correia. While the show is mainly focused on **Creative Commons**-licensed music, since it is also naturally intertwined with other movements and ideologies such as **open source** and **open access**, it often features these and similar **forms of activism related to digital rights and freedoms**.
 
-**White Market Podcast** is a completely **independent, non-profit and volunteer-based project. **It is open to the community [via GitHub](https://github.com/WhiteMarketPodcast) and mostly kept by [Rute Correia](https://aariops.github.io/).
+**White Market Podcast** is a completely **independent, non-profit and volunteer-based project.** It is open to the community [via GitHub](https://github.com/WhiteMarketPodcast) and mostly kept by [Rute Correia](https://aariops.github.io/).
 
 Our promise to raise free culture awareness is also stated on [our collection on **Free Music Archive**](http://freemusicarchive.org/curator/programamarcabranca/). **White Market Podcast** has been a curator since 2012.
 
