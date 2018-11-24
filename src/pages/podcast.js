@@ -5,6 +5,7 @@ import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import { HTMLContent } from 'components/Content';
 import PodcastContext from 'components/PodcastContext';
+import SubscribeLinksBar from 'components/SubscribeLinksBar';
 import { SrText } from 'style/components';
 import {
   Grid,
@@ -16,6 +17,7 @@ import {
   PlayButton,
   IconContainer,
   TitleBG,
+  TitleContainer,
   Title,
 } from 'style/components/podcastPage';
 import { PlayIcon, SpeakerIcon } from 'mdi-react';
@@ -131,7 +133,10 @@ export default class PodcastPage extends Component {
           <title>{`Podcast Episodes | ${title}`}</title>
         </Helmet>
         <TitleBG image={image || imageURL}>
-          <Title>Podcast Archive</Title>
+          <TitleContainer>
+            <Title>Podcast Archive</Title>
+          </TitleContainer>
+          <SubscribeLinksBar />
         </TitleBG>
         <Grid>
           {this.renderEpisodes()}

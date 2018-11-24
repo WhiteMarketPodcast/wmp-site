@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { white, primary } from 'style/colors';
 import { sansSerif } from 'style/fonts';
-import { onMobile } from 'style/mediaQueries';
 
 export const Bar = styled.div`
   display: flex;
@@ -10,6 +9,7 @@ export const Bar = styled.div`
   flex-direction: column;
   color: ${white};
   padding: 1rem;
+  width: 100%;
 
   a {
     display: flex;
@@ -19,10 +19,12 @@ export const Bar = styled.div`
     font-weight: 500;
     line-height: 1;
     margin: 0 0.5rem;
+    filter: saturate(0%);
+    transition: all 0.2s ease;
 
     &:hover,
     &:focus {
-      filter: unset;
+      filter: saturate(100%);
     }
 
     img,
@@ -35,15 +37,14 @@ export const Bar = styled.div`
       margin-left: 0.5rem;
     }
   }
-  ${onMobile} {
-    /*  */
-  }
 `;
 
 export const Links = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  width: 100%;
+  max-width: 400px;
 `;
 
 export const Title = styled.h3`
@@ -53,6 +54,8 @@ export const Title = styled.h3`
   font-weight: 500;
   line-height: 1;
   margin: 0;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.8rem;
   text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  background-color: ${primary};
 `;

@@ -15,7 +15,6 @@ import {
   PostType,
   DateText,
   FlexCenter,
-  FlexCenterWithMargin,
   LinkButton,
   PodcastSection,
   PodcastTextContainer,
@@ -23,7 +22,7 @@ import {
   PodcastTitle,
   BrandH2,
   PodcastPlayBox,
-  SubscribeBox,
+  SeeMoreContainer,
 } from 'style/components';
 import { formatConverter } from 'utils';
 
@@ -77,9 +76,7 @@ export default class IndexPage extends Component {
             screenReaderText="Listen to the latest session"
           />
         </PodcastPlayBox>
-        <SubscribeBox>
-          <SubscribeLinksBar />
-        </SubscribeBox>
+        <SubscribeLinksBar />
       </PodcastSection>
     );
   }
@@ -117,9 +114,9 @@ export default class IndexPage extends Component {
           {_.map(posts, this.renderPost)}
         </BlogPostPreviewGrid>
 
-        <FlexCenterWithMargin>
+        <SeeMoreContainer>
           <LinkButton to="/blog/">See more posts</LinkButton>
-        </FlexCenterWithMargin>
+        </SeeMoreContainer>
       </section>
     );
   }
