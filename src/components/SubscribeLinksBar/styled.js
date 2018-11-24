@@ -47,11 +47,12 @@ export const Links = styled.div`
   max-width: 400px;
 `;
 
-export const Title = styled.h3`
+export const Title = styled.div`
   color: ${white};
   font-family: ${sansSerif};
   font-size: 0.8rem;
   font-weight: 500;
+  letter-spacing: 1px;
   line-height: 1;
   margin: 0;
   margin-bottom: 0.8rem;
