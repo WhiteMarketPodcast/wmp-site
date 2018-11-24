@@ -18,6 +18,10 @@ export const PaddedSection = styled.section`
   }
 `;
 
+export const PaddedTopBottom = styled.section`
+  padding: 2rem 0;
+`;
+
 export const FlexCenter = styled.div`
   display: flex;
   justify-content: center;

@@ -4,6 +4,7 @@ import { array, shape, string } from 'prop-types';
 import { graphql, Link } from 'gatsby';
 import Helmet from 'react-helmet';
 import PlayButton from 'components/PlayButton';
+import SubscribeLinksBar from 'components/SubscribeLinksBar';
 import PodcastContext from 'components/PodcastContext';
 import {
   BlogPostPreviewGrid,
@@ -14,13 +15,14 @@ import {
   PostType,
   DateText,
   FlexCenter,
-  FlexCenterWithMargin,
   LinkButton,
   PodcastSection,
   PodcastTextContainer,
   PodcastSmallText,
   PodcastTitle,
   BrandH2,
+  PodcastPlayBox,
+  SeeMoreContainer,
 } from 'style/components';
 import { formatConverter } from 'utils';
 
@@ -61,17 +63,20 @@ export default class IndexPage extends Component {
 
     return (
       <PodcastSection bgImage={image || imageURL}>
-        <PodcastTextContainer>
-          <PodcastSmallText>Latest session</PodcastSmallText>
-          <Link to={slug}>
-            <PodcastTitle>{title}</PodcastTitle>
-          </Link>
-        </PodcastTextContainer>
-        <PlayButton
-          isPlaying={url === podcastURL && isPlaying}
-          onClick={this.handlePlayButtonClick}
-          screenReaderText="Listen to the latest session"
-        />
+        <PodcastPlayBox>
+          <PodcastTextContainer>
+            <PodcastSmallText>Latest session</PodcastSmallText>
+            <Link to={slug}>
+              <PodcastTitle>{title}</PodcastTitle>
+            </Link>
+          </PodcastTextContainer>
+          <PlayButton
+            isPlaying={url === podcastURL && isPlaying}
+            onClick={this.handlePlayButtonClick}
+            screenReaderText="Listen to the latest session"
+          />
+        </PodcastPlayBox>
+        <SubscribeLinksBar />
       </PodcastSection>
     );
   }
@@ -109,9 +114,9 @@ export default class IndexPage extends Component {
           {_.map(posts, this.renderPost)}
         </BlogPostPreviewGrid>
 
-        <FlexCenterWithMargin>
+        <SeeMoreContainer>
           <LinkButton to="/blog/">See more posts</LinkButton>
-        </FlexCenterWithMargin>
+        </SeeMoreContainer>
       </section>
     );
   }

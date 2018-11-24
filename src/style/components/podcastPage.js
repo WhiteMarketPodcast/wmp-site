@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { getImageURL } from 'utils/images';
-import { FlexCenter, BrandH1 } from 'style/components';
+import { FlexCenterColumn, BrandH1 } from 'style/components';
 import {
   primary,
   primaryLight,
@@ -11,15 +11,13 @@ import {
 } from 'style/colors';
 import { onMobile } from 'style/mediaQueries';
 
-export const TitleBG = styled(FlexCenter)`
+export const TitleBG = styled(FlexCenterColumn)`
   background-color: ${black};
   background-image:
     linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
     url("${({ image }) => getImageURL({ image })}");
   background-position: center;
   background-size: cover;
-  min-height: 33vh;
-  padding: 5rem 2rem;
   text-align: center;
   width: 100%;
 
@@ -27,7 +25,15 @@ export const TitleBG = styled(FlexCenter)`
     background-image:
       linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
       url("${({ image }) => getImageURL({ image, width: 600 })}");
-    padding: 3rem 1rem;
+  }
+`;
+
+export const TitleContainer = styled(FlexCenterColumn)`
+  min-height: 25vh;
+  padding: 5rem 1rem 2rem 1rem;
+
+  ${onMobile} {
+    padding: 3rem 1rem 1rem 1rem;
   }
 `;
 

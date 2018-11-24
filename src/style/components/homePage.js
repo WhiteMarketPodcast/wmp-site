@@ -234,6 +234,7 @@ export const DateText = styled.div`
   }
 `;
 
+const linearGradient = `linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.4))`;
 export const PodcastSection = styled.section`
   display: flex;
   justify-content: center;
@@ -243,34 +244,30 @@ export const PodcastSection = styled.section`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ),
+  background-image: ${linearGradient},
     url(${({ bgImage }) => getImageURL({ image: bgImage })});
   min-height: 50vh;
-  padding: 1rem;
   width: 100%;
 
   @media (max-width: 575px) {
     min-height: 400px;
-    background-image: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.4)
-      ),
+    background-image: ${linearGradient},
       url(${({ bgImage }) => getImageURL({ image: bgImage, width: 600 })});
   }
 
   ${onMassiveScreen} {
-    background-image: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.4)
-      ),
+    background-image: ${linearGradient},
       url(${({ bgImage }) => getImageURL({ image: bgImage, width: 1700 })});
   }
+`;
+
+export const PodcastPlayBox = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  padding: 3rem 1rem 1rem 1rem;
 `;
 
 export const PodcastTextContainer = styled.div`
@@ -310,4 +307,16 @@ export const PodcastTitle = styled.h3`
 export const PlyrContainer = styled.div`
   width: 50ch;
   max-width: 100%;
+`;
+
+export const SeeMoreContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 1rem;
+  padding: 2rem 0;
+
+  ${onMobile} {
+    padding: 1.5rem 0;
+  }
 `;
