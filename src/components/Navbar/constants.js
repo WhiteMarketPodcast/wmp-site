@@ -6,4 +6,5 @@ export const LINKS = [
   { page: `Blog`, url: `/blog` },
   { page: `FMA Collection`, url: `/fma-collection` },
   { page: `About`, url: `/about` },
+  { page: `Partners`, url: `/partners` },
 ];

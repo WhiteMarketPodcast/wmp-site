@@ -161,11 +161,24 @@ collections:
               label: 'Template Key',
               name: 'templateKey',
               widget: 'hidden',
-              default: 'standard-page',
+              default: 'partners-page',
             }
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Description', name: 'description', widget: 'string', required: false }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
+          - { label: 'Introduction text', name: 'body', widget: markdown }
+          - { label: 'Partners list', name: 'partners', widget: 'list', fields:
+            [
+              { label: 'Name', name: name, widget: string },
+              { label: 'Description', name: description, widget: string },
+              { label: 'Logo', name: image, widget: image },
+              { label: 'URL', name: url, widget: string },
+            ]
+            }
+          - {
+              label: 'Meta Description',
+              name: 'metaDescription',
+              widget: 'string',
+              required: false
+            }
       - file: 'src/pages/fma-collection/index.md'
         label: 'FMA Collection'
         name: 'fma-collection'

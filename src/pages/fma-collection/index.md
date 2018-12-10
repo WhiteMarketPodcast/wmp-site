@@ -3,7 +3,7 @@ templateKey: fma-collection
 title: FMA Collection
 collection:
   - artist: Monster Jinx
-    title: Monster Jinx Beat Camp #01
+    title: 'Monster Jinx Beat Camp #01'
     genres:
       - electronic
       - alternative hip-hop

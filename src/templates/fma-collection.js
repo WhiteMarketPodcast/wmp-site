@@ -107,12 +107,9 @@ export class FMACollectionTemplate extends Component {
 const FMACollection = ({ data }) => {
   const {
     markdownRemark: post,
-    site: {
-      siteMetadata: { title },
-    },
   } = data;
   const description = post.excerpt.replace(/\s{2}/g, ` `).replace(/\s\./g, `.`);
-  const pageTitle = `${post.frontmatter.title} | ${title}`;
+  const { title } = post.frontmatter;
 
   return (
     <FMACollectionTemplate
@@ -122,7 +119,7 @@ const FMACollection = ({ data }) => {
       content={post.html}
       helmet={(
         <PageHelmet
-          pageTitle={pageTitle}
+          pageTitle={title}
           description={description}
           path={post.fields.slug}
         />
@@ -139,11 +136,6 @@ export default FMACollection;
 
 export const fmaCollectionQuery = graphql`
   query FMACollection($id: String!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     markdownRemark(id: { eq: $id }) {
       html
       excerpt(pruneLength: 5000)
