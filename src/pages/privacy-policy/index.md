@@ -1,5 +1,5 @@
 ---
-templateKey: 'privacy-policy'
+templateKey: 'standard-page'
 path: /privacy-policy
 title: Privacy Policy
 ---
