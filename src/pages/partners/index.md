@@ -2,6 +2,7 @@
 templateKey: 'partners-page'
 path: /partners
 title: Partners
+metaDescription: ''
 partners:
   - name: starfrosch
     description: 'No Copyright, royalty free music for your projects, gifted by attention seeking or generous artists.'

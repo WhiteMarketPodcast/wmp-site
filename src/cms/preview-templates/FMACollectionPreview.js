@@ -6,6 +6,7 @@ import injectStyle from '../injectStyle';
 const FMACollectionPreview = ({ entry, widgetFor }) => (
   <FMACollectionTemplate
     title={entry.getIn(['data', 'title'])}
+    collection={entry.getIn(['data', 'collection'])}
     content={widgetFor('body')}
   />
 );

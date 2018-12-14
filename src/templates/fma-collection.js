@@ -105,9 +105,7 @@ export class FMACollectionTemplate extends Component {
 }
 
 const FMACollection = ({ data }) => {
-  const {
-    markdownRemark: post,
-  } = data;
+  const { markdownRemark: post } = data;
   const description = post.excerpt.replace(/\s{2}/g, ` `).replace(/\s\./g, `.`);
   const { title } = post.frontmatter;
 

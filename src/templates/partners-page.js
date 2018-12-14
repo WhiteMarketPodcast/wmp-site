@@ -62,7 +62,7 @@ export class PartnersPageTemplate extends Component {
 
 const PartnersPage = ({ data }) => {
   const { markdownRemark: post } = data;
-  const { title, description, partners } = post.frontmatter;
+  const { title, metaDescription, partners } = post.frontmatter;
 
   return (
     <PartnersPageTemplate
@@ -73,7 +73,7 @@ const PartnersPage = ({ data }) => {
       helmet={(
         <PageHelmet
           pageTitle={title}
-          description={description}
+          description={metaDescription}
           path={post.fields.slug}
         />
       )}
@@ -94,6 +94,7 @@ export const PartnersPageQuery = graphql`
       excerpt(pruneLength: 5000)
       frontmatter {
         title
+        metaDescription
         partners {
           name
           description

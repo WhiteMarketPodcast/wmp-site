@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { PrivacyPolicyTemplate } from 'templates/privacy-policy';
+import { StandardPageTemplate } from 'templates/standard-page';
 import injectStyle from '../injectStyle';
 
 const PrivacyPolicyPreview = ({ entry, widgetFor }) => (
-  <PrivacyPolicyTemplate
+  <StandardPageTemplate
     title={entry.getIn(['data', 'title'])}
     content={widgetFor('body')}
   />

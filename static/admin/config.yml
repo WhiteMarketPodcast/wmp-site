@@ -176,7 +176,7 @@ collections:
           - {
               label: 'Meta Description',
               name: 'metaDescription',
-              widget: 'string',
+              widget: 'text',
               required: false
             }
       - file: 'src/pages/fma-collection/index.md'
@@ -187,7 +187,7 @@ collections:
               label: 'Template Key',
               name: 'templateKey',
               widget: 'hidden',
-              default: 'privacy-policy',
+              default: 'fma-collection',
             }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
