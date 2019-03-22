@@ -39,7 +39,7 @@ You can do it by:
 
 ## So, what is so wrong about this proposed Copyright Directive?
 
-The two main issues are article 11 and article 13 (which now has been officially numbered as article 17), but tragically they’re not alone. 
+The two main issues are article 11 and article 13 (*which now has been officially numbered as article 17*), but tragically they’re not alone. 
 
 Article 13 proposes automatic filters that scan content upon uploading, establishing censorship machines to detect copyright infringing content. Such technology already exists and is used by mega platforms, like YouTube, but for now it’s put in place after publishing. To instate such filters prior to publishing is “[inconsistent with human rights standards](https://www.ohchr.org/EN/NewsEvents/Pages/DisplayNews.aspx?NewsID=24298&)”. These are not my words. They’re a quote by David Kaye, UN Special Rapporteur on freedom of expression, one of the many specialists that has spoken against such measure. Like him, many [civil society organisations](https://www.liberties.eu/en/news/delete-article-thirteen-open-letter/13194), [programmers](https://savecodeshare.eu/), [academics](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3054967) and even [some MEPs](https://pledge2019.eu) are standing together against Article 13.
 
