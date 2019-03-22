@@ -177,7 +177,11 @@ async function createEpisodes(site, allMarkdownRemark) {
       guid: url,
       enclosure: { url: podcastURL, size, type: 'audio/mpeg' },
       custom_elements: [
-        { 'content:encoded': html },
+        {
+          'content:encoded': useArchiveDescription
+            ? archiveDetails.description
+            : html,
+        },
 
         // Google fields
         { 'googleplay:author': owner },
