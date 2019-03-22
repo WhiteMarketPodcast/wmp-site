@@ -4,10 +4,10 @@ import { primaryDark, lightGrey, primary } from './colors';
 
 const GlobalStyle = createGlobalStyle`
   html {
-    font-size: 18px;
+    font-size: 17px;
     
-    ${onMobile} { font-size: 18px; }
-    ${onDesktop} { font-size: 19px; }
+    ${onMobile} { font-size: 17px; }
+    ${onDesktop} { font-size: 18px; }
     @media screen and (min-width: 1400px) { font-size: 20px; }
   }
 
