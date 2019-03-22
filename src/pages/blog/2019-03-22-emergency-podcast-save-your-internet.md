@@ -80,11 +80,12 @@ It will take place next week at the European Parliament, on the 26th or the 27th
 
 - - -
 
-#### _Podcast credits_
+#### _Podcast info and credits:_
 
-This text and the podcast contain excerpts from Julia Reda's website and the Save Your Internet campaign by EDRI.
+- FLAC version available for download on [Archive.org](https://archive.org/details/EmergencyPodcastSaveYourInternet)
+- This text and the podcast contain excerpts from Julia Reda's website and the Save Your Internet campaign by EDRI
+- All used tracks licensed under [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)
 
-_All songs licensed under [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)_
+*Lee Rosevere - "[It Was Like That When I Got Here](http://freemusicarchive.org/music/Lee_Rosevere/Music_For_Podcasts_6/Lee_Rosevere_-_Music_For_Podcasts_6_-_11_It_Was_Like_That_When_I_Got_Here)" & "[We Don't Know How it Ends](http://freemusicarchive.org/music/Lee_Rosevere/Music_For_Podcasts_6/Lee_Rosevere_-_Music_For_Podcasts_6_-_17_We_Dont_Know_How_it_Ends)"*
 
-Lee Rosevere - "[It Was Like That When I Got Here](http://freemusicarchive.org/music/Lee_Rosevere/Music_For_Podcasts_6/Lee_Rosevere_-_Music_For_Podcasts_6_-_11_It_Was_Like_That_When_I_Got_Here)" & "[We Don't Know How it Ends](http://freemusicarchive.org/music/Lee_Rosevere/Music_For_Podcasts_6/Lee_Rosevere_-_Music_For_Podcasts_6_-_17_We_Dont_Know_How_it_Ends)"
-Six Umbrellas - "[Rise](http://freemusicarchive.org/music/Six_Umbrellas/Ad_Astra/02_Six_Umbrellas_-_Rise)" & "[Sparks](http://freemusicarchive.org/music/Six_Umbrellas/Ad_Astra/10_Six_Umbrellas_-_Sparks)"
+*Six Umbrellas - "[Rise](http://freemusicarchive.org/music/Six_Umbrellas/Ad_Astra/02_Six_Umbrellas_-_Rise)" & "[Sparks](http://freemusicarchive.org/music/Six_Umbrellas/Ad_Astra/10_Six_Umbrellas_-_Sparks)"*
