@@ -24,7 +24,7 @@ import {
   PodcastPlayBox,
   SeeMoreContainer,
 } from 'style/components';
-import { formatConverter } from 'utils';
+import { formatConverter, isFirstPostPodcast } from 'utils';
 
 export default class IndexPage extends Component {
   static propTypes = {
@@ -102,7 +102,8 @@ export default class IndexPage extends Component {
 
   renderPosts() {
     const { data } = this.props;
-    const { edges: posts } = data.posts;
+    const { edges } = data.posts;
+    const posts = isFirstPostPodcast(edges) ? _.tail(edges) : _.take(edges, 8);
 
     return (
       <section>
@@ -155,7 +156,7 @@ export const pageQuery = graphql`
     posts: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
-      limit: 8
+      limit: 9
     ) {
       edges {
         node {

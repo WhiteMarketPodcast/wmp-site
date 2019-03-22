@@ -12,3 +12,7 @@ export const licenceURLs = {
   'CC BY-NC-SA': `https://creativecommons.org/licenses/by-nc-sa/4.0/`,
   'CC BY-NC-ND': `https://creativecommons.org/licenses/by-nc-nd/4.0/`,
 };
+
+export function isFirstPostPodcast(posts) {
+  return posts[0].node.frontmatter.format === 'audio';
+}

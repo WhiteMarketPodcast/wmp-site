@@ -250,7 +250,7 @@ export const PodcastSection = styled.section`
   width: 100%;
 
   @media (max-width: 575px) {
-    min-height: 400px;
+    min-height: 500px;
     background-image: ${linearGradient},
       url(${({ bgImage }) => getImageURL({ image: bgImage, width: 600 })});
   }
