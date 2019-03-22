@@ -116,14 +116,8 @@ export const BlogContent = styled(SlideUp)`
     margin-right: auto;
   }
 
-  ul,
-  li {
-    max-width: 45ch;
-  }
-
-  p,
-  small {
-    max-width: 50ch;
+  > * {
+    max-width: 70ch;
   }
 
   img {

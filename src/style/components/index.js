@@ -7,7 +7,7 @@ export const PaddedSection = styled.section`
   margin: 0 auto;
   padding: 2rem;
   padding-top: 0;
-  max-width: 60ch;
+  max-width: 70ch;
 
   ${onMobile} {
     padding: 0 1rem 2rem 1rem;

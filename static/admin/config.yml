@@ -33,7 +33,7 @@ collections:
           label: 'Post type',
           name: 'format',
           widget: 'select',
-          options: ['standard', 'podcast', 'audio', 'video'],
+          options: ['standard', 'audio', 'video'],
           default: 'standard',
         }
       - {

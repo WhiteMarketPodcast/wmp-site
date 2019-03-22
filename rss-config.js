@@ -10,7 +10,7 @@ const ARCHIVE_ORG_BASE_URL = `https://archive.org/details/`;
 const getArchiveDetailsURL = (podcastURL) => `${ARCHIVE_ORG_BASE_URL}${
   podcastURL.replace(/.*\/download\//, '').split('/')[0]
 }?output=json`;
-const getMp3FromURL = (url) => _.last(url.split('/'));
+const getMp3FromURL = (url) => decodeURIComponent(_.last(url.split('/')));
 
 function deleteLocalFile(filepath) {
   fs.unlink(filepath, (err) => {
