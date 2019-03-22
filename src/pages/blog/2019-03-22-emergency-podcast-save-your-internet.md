@@ -8,7 +8,7 @@ description: >-
 
   Next week, MEPs will vote on the Copyright Directive in the European
   Parliament, but you can still help out saving the internet.
-format: podcast
+format: audio
 image: /img/braden-hopkins-251378-unsplash.jpg
 imageAlt: exit sign
 imageCredit:
@@ -19,7 +19,8 @@ imageCredit:
 podcastURL: >-
   https://archive.org/download/EmergencyPodcastSaveYourInternet/Emergency%20Podcast%20-%20Save%20your%20Internet.mp3
 useArchiveDescription: true
-categories: []
+categories:
+  - ''
 tags:
   - copyright reform
   - save your internet
