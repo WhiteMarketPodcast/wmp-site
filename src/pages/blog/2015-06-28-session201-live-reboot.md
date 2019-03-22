@@ -7,7 +7,7 @@ imageURL: >-
 format: audio
 useArchiveDescription: false
 podcastURL: >-
-  https://archive.org/28/items/WhiteMarket20150628Session201_201508/WhiteMarket-20150628-Session201.mp3
+  https://archive.org/download/WhiteMarket20150628Session201_201508/WhiteMarket-20150628-Session201.mp3
 tags:
   - aaahh records
   - Bandcamp

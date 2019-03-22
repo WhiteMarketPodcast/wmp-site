@@ -7,7 +7,9 @@ const mp3Duration = require('mp3-duration');
 
 const writeFile = pify(fs.writeFile);
 const ARCHIVE_ORG_BASE_URL = `https://archive.org/details/`;
-const getArchiveURL = (id) => `${ARCHIVE_ORG_BASE_URL}${id}?output=json`;
+const getArchiveDetailsURL = (podcastURL) => `${ARCHIVE_ORG_BASE_URL}${
+  podcastURL.replace(/.*\/download\//, '').split('/')[0]
+}?output=json`;
 const getMp3FromURL = (url) => _.last(url.split('/'));
 
 function deleteLocalFile(filepath) {
@@ -24,11 +26,10 @@ function convertSecondsToTime(seconds) {
     .split('.')[0];
 }
 
-async function callArchiveAPI(mp3Path, isFirstAttempt) {
-  let mp3Id = mp3Path.split(`.`)[0];
-  if (isFirstAttempt) mp3Id = mp3Id.replace(/\W/g, '');
+async function callArchiveAPI(podcastURL) {
+  const mp3Path = getMp3FromURL(podcastURL);
 
-  const response = await fetch(getArchiveURL(mp3Id));
+  const response = await fetch(getArchiveDetailsURL(podcastURL));
   const json = await response.json();
 
   const { description } = json.metadata;
@@ -42,20 +43,13 @@ async function callArchiveAPI(mp3Path, isFirstAttempt) {
 }
 
 async function getDetailsFromArchive(podcastURL) {
-  const mp3Path = getMp3FromURL(podcastURL);
   try {
-    const details = await callArchiveAPI(mp3Path, true);
+    const details = await callArchiveAPI(podcastURL);
     return details;
-  } catch (firstError) {
-    try {
-      const details = await callArchiveAPI(mp3Path, false);
-      return details;
-    } catch (secondError) {
-      console.log(`!!! failed: ${podcastURL}`);
-      console.log(`First error:`, firstError.toString());
-      console.log(`Second error:`, secondError.toString());
-      return {};
-    }
+  } catch (error) {
+    console.log(`!!! failed: ${podcastURL}`);
+    console.log(`Error:`, error.toString());
+    return {};
   }
 }
 
