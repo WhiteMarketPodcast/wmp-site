@@ -27,10 +27,18 @@ function convertSecondsToTime(seconds) {
 async function callArchiveAPI(mp3Path, isFirstAttempt) {
   let mp3Id = mp3Path.split(`.`)[0];
   if (isFirstAttempt) mp3Id = mp3Id.replace(/\W/g, '');
+
   const response = await fetch(getArchiveURL(mp3Id));
   const json = await response.json();
+
+  const { description } = json.metadata;
   const { size, length } = json.files[`/${mp3Path}`];
-  return { size, duration: convertSecondsToTime(length) };
+
+  return {
+    size,
+    duration: convertSecondsToTime(length),
+    description,
+  };
 }
 
 async function getDetailsFromArchive(podcastURL) {
@@ -151,18 +159,23 @@ async function createEpisodes(site, allMarkdownRemark) {
 
   return allMarkdownRemark.edges.map(async ({ node }) => {
     const { frontmatter, fields, excerpt, html } = node;
-    const { podcastURL, title } = frontmatter;
+    const { useArchiveDescription, podcastURL, title } = frontmatter;
     const url = siteUrl + fields.slug;
-    const description = excerpt
-      .replace(/\s{2,}/g, ` `)
-      .replace(/\s,/g, `,`)
-      .replace(/\s\./g, `.`);
 
-    console.log(`~~~ getting ${title} info`);
-    let { size, duration } = await getDetailsFromArchive(podcastURL);
+    console.log(`~~~ getting ${title} info\n`);
+    const archiveDetails = await getDetailsFromArchive(podcastURL);
+    let { size, duration } = archiveDetails;
+
     if (!size) size = await getFileSize(podcastURL);
     if (!duration) duration = await getDuration(podcastURL);
-    console.log(`~~~ finished ${title}`);
+    console.log(`~~~ finished ${title}\n`);
+
+    const description = useArchiveDescription
+      ? archiveDetails.description
+      : excerpt
+        .replace(/\s{2,}/g, ` `)
+        .replace(/\s,/g, `,`)
+        .replace(/\s\./g, `.`);
 
     return Object.assign({}, frontmatter, {
       description,
@@ -233,6 +246,7 @@ const podcastQuery = `
             title
             date
             podcastURL
+            useArchiveDescription
           }
         }
       }

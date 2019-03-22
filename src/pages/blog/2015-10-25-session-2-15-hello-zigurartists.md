@@ -5,7 +5,7 @@ date: 2015-10-25T21:00:56.000Z
 imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/10/ZigurArtistsBanner.png'
 imageAlt: 'Zigur-Artists-Banner'
 format: 'audio'
-podcastURL: https://media.blubrry.com/white_market/s/ia601505.us.archive.org/13/items/WhiteMarketSession215Zigurartists/WhiteMarket-Session215-zigurartists.mp3
+podcastURL: https://archive.org/13/items/WhiteMarketSession215Zigurartists/WhiteMarket-Session215-zigurartists.mp3
 categories:
   - 'Interviews'
   - 'Podcasts'

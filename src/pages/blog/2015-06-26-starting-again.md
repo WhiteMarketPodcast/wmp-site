@@ -5,6 +5,7 @@ description: ''
 date: 2015-06-26T11:38:21.000Z
 image: ''
 imageURL: https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/Norton-Kersche-Remixed-album-cover.jpg
+useArchiveDescription: false
 format: standard
 categories:
   - Blog

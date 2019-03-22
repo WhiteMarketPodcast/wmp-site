@@ -117,6 +117,13 @@ collections:
           required: false,
         }
       - {
+          label: 'Use archive.org for podcast description',
+          name: 'useArchiveDescription',
+          widget: 'boolean',
+          default: false,
+          required: false,
+        }
+      - {
           label: 'Video URL',
           name: 'videoURL',
           widget: 'string',
