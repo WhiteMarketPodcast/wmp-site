@@ -80,7 +80,9 @@ It will take place next week at the European Parliament, on the 26th or the 27th
 
 - - -
 
-#### _Podcast credits_
+#### _Podcast credits & info_
+
+Download the FLAC version on [Archive.org](https://archive.org/details/EmergencyPodcastSaveYourInternet).
 
 This text and the podcast contain excerpts from Julia Reda's website and the Save Your Internet campaign by EDRI.
 
