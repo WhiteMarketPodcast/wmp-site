@@ -136,6 +136,10 @@ export const CurrentEpisodeContainer = styled.div`
     border: 0;
     padding: 2rem 1rem;
   }
+
+  * {
+    max-width: 100%;
+  }
 `;
 
 export const SelectedEpsiodeTitle = styled.h2`
