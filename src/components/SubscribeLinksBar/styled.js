@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { white, primary } from 'style/colors';
 import { sansSerif } from 'style/fonts';
+import { onMobile } from 'style/mediaQueries';
 
 export const Bar = styled.div`
   display: flex;
@@ -31,6 +32,11 @@ export const Bar = styled.div`
     svg {
       font-size: 35px;
       height: 35px;
+
+      ${onMobile} {
+        font-size: 24px;
+        height: 24px;
+      }
     }
 
     span {
