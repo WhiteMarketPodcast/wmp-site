@@ -7,11 +7,12 @@ import {
   FaTwitter,
   FaRss,
   FaMixcloud,
-  FaItunes,
+  FaPodcast,
   FaGithub,
   FaCreativeCommons,
   FaCreativeCommonsBy,
   FaCreativeCommonsSa,
+  FaSpotify,
 } from 'react-icons/fa';
 import Link from 'components/Link';
 import { SrText } from 'style/components';
@@ -33,6 +34,7 @@ import {
   mixcloudScreenReaderText,
   itunesScreenReaderText,
   githubScreenReaderText,
+  spotifyScreenReaderText,
 } from './utils';
 
 class Footer extends Component {
@@ -110,19 +112,27 @@ class Footer extends Component {
             </SocialLink>
 
             <SocialLink
-              className="mixcloud"
-              to="https://www.mixcloud.com/whitemarketpodcast/"
+              className="spotify"
+              to="https://open.spotify.com/show/4o2iPfNaRrP73gWsmQ7yF3?si=CoK9hmBnQHSb1MQVuluNcQ"
             >
-              <FaMixcloud size="1.7em" />
-              <SrText>{mixcloudScreenReaderText}</SrText>
+              <FaSpotify size="1.4em" />
+              <SrText>{spotifyScreenReaderText}</SrText>
             </SocialLink>
 
             <SocialLink
               className="itunes"
               to="https://itunes.apple.com/gb/podcast/white-market-podcast/id1033024096"
             >
-              <FaItunes size="1.4em" />
+              <FaPodcast size="1.4em" />
               <SrText>{itunesScreenReaderText}</SrText>
+            </SocialLink>
+
+            <SocialLink
+              className="mixcloud"
+              to="https://www.mixcloud.com/whitemarketpodcast/"
+            >
+              <FaMixcloud size="1.7em" />
+              <SrText>{mixcloudScreenReaderText}</SrText>
             </SocialLink>
 
             <SocialLink

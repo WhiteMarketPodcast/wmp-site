@@ -21,21 +21,55 @@ class SubscribeLinksBar extends PureComponent {
       <Bar>
         <Title>Ways to listen</Title>
         <Links>
-          {links.map(({ provider, src, url }) => (
-            <Link key={provider} to={url} title={`Subscribe in ${provider}`}>
-              <img
-                src={src}
-                alt={`${provider} logo`}
-                title={`Subscribe in ${provider}`}
-              />
-              <SrText>{`Subscribe in ${provider}`}</SrText>
+          {links.left.map(({ Icon, provider, src, url, style = {} }) => (
+            <Link
+              key={provider}
+              to={url}
+              title={`Subscribe on ${provider}`}
+              style={style}
+            >
+              {Icon ? (
+                <Icon />
+              ) : (
+                <img
+                  src={src}
+                  alt={`${provider} logo`}
+                  title={`Subscribe on ${provider}`}
+                />
+              )}
+              <SrText>{`Subscribe on ${provider}`}</SrText>
             </Link>
           ))}
 
-          <Link to={`${siteUrl}/rss.xml`} title="Get the RSS feed" download>
+          <Link
+            to={`${siteUrl}/rss.xml`}
+            style={{ color: '#f26522' }}
+            title="Get the RSS feed"
+            download
+          >
             <FaRss />
             <SrText>Get the RSS feed</SrText>
           </Link>
+
+          {links.right.map(({ Icon, provider, src, url, style = {} }) => (
+            <Link
+              key={provider}
+              to={url}
+              title={`Subscribe on ${provider}`}
+              style={style}
+            >
+              {Icon ? (
+                <Icon />
+              ) : (
+                <img
+                  src={src}
+                  alt={`${provider} logo`}
+                  title={`Subscribe on ${provider}`}
+                />
+              )}
+              <SrText>{`Subscribe on ${provider}`}</SrText>
+            </Link>
+          ))}
         </Links>
       </Bar>
     );
