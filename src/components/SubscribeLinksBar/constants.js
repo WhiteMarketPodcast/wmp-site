@@ -37,7 +37,7 @@ export const links = {
     {
       Icon: FaMixcloud,
       provider: `Mixcloud`,
-      url: `https://open.spotify.com/show/4o2iPfNaRrP73gWsmQ7yF3?si=CoK9hmBnQHSb1MQVuluNcQ`,
+      url: `https://www.mixcloud.com/whitemarketpodcast/`,
       style: { color: '#4fa6d3' },
     },
   ],
