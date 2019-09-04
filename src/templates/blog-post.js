@@ -12,6 +12,7 @@ import { SrText } from 'style/components';
 import PageHelmet from 'components/Helmets/PageHelmet';
 import {
   Hero,
+  HeroContents,
   Title,
   Column,
   BlogContent,
@@ -30,6 +31,7 @@ import {
 } from 'style/components/blogPostPage';
 import { licenceURLs } from 'utils';
 import { getShareURLs } from 'utils/sharing';
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 
 function renderImageInfoSpan(text, name, url) {
   return (
@@ -245,12 +247,18 @@ export class BlogPostTemplate extends Component {
     if (showMedia && format === `video`) return null;
 
     return (
-      <Hero src={image || imageURL}>
-        <CenteredFade>
-          <Title>{title}</Title>
-          {this.renderPlayButton()}
-          <Date>{date}</Date>
-        </CenteredFade>
+      <Hero>
+        <PreviewCompatibleImage
+          imageInfo={image || imageURL}
+          className="fill"
+        />
+        <HeroContents>
+          <CenteredFade>
+            <Title>{title}</Title>
+            {this.renderPlayButton()}
+            <Date>{date}</Date>
+          </CenteredFade>
+        </HeroContents>
       </Hero>
     );
   }
@@ -335,6 +343,7 @@ BlogPost.propTypes = {
   data: shape({
     markdownRemark: object,
   }).isRequired,
+  pageContext: object.isRequired,
 };
 
 export default BlogPost;

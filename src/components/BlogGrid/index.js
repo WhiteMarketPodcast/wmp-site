@@ -56,7 +56,7 @@ class BlogGrid extends Component {
     const { showExcerpt } = this.state;
     const {
       id,
-      frontmatter: { image, title, date, format },
+      frontmatter: { image, imageURL, title, date, format },
       fields: { slug },
       excerpt,
     } = post;
@@ -73,7 +73,7 @@ class BlogGrid extends Component {
         tabIndex="0"
       >
         <BlogPreviewImage>
-          {image && <PreviewCompatibleImage imageInfo={image} />}
+          <PreviewCompatibleImage imageInfo={image || imageURL} />
         </BlogPreviewImage>
         <PreviewTextContainer index={index}>
           <PostType format={format}>{formatConverter[format]}</PostType>

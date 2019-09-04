@@ -17,6 +17,7 @@ import {
   FlexCenter,
   LinkButton,
   PodcastSection,
+  PodcastSectionContents,
   PodcastTextContainer,
   PodcastSmallText,
   PodcastTitle,
@@ -61,26 +62,29 @@ export default class IndexPage extends Component {
     const { fields, frontmatter } = this.getPodcastInfo();
     const { slug } = fields;
     const { title, podcastURL, image, imageURL } = frontmatter;
-    console.log('image:', image);
-    console.log('imageURL:', imageURL);
 
     return (
       <PodcastSection>
-        <PreviewCompatibleImage imageInfo={image} />
-        <PodcastPlayBox>
-          <PodcastTextContainer>
-            <PodcastSmallText>Latest session</PodcastSmallText>
-            <Link to={slug}>
-              <PodcastTitle>{title}</PodcastTitle>
-            </Link>
-          </PodcastTextContainer>
-          <PlayButton
-            isPlaying={url === podcastURL && isPlaying}
-            onClick={this.handlePlayButtonClick}
-            screenReaderText="Listen to the latest session"
-          />
-        </PodcastPlayBox>
-        <SubscribeLinksBar />
+        <PreviewCompatibleImage
+          imageInfo={image || imageURL}
+          className="fill"
+        />
+        <PodcastSectionContents>
+          <PodcastPlayBox>
+            <PodcastTextContainer>
+              <PodcastSmallText>Latest session</PodcastSmallText>
+              <Link to={slug}>
+                <PodcastTitle>{title}</PodcastTitle>
+              </Link>
+            </PodcastTextContainer>
+            <PlayButton
+              isPlaying={url === podcastURL && isPlaying}
+              onClick={this.handlePlayButtonClick}
+              screenReaderText="Listen to the latest session"
+            />
+          </PodcastPlayBox>
+          <SubscribeLinksBar />
+        </PodcastSectionContents>
       </PodcastSection>
     );
   }
@@ -94,7 +98,12 @@ export default class IndexPage extends Component {
 
     return (
       <BlogPreviewContainer key={id} to={slug}>
-        <BlogPreviewImage bgImage={image || imageURL} index={index} />
+        <BlogPreviewImage>
+          <PreviewCompatibleImage
+            imageInfo={image || imageURL}
+            className="fill"
+          />
+        </BlogPreviewImage>
         <PreviewTextContainer index={index}>
           <PostType format={format}>{formatConverter[format]}</PostType>
           <PreviewTitle index={index}>{title}</PreviewTitle>

@@ -17,15 +17,18 @@ export const Title = styled.h1`
 `;
 
 export const Hero = styled.div`
+  position: relative;
+  background-color: ${black};
+`;
+
+export const HeroContents = styled.div`
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background-color: ${black};
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-image: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.4),
