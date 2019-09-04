@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 3.16 – Music to Our Ears'
 date: 2016-11-15T11:45:11.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-0-Music-1.jpeg'
+image: /img/CC-0-Music-1.jpeg
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/archive.org/download/WhiteMarket20161115Session316/WhiteMarket-20161115-Session316.mp3
 categories:

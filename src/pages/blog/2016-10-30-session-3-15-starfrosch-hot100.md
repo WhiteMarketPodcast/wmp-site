@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 3.15 – Starfrosch and the Hot100'
 date: 2016-10-30T22:12:57.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-0-Bern.jpeg'
+image: /img/CC-0-Bern.jpeg
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/archive.org/download/WhiteMarket20161030Session315/WhiteMarket-20161030-Session315.mp3
 categories:

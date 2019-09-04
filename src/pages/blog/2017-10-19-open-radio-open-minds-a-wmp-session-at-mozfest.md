@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Open Radio, Open Minds – a WMP session at MozFest
 date: 2017-10-19T14:40:10.000Z
-imageURL: https://res.cloudinary.com/thekdizzler/image/upload/white_market/eric-nopanen-208576.jpg
+image: /img/eric-nopanen-208576.jpg
 format: standard
 categories:
   - Blog

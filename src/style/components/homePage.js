@@ -157,11 +157,14 @@ export const BlogPreviewImage = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(${({ bgImage, index }) => getBGImageURL(bgImage, index)});
+  background-image: ${({ bgImage, index }) => {
+    return `url(${getBGImageURL(bgImage, index)})`;
+  }};
   width: 100%;
 
   @media (max-width: 575px) {
-    background-image: url(${({ bgImage }) => getImageURL({ image: bgImage, width: 300 })});
+    background-image: ${({ bgImage }) =>
+      `url(${getImageURL({ image: bgImage, width: 300 })})`};
     width: 40%;
   }
 `;

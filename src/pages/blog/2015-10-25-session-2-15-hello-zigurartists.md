@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 2.15 – Hello, ZigurArtists!'
 date: 2015-10-25T21:00:56.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/10/ZigurArtistsBanner.png'
+image: /img/2015_10_ZigurArtistsBanner.png
 imageAlt: 'Zigur-Artists-Banner'
 format: 'audio'
 podcastURL: https://archive.org/download/WhiteMarketSession215Zigurartists/WhiteMarket-Session215-zigurartists.mp3

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "21 songs for Sunderland City of Culture 2021 bid"
 date: 2015-09-17T11:39:36.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/09/Sunderland-City-of-Culture-featured-image.jpg"
+image: /img/2015_09_Sunderland-City-of-Culture-featured-image.jpg
 format: "standard"
 categories:
   - "Blog"

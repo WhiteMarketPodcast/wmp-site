@@ -5,7 +5,13 @@
     "jest": true,
     "es6": true
   },
-  "extends": ["eslint:recommended", "airbnb"],
+  "extends": [
+    "eslint:recommended",
+    "airbnb",
+    "plugin:prettier/recommended",
+    "prettier/react",
+    "prettier/standard"
+  ],
   "globals": {
     "graphql": true
   },
@@ -25,24 +31,18 @@
       }
     }
   },
-  "plugins": ["react", "jsx-a11y"],
+  "plugins": ["react", "jsx-a11y", "prettier"],
   "rules": {
+    "prettier/prettier": [
+      "error",
+      { "arrowParens": "always", "singleQuote": true, "trailingComma": "all" }
+    ],
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
         "components": ["ExternalLink"]
       }
     ],
-    "indent": ["error", 2],
-    "linebreak-style": ["error", "unix"],
-    "quotes": [
-      "error",
-      "single",
-      {
-        "allowTemplateLiterals": true
-      }
-    ],
-    "semi": ["error", "always"],
     "no-console": 0,
     "no-param-reassign": [
       "error",
@@ -57,8 +57,6 @@
     "react/no-danger": 0,
     "react/prefer-stateless-function": 0,
     "import/prefer-default-export": 0,
-    "react/forbid-prop-types": 0,
-    "arrow-parens": [2, "always"],
-    "max-len": [0, 80]
+    "react/forbid-prop-types": 0
   }
 }

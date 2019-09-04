@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Celebrating World Photo Day with free photos'
 date: 2015-08-19T17:46:10.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-BY-NC-SA-Polaroid-by-Jeff-Slinker-e1439999789762.jpg'
+image: /img/2015_08_CC-BY-NC-SA-Polaroid-by-Jeff-Slinker-e1439999789762.jpg
 imageAlt: 'CC-BY-NC-ND-Polaroid-by-Jeff-Slinker'
 format: 'standard'
 categories:

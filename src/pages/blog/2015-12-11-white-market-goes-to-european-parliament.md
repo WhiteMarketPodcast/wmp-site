@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "White Market goes to the European Parliament"
 date: 2015-12-11T12:39:05.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/12/5550389306_7d3dfd4f48_b.jpg"
+image: /img/2015_12_5550389306_7d3dfd4f48_b.jpg
 imageAlt: "European Parliament by Eva van Wassenhove CC-BY"
 format: "standard"
 categories:

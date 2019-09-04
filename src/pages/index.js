@@ -25,6 +25,7 @@ import {
   SeeMoreContainer,
 } from 'style/components';
 import { formatConverter, isFirstPostPodcast } from 'utils';
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 
 export default class IndexPage extends Component {
   static propTypes = {
@@ -60,9 +61,12 @@ export default class IndexPage extends Component {
     const { fields, frontmatter } = this.getPodcastInfo();
     const { slug } = fields;
     const { title, podcastURL, image, imageURL } = frontmatter;
+    console.log('image:', image);
+    console.log('imageURL:', imageURL);
 
     return (
-      <PodcastSection bgImage={image || imageURL}>
+      <PodcastSection>
+        <PreviewCompatibleImage imageInfo={image} />
         <PodcastPlayBox>
           <PodcastTextContainer>
             <PodcastSmallText>Latest session</PodcastSmallText>
@@ -169,7 +173,13 @@ export const pageQuery = graphql`
             title
             templateKey
             date(formatString: "DD MMMM YYYY")
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1700) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
             imageURL
             imageAlt
             format
@@ -190,7 +200,13 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1700) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
             imageURL
             imageAlt
             podcastURL

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 4.02 – Sharing knowledge with Wikimedia'
 date: 2017-09-10T21:17:54.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/CCBY-WikipediaByWikimedia.jpg'
+image: /img/CCBY-WikipediaByWikimedia.jpg
 imageAlt: 'CCBY-WikipediaByWikimedia'
 imageCredit:
   author:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 2.09 – Another relaxing evening'
 date: 2015-08-30T20:55:04.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-NC-ND-night-sky-by-Miska-Saarikko.jpg'
+image: /img/2015_08_CC-NC-ND-night-sky-by-Miska-Saarikko.jpg
 imageAlt: 'CC-NC-ND-night-sky-by-Miska-Saarikko'
 format: 'audio'
 podcastURL: https://archive.org/7/items/WhiteMarket20150830Session209/WhiteMarket-20150830-Session209.mp3

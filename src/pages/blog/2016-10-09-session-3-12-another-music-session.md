@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 3.12 – Another Music Session'
 date: 2016-10-09T21:01:42.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-0-RecordNeedle-1.jpg'
+image: /img/CC-0-RecordNeedle-1.jpg
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/WhiteMarket20161009Session312/WhiteMarket-20161009-Session312.mp3
 categories:

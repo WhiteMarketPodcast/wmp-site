@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Featured on 99% Perspiration podcast'
 date: 2015-08-24T12:16:35.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/99podcast.png'
+image: /img/2015_08_99podcast.png
 imageAlt: '99-perspiration-podcast-logo'
 format: 'standard'
 categories:

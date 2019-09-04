@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Hiatus and comeback'
 date: 2017-06-20T11:55:57.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/willspirit-sbln-106481.jpg'
+image: /img/willspirit-sbln-106481.jpg
 format: 'standard'
 categories:
   - 'Blog'

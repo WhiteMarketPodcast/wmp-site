@@ -59,8 +59,7 @@ class Footer extends Component {
               </CCIcon>
             </CCIconContainer>
             <div>
-              Unless otherwise noted, this blog is published under a
-              {' '}
+              Unless otherwise noted, this blog is published under a{' '}
               <Link to="https://creativecommons.org/licenses/by-sa/4.0/">
                 Creative Commons Attribution-ShareAlike 4.0 International
                 License

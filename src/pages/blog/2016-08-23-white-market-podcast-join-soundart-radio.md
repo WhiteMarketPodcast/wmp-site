@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "White Market Podcast to join Soundart Radio"
 date: 2016-08-23T11:45:25.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/08/soundart_sticker_logo.jpg"
+image: /img/2016_08_soundart_sticker_logo.jpg
 format: "standard"
 categories:
   - "Blog"

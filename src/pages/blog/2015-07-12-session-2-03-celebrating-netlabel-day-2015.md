@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 2.03 – Celebrating Netlabel Day 2015'
 date: 2015-07-12T21:00:58.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/logo_netlabel_day.png'
+image: /img/2015_08_logo_netlabel_day.png
 imageAlt: 'logo_netlabel_day'
 format: 'audio'
 podcastURL: https://archive.org/6/items/WhiteMarket20150712Session203/WhiteMarket-20150712-Session203.mp3

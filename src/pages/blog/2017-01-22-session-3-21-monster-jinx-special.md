@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 3.21 – Monster Jinx Special'
 date: 2017-01-22T23:30:02.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/Monster-Jinx-e1485339008611.jpg'
+image: /img/Monster-Jinx-e1485339008611.jpg
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/archive.org/download/WhiteMarket20170122Session321/WhiteMarket-20170122-Session321.mp3
 categories:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "White Market is featured on Radio Free Culture"
 date: 2015-09-08T15:57:14.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/09/CC-BY-Podcast-Set-by-Patrick-Breitenbach.jpg"
+image: /img/2015_09_CC-BY-Podcast-Set-by-Patrick-Breitenbach.jpg
 imageAlt: "CC-BY-Podcast-Set-by-Patrick-Breitenbach"
 format: "standard"
 categories:

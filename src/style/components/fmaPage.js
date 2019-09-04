@@ -3,7 +3,6 @@ import Link from 'components/Link';
 import InfiniteScroll from 'react-infinite-scroller';
 import { primary, white } from 'style/colors';
 import { onMobile, onDesktop } from 'style/mediaQueries';
-import { getImageURL } from 'utils/images';
 
 export const Grid = styled(InfiniteScroll)`
   display: grid;
@@ -28,22 +27,17 @@ export const AlbumContainer = styled(Link)`
   justify-content: flex-end;
   align-items: flex-end;
   background-color: ${primary};
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url('${({ bgImage }) => getImageURL({ image: bgImage, width: 400 })}');
   overflow: hidden;
   opacity: 0.8;
-  
+
   &:hover {
     filter: inherit;
     opacity: 1;
   }
-  
+
   ${onMobile} {
     opacity: 1;
     font-weight: 600;
-    background-image: url('${({ bgImage }) => getImageURL({ image: bgImage, width: 600 })}');
   }
 `;
 

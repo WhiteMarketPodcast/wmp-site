@@ -1,6 +1,7 @@
 const _ = require('lodash');
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
+const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 const { podcastQuery, createRSSFeed } = require('./rss-config.js');
 
 exports.createPages = ({ actions, graphql }) => {
@@ -19,6 +20,7 @@ exports.createPages = ({ actions, graphql }) => {
               tags
               templateKey
               title
+              imageURL
             }
           }
         }
@@ -33,7 +35,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     const pages = result.data.allMarkdownRemark.edges;
     const blogPosts = _(pages)
-      .filter((page) => _.includes(_.get(page, `node.fields.slug`), `/blog/`))
+      .filter((page) => _.get(page, `node.fields.slug`, ``).includes(`/blog/`))
       .sortBy(`node.fields.slug`)
       .value();
 
@@ -52,6 +54,7 @@ exports.createPages = ({ actions, graphql }) => {
         fields: { slug },
         frontmatter: { tags, templateKey },
       } = edge.node;
+
       const otherPosts = getOtherPosts(edge);
 
       createPage({
@@ -86,13 +89,16 @@ exports.createPages = ({ actions, graphql }) => {
     });
   });
 
-  const rssPromise = graphql(podcastQuery).then(async (podcastData) => createRSSFeed(podcastData));
+  const rssPromise = graphql(podcastQuery).then(async (podcastData) => {
+    await createRSSFeed(podcastData);
+  });
 
   return Promise.all([pagesPromise, rssPromise]);
 };
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
+  fmImagesToRelative(node); // convert image paths for gatsby images
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode });

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 3.17 – Rain, technical issues and music'
 date: 2016-11-25T11:20:13.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/mvjo-amrwke-jack-catterall.jpg'
+image: /img/mvjo-amrwke-jack-catterall.jpg
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/archive.org/download/WhiteMarket20161122Session317/WhiteMarket-20161122-Session317.mp3
 categories:

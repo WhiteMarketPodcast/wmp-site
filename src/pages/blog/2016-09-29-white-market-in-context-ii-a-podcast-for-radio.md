@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "White Market in Context II – A Podcast for Radio"
 date: 2016-09-29T12:33:23.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-0-PhoneWithHeadphones.jpg"
+image: /img/CC-0-PhoneWithHeadphones.jpg
 format: "standard"
 categories:
   - "Blog"

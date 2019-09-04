@@ -71,9 +71,7 @@ export class BlogPostTemplate extends Component {
     contentComponent: undefined,
     tags: [],
     helmet: null,
-    description: ``,
     image: ``,
-    imageAlt: ``,
     imageCredit: undefined,
     imageURL: ``,
     podcastURL: ``,
@@ -213,7 +211,8 @@ export class BlogPostTemplate extends Component {
 
     const photoBy = renderImageInfoSpan(`Photo by `, name, url);
     const where = site && renderImageInfoSpan(` on `, site, siteURL);
-    const licenceInfo = licence && renderImageInfoSpan(` – `, licence, licenceURL);
+    const licenceInfo =
+      licence && renderImageInfoSpan(` – `, licence, licenceURL);
 
     return (
       <ImageCredit>
@@ -307,20 +306,14 @@ const BlogPost = ({ data, pageContext }) => {
       fields: { slug },
     },
   } = data;
-  const {
-    title,
-    description,
-    image,
-    imageURL,
-    imageAlt,
-  } = frontmatter;
+  const { title, description, image, imageURL, imageAlt } = frontmatter;
   const imageSrc = image || imageURL;
 
   return (
     <BlogPostTemplate
       content={html}
       contentComponent={HTMLContent}
-      helmet={(
+      helmet={
         <PageHelmet
           pageTitle={title}
           description={description}
@@ -329,7 +322,7 @@ const BlogPost = ({ data, pageContext }) => {
           imageAlt={imageAlt}
           largeTwitterCard
         />
-      )}
+      }
       pageContext={pageContext}
       siteUrl={siteUrl}
       slug={slug}
@@ -355,7 +348,13 @@ export const pageQuery = graphql`
         date(formatString: "DD MMMM YYYY")
         title
         description
-        image
+        image {
+          childImageSharp {
+            fluid(maxWidth: 1700) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
         imageURL
         imageCredit {
           author {

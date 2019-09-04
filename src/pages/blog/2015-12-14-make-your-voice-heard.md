@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Make your voice heard! Join the EU Public Consultations'
 date: 2015-12-14T13:21:56.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/12/5540462170_d5297d9ce8_b.jpg'
+image: /img/2015_12_5540462170_d5297d9ce8_b.jpg
 imageAlt: 'https://creativecommons.org/licenses/by-sa/2.0/'
 format: 'standard'
 categories:

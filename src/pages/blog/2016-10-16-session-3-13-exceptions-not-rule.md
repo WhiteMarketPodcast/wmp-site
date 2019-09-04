@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 3.13 – Exceptions are not the Rule'
 date: 2016-10-16T21:33:36.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-0-Messy-Ruler.jpeg'
+image: /img/CC-0-Messy-Ruler.jpeg
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/WhiteMarket-20161016-Session313/WhiteMarket-20161016-Session313.mp3
 categories:

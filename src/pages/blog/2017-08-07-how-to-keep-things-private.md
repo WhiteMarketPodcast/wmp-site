@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'How to keep things private while browsing the web'
 date: 2017-08-07T18:40:46.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/CCBY-Privacy-by-BlueCoat-1.jpg'
+image: /img/CCBY-Privacy-by-BlueCoat-1.jpg
 imageAlt: 'CCBY-Privacy-by-BlueCoat'
 format: 'standard'
 categories:

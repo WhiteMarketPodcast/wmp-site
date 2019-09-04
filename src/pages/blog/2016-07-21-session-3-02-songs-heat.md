@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 3.02 – Songs for the Heat'
 date: 2016-07-21T21:21:45.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/07/CC-BY-NC-ND-Shells-by-Smee72.jpg'
+image: /img/2016_07_CC-BY-NC-ND-Shells-by-Smee72.jpg
 imageAlt: 'CC-BY-NC-ND-Shells-by-Smee72'
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/WhiteMarket20160721Session302/WhiteMarket-20160721-Session302.mp3

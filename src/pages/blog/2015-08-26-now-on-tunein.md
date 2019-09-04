@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "Now on TuneIn"
 date: 2015-08-26T15:30:57.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/TuneIn_Logo_2000px-e1440416963169.png"
+image: /img/2015_08_TuneIn_Logo_2000px-e1440416963169.png
 format: "standard"
 categories:
   - "Blog"

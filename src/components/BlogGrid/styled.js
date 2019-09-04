@@ -9,7 +9,6 @@ import {
   white,
 } from 'style/colors';
 import { onMobile, onDesktop } from 'style/mediaQueries';
-import { getImageURL } from 'utils/images';
 
 export const BlogListGrid = styled(InfiniteScroll)`
   display: grid;
@@ -59,10 +58,6 @@ export const BlogPreviewContainer = styled(Link)`
 
 export const BlogPreviewImage = styled.div`
   background-color: ${primary};
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url(${({ bgImage }) => getImageURL({ image: bgImage, width: 600 })});
   width: 100%;
 
   ${onMobile} {

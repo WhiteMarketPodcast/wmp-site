@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "News from WMP's HQ"
 date: 2016-11-14T22:54:03.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/cc-0work.jpeg"
+image: /img/cc-0work.jpeg
 format: "standard"
 categories:
   - "Blog"

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Complete season 3 now available on Mixcloud + news from season 4'
 date: 2017-07-28T12:15:39.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/podcastCCBY.jpg'
+image: /img/podcastCCBY.jpg
 imageAlt: 'podcastCCBY'
 format: 'standard'
 categories:

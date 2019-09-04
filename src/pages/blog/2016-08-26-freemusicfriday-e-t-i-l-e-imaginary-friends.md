@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "Our Imaginary Friend is beautiful"
 date: 2016-08-26T17:00:46.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/08/cover-square.jpg"
+image: /img/2016_08_cover-square.jpg
 imageAlt: "SLPD-ETILE-Our-Imaginary-Friend-Cover"
 format: "standard"
 categories:

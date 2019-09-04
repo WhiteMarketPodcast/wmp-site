@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'White Market turns 8! – From free music to the open web'
 date: 2016-03-22T16:51:15.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/03/CC-BY-NC-Freedom-by-Curly-e1458665020766.jpg'
+image: /img/2016_03_CC-BY-NC-Freedom-by-Curly-e1458665020766.jpg
 imageAlt: 'CC-BY-NC-Freedom-by-Curly'
 format: 'standard'
 categories:

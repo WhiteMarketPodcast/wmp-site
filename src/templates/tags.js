@@ -71,14 +71,18 @@ export const tagPageQuery = graphql`
             slug
           }
           frontmatter {
-            title
-            image
-            imageURL
             date(formatString: "DD MMMM YYYY")
-            image
+            format
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1700) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
             imageURL
             imageAlt
-            format
+            title
           }
         }
       }

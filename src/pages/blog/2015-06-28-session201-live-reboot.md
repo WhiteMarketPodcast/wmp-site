@@ -2,8 +2,7 @@
 templateKey: blog-post
 title: Session 2.01 – Live Reboot
 date: 2015-06-28T21:00:11.000Z
-imageURL: >-
-  https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-BY-Restart-by-Acid-Pix.jpg
+image: /img/2015_08_CC-BY-Restart-by-Acid-Pix.jpg
 format: audio
 useArchiveDescription: false
 podcastURL: >-

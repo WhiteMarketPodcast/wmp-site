@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 3.01 – Netlabel Day 2016'
 date: 2016-07-14T21:20:34.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/07/NetlabelDay2016.jpg'
+image: /img/2016_07_NetlabelDay2016.jpg
 imageAlt: 'NetlabelDay2016'
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/WhiteMarket20160715Session301/WhiteMarket-20160715-Session301.mp3

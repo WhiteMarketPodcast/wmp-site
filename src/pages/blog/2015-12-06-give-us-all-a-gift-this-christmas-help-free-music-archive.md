@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Give us all a gift this Christmas – Help Free Music Archive'
 date: 2015-12-06T19:40:19.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/12/10950616284_95a2c8f063_b.jpg'
+image: /img/2015_12_10950616284_95a2c8f063_b.jpg
 imageAlt: 'FMA_logo'
 format: 'standard'
 categories:

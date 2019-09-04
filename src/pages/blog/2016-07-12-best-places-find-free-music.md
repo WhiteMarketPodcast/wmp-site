@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'The Best Places to find Creative Commons Music'
 date: 2016-07-12T18:50:08.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/07/PD-HeadphonesWithLaptop.jpg'
+image: /img/2016_07_PD-HeadphonesWithLaptop.jpg
 format: 'standard'
 categories:
   - 'Blog'

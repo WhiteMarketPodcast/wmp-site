@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 3.11 – Experimentalism with Pilot Eleven'
 date: 2016-10-02T21:05:31.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-0-Wires.jpg'
+image: /img/CC-0-Wires.jpg
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/WhiteMarket20161002Session311/WhiteMarket-20161002-Session311.mp3
 categories:

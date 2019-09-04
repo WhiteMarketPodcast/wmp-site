@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'CC Film #5 – An Island'
 date: 2016-08-24T11:30:37.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/08/An-Island-by-Vincent-Moon_1280x720.jpg'
+image: /img/2016_08_An-Island-by-Vincent-Moon_1280x720.jpg
 imageAlt: 'An-Island-by-Vincent-Moon_1280x720'
 format: 'video'
 videoURL: https://vimeo.com/25619692

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 2.13 – blocSonic in the house!'
 date: 2015-10-04T20:30:09.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/10/blocsonic_logo.jpg'
+image: /img/2015_10_blocsonic_logo.jpg
 format: 'audio'
 podcastURL: https://archive.org/0/items/WhiteMarket20151004Session213/WhiteMarket-20151004-Session213.mp3
 categories:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "Silver Innovation Award of the Year"
 date: 2016-09-12T09:46:59.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/09/CsBCXsdXEAQaNZK.jpg"
+image: /img/2016_09_CsBCXsdXEAQaNZK.jpg
 format: "standard"
 categories:
   - "Blog"

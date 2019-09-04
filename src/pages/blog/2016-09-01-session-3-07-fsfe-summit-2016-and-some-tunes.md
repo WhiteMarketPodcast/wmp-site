@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 3.07 – FSFE Summit 2016 and Some Tunes'
 date: 2016-09-01T22:20:07.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/09/fsfe-summit-header-e1472761010649.jpg'
+image: /img/2016_09_fsfe-summit-header-e1472761010649.jpg
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/WhiteMarket20160901Session307/WhiteMarket-20160901-Session307.mp3
 categories:

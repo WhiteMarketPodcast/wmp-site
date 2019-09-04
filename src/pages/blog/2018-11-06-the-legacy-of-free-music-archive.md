@@ -7,7 +7,6 @@ description: >-
   for the show and the legacy for openly-licensed music.
 format: standard
 image: /img/mr-cup-fabien-barral-86068-unsplash-1920.jpg
-imageURL: ''
 imageAlt: record-archive
 imageCredit:
   author:
