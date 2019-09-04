@@ -63,8 +63,8 @@ class PodcastPlayer extends PureComponent {
   }
 
   getEpisodeImage = () => {
-    const { image } = this.getEpisode();
-    return _.get(image, 'childImageSharp.fixed.src', '');
+    const { image, imageURL = '' } = this.getEpisode();
+    return _.get(image, 'childImageSharp.fixed.src', imageURL);
   };
 
   getEpisodeTitle = () => {

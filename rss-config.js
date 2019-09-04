@@ -7,9 +7,10 @@ const mp3Duration = require('mp3-duration');
 
 const writeFile = pify(fs.writeFile);
 const ARCHIVE_ORG_BASE_URL = `https://archive.org/details/`;
-const getArchiveDetailsURL = (podcastURL) => `${ARCHIVE_ORG_BASE_URL}${
-  podcastURL.replace(/.*\/download\//, '').split('/')[0]
-}?output=json`;
+const getArchiveDetailsURL = (podcastURL) =>
+  `${ARCHIVE_ORG_BASE_URL}${
+    podcastURL.replace(/.*\/download\//, '').split('/')[0]
+  }?output=json`;
 const getMp3FromURL = (url) => decodeURIComponent(_.last(url.split('/')));
 
 function deleteLocalFile(filepath) {
@@ -148,10 +149,10 @@ function createChannelSetup(data) {
 }
 
 // This creates each item in the feed
-async function createEpisodes(site, allMarkdownRemark) {
+function createEpisodes(site, allMarkdownRemark) {
   const { siteUrl, siteLogo, owner } = site.siteMetadata;
 
-  return allMarkdownRemark.edges.map(async ({ node }) => {
+  const episodeDetails = allMarkdownRemark.edges.map(async ({ node }) => {
     const { frontmatter, fields, excerpt, html } = node;
     const { useArchiveDescription, podcastURL, title } = frontmatter;
     const url = siteUrl + fields.slug;
@@ -167,9 +168,9 @@ async function createEpisodes(site, allMarkdownRemark) {
     const description = useArchiveDescription
       ? archiveDetails.description
       : excerpt
-        .replace(/\s{2,}/g, ` `)
-        .replace(/\s,/g, `,`)
-        .replace(/\s\./g, `.`);
+          .replace(/\s{2,}/g, ` `)
+          .replace(/\s,/g, `,`)
+          .replace(/\s\./g, `.`);
 
     return Object.assign({}, frontmatter, {
       description,
@@ -198,6 +199,8 @@ async function createEpisodes(site, allMarkdownRemark) {
       ],
     });
   });
+
+  return Promise.all(episodeDetails);
 }
 
 // ~~~ exports ~~~
@@ -207,7 +210,7 @@ async function createRSSFeed(podcastData) {
 
   console.time(`*** got all info ***`);
   const channelInfo = createChannelSetup(site);
-  const episodes = await Promise.all(createEpisodes(site, allMarkdownRemark));
+  const episodes = await createEpisodes(site, allMarkdownRemark);
   console.timeEnd(`*** got all info ***`);
 
   const feed = new RSS(channelInfo);

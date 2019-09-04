@@ -89,9 +89,9 @@ exports.createPages = ({ actions, graphql }) => {
     });
   });
 
-  const rssPromise = graphql(podcastQuery).then(async (podcastData) => {
-    await createRSSFeed(podcastData);
-  });
+  const rssPromise = graphql(podcastQuery).then(async (podcastData) =>
+    createRSSFeed(podcastData),
+  );
 
   return Promise.all([pagesPromise, rssPromise]);
 };
