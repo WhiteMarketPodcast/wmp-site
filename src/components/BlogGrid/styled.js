@@ -9,6 +9,7 @@ import {
   white,
 } from 'style/colors';
 import { onMobile, onDesktop } from 'style/mediaQueries';
+import PreviewCompatibleImage from '../PreviewCompatibleImage';
 
 export const BlogListGrid = styled(InfiniteScroll)`
   display: grid;
@@ -56,7 +57,7 @@ export const BlogPreviewContainer = styled(Link)`
   }
 `;
 
-export const BlogPreviewImage = styled.div`
+export const BlogPreviewImage = styled(PreviewCompatibleImage)`
   background-color: ${primary};
   width: 100%;
 
@@ -67,7 +68,7 @@ export const BlogPreviewImage = styled.div`
   }
 
   ${onDesktop} {
-    position: absolute;
+    position: absolute !important;
     top: 0;
     bottom: 0;
     left: 0;

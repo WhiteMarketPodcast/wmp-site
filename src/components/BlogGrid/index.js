@@ -12,7 +12,6 @@ import {
   ExcerptContainer,
   DateText,
 } from './styled';
-import PreviewCompatibleImage from '../PreviewCompatibleImage';
 
 class BlogGrid extends Component {
   static propTypes = {
@@ -72,9 +71,7 @@ class BlogGrid extends Component {
         onMouseLeave={this.handleBlur(index)}
         tabIndex="0"
       >
-        <BlogPreviewImage>
-          <PreviewCompatibleImage imageInfo={image || imageURL} />
-        </BlogPreviewImage>
+        <BlogPreviewImage imageInfo={image || imageURL} />
         <PreviewTextContainer index={index}>
           <PostType format={format}>{formatConverter[format]}</PostType>
           <PreviewTitle index={index}>{title}</PreviewTitle>
