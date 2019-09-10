@@ -14,12 +14,6 @@ This site is hosted on [Netlify](https://www.netlify.com/).
 
 - [View Netlify's GDPR policy](https://www.netlify.com/gdpr/)
 
-### Images
-
-Most images are hosted on Cloudinary. Their service allows us to reduce image-file sizes, meaning you use less data (particularly on mobile), and the site loads faster.
-
-- [View Cloudinary's privacy policy](https://cloudinary.com/privacy)
-
 ### Videos
 
 The videos we show/link to on this site are typically hosted on [Vimeo](https://vimeo.com).

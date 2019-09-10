@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import styled from 'styled-components';
 import Link from 'components/Link';
-import { getImageURL } from 'utils/images';
 import {
   black,
   primary,
@@ -13,11 +12,6 @@ import { sansSerif } from '../fonts';
 import { onMobile } from '../mediaQueries';
 
 const isHighlightedPreview = (index) => _.includes([0, 3, 5], index);
-
-function getBGImageURL(image, index = 0) {
-  const width = isHighlightedPreview(index) ? 1100 : 450;
-  return getImageURL({ image, width });
-}
 
 export const BlogPostPreviewGrid = styled.div`
   display: grid;
@@ -154,17 +148,9 @@ export const BlogPreviewImage = styled.div`
   bottom: 0;
   left: 0;
   background-color: ${primary};
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: ${({ bgImage, index }) => {
-    return `url(${getBGImageURL(bgImage, index)})`;
-  }};
   width: 100%;
 
   @media (max-width: 575px) {
-    background-image: ${({ bgImage }) =>
-      `url(${getImageURL({ image: bgImage, width: 300 })})`};
     width: 40%;
   }
 `;

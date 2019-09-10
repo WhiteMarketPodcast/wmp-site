@@ -315,7 +315,7 @@ const BlogPost = ({ data, pageContext }) => {
     },
   } = data;
   const { title, description, image, imageURL, imageAlt } = frontmatter;
-  const imageSrc = image || imageURL;
+  const imageSrc = _.get(image, 'childImageSharp.fluid.src', imageURL);
 
   return (
     <BlogPostTemplate

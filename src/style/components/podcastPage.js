@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { getImageURL } from 'utils/images';
+import PreviewCompatibleImage from 'components/PreviewCompatibleImage';
 import { FlexCenterColumn, BrandH1 } from 'style/components';
 import {
   primary,
@@ -11,26 +11,25 @@ import {
 } from 'style/colors';
 import { onMobile } from 'style/mediaQueries';
 
-export const TitleBG = styled(FlexCenterColumn)`
-  background-color: ${black};
-  background-image:
-    linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url("${({ image }) => getImageURL({ image })}");
-  background-position: center;
-  background-size: cover;
-  text-align: center;
-  width: 100%;
-
-  ${onMobile} {
-    background-image:
-      linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-      url("${({ image }) => getImageURL({ image, width: 600 })}");
-  }
+export const TitleBG = styled(PreviewCompatibleImage)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
 `;
 
 export const TitleContainer = styled(FlexCenterColumn)`
+  position: relative;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
   min-height: 25vh;
   padding: 5rem 1rem 2rem 1rem;
+  text-align: center;
 
   ${onMobile} {
     padding: 3rem 1rem 1rem 1rem;

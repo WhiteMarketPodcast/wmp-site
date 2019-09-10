@@ -136,12 +136,11 @@ export default class PodcastPage extends Component {
           path="/podcast"
         />
 
-        <TitleBG image={image || imageURL}>
-          <TitleContainer>
-            <Title>{pageTitle}</Title>
-          </TitleContainer>
+        <TitleContainer>
+          <TitleBG imageInfo={image || imageURL} className="fill" />
+          <Title>{pageTitle}</Title>
           <SubscribeLinksBar />
-        </TitleBG>
+        </TitleContainer>
         <Grid>
           {this.renderEpisodes()}
           {this.renderSelectedEpisode()}

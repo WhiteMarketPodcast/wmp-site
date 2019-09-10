@@ -108,7 +108,7 @@ export const BlogContent = styled(SlideUp)`
 
   img {
     display: flex;
-    margin: 1rem auto;
+    margin: 0 auto;
     max-width: 100%;
   }
 `;
