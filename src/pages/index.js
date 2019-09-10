@@ -17,6 +17,7 @@ import {
   FlexCenter,
   LinkButton,
   PodcastSection,
+  PodcastSectionContents,
   PodcastTextContainer,
   PodcastSmallText,
   PodcastTitle,
@@ -25,6 +26,7 @@ import {
   SeeMoreContainer,
 } from 'style/components';
 import { formatConverter, isFirstPostPodcast } from 'utils';
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 
 export default class IndexPage extends Component {
   static propTypes = {
@@ -62,21 +64,27 @@ export default class IndexPage extends Component {
     const { title, podcastURL, image, imageURL } = frontmatter;
 
     return (
-      <PodcastSection bgImage={image || imageURL}>
-        <PodcastPlayBox>
-          <PodcastTextContainer>
-            <PodcastSmallText>Latest session</PodcastSmallText>
-            <Link to={slug}>
-              <PodcastTitle>{title}</PodcastTitle>
-            </Link>
-          </PodcastTextContainer>
-          <PlayButton
-            isPlaying={url === podcastURL && isPlaying}
-            onClick={this.handlePlayButtonClick}
-            screenReaderText="Listen to the latest session"
-          />
-        </PodcastPlayBox>
-        <SubscribeLinksBar />
+      <PodcastSection>
+        <PreviewCompatibleImage
+          imageInfo={image || imageURL}
+          className="fill"
+        />
+        <PodcastSectionContents>
+          <PodcastPlayBox>
+            <PodcastTextContainer>
+              <PodcastSmallText>Latest session</PodcastSmallText>
+              <Link to={slug}>
+                <PodcastTitle>{title}</PodcastTitle>
+              </Link>
+            </PodcastTextContainer>
+            <PlayButton
+              isPlaying={url === podcastURL && isPlaying}
+              onClick={this.handlePlayButtonClick}
+              screenReaderText="Listen to the latest session"
+            />
+          </PodcastPlayBox>
+          <SubscribeLinksBar />
+        </PodcastSectionContents>
       </PodcastSection>
     );
   }
@@ -90,7 +98,12 @@ export default class IndexPage extends Component {
 
     return (
       <BlogPreviewContainer key={id} to={slug}>
-        <BlogPreviewImage bgImage={image || imageURL} index={index} />
+        <BlogPreviewImage>
+          <PreviewCompatibleImage
+            imageInfo={image || imageURL}
+            className="fill"
+          />
+        </BlogPreviewImage>
         <PreviewTextContainer index={index}>
           <PostType format={format}>{formatConverter[format]}</PostType>
           <PreviewTitle index={index}>{title}</PreviewTitle>
@@ -169,7 +182,13 @@ export const pageQuery = graphql`
             title
             templateKey
             date(formatString: "DD MMMM YYYY")
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1700) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
             imageURL
             imageAlt
             format
@@ -190,7 +209,13 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1700) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
             imageURL
             imageAlt
             podcastURL

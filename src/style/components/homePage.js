@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import styled from 'styled-components';
 import Link from 'components/Link';
-import { getImageURL } from 'utils/images';
 import {
   black,
   primary,
@@ -10,14 +9,9 @@ import {
   white,
 } from '../colors';
 import { sansSerif } from '../fonts';
-import { onMobile, onMassiveScreen } from '../mediaQueries';
+import { onMobile } from '../mediaQueries';
 
 const isHighlightedPreview = (index) => _.includes([0, 3, 5], index);
-
-function getBGImageURL(image, index = 0) {
-  const width = isHighlightedPreview(index) ? 1100 : 450;
-  return getImageURL({ image, width });
-}
 
 export const BlogPostPreviewGrid = styled.div`
   display: grid;
@@ -154,14 +148,9 @@ export const BlogPreviewImage = styled.div`
   bottom: 0;
   left: 0;
   background-color: ${primary};
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url(${({ bgImage, index }) => getBGImageURL(bgImage, index)});
   width: 100%;
 
   @media (max-width: 575px) {
-    background-image: url(${({ bgImage }) => getImageURL({ image: bgImage, width: 300 })});
     width: 40%;
   }
 `;
@@ -236,28 +225,23 @@ export const DateText = styled.div`
 
 const linearGradient = `linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.4))`;
 export const PodcastSection = styled.section`
+  position: relative;
+  background-color: ${primary};
+`;
+
+export const PodcastSectionContents = styled.div`
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: ${primary};
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: ${linearGradient},
-    url(${({ bgImage }) => getImageURL({ image: bgImage })});
+  background-image: ${linearGradient};
   min-height: 50vh;
   width: 100%;
 
   @media (max-width: 575px) {
     min-height: 500px;
-    background-image: ${linearGradient},
-      url(${({ bgImage }) => getImageURL({ image: bgImage, width: 600 })});
-  }
-
-  ${onMassiveScreen} {
-    background-image: ${linearGradient},
-      url(${({ bgImage }) => getImageURL({ image: bgImage, width: 1700 })});
   }
 `;
 

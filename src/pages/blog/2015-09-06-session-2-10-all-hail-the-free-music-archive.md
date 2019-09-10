@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 2.10 – All hail the Free Music Archive'
 date: 2015-09-06T20:55:34.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/09/CC-BY-NC-2009-in-music-FMA-by-erin-m-e1441146727804.jpg'
+image: /img/2015_09_CC-BY-NC-2009-in-music-FMA-by-erin-m-e1441146727804.jpg
 format: 'audio'
 podcastURL: https://archive.org/download/WhiteMarket20150906/WhiteMarket_20150906.mp3
 categories:

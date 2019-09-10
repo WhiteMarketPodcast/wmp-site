@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'White Market becomes a Syndication Platform'
 date: 2016-07-06T15:40:25.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/07/CC-BY-NC-SA-BacalhauNaZero.jpg'
+image: /img/2016_07_CC-BY-NC-SA-BacalhauNaZero.jpg
 imageAlt: 'CC-BY-NC-ND-BacalhauNaZero'
 format: 'standard'
 categories:

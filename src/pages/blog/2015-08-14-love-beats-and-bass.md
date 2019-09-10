@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Love, beats and bass'
 date: 2015-08-14T18:30:56.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/Boss-Bass-Love-For-Everyone-Everywhere-album-cover.jpg'
+image: /img/2015_08_Boss-Bass-Love-For-Everyone-Everywhere-album-cover.jpg
 format: 'standard'
 categories:
   - 'Blog'

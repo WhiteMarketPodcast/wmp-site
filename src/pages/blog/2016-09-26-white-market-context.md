@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "White Market in Context"
 date: 2016-09-26T15:45:47.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-0-Writing-1.jpeg"
+image: /img/CC-0-Writing-1.jpeg
 imageAlt: "cc-0-writing"
 format: "standard"
 categories:

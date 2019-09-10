@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 3.03 – Copy Me, Copy You'
 date: 2016-07-28T22:34:53.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/07/COPYME_featured.jpg'
+image: /img/2016_07_COPYME_featured.jpg
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/WhiteMarket20160728Session303/WhiteMarket-20160728-Session303.mp3
 categories:

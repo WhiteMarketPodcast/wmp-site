@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 2.11 – Julia Reda and how you can help #fixcopyright'
 date: 2015-09-08T17:00:25.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/09/CC-BY-SA-JuliaReda-by-ActuaLitté.jpg'
+image: /img/2015_09_CC-BY-SA-JuliaReda-by-ActuaLitte.jpg
 imageAlt: 'CC-BY-SA-JuliaReda-by-ActuaLitté'
 format: 'audio'
 podcastURL: https://archive.org/download/WhiteMarket20150920Session211/WhiteMarket-20150920-Session211.mp3

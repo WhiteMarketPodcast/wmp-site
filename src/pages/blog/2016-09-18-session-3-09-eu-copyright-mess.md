@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 3.09 – EU Copyright Mess'
 date: 2016-09-18T21:00:14.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/09/CC-BY-ND-Copyright-by-Dennis-Skley.jpg'
+image: /img/2016_09_CC-BY-ND-Copyright-by-Dennis-Skley.jpg
 imageAlt: 'cc-by-nd-copyright-by-dennis-skley'
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/WhiteMarket20160918Session309/WhiteMarket-20160918-Session309.mp3

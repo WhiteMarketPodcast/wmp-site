@@ -9,7 +9,7 @@ import {
   white,
 } from 'style/colors';
 import { onMobile, onDesktop } from 'style/mediaQueries';
-import { getImageURL } from 'utils/images';
+import PreviewCompatibleImage from '../PreviewCompatibleImage';
 
 export const BlogListGrid = styled(InfiniteScroll)`
   display: grid;
@@ -57,12 +57,8 @@ export const BlogPreviewContainer = styled(Link)`
   }
 `;
 
-export const BlogPreviewImage = styled.div`
+export const BlogPreviewImage = styled(PreviewCompatibleImage)`
   background-color: ${primary};
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url(${({ bgImage }) => getImageURL({ image: bgImage, width: 600 })});
   width: 100%;
 
   ${onMobile} {
@@ -72,7 +68,7 @@ export const BlogPreviewImage = styled.div`
   }
 
   ${onDesktop} {
-    position: absolute;
+    position: absolute !important;
     top: 0;
     bottom: 0;
     left: 0;

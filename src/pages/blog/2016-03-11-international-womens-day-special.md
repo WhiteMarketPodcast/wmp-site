@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "International Women's Day Special"
 date: 2016-03-11T19:42:24.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/03/IWD-INSTA2.png'
+image: /img/2016_03_IWD-INSTA2.png
 imageAlt: 'IWD-SparkSunderland'
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/whitemarketpodcast_IWDSpecial/IWD_WhiteMarketSpecial.mp3

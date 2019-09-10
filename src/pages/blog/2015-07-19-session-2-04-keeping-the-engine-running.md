@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 2.04 – Keeping the engine running'
 date: 2015-07-19T21:00:13.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-BY-SA-Cup-of-Tea-by-Marius-Brede.jpg'
+image: /img/2015_08_CC-BY-SA-Cup-of-Tea-by-Marius-Brede.jpg
 imageAlt: 'CC-BY-SA-Cup-of-Tea-by-Marius-Brede'
 format: 'audio'
 podcastURL: https://archive.org/download/WhiteMarket20150719Session204/WhiteMarket-20150719-Session204.mp3

@@ -12,6 +12,7 @@ import { SrText } from 'style/components';
 import PageHelmet from 'components/Helmets/PageHelmet';
 import {
   Hero,
+  HeroContents,
   Title,
   Column,
   BlogContent,
@@ -30,6 +31,7 @@ import {
 } from 'style/components/blogPostPage';
 import { licenceURLs } from 'utils';
 import { getShareURLs } from 'utils/sharing';
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 
 function renderImageInfoSpan(text, name, url) {
   return (
@@ -71,9 +73,7 @@ export class BlogPostTemplate extends Component {
     contentComponent: undefined,
     tags: [],
     helmet: null,
-    description: ``,
     image: ``,
-    imageAlt: ``,
     imageCredit: undefined,
     imageURL: ``,
     podcastURL: ``,
@@ -213,7 +213,8 @@ export class BlogPostTemplate extends Component {
 
     const photoBy = renderImageInfoSpan(`Photo by `, name, url);
     const where = site && renderImageInfoSpan(` on `, site, siteURL);
-    const licenceInfo = licence && renderImageInfoSpan(` – `, licence, licenceURL);
+    const licenceInfo =
+      licence && renderImageInfoSpan(` – `, licence, licenceURL);
 
     return (
       <ImageCredit>
@@ -246,12 +247,18 @@ export class BlogPostTemplate extends Component {
     if (showMedia && format === `video`) return null;
 
     return (
-      <Hero src={image || imageURL}>
-        <CenteredFade>
-          <Title>{title}</Title>
-          {this.renderPlayButton()}
-          <Date>{date}</Date>
-        </CenteredFade>
+      <Hero>
+        <PreviewCompatibleImage
+          imageInfo={image || imageURL}
+          className="fill"
+        />
+        <HeroContents>
+          <CenteredFade>
+            <Title>{title}</Title>
+            {this.renderPlayButton()}
+            <Date>{date}</Date>
+          </CenteredFade>
+        </HeroContents>
       </Hero>
     );
   }
@@ -307,20 +314,14 @@ const BlogPost = ({ data, pageContext }) => {
       fields: { slug },
     },
   } = data;
-  const {
-    title,
-    description,
-    image,
-    imageURL,
-    imageAlt,
-  } = frontmatter;
-  const imageSrc = image || imageURL;
+  const { title, description, image, imageURL, imageAlt } = frontmatter;
+  const imageSrc = _.get(image, 'childImageSharp.fluid.src', imageURL);
 
   return (
     <BlogPostTemplate
       content={html}
       contentComponent={HTMLContent}
-      helmet={(
+      helmet={
         <PageHelmet
           pageTitle={title}
           description={description}
@@ -329,7 +330,7 @@ const BlogPost = ({ data, pageContext }) => {
           imageAlt={imageAlt}
           largeTwitterCard
         />
-      )}
+      }
       pageContext={pageContext}
       siteUrl={siteUrl}
       slug={slug}
@@ -342,6 +343,7 @@ BlogPost.propTypes = {
   data: shape({
     markdownRemark: object,
   }).isRequired,
+  pageContext: object.isRequired,
 };
 
 export default BlogPost;
@@ -355,7 +357,13 @@ export const pageQuery = graphql`
         date(formatString: "DD MMMM YYYY")
         title
         description
-        image
+        image {
+          childImageSharp {
+            fluid(maxWidth: 1700) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
         imageURL
         imageCredit {
           author {

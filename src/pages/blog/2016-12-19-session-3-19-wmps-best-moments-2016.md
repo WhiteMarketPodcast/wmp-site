@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "Session 3.19 – WMP's Best Moments of 2016"
 date: 2016-12-19T12:29:45.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC0-xmas-markus-spiske-2.jpg'
+image: /img/CC0-xmas-markus-spiske-2.jpg
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/archive.org/download/WhiteMarket20161218Session319/WhiteMarket-20161218-Session319.mp3
 categories:

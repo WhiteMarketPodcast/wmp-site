@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 3.20 – Happy Public Domain Day!'
 date: 2017-01-01T21:00:58.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC0-Bookcase-by-janko-ferlic.jpg'
+image: /img/CC0-Bookcase-by-janko-ferlic.jpg
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/archive.org/download/WhiteMarket20170101Session320/WhiteMarket-20170101-Session320.mp3
 categories:

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 2.12 – Back to the music'
 date: 2015-09-27T21:00:31.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/10/CC-BY-SA-tape-by-Dennis-Skley-e1443709158866.jpg'
+image: /img/2015_10_CC-BY-SA-tape-by-Dennis-Skley-e1443709158866.jpg
 format: 'audio'
 podcastURL: https://archive.org/download/WhiteMarket20150927Session212/WhiteMarket-20150927-Session212.mp3
 categories:

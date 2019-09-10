@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "White Market Podcast shortlisted for Community Radio Awards"
 date: 2016-08-30T10:34:27.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/08/b_1_q_0_p_0.jpg"
+image: /img/2016_08_b_1_q_0_p_0.jpg
 imageAlt: "Community-Radio-Awards-Logo"
 format: "standard"
 categories:

@@ -3,7 +3,6 @@ import posed from 'react-pose';
 import { primary, white, black, hexToRGBA } from 'style/colors';
 import { onMobile } from 'style/mediaQueries';
 import Player from 'react-player';
-import { getImageURL } from 'utils/images';
 import { tinyWMPLogo } from '../utils';
 
 export const ReactPlayer = styled(Player)`
@@ -38,7 +37,7 @@ export const ControlsContainer = styled(Flex)`
 export const PodcastArtwork = styled.div`
   width: 50px;
   height: 50px;
-  background-image: url("${({ src }) => (src ? getImageURL({ image: src, width: 110 }) : tinyWMPLogo)}");
+  background-image: url(${({ src }) => src || tinyWMPLogo});
   background-color: ${black};
   background-position: center;
   background-size: cover;

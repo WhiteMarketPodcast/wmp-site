@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Working open with the help of Mozilla and a repo'
 date: 2017-10-05T10:45:42.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/james-sutton-199643-1.jpg'
+image: /img/james-sutton-199643-1.jpg
 imageAlt: 'james-sutton-199643-unsplash'
 format: 'standard'
 categories:

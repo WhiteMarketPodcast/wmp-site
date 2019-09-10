@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 2.02 – Celebrating Summer, Enjoying the Rain'
 date: 2015-07-05T21:00:24.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/CC-NC-SA-Beach-Sky-by-Darren-Flinders.jpg'
+image: /img/2015_08_CC-NC-SA-Beach-Sky-by-Darren-Flinders.jpg
 imageAlt: 'CC-NC-SA-Beach-Sky-by-Darren-Flinders'
 format: 'audio'
 podcastURL: https://archive.org/download/WhiteMarket20150705Session202/WhiteMarket-20150705-Session202.mp3

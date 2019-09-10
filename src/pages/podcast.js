@@ -44,7 +44,8 @@ export default class PodcastPage extends Component {
   componentDidMount() {
     const { url } = this.context;
     const { episodes, showDetails } = this.state;
-    const { id } = _.find(episodes, [`frontmatter.podcastURL`, url]) || episodes[0];
+    const { id } =
+      _.find(episodes, [`frontmatter.podcastURL`, url]) || episodes[0];
     if (showDetails === id) return;
     this.setState({ showDetails: id });
   }
@@ -135,12 +136,11 @@ export default class PodcastPage extends Component {
           path="/podcast"
         />
 
-        <TitleBG image={image || imageURL}>
-          <TitleContainer>
-            <Title>{pageTitle}</Title>
-          </TitleContainer>
+        <TitleContainer>
+          <TitleBG imageInfo={image || imageURL} className="fill" />
+          <Title>{pageTitle}</Title>
           <SubscribeLinksBar />
-        </TitleBG>
+        </TitleContainer>
         <Grid>
           {this.renderEpisodes()}
           {this.renderSelectedEpisode()}
@@ -163,7 +163,13 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM YYYY")
-            image
+            image {
+              childImageSharp {
+                fluid(maxWidth: 1700) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
             imageURL
             imageAlt
             podcastURL

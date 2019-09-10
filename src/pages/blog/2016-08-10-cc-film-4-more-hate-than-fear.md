@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'CC Film #4 – More Hate Than Fear'
 date: 2016-08-10T10:46:56.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/08/CCFILM_MoreHateThanFear_1280x720.jpg'
+image: /img/2016_08_CCFILM_MoreHateThanFear_1280x720.jpg
 imageAlt: 'CCFILM_MoreHateThanFear_1280x720'
 format: 'video'
 videoURL: https://vimeo.com/157336974

@@ -47,7 +47,8 @@ export const LinkButton = styled(Link)`
 
 export const BrandH1 = styled.h1`
   position: relative;
-  margin: ${({ moreMarginOnTop }) => (moreMarginOnTop ? `3rem auto 1rem auto` : `2rem auto`)};
+  margin: ${({ moreMarginOnTop }) =>
+    moreMarginOnTop ? `3rem auto 1rem auto` : `2rem auto`};
   padding: 0 0.3em;
   text-align: center;
 `;

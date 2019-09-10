@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Public domain poems for National Poetry Day'
 date: 2015-10-08T16:51:26.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/10/CC-BY-NC-SA-open-book-by-lauren-finkel.jpg'
+image: /img/2015_10_CC-BY-NC-SA-open-book-by-lauren-finkel.jpg
 imageAlt: 'CC-BY-NC-SA-open-book-by-lauren-finkel'
 format: 'standard'
 categories:

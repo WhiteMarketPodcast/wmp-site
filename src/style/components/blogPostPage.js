@@ -5,9 +5,8 @@ import {
   MOBILE_NAV_HEIGHT,
   DESKTOP_NAV_HEIGHT,
 } from 'components/Navbar/constants';
-import { getImageURL } from 'utils/images';
 import { white, black, primary, darkGrey, grey } from '../colors';
-import { onMobile, onMassiveScreen } from '../mediaQueries';
+import { onMobile } from '../mediaQueries';
 import { fade, slideUpWithDelay } from '../poses';
 
 export const Title = styled.h1`
@@ -18,40 +17,27 @@ export const Title = styled.h1`
 `;
 
 export const Hero = styled.div`
+  position: relative;
+  background-color: ${black};
+`;
+
+export const HeroContents = styled.div`
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  background-color: ${black};
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ),
-    url(${({ src }) => getImageURL({ image: src })});
+    to top,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)
+  );
   min-height: 60vh;
 
   ${onMobile} {
-    background-image: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.4)
-      ),
-      url(${({ src }) => getImageURL({ image: src, width: 700 })});
     padding: 1rem;
-  }
-
-  ${onMassiveScreen} {
-    background-image: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.4)
-      ),
-      url(${({ src }) => getImageURL({ image: src, width: 1700 })});
   }
 `;
 
@@ -122,7 +108,7 @@ export const BlogContent = styled(SlideUp)`
 
   img {
     display: flex;
-    margin: 1rem auto;
+    margin: 0 auto;
     max-width: 100%;
   }
 `;
@@ -191,11 +177,10 @@ export const VideoPlyrContainer = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ),
-    url(${({ bgImage }) => bgImage && getImageURL({ image: bgImage })});
+    to top,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)
+  );
   height: calc((100vw - 250px) / 16 * 9);
   max-height: calc(100vh - ${DESKTOP_NAV_HEIGHT});
   max-width: 100vw;
@@ -208,12 +193,6 @@ export const VideoPlyrContainer = styled.div`
   ${onMobile} {
     height: calc(100vw / 16 * 9);
     max-height: calc(100vh - ${MOBILE_NAV_HEIGHT});
-    background-image: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.4),
-        rgba(0, 0, 0, 0.4)
-      ),
-      url(${({ bgImage }) => bgImage && getImageURL({ image: bgImage, width: 700 })});
 
     > div {
       max-width: calc((100vh - ${MOBILE_NAV_HEIGHT}) / 9 * 16);

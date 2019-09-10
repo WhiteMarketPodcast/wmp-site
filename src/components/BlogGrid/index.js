@@ -71,7 +71,7 @@ class BlogGrid extends Component {
         onMouseLeave={this.handleBlur(index)}
         tabIndex="0"
       >
-        <BlogPreviewImage bgImage={image || imageURL} index={index} />
+        <BlogPreviewImage imageInfo={image || imageURL} />
         <PreviewTextContainer index={index}>
           <PostType format={format}>{formatConverter[format]}</PostType>
           <PreviewTitle index={index}>{title}</PreviewTitle>

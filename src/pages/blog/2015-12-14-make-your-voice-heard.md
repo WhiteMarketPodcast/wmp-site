@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Make your voice heard! Join the EU Public Consultations'
 date: 2015-12-14T13:21:56.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/12/5540462170_d5297d9ce8_b.jpg'
+image: /img/2015_12_5540462170_d5297d9ce8_b.jpg
 imageAlt: 'https://creativecommons.org/licenses/by-sa/2.0/'
 format: 'standard'
 categories:
@@ -15,7 +15,7 @@ tags:
 
 If you thought there wasn’t much you could do about EU regulations, I have good news for you! **You can actually make a difference.** The European Union often asks citizens (and other parties) how they feel about certain issues before starting the legislation process, in what we call **EU Public Consultations**. So, there is a real chance for you to speak up your mind and tell the EU Commission and Parliament your thoughts on what should be done and what matters to you. Currently, there are a few public consultations and surveys going on which you should take a look at. I know some look a bit daunting, but believe me: the possibility of having a **freer, more accessible borderless digital market in the EU** is worth every single minute. Get yourself a cup of tea and get going!
 
-[![Eurpean_Commissions_Platform_Consultation](https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/12/Eurpean_Commissions_Platform_Consultation.png)](https://edri.org/platformsconsultationtool/)
+[![Eurpean_Commissions_Platform_Consultation](/img/Eurpean_Commissions_Platform_Consultation.png)](https://edri.org/platformsconsultationtool/)
 
 ## By December 25th
 

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Bossa-nova and the mellowness of the tropics'
 date: 2015-08-08T12:05:09.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/A-Minha-Embala-album-cover-big-e1439031693892.jpg'
+image: /img/2015_08_A-Minha-Embala-album-cover-big-e1439031693892.jpg
 imageAlt: 'A-Minha-Embala-album-cover'
 format: 'standard'
 categories:

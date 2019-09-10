@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 3.10 – All We Need Is Free Music Archive'
 date: 2016-09-25T22:05:20.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/09/CC0-Free-Music-2-e1474890099877.jpeg'
+image: /img/2016_09_CC0-Free-Music-2-e1474890099877.jpeg
 format: 'audio'
 podcastURL: https://archive.org/download/WhiteMarket20160925Session310/WhiteMarket-20160925-Session310.mp3
 categories:

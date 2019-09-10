@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 2.14 – About the CC Summit 2015'
 date: 2015-10-11T20:55:40.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/10/6051120264_feb1103fb2_o.jpg'
+image: /img/2015_10_6051120264_feb1103fb2_o.jpg
 imageAlt: 'CC-BY-NC-ND-CC-logo-storm-trooper'
 format: 'audio'
 podcastURL: https://archive.org/download/WhiteMarketSession214/WhiteMarket_2015-10-11.mp3

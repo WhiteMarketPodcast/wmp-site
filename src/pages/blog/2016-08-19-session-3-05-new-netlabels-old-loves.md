@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 3.05 – New Netlabels and Old Loves'
 date: 2016-08-19T17:23:58.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/08/CC-BY-NC-Sound-Waves-by-Thomas-Hawk.jpg'
+image: /img/2016_08_CC-BY-NC-Sound-Waves-by-Thomas-Hawk.jpg
 imageAlt: 'CC-BY-NC-Sound-Waves-by-Thomas-Hawk'
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/WhiteMarket20160819Session305/WhiteMarket-20160819-Session305.mp3

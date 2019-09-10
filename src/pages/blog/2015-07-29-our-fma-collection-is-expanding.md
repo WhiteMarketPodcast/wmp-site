@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Our FMA collection is expanding'
 date: 2015-07-29T12:25:29.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/07/cover_FMA.jpg'
+image: /img/2015_07_cover_FMA.jpg
 imageAlt: 'Darksunn-MELANGE-album-cover'
 format: 'standard'
 categories:

@@ -1,4 +1,4 @@
-import CMS from 'netlify-cms';
+import CMS from 'netlify-cms-app';
 import 'style/sass/all.sass';
 
 import AboutPagePreview from './preview-templates/AboutPagePreview';

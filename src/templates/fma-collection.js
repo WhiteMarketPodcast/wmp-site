@@ -4,6 +4,7 @@ import { array, func, node, object, string } from 'prop-types';
 import { graphql } from 'gatsby';
 import PageHelmet from 'components/Helmets/PageHelmet';
 import Content, { HTMLContent } from 'components/Content';
+import PreviewCompatibleImage from 'components/PreviewCompatibleImage';
 import { TitleBG, Title, Section } from 'style/components/aboutPage';
 import {
   Grid,
@@ -68,13 +69,13 @@ export class FMACollectionTemplate extends Component {
       <AlbumContainer
         key={url}
         to={url}
-        bgImage={image}
         onFocus={this.handleHover(index)}
         onMouseOver={this.handleHover(index)}
         onBlur={this.handleBlur(index)}
         onMouseLeave={this.handleBlur(index)}
         tabIndex="0"
       >
+        <PreviewCompatibleImage imageInfo={image} className="fill" />
         <InfoContainer active={index === showInfo}>
           <ArtistAndTitle>{`${artist} - ${title}`}</ArtistAndTitle>
           <div>{`(${genres.join(`, `)})`}</div>
@@ -119,14 +120,15 @@ const FMACollection = ({ data }) => {
       contentComponent={HTMLContent}
       title={post.frontmatter.title}
       collection={post.frontmatter.collection}
+      image={post.frontmatter.image}
       content={post.html}
-      helmet={(
+      helmet={
         <PageHelmet
           pageTitle={pageTitle}
           description={description}
           path={post.fields.slug}
         />
-      )}
+      }
     />
   );
 };
@@ -152,7 +154,13 @@ export const fmaCollectionQuery = graphql`
         collection {
           title
           artist
-          image
+          image {
+            childImageSharp {
+              fluid(maxWidth: 1700) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
           genres
           url
         }

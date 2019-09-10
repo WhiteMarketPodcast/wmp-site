@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 4.01 – Talking copyright with EDRi'
 date: 2017-07-30T22:29:17.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/edri_logo-1.jpg'
+image: /img/edri_logo-1.jpg
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/archive.org/download/WhiteMarketPodcastSession401/WhiteMarketPodcast-Session401.mp3
 categories:

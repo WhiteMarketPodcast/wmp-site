@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "The 2016 EU Copyright Reform Proposal"
 date: 2016-09-16T17:28:45.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/09/CC-BY-Copyleft-by-Eflon-5.jpg"
+image: /img/2016_09_CC-BY-Copyleft-by-Eflon-5.jpg
 imageAlt: "cc-by-copyleft-by-eflon"
 format: "standard"
 categories:

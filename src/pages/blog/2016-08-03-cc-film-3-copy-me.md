@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'CC Film #3 – Copy-Me'
 date: 2016-08-03T12:31:21.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/07/COPYME_featured.jpg'
+image: /img/2016_07_COPYME_featured.jpg
 format: 'video'
 videoURL: https://vimeo.com/143511457
 categories:

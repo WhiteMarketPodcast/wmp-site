@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 3.06 – Happy Anniversary, Linux!'
 date: 2016-08-25T23:00:58.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/08/CC-0-Birthday-3.jpeg'
+image: /img/2016_08_CC-0-Birthday-3.jpeg
 imageAlt: 'CC-0-Birthday-by-Annie-Sprat'
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/WhiteMarket20160825Session306/WhiteMarket-20160825-Session306.mp3

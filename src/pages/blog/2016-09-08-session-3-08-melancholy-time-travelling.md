@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Session 3.08 – Melancholy and Time Travelling'
 date: 2016-09-08T22:15:04.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/09/CC-0-Melancholy.jpeg'
+image: /img/2016_09_CC-0-Melancholy.jpeg
 imageAlt: 'cc-0-melancholy'
 format: 'audio'
 podcastURL: https://media.blubrry.com/white_market/s/archive.org/download/WhiteMarket20160902Session308/WhiteMarket-20160902-Session308.mp3

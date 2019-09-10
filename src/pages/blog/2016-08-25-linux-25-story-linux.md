@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "Linux 25 – The Story of Linux"
 date: 2016-08-25T15:20:16.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/08/Linux-25-The-Story-of-Linux-2.jpg"
+image: /img/2016_08_Linux-25-The-Story-of-Linux-2.jpg
 format: "standard"
 categories:
   - "Documentaries"

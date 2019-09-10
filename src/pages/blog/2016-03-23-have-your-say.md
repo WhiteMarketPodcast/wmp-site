@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'EU wants to hear you – #SaveTheLink and Freedom of Panorama'
 date: 2016-03-23T12:15:17.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/03/CC-BY-SA-Blacked_out_London-Eye-by-Khan-Tran.jpg'
+image: /img/2016_03_CC-BY-SA-Blacked_out_London-Eye-by-Khan-Tran.jpg
 imageAlt: 'CC-BY-SA-Blacked_out_London-Eye-by-Khan-Tran'
 format: 'standard'
 categories:

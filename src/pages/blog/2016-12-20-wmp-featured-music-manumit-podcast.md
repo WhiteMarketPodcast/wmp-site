@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "WMP featured on Music Manumit podcast"
 date: 2016-12-20T16:35:16.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/musicmanumit.jpg"
+image: /img/musicmanumit.jpg
 format: "standard"
 categories:
   - "Blog"

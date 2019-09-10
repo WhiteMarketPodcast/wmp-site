@@ -13,7 +13,8 @@ export function getTwitterURL({ url, text }) {
 }
 
 // WhatsApp
-const getWhatsAppURL = ({ url, text }) => `https://wa.me/?text=${encodeURIComponent(text)} - ${url}`;
+const getWhatsAppURL = ({ url, text }) =>
+  `https://wa.me/?text=${encodeURIComponent(text)} - ${url}`;
 
 // Email
 const getMailto = ({ url, text }) => `mailto:?body=${text} - ${url}`;

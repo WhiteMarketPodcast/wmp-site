@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: "White Market in Context I – Production Effort and Production Values"
 date: 2016-09-27T14:35:15.000Z
-imageURL: "https://res.cloudinary.com/thekdizzler/image/upload/white_market/CC-0-Studio.jpeg"
+image: /img/CC-0-Studio.jpeg
 imageAlt: "cc-0-studio"
 format: "standard"
 categories:

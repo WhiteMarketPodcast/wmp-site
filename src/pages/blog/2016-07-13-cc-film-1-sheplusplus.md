@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'CC Film #1 – she++: The Documentary'
 date: 2016-07-13T20:15:24.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2016/07/ShePlusPlus-thumb-1280x720.jpg'
+image: /img/2016_07_ShePlusPlus-thumb-1280x720.jpg
 imageAlt: 'ShePlusPlus-thumb-1280x720'
 format: 'video'
 videoURL: https://vimeo.com/63877454

@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: 'Neon lights and shiny beats'
 date: 2015-08-21T15:14:54.000Z
-imageURL: 'https://res.cloudinary.com/thekdizzler/image/upload/white_market/2015/08/Taseh-Dekotora-album-cover.jpg'
+image: /img/2015_08_Taseh-Dekotora-album-cover.jpg
 imageAlt: 'Taseh-Dekotora-album-cover'
 format: 'standard'
 categories:
