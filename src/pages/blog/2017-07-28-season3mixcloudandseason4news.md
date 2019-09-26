@@ -14,7 +14,7 @@ tags:
   - 'podcast updates'
 ---
 
-White Market Podcast strives to be an accessible project, so I have been making the show available in a variety of platforms. You can download and listen each episode straight from this website and from [**Archive.org**](https://archive.org/details/@white_market_podcast), you can subscribe to the podcast via **[iTunes](https://itunes.apple.com/gb/podcast/white-market-podcast/id1033024096)** and via [**RSS feed**](http://www.whitemarketpodcast.co.uk/feed/podcast/) and you can now listen to all of season 3 episodes on **[Mixcloud](https://www.mixcloud.com/whitemarketpodcast/)**. For those of you who are not familiar with it, Mixcloud is a streaming platform focused on radio content and dj mixes. You can think of it a Soundcloud dedicated longer audio formats. While season 4 is cooking up, why not listen to some of our old shows there?
+White Market Podcast strives to be an accessible project, so I have been making the show available in a variety of platforms. You can download and listen each episode straight from this website and from [**Archive.org**](https://archive.org/details/@white_market_podcast), you can subscribe to the podcast via **[iTunes](https://itunes.apple.com/gb/podcast/white-market-podcast/id1033024096)** and via [**RSS feed**](/rss.xml/) and you can now listen to all of season 3 episodes on **[Mixcloud](https://www.mixcloud.com/whitemarketpodcast/)**. For those of you who are not familiar with it, Mixcloud is a streaming platform focused on radio content and dj mixes. You can think of it a Soundcloud dedicated longer audio formats. While season 4 is cooking up, why not listen to some of our old shows there?
 
 ## Did I just read “season 4”?
 

@@ -15,7 +15,7 @@ tags:
   - 'syndication'
 ---
 
-I [have already explained](http://www.whitemarketpodcast.co.uk/blog/2016/03/22/happy-birthday-white-market/) how much has changed since **White Market** podcast started. Throughout the last eight years, the show has gathered some [**impressive stats**](http://www.whitemarketpodcast.co.uk/wp-content/uploads/2016/07/White-Market-Stats-Syndication-Web.pdf), and is now ready for the next step. During this summer, White Market will develop into a full syndication platform – producing and hosting free/libre open radio content. This will happen as a **practice-based academic project**, being the final project of my MA degree in Radio Production and Management.
+I [have already explained](/blog/2016-03-22-happy-birthday-white-market/) how much has changed since **White Market** podcast started. Throughout the last eight years, the show has gathered some [**impressive stats**](/wp-content/uploads/2016/07/White-Market-Stats-Syndication-Web.pdf), and is now ready for the next step. During this summer, White Market will develop into a full syndication platform – producing and hosting free/libre open radio content. This will happen as a **practice-based academic project**, being the final project of my MA degree in Radio Production and Management.
 
 ## Using Creative Commons builds creative commons
 

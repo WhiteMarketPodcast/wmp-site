@@ -21,7 +21,7 @@ tags:
   - 'Tanukieri Records'
 ---
 
-We’re back to the music after two wonderful sessions with interviews – one with **[MEP Julia Reda](http://www.whitemarketpodcast.co.uk/podcasts/2015/09/08/session-2-11-julia-reda-and-how-you-can-help-fixcopyright/)**, the other one with the **[director of the Free Music Archive](http://www.whitemarketpodcast.co.uk/podcasts/2015/09/06/session-2-10-all-hail-the-free-music-archive/)**, Cheyenne Hohman. This means netlabels are back, Bandcamp is back and basically I am offering you a full hour of unbelievably amazing free music.
+We’re back to the music after two wonderful sessions with interviews – one with **[MEP Julia Reda](/blog/2015-09-08-session-2-11-julia-reda-and-how-you-can-help-fixcopyright/)**, the other one with the **[director of the Free Music Archive](/blog/2015-09-06-session-2-10-all-hail-the-free-music-archive/)**, Cheyenne Hohman. This means netlabels are back, Bandcamp is back and basically I am offering you a full hour of unbelievably amazing free music.
 
 Emerald Park – GO! GO! GO! \[[23 Seconds](http://www.23seconds.org/)/[blocSonic](http://blocsonic.com/releases/bscomp0048)\]  
 Arcade Island – Refugee (remix) \[[Bandcamp](http://arcadeisland.bandcamp.com/album/youth-in-decay)\]  

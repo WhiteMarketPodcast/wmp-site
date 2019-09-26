@@ -16,7 +16,7 @@ tags:
   - 'Monster Jinx'
 ---
 
-On our [last session](http://www.whitemarketpodcast.co.uk/blog/2015/07/19/session-2-04-keeping-the-engine-running/), I challenged myself to make a new upload to **[White Market’s music collection Free Music Archive](https://freemusicarchive.org/curator/programamarcabranca/)** every week. It would have been amazing if it wasn’t for the fact that I just moved houses and I am out of internet until August 5th, which makes things just slightly tougher. However, I will try to make up for it and upload some sweet sweet things in a near-ish future.
+On our [last session](/blog/2015-07-19-session-2-04-keeping-the-engine-running/), I challenged myself to make a new upload to **[White Market’s music collection Free Music Archive](https://freemusicarchive.org/curator/programamarcabranca/)** every week. It would have been amazing if it wasn’t for the fact that I just moved houses and I am out of internet until August 5th, which makes things just slightly tougher. However, I will try to make up for it and upload some sweet sweet things in a near-ish future.
 
 Now, a few things that you need to know about this **Free Music Archive** thing. I started curating/uploading content for it a few years ago, when White Market was still “**[Programa Marca Branca](http://programamarcabranca.blogspot.pt/)**“- basically the same show, but in Portuguese, airing in 5 different radio stations in Portugal and Spain. When PMB transformed into White Market, I adjusted the descriptions, links and whatnot, while keeping the previously uploaded records online.
 

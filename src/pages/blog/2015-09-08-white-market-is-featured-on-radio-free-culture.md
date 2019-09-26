@@ -12,7 +12,7 @@ tags:
   - "Radio Free Culture"
   - "WFMU"
 ---
-Whoop, whoop! White Market is featured on the latest **Radio Free Culture** podcast. I talked about the show and how I got tangled in the free music world, as well as some of my favourite places to get free music. Yes, you guessed correctly: [when I interviewed Cheyenne](http://www.whitemarketpodcast.co.uk/podcasts/2015/09/06/session-2-10-all-hail-the-free-music-archive/), she interviewed me as well.
+Whoop, whoop! White Market is featured on the latest **Radio Free Culture** podcast. I talked about the show and how I got tangled in the free music world, as well as some of my favourite places to get free music. Yes, you guessed correctly: [when I interviewed Cheyenne](/blog/2015-09-06-session-2-10-all-hail-the-free-music-archive/), she interviewed me as well.
 
 Radio Free Culture is a weekly program that explores digital culture, net neutrality, piracy, the broadcast spectrum, digital rights, and archives and libraries in the internet age. We’ll be interviewing some of the nation’s key figures at the intersection of music, multimedia, and digital technology. It is produced by **WFMU** and **Free Music Archive**.
 

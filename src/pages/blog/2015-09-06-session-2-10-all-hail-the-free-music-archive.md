@@ -18,7 +18,7 @@ tags:
 
 <cite>Wikipedia</cite>
 
-It was founded in 2009 and it’s still running. And now, every Friday, I upload a [new record to Free Music Archive](http://www.whitemarketpodcast.co.uk/free-music-archive-collection/). Being a [curator](http://freemusicarchive.org/curator/programamarcabranca/) there is a fundamental piece of White Market’s quest to spread the word on free music. So, this latest session I had the great pleasure of talking to **Cheyenne Hohman**, the **director of [Free Music Archive](http://freemusicarchive.org)**. Not only did we talk about their work, mission and challenges, we also had time to share some cool tracks and share other thoughts on free culture and copyright. As you may have guessed by now, all the tracks we played today can be found on Free Music Archive.
+It was founded in 2009 and it’s still running. And now, every Friday, I upload a [new record to Free Music Archive](/fma-collection/). Being a [curator](http://freemusicarchive.org/curator/programamarcabranca/) there is a fundamental piece of White Market’s quest to spread the word on free music. So, this latest session I had the great pleasure of talking to **Cheyenne Hohman**, the **director of [Free Music Archive](http://freemusicarchive.org)**. Not only did we talk about their work, mission and challenges, we also had time to share some cool tracks and share other thoughts on free culture and copyright. As you may have guessed by now, all the tracks we played today can be found on Free Music Archive.
 
 Make sure you like them on [Facebook](https://www.facebook.com/freemusicarchive), follow them on [Twitter](https://twitter.com/freemusicarchiv) and download their brand new/revamped app, which is available for both iOS and Android.
 
