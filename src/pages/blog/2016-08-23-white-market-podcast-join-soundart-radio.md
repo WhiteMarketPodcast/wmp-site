@@ -12,7 +12,7 @@ tags:
   - "Soundart Radio"
   - "syndication"
 ---
-If you’ve been following the show (or this blog) lately, you probably know that White Market Podcast is slowly [becoming a syndication platform for community radio stations](http://www.whitemarketpodcast.co.uk/blog/2016/07/06/white-market-becomes-syndication-platform/). As part of this effort, I can now proudly announce that the show will be broadcast on [**Soundart Radio**](http://soundartradio.org.uk/). Starting **September 6th**, the show will take over the 11pm slot on Tuesdays.
+If you’ve been following the show (or this blog) lately, you probably know that White Market Podcast is slowly [becoming a syndication platform for community radio stations](/blog/2016-07-06-white-market-becomes-syndication-platform/). As part of this effort, I can now proudly announce that the show will be broadcast on [**Soundart Radio**](http://soundartradio.org.uk/). Starting **September 6th**, the show will take over the 11pm slot on Tuesdays.
 
 **Soundart Radio** is a community radio station based in Dartington, England, and one particularly devoted to arts. Exciting and creative, the station operates under an Ofcom licence, delivering mostly works of art in sonic form and specialised radio production. In addition to the artistic-led programming schedule and activities, Soundart Radio is also a member of the **[Radia Network](http://www.radia.fm/).**
 

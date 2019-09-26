@@ -25,7 +25,7 @@ tags:
 
 This week, we celebrated **Linux’s 25th anniversary**. So, on top of the usual free music playlist, there was also a  brand new segment. For the first time ever on the show, we played a **documentary**.
 
-“[**Linux 25 – The Story of Linux**](http://www.whitemarketpodcast.co.uk/features/documentaries/2016/08/25/linux-25-story-linux/)” is a White Market Podcast production and it is available for free download in a variety of formats as a stand-alone piece. As usual, it is also free to share and use, as it is available under a [**Creative Commons Attribution Share-Alike**](https://creativecommons.org/licenses/by-sa/3.0/) licence.
+“[**Linux 25 – The Story of Linux**](/blog/2016-08-25-linux-25-story-linux/)” is a White Market Podcast production and it is available for free download in a variety of formats as a stand-alone piece. As usual, it is also free to share and use, as it is available under a [**Creative Commons Attribution Share-Alike**](https://creativecommons.org/licenses/by-sa/3.0/) licence.
 
 Kellee Maize – In Tune – Remix 2 (2017 brand new!) \[[FMA](http://freemusicarchive.org/music/Kellee_Maize/The_Remixes)\] // [CC BY  
 ](https://creativecommons.org/licenses/by/4.0/)Nada Funk- Novocaine \[[Jamendo](https://www.jamendo.com/track/1368603/novocaine)\] // [CC BY-NC](https://creativecommons.org/licenses/by-nd/3.0/)  

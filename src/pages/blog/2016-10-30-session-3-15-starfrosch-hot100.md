@@ -18,7 +18,7 @@ tags:
   - 'Wowa Music'
 ---
 
-After mentioning the project several times on the show ([and on the blog as well](http://www.whitemarketpodcast.co.uk/blog/2016/07/12/best-places-find-free-music/)!), this week, I finally had the pleasure of talking to **Markus Koller**, the person behind the wonderful [**Starfrosch**](https://starfrosch.com). Starfrosch is a Switzerland-based project that runs simultaneously as a podcast, a blog, an automated radio playlist and, last but definitely not least, as a [**Hot100 chart for Creative Commons music**](https://starfrosch.com/hot-100).
+After mentioning the project several times on the show ([and on the blog as well](/blog/2016-07-12-best-places-find-free-music/)!), this week, I finally had the pleasure of talking to **Markus Koller**, the person behind the wonderful [**Starfrosch**](https://starfrosch.com). Starfrosch is a Switzerland-based project that runs simultaneously as a podcast, a blog, an automated radio playlist and, last but definitely not least, as a [**Hot100 chart for Creative Commons music**](https://starfrosch.com/hot-100).
 
 Markus is a pioneer of Creative Commons music, having been an active member of the community for more than a decade now. So, it didn’t come as a surprise to find out that he knows quite a lot about the licences and some of the issues major CC music sharing platforms have. On top of that, we also talked about how he developed the website and the project over the years, and some of his own favourite music genres and platforms.
 

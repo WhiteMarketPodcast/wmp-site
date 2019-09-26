@@ -18,7 +18,7 @@ We couldn’t really go another **CC Film Wednesday** without highlighting the w
 
 While we are showcasing the latest episode, the webseries already has three more episodes available. On top of this, the team behind it has plans to deliver at least four more. All episodes are available under a [**CC BY** licence](https://creativecommons.org/licenses/by/3.0/), which means they can be **freely shared, reused and remixed, even for commercial purposes** – all you have to do is credit the author properly. You can also collaborate with Copy-Me by [helping out in the translation process](http://copy-me.org/contribute/copy-webseries-subtitles/).
 
-If you want to know a bit more about this project, make sure you listen to [**White Market’s latest session**](http://www.whitemarketpodcast.co.uk/podcasts/2016/07/28/3-03-copy-me-copy-you/) as I interviewed Alex Lungu from Copy-Me.
+If you want to know a bit more about this project, make sure you listen to [**White Market’s latest session**](/blog/2016-07-28-3-03-copy-me-copy-you/) as I interviewed Alex Lungu from Copy-Me.
 
 ## Episodes Available
 

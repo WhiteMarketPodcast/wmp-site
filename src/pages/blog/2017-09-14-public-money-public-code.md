@@ -22,6 +22,6 @@ Join the cause and make sure you [sign the open letter.](https://publiccode.eu/)
 
 [Sign now](https://publiccode.eu/)
 
-To find out more about FSFE and their work, listen to [session 3.07, which features an interview with the executive director at FSFE](https://www.whitemarketpodcast.co.uk/podcasts/2016/09/01/session-3-07-fsfe-summit-2016-and-some-tunes/), Jonas Öberg.
+To find out more about FSFE and their work, listen to [session 3.07, which features an interview with the executive director at FSFE](/blog/2016-09-01-session-3-07-fsfe-summit-2016-and-some-tunes/), Jonas Öberg.
 
 <small>_This post is available under a [Creative Commons BY-SA 4.0 licence](https://creativecommons.org/licenses/by-sa/4.0/). It includes text excerpts from the ”**[Public Money? Public Code!](https://publiccode.eu/)**” campaign; also available under a [Creative Commons BY-SA 4.0 licence](https://creativecommons.org/licenses/by-sa/4.0/)._</small>

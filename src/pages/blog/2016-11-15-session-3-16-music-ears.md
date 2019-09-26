@@ -20,7 +20,7 @@ tags:
   - 'Vulpiano Records'
 ---
 
-This week we dive into yet another music-only session! From hip-hop to post-rock, from new music to great throwbacks, this episode come jam-packed with amazing tunes to suit all your needs. This episode also marks the beginning of a new feature called “**Starfrosch Hot Track of the Week**“, which is a collaboration with [Starfrosch](https://starfrosch.com/hot-100/). If you want to know more about their Creative Commons chart, make sure you listen to our [interview with Markus Koeller](http://www.whitemarketpodcast.co.uk/podcasts/2016/10/30/session-3-15-starfrosch-hot100/).
+This week we dive into yet another music-only session! From hip-hop to post-rock, from new music to great throwbacks, this episode come jam-packed with amazing tunes to suit all your needs. This episode also marks the beginning of a new feature called “**Starfrosch Hot Track of the Week**“, which is a collaboration with [Starfrosch](https://starfrosch.com/hot-100/). If you want to know more about their Creative Commons chart, make sure you listen to our [interview with Markus Koeller](/blog/2016-10-30-session-3-15-starfrosch-hot100/).
 
 The Impossebulls – No Country for Old Men \[[blocSonic](http://blocsonic.com/releases/bsmx0147)\] // [CC BY-NC-SA  
 ](https://creativecommons.org/licenses/by-nc-sa/4.0/)Severin – I Really Adore You \[[Needle Drop Co.](http://freemusicarchive.org/music/Severin/Severin/)\] // [CC BY-NC  

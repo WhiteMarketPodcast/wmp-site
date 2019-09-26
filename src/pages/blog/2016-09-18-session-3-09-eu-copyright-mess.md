@@ -22,7 +22,7 @@ tags:
   - 'ZigurArtists'
 ---
 
-Following the reveal of the [**EU Copyright Reform Proposal**](http://www.whitemarketpodcast.co.uk/blog/2016/09/16/2016-eu-copyright-reform-proposal/), this show had to feature it. The text is a disappointment, but there’s still a lot that can be done to make it change. The piece is [available for separate download](https://archive.org/details/2016EUCopyrightProposalReform) in a variety of formats, so make sure you share it, remix it, use it for whatever you need, just spread the word!
+Following the reveal of the [**EU Copyright Reform Proposal**](/blog/2016-09-16-2016-eu-copyright-reform-proposal/), this show had to feature it. The text is a disappointment, but there’s still a lot that can be done to make it change. The piece is [available for separate download](https://archive.org/details/2016EUCopyrightProposalReform) in a variety of formats, so make sure you share it, remix it, use it for whatever you need, just spread the word!
 
 We also went aboard the public domain ship, once again, and found a bit more about “The Little Prince”. Last but not the least, we brought you more than a handful of awesome free tracks – most of them with permissions for remixing.
 
