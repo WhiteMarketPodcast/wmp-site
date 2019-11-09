@@ -59,10 +59,10 @@
   "license": "GPL-3.0",
   "main": "n/a",
   "scripts": {
-    "start": "npm run develop",
+    "start": "yarn develop",
     "clean": "rimraf .cache public",
-    "build": "npm run clean && gatsby build",
-    "develop": "npm run clean && gatsby develop",
+    "build": "yarn clean && gatsby build",
+    "develop": "yarn clean && gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --arrow-parens always --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "lint": "eslint --fix \"{gatsby-*.js,src/**/*.js}\"",
