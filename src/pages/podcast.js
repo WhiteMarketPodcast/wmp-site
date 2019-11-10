@@ -58,10 +58,10 @@ export default class PodcastPage extends Component {
   setShowDetails = (id) => () => this.setState({ showDetails: id });
 
   handlePlayButtonClick = (podcastURL) => () => {
-    const { isPlaying, url, setPodcastState, setPlayState } = this.context;
+    const { isPlaying, url, setPodcastState, setPlaying } = this.context;
 
     if (podcastURL === url) {
-      setPlayState(!isPlaying);
+      setPlaying(!isPlaying);
     } else {
       setPodcastState({ url: podcastURL });
     }

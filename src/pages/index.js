@@ -48,17 +48,17 @@ export default class IndexPage extends Component {
 
   handlePlayButtonClick = () => {
     const { podcastURL } = this.getPodcastInfo().frontmatter;
-    const { isPlaying, url, setPodcastState, setPlayState } = this.context;
+    const { isPlaying, url, setPodcastState, setPlaying } = this.context;
 
     if (podcastURL === url) {
-      setPlayState(!isPlaying);
+      setPlaying(!isPlaying);
     } else {
       setPodcastState({ url: podcastURL });
     }
   };
 
   renderPodcast() {
-    const { isPlaying, url } = this.context;
+    const { isBuffering, isPlaying, url } = this.context;
     const { fields, frontmatter } = this.getPodcastInfo();
     const { slug } = fields;
     const { title, podcastURL, image, imageURL } = frontmatter;
@@ -78,6 +78,7 @@ export default class IndexPage extends Component {
               </Link>
             </PodcastTextContainer>
             <PlayButton
+              isBuffering={isBuffering}
               isPlaying={url === podcastURL && isPlaying}
               onClick={this.handlePlayButtonClick}
               screenReaderText="Listen to the latest session"

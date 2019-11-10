@@ -57,6 +57,21 @@
     "react/no-danger": 0,
     "react/prefer-stateless-function": 0,
     "import/prefer-default-export": 0,
-    "react/forbid-prop-types": 0
+    "react/forbid-prop-types": 0,
+    "react/sort-comp": [
+      2,
+      {
+        "order": [
+          "static-variables",
+          "static-methods",
+          "lifecycle",
+          "everything-else",
+          "rendering"
+        ],
+        "groups": {
+          "rendering": ["/^render.+$/", "render"]
+        }
+      }
+    ]
   }
 }

@@ -13,7 +13,7 @@ import 'style/sass/all.sass';
 import GlobalStyle from 'style';
 import { PageFade } from './styled';
 
-class TemplateWrapper extends Component {
+class Layout extends Component {
   static propTypes = {
     children: node.isRequired,
     location: object.isRequired,
@@ -21,10 +21,12 @@ class TemplateWrapper extends Component {
 
   state = {
     mounted: false,
+    isBuffering: false,
     isPlaying: false,
     url: ``,
     setPodcastState: (changes) => this.setState(changes),
-    setPlayState: (isPlaying) => this.setState({ isPlaying }),
+    setPlaying: (isPlaying) => this.setState({ isPlaying }),
+    setBuffering: (isBuffering) => this.setState({ isBuffering }),
   };
 
   componentDidMount() {
@@ -52,4 +54,4 @@ class TemplateWrapper extends Component {
   }
 }
 
-export default TemplateWrapper;
+export default Layout;

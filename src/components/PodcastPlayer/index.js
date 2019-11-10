@@ -10,6 +10,7 @@ import {
   VolumeLowIcon,
   VolumeMediumIcon,
   VolumeOffIcon,
+  LoadingIcon,
 } from 'mdi-react';
 import { SrOnly, SrText } from 'style/components';
 import {
@@ -81,25 +82,26 @@ class PodcastPlayer extends PureComponent {
   };
 
   load = (url) => {
-    const { setPlayState } = this.context;
+    const { setPlaying, setBuffering } = this.context;
     this.setState({
       url,
       played: 0,
       title: this.getEpisodeTitle(),
       episodeImage: this.getEpisodeImage(),
     });
-    setPlayState(false);
+    setPlaying(true);
+    setBuffering(true);
   };
 
   playPause = () => {
-    const { isPlaying, setPlayState } = this.context;
-    setPlayState(!isPlaying);
+    const { isPlaying, setPlaying } = this.context;
+    setPlaying(!isPlaying);
   };
 
   stop = () => {
-    const { setPlayState } = this.context;
+    const { setPlaying } = this.context;
     this.setState({ url: null });
-    setPlayState(false);
+    setPlaying(false);
   };
 
   setVolume = (e) => {
@@ -112,19 +114,18 @@ class PodcastPlayer extends PureComponent {
 
   onReady = () => {
     this.setState({ changingURL: false });
-    this.onPlay();
   };
 
   onPlay = () => {
     console.log('onPlay');
-    const { isPlaying, setPlayState } = this.context;
-    if (!isPlaying) setPlayState(true);
+    const { setBuffering } = this.context;
+    setBuffering(false);
   };
 
   onPause = () => {
     console.log('onPause');
-    const { setPlayState } = this.context;
-    setPlayState(false);
+    const { setPlaying } = this.context;
+    setPlaying(false);
   };
 
   onSeekMouseDown = () => {
@@ -158,8 +159,8 @@ class PodcastPlayer extends PureComponent {
   };
 
   onEnded = () => {
-    const { setPlayState } = this.context;
-    setPlayState(false);
+    const { setPlaying } = this.context;
+    setPlaying(false);
   };
 
   onDuration = (duration) => {
@@ -171,7 +172,7 @@ class PodcastPlayer extends PureComponent {
   };
 
   render() {
-    const { isPlaying } = this.context;
+    const { isBuffering, isPlaying, setPodcastState } = this.context;
     const {
       url,
       title,
@@ -202,6 +203,10 @@ class PodcastPlayer extends PureComponent {
           onEnded={this.onEnded}
           onProgress={this.onProgress}
           onDuration={this.onDuration}
+          onBuffer={() => setPodcastState({ isBuffering: true })}
+          onBufferEnd={() => {
+            setPodcastState({ isPlaying: true, isBuffering: false });
+          }}
         />
 
         <SrOnly>
@@ -231,7 +236,7 @@ class PodcastPlayer extends PureComponent {
           <PodcastInfoContainer>
             <PodcastTitle>{title}</PodcastTitle>
             <TimeRemaining>
-              {formatTime(duration * (1 - played), `-`)}
+              {!isBuffering && formatTime(duration * (1 - played), `-`)}
             </TimeRemaining>
           </PodcastInfoContainer>
 
@@ -256,8 +261,13 @@ class PodcastPlayer extends PureComponent {
               id="podcast-play-button"
               type="button"
               onClick={this.playPause}
+              disabled={isBuffering}
             >
-              <PlayPauseIcon />
+              {isBuffering ? (
+                <LoadingIcon className="spin" />
+              ) : (
+                <PlayPauseIcon />
+              )}
               <SrText>{srText}</SrText>
             </PlayButton>
           </PlayButtonsContainer>

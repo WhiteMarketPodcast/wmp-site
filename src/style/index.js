@@ -69,6 +69,20 @@ const GlobalStyle = createGlobalStyle`
     right: 0;
     bottom: 0;
   }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+  .spin {
+    animation: spin 0.5s infinite linear;
+  }
 `;
 
 export default GlobalStyle;
