@@ -29,7 +29,7 @@ module.exports = {
         icon: `src/img/White_market_favicon.jpg`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-offline`,
+    `gatsby-plugin-remove-serviceworker`,
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: `gatsby-source-filesystem`,
