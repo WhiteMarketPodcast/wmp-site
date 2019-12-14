@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { string } from 'prop-types';
 import isEmpty from 'lodash/isEmpty';
-import { CloseIcon, MenuIcon } from 'mdi-react';
+import CloseIcon from 'mdi-react/CloseIcon';
+import MenuIcon from 'mdi-react/MenuIcon';
 import { SrText } from 'style/components';
 import logo from 'img/White-market-transp-logo.png';
 import { LINKS } from './constants';

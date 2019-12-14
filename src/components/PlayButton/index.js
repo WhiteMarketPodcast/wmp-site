@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { bool, func, string } from 'prop-types';
-import { PlayIcon, PauseIcon, LoadingIcon } from 'mdi-react';
+import PlayIcon from 'mdi-react/PlayIcon';
+import PauseIcon from 'mdi-react/PauseIcon';
+import LoadingIcon from 'mdi-react/LoadingIcon';
 import { SrText } from 'style/components';
 import { Button } from './styled';
 

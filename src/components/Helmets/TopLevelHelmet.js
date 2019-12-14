@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { PureComponent } from 'react';
 import { string } from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
@@ -26,7 +26,7 @@ class TopLevelHelmet extends PureComponent {
     };
 
     return (
-      <Fragment>
+      <>
         <Helmet>
           <html lang="en" />
           <title>{`${title} | ${subtitle}`}</title>
@@ -34,7 +34,7 @@ class TopLevelHelmet extends PureComponent {
         </Helmet>
         <FacebookHelmet {...helmetProps} />
         <TwitterHelmet {...helmetProps} />
-      </Fragment>
+      </>
     );
   }
 }

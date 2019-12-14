@@ -20,7 +20,8 @@ import {
   TitleContainer,
   Title,
 } from 'style/components/podcastPage';
-import { PlayIcon, SpeakerIcon } from 'mdi-react';
+import PlayIcon from 'mdi-react/PlayIcon';
+import SpeakerIcon from 'mdi-react/SpeakerIcon';
 
 const pageTitle = `Podcast Archive`;
 const pageDescription = ``;

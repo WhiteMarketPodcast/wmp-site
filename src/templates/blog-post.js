@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { array, func, node, string, shape, object } from 'prop-types';
 import { graphql } from 'gatsby';
 import { FaEnvelope, FaFacebook, FaTwitter, FaWhatsapp } from 'react-icons/fa';
@@ -127,7 +127,7 @@ export class BlogPostTemplate extends Component {
     });
 
     return (
-      <Fragment>
+      <>
         <h4>Share</h4>
         <ShareLinksContainer>
           <ShareLink to={twitterURL}>
@@ -147,7 +147,7 @@ export class BlogPostTemplate extends Component {
             <SrText>Email someone a link to this post</SrText>
           </ShareLink>
         </ShareLinksContainer>
-      </Fragment>
+      </>
     );
   }
 
@@ -162,10 +162,10 @@ export class BlogPostTemplate extends Component {
     ));
 
     return (
-      <Fragment>
+      <>
         <h4>Tags</h4>
         <TagList>{tagList}</TagList>
-      </Fragment>
+      </>
     );
   }
 
