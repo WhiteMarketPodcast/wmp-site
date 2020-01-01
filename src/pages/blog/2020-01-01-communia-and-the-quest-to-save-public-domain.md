@@ -15,8 +15,7 @@ imageCredit:
   author:
     name: Juan Luis Chaurant
     url: 'https://github.com/juanluischaurant'
-podcastURL: >-
-  https://ia601508.us.archive.org/28/items/communiaandpublicdomain/Communia%20and%20Public%20Domain.mp3
+podcastURL: https://archive.org/download/communiaandpublicdomain/Communia%20and%20Public%20Domain.mp3
 useArchiveDescription: true
 categories:
   - podcast
