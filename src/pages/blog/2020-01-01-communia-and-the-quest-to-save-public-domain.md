@@ -10,6 +10,7 @@ format: audio
 image: /img/ccbysa-juanluischaurant-communia.jpg
 imageURL: >-
   https://github.com/WhiteMarketPodcast/whitemarketpodcast-repo/blob/master/featured%20images/CCBYSA-juanluischaurant-communia.jpg
+imageAlt: old camera under a Communia banner
 imageCredit:
   author:
     name: Juan Luis Chaurant
