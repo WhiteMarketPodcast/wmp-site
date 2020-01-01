@@ -1,16 +1,17 @@
-/* eslint-disable react/no-unused-state */
 import React, { Component } from 'react'
 import { node, object } from 'prop-types'
 import { PoseGroup } from 'react-pose'
 import 'typeface-crete-round'
 import 'typeface-montserrat'
-import Footer from 'components/Footer'
-import Navbar from 'components/Navbar'
-import PodcastContext from 'components/PodcastContext'
-import PodcastPlayer from 'components/PodcastPlayer'
-import { TopLevelHelmet } from 'components/Helmets'
+
 import 'style/sass/all.sass'
 import GlobalStyle from 'style'
+
+import Footer from 'components/Footer'
+import Navbar from 'components/Navbar'
+import PodcastPlayer from 'components/PodcastPlayer'
+import { TopLevelHelmet } from 'components/Helmets'
+
 import { PageFade } from './styled'
 
 class Layout extends Component {
@@ -21,12 +22,6 @@ class Layout extends Component {
 
   state = {
     mounted: false,
-    isBuffering: false,
-    isPlaying: false,
-    url: ``,
-    setPodcastState: (changes) => this.setState(changes),
-    setPlaying: (isPlaying) => this.setState({ isPlaying }),
-    setBuffering: (isBuffering) => this.setState({ isBuffering }),
   }
 
   componentDidMount() {
@@ -38,7 +33,7 @@ class Layout extends Component {
     const { mounted } = this.state
 
     return (
-      <PodcastContext.Provider value={this.state}>
+      <>
         <GlobalStyle />
         <TopLevelHelmet />
         <Navbar locationKey={location.key} />
@@ -49,7 +44,7 @@ class Layout extends Component {
         </PoseGroup>
         <Footer />
         <PodcastPlayer />
-      </PodcastContext.Provider>
+      </>
     )
   }
 }

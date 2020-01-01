@@ -2,8 +2,11 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import { array, shape, string } from 'prop-types'
 import { graphql } from 'gatsby'
+import PlayIcon from 'mdi-react/PlayIcon'
+import SpeakerIcon from 'mdi-react/SpeakerIcon'
+
+import PodcastContext from 'contexts/PodcastContext'
 import { HTMLContent } from 'components/Content'
-import PodcastContext from 'components/PodcastContext'
 import PageHelmet from 'components/Helmets/PageHelmet'
 import SubscribeLinksBar from 'components/SubscribeLinksBar'
 import { SrText } from 'style/components'
@@ -20,11 +23,10 @@ import {
   TitleContainer,
   Title,
 } from 'style/components/podcastPage'
-import PlayIcon from 'mdi-react/PlayIcon'
-import SpeakerIcon from 'mdi-react/SpeakerIcon'
 
 const pageTitle = `Podcast Archive`
 const pageDescription = ``
+
 export default class PodcastPage extends Component {
   static propTypes = {
     data: shape({

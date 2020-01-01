@@ -3,13 +3,18 @@ import React, { Component } from 'react'
 import { array, func, node, string, shape, object } from 'prop-types'
 import { graphql } from 'gatsby'
 import { FaEnvelope, FaFacebook, FaTwitter, FaWhatsapp } from 'react-icons/fa'
+
+import { licenceURLs } from 'utils'
+import { getShareURLs } from 'utils/sharing'
+
+import PodcastContext from 'contexts/PodcastContext'
 import Link from 'components/Link'
-import PodcastContext from 'components/PodcastContext'
 import PlayButton from 'components/PlayButton'
 import VideoPlayer from 'components/VideoPlayer'
 import Content, { HTMLContent } from 'components/Content'
-import { SrText } from 'style/components'
 import PageHelmet from 'components/Helmets/PageHelmet'
+import PreviewCompatibleImage from 'components/PreviewCompatibleImage'
+import { SrText } from 'style/components'
 import {
   Hero,
   HeroContents,
@@ -29,9 +34,6 @@ import {
   Fade,
   CenteredFade,
 } from 'style/components/blogPostPage'
-import { licenceURLs } from 'utils'
-import { getShareURLs } from 'utils/sharing'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 function renderImageInfoSpan(text, name, url) {
   return (

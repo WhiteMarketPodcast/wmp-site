@@ -5,7 +5,7 @@ import { graphql, Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import PlayButton from 'components/PlayButton'
 import SubscribeLinksBar from 'components/SubscribeLinksBar'
-import PodcastContext from 'components/PodcastContext'
+import PodcastContext from 'contexts/PodcastContext'
 import {
   BlogPostPreviewGrid,
   BlogPreviewContainer,

@@ -2,7 +2,6 @@ import _ from 'lodash'
 import React, { PureComponent } from 'react'
 import { object } from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import PodcastContext from 'components/PodcastContext'
 import PauseIcon from 'mdi-react/PauseIcon'
 import PlayIcon from 'mdi-react/PlayIcon'
 import VolumeHighIcon from 'mdi-react/VolumeHighIcon'
@@ -10,6 +9,8 @@ import VolumeLowIcon from 'mdi-react/VolumeLowIcon'
 import VolumeMediumIcon from 'mdi-react/VolumeMediumIcon'
 import VolumeOffIcon from 'mdi-react/VolumeOffIcon'
 import LoadingIcon from 'mdi-react/LoadingIcon'
+
+import PodcastContext from 'contexts/PodcastContext'
 import { SrOnly, SrText } from 'style/components'
 import {
   AudioPlayerContainer,

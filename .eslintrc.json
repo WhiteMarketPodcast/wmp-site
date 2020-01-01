@@ -35,6 +35,7 @@
   },
   "plugins": [
     "react",
+    "react-hooks",
     "jsx-a11y",
     "prettier"
   ],

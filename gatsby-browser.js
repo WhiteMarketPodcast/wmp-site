@@ -1,10 +1,15 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
+import { PodcastProvider } from './src/contexts/PodcastContext'
 import Layout from './src/components/Layout'
 import { delay } from './src/style/poses'
 
-// eslint-disable-next-line react/prop-types
 export const wrapPageElement = ({ element, props }) => (
   <Layout {...props}>{element}</Layout>
+)
+
+export const wrapRootElement = ({ element }) => (
+  <PodcastProvider>{element}</PodcastProvider>
 )
 
 export const shouldUpdateScroll = () => {
