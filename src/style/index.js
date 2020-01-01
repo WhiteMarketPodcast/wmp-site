@@ -15,6 +15,25 @@ const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 
+  button {
+    -webkit-appearance: none;
+    border: 0;
+    background: none;
+    color: inherit;
+    padding: 0;
+    font-family: inherit;
+    font-size: 1em;
+    text-align: inherit;
+
+    &:focus {
+      outline: thin dotted currentColor;
+    }
+
+    &::-moz-focus-inner {
+      border: 0;
+    }
+  }
+
   *:disabled {
     cursor: not-allowed;
   }
