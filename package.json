@@ -55,6 +55,7 @@
     "start": "yarn develop",
     "clean": "rimraf .cache public",
     "build": "yarn clean && gatsby build",
+    "deploy": "yarn && yarn build && netlify deploy -p -d public",
     "develop": "yarn clean && gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --arrow-parens always --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
