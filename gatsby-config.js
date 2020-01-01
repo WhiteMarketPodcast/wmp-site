@@ -9,6 +9,21 @@ module.exports = {
     ownerEmail: `whitemarketpodcast@gmail.com`,
     siteLogo: `https://www.whitemarketpodcast.eu/img/White_market_logo_1400x1400.jpg`,
     categories: [`Society & Culture`, `Music`, `Technology`],
+    twitterUsername: 'WhiteMarketCast',
+    links: {
+      castbox: 'https://castbox.fm/channel/White-Market-Podcast-id242607',
+      facebook: 'https://www.facebook.com/whitemarketpodcast',
+      github: 'https://github.com/WhiteMarketPodcast/whitemarketpodcast-repo',
+      googlePodcasts:
+        'https://www.google.com/podcasts?feed=aHR0cHM6Ly93d3cud2hpdGVtYXJrZXRwb2RjYXN0LmV1L3Jzcy54bWw%3D',
+      itunes:
+        'https://itunes.apple.com/gb/podcast/white-market-podcast/id1033024096',
+      mixcloud: 'https://www.mixcloud.com/whitemarketpodcast/',
+      pocketCasts: 'https://pca.st/wfkj',
+      twitter: 'https://twitter.com/WhiteMarketCast',
+      spotify:
+        'https://open.spotify.com/show/4o2iPfNaRrP73gWsmQ7yF3?si=CoK9hmBnQHSb1MQVuluNcQ',
+    },
   },
   plugins: [
     `gatsby-plugin-resolve-src`,
@@ -92,4 +107,4 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify`, // make sure to keep it last in the array
   ],
-};
+}

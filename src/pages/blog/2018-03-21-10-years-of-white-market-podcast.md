@@ -40,7 +40,7 @@ And so, ten years after it all began, I see the show becoming what I have envisi
 Good thing you ask! We are currently looking for contributions regarding **content** and regarding **code**. Either way, our [**GitHub** repos](https://github.com/WhiteMarketPodcast) are where all the action and fun takes place.
 
 1.  [**Content repo**](https://github.com/WhiteMarketPodcast/whitemarketpodcast-repo): for blog posts, new images, show archives and other content related stuff.
-2.  [**Website repo**](https://github.com/WhiteMarketPodcast/WMP-website/): WMP is working on developing a fully open source website, as this one runs on a proprietary theme.
+2.  [**Website repo**](https://github.com/WhiteMarketPodcast/wmp-site/): WMP is working on developing a fully open source website, as this one runs on a proprietary theme.
 
 **If you don’t have the time to help out more, just telling your friends about the show and the project is already a huge thing. Rate us on iTunes and other podcast platforms where you might listen to us. Share episodes on social media. Play the show on your community radio stations.**
 

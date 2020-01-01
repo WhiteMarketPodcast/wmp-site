@@ -1,96 +1,114 @@
-import React, { PureComponent } from 'react';
-import { string } from 'prop-types';
-import Link from 'components/Link';
-import { StaticQuery, graphql } from 'gatsby';
-import { FaRss } from 'react-icons/fa';
-import { SrText } from 'style/components';
-import { links } from './constants';
-import { Bar, Links, Title } from './styled';
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import { FaRss, FaSpotify, FaPodcast, FaMixcloud } from 'react-icons/fa'
+import Link from 'components/Link'
+import { SrText } from 'style/components'
+import castboxLogo from 'assets/castbox.png'
+import googlePodcastsLogo from 'assets/google-podcasts-logo.png'
+import pocketCastsLogo from 'assets/pocket-casts.png'
+import { Bar, Links, Title } from './styled'
 
-class SubscribeLinksBar extends PureComponent {
-  static propTypes = {
-    siteUrl: string.isRequired,
-  };
-
-  state = {};
-
-  render() {
-    const { siteUrl } = this.props;
-
-    return (
-      <Bar>
-        <Title>Ways to listen</Title>
-        <Links>
-          {links.left.map(({ Icon, provider, src, url, style = {} }) => (
-            <Link
-              key={provider}
-              to={url}
-              title={`Subscribe on ${provider}`}
-              style={style}
-            >
-              {Icon ? (
-                <Icon />
-              ) : (
-                <img
-                  src={src}
-                  alt={`${provider} logo`}
-                  title={`Subscribe on ${provider}`}
-                />
-              )}
-              <SrText>{`Subscribe on ${provider}`}</SrText>
-            </Link>
-          ))}
-
-          <Link
-            to={`${siteUrl}/rss.xml`}
-            style={{ color: '#f26522' }}
-            title="Get the RSS feed"
-            download
-          >
-            <FaRss />
-            <SrText>Get the RSS feed</SrText>
-          </Link>
-
-          {links.right.map(({ Icon, provider, src, url, style = {} }) => (
-            <Link
-              key={provider}
-              to={url}
-              title={`Subscribe on ${provider}`}
-              style={style}
-            >
-              {Icon ? (
-                <Icon />
-              ) : (
-                <img
-                  src={src}
-                  alt={`${provider} logo`}
-                  title={`Subscribe on ${provider}`}
-                />
-              )}
-              <SrText>{`Subscribe on ${provider}`}</SrText>
-            </Link>
-          ))}
-        </Links>
-      </Bar>
-    );
-  }
-}
-
-const query = graphql`
-  query SubscribeLinksBarQuery {
-    site {
-      siteMetadata {
-        siteUrl
+const SubscribeLinksBar = () => {
+  const data = useStaticQuery(graphql`
+    query SubscribeLinksBarQuery {
+      site {
+        siteMetadata {
+          siteUrl
+          links {
+            castbox
+            googlePodcasts
+            itunes
+            mixcloud
+            pocketCasts
+            spotify
+          }
+        }
       }
     }
-  }
-`;
+  `)
 
-export default () => (
-  <StaticQuery
-    query={query}
-    render={({ site }) => (
-      <SubscribeLinksBar siteUrl={site.siteMetadata.siteUrl} />
-    )}
-  />
-);
+  const {
+    siteUrl,
+    links: { castbox, googlePodcasts, itunes, mixcloud, pocketCasts, spotify },
+  } = data.site.siteMetadata
+
+  const links = [
+    {
+      provider: `Castbox`,
+      src: castboxLogo,
+      url: castbox,
+    },
+    {
+      provider: `Google Podcasts`,
+      src: googlePodcastsLogo,
+      url: googlePodcasts,
+    },
+    {
+      Icon: FaPodcast,
+      provider: `Apple Podcasts`,
+      url: itunes,
+      style: { color: '#de50ed' },
+    },
+    {
+      Icon: FaSpotify,
+      provider: `Spotify`,
+      url: spotify,
+      style: { color: '#1db954' },
+    },
+    {
+      provider: `Pocket Casts`,
+      src: pocketCastsLogo,
+      url: pocketCasts,
+    },
+    {
+      Icon: FaMixcloud,
+      provider: `Mixcloud`,
+      url: mixcloud,
+      style: { color: '#4fa6d3' },
+    },
+  ]
+    .filter(({ url }) => url)
+    .map(({ Icon, provider, src, url, style = {} }) => (
+      <Link
+        key={provider}
+        to={url}
+        title={`Subscribe on ${provider}`}
+        style={style}
+      >
+        {Icon ? (
+          <Icon />
+        ) : (
+          <img
+            src={src}
+            alt={`${provider} logo`}
+            title={`Subscribe on ${provider}`}
+          />
+        )}
+        <SrText>{`Subscribe on ${provider}`}</SrText>
+      </Link>
+    ))
+
+  links.splice(
+    Math.floor(links.length / 2),
+    0,
+    <Link
+      key="rss-feed"
+      to={`${siteUrl}/rss.xml`}
+      style={{ color: '#f26522' }}
+      title="Get the RSS feed"
+      download
+    >
+      <FaRss />
+      <SrText>Get the RSS feed</SrText>
+    </Link>,
+  )
+
+  return (
+    <Bar>
+      <Title>Ways to listen</Title>
+      <Links>{links}</Links>
+    </Bar>
+  )
+}
+
+export default SubscribeLinksBar

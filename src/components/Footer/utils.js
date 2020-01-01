@@ -1,8 +1,10 @@
-export const emailScreenReaderText = `Email whitemarketpodcast@gmail.com`;
-export const rssScreenReaderText = `Go to the podcast RSS feed`;
-export const facebookScreenReaderText = `Go to White Market Podcast's Facebook page`;
-export const twitterScreenReaderText = `Go to White Market Podcast's profile page on Twitter`;
-export const spotifyScreenReaderText = `Listen to White Market Podcast on Spotify`;
-export const mixcloudScreenReaderText = `Go to White Market Podcast's page on MixCloud`;
-export const itunesScreenReaderText = `Go to White Market Podcast's page on iTunes`;
-export const githubScreenReaderText = `Go to White Market Podcast's GitHub repo`;
+export const getSRTextForLinks = ({ title, email }) => ({
+  email: `Email ${email}`,
+  rss: `Go to the podcast RSS feed`,
+  facebook: `Go to ${title}'s Facebook page`,
+  twitter: `Go to ${title}'s profile page on Twitter`,
+  spotify: `Listen to ${title} on Spotify`,
+  mixcloud: `Go to ${title}'s page on MixCloud`,
+  itunes: `Go to ${title}'s page on iTunes`,
+  github: `Go to ${title}'s GitHub repo`,
+})

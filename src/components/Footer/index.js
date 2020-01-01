@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import { string } from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import {
   FaEnvelope,
   FaFacebook,
@@ -13,9 +12,9 @@ import {
   FaCreativeCommonsBy,
   FaCreativeCommonsSa,
   FaSpotify,
-} from 'react-icons/fa';
-import Link from 'components/Link';
-import { SrText } from 'style/components';
+} from 'react-icons/fa'
+import Link from 'components/Link'
+import { SrText } from 'style/components'
 import {
   StyledFooter,
   LicenceInfo,
@@ -25,142 +24,124 @@ import {
   SocialIconContainer,
   SocialLink,
   PrivacyLink,
-} from './styled';
-import {
-  emailScreenReaderText,
-  rssScreenReaderText,
-  facebookScreenReaderText,
-  twitterScreenReaderText,
-  mixcloudScreenReaderText,
-  itunesScreenReaderText,
-  githubScreenReaderText,
-  spotifyScreenReaderText,
-} from './utils';
+} from './styled'
+import { getSRTextForLinks } from './utils'
 
-class Footer extends Component {
-  static propTypes = { siteUrl: string.isRequired };
-
-  render() {
-    const { siteUrl } = this.props;
-
-    return (
-      <StyledFooter>
-        <LicenceInfo>
-          <div>
-            <CCIconContainer>
-              <CCIcon>
-                <FaCreativeCommons />
-              </CCIcon>
-              <CCIcon>
-                <FaCreativeCommonsBy />
-              </CCIcon>
-              <CCIcon>
-                <FaCreativeCommonsSa />
-              </CCIcon>
-            </CCIconContainer>
-            <div>
-              Unless otherwise noted, this blog is published under a{' '}
-              <Link to="https://creativecommons.org/licenses/by-sa/4.0/">
-                Creative Commons Attribution-ShareAlike 4.0 International
-                License
-              </Link>
-              . Individual tracks retain their original licences and may be more
-              restrictive. Please refer to each original release page for more
-              information.
-            </div>
-          </div>
-        </LicenceInfo>
-        <CopyrightRow>
-          <div>
-            <div>
-              <span>White Market Podcast – </span>
-              <Link to="https://creativecommons.org/licenses/by-sa/4.0/">
-                CC BY-SA
-              </Link>
-            </div>
-            <PrivacyLink to="/privacy-policy">Privacy</PrivacyLink>
-          </div>
-          <SocialIconContainer>
-            <SocialLink
-              className="email"
-              to="mailto:whitemarketpodcast@gmail.com"
-            >
-              <FaEnvelope size="1.4em" />
-              <SrText>{emailScreenReaderText}</SrText>
-            </SocialLink>
-
-            <SocialLink className="rss" to={`${siteUrl}/rss.xml`}>
-              <FaRss size="1.4em" />
-              <SrText>{rssScreenReaderText}</SrText>
-            </SocialLink>
-
-            <SocialLink
-              className="facebook"
-              to="https://www.facebook.com/whitemarketpodcast"
-            >
-              <FaFacebook size="1.4em" />
-              <SrText>{facebookScreenReaderText}</SrText>
-            </SocialLink>
-
-            <SocialLink
-              className="twitter"
-              to="https://twitter.com/WhiteMarketCast"
-            >
-              <FaTwitter size="1.4em" />
-              <SrText>{twitterScreenReaderText}</SrText>
-            </SocialLink>
-
-            <SocialLink
-              className="spotify"
-              to="https://open.spotify.com/show/4o2iPfNaRrP73gWsmQ7yF3?si=CoK9hmBnQHSb1MQVuluNcQ"
-            >
-              <FaSpotify size="1.4em" />
-              <SrText>{spotifyScreenReaderText}</SrText>
-            </SocialLink>
-
-            <SocialLink
-              className="itunes"
-              to="https://itunes.apple.com/gb/podcast/white-market-podcast/id1033024096"
-            >
-              <FaPodcast size="1.4em" />
-              <SrText>{itunesScreenReaderText}</SrText>
-            </SocialLink>
-
-            <SocialLink
-              className="mixcloud"
-              to="https://www.mixcloud.com/whitemarketpodcast/"
-            >
-              <FaMixcloud size="1.7em" />
-              <SrText>{mixcloudScreenReaderText}</SrText>
-            </SocialLink>
-
-            <SocialLink
-              className="github"
-              to="https://github.com/WhiteMarketPodcast/whitemarketpodcast-repo"
-            >
-              <FaGithub size="1.4em" />
-              <SrText>{githubScreenReaderText}</SrText>
-            </SocialLink>
-          </SocialIconContainer>
-        </CopyrightRow>
-      </StyledFooter>
-    );
-  }
-}
-
-const query = graphql`
-  query FooterQuery {
-    site {
-      siteMetadata {
-        siteUrl
+const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query FooterQuery {
+      site {
+        siteMetadata {
+          siteUrl
+          title
+          ownerEmail
+          links {
+            github
+            itunes
+            twitter
+            facebook
+            mixcloud
+            spotify
+          }
+        }
       }
     }
-  }
-`;
+  `)
+  const { links, ownerEmail, siteUrl, title } = data.site.siteMetadata
+  const srText = getSRTextForLinks({ title, email: ownerEmail })
 
-export default () => (
-  <StaticQuery
-    query={query}
-    render={({ site }) => <Footer siteUrl={site.siteMetadata.siteUrl} />}
-  />
-);
+  return (
+    <StyledFooter>
+      <LicenceInfo>
+        <div>
+          <CCIconContainer>
+            <CCIcon>
+              <FaCreativeCommons />
+            </CCIcon>
+            <CCIcon>
+              <FaCreativeCommonsBy />
+            </CCIcon>
+            <CCIcon>
+              <FaCreativeCommonsSa />
+            </CCIcon>
+          </CCIconContainer>
+          <div>
+            Unless otherwise noted, this blog is published under a{' '}
+            <Link to="https://creativecommons.org/licenses/by-sa/4.0/">
+              Creative Commons Attribution-ShareAlike 4.0 International License
+            </Link>
+            . Individual tracks retain their original licences and may be more
+            restrictive. Please refer to each original release page for more
+            information.
+          </div>
+        </div>
+      </LicenceInfo>
+      <CopyrightRow>
+        <div>
+          <div>
+            <span>{`${title} – `}</span>
+            <Link to="https://creativecommons.org/licenses/by-sa/4.0/">
+              CC BY-SA
+            </Link>
+          </div>
+          <PrivacyLink to="/privacy-policy">Privacy</PrivacyLink>
+        </div>
+        <SocialIconContainer>
+          <SocialLink className="email" to={`mailto:${ownerEmail}`}>
+            <FaEnvelope size="1.4em" />
+            <SrText>{srText.email}</SrText>
+          </SocialLink>
+
+          <SocialLink className="rss" to={`${siteUrl}/rss.xml`}>
+            <FaRss size="1.4em" />
+            <SrText>{srText.rss}</SrText>
+          </SocialLink>
+
+          {links.facebook && (
+            <SocialLink className="facebook" to={links.facebook}>
+              <FaFacebook size="1.4em" />
+              <SrText>{srText.facebook}</SrText>
+            </SocialLink>
+          )}
+
+          {links.twitter && (
+            <SocialLink className="twitter" to={links.twitter}>
+              <FaTwitter size="1.4em" />
+              <SrText>{srText.twitter}</SrText>
+            </SocialLink>
+          )}
+
+          {links.spotify && (
+            <SocialLink className="spotify" to={links.spotify}>
+              <FaSpotify size="1.4em" />
+              <SrText>{srText.spotify}</SrText>
+            </SocialLink>
+          )}
+
+          {links.itunes && (
+            <SocialLink className="itunes" to={links.itunes}>
+              <FaPodcast size="1.4em" />
+              <SrText>{srText.itunes}</SrText>
+            </SocialLink>
+          )}
+
+          {links.mixcloud && (
+            <SocialLink className="mixcloud" to={links.mixcloud}>
+              <FaMixcloud size="1.7em" />
+              <SrText>{srText.mixcloud}</SrText>
+            </SocialLink>
+          )}
+
+          {links.github && (
+            <SocialLink className="github" to={links.github}>
+              <FaGithub size="1.4em" />
+              <SrText>{srText.github}</SrText>
+            </SocialLink>
+          )}
+        </SocialIconContainer>
+      </CopyrightRow>
+    </StyledFooter>
+  )
+}
+
+export default Footer
