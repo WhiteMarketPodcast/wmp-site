@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react';
-import { node, string } from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
-import Helmet from 'react-helmet';
+import React, { PureComponent } from 'react'
+import { node, string } from 'prop-types'
+import { StaticQuery, graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 
 class TwitterHelmet extends PureComponent {
   static propTypes = {
@@ -12,14 +12,14 @@ class TwitterHelmet extends PureComponent {
     imageAlt: string,
     cardType: string,
     children: node,
-  };
+  }
 
   static defaultProps = {
     cardType: `summary`,
     imageAlt: ``,
     children: null,
     description: ``,
-  };
+  }
 
   render() {
     const {
@@ -30,8 +30,8 @@ class TwitterHelmet extends PureComponent {
       imageAlt,
       siteUrl,
       title,
-    } = this.props;
-    const imageURL = /^\/img\//.test(image) ? `${siteUrl}${image}` : image;
+    } = this.props
+    const imageURL = /^\/img\//.test(image) ? `${siteUrl}${image}` : image
 
     return (
       <Helmet>
@@ -45,7 +45,7 @@ class TwitterHelmet extends PureComponent {
         {imageAlt && <meta name="twitter:image:alt" content={imageAlt} />}
         {children}
       </Helmet>
-    );
+    )
   }
 }
 
@@ -57,11 +57,11 @@ const query = graphql`
       }
     }
   }
-`;
+`
 
 export default (props) => (
   <StaticQuery
     query={query}
     render={({ site }) => <TwitterHelmet {...site.siteMetadata} {...props} />}
   />
-);
+)

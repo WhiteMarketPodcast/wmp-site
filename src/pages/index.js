@@ -1,11 +1,11 @@
-import _ from 'lodash';
-import React, { Component } from 'react';
-import { array, shape, string } from 'prop-types';
-import { graphql, Link } from 'gatsby';
-import Helmet from 'react-helmet';
-import PlayButton from 'components/PlayButton';
-import SubscribeLinksBar from 'components/SubscribeLinksBar';
-import PodcastContext from 'components/PodcastContext';
+import _ from 'lodash'
+import React, { Component } from 'react'
+import { array, shape, string } from 'prop-types'
+import { graphql, Link } from 'gatsby'
+import Helmet from 'react-helmet'
+import PlayButton from 'components/PlayButton'
+import SubscribeLinksBar from 'components/SubscribeLinksBar'
+import PodcastContext from 'components/PodcastContext'
 import {
   BlogPostPreviewGrid,
   BlogPreviewContainer,
@@ -24,9 +24,9 @@ import {
   BrandH2,
   PodcastPlayBox,
   SeeMoreContainer,
-} from 'style/components';
-import { formatConverter, isFirstPostPodcast } from 'utils';
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
+} from 'style/components'
+import { formatConverter, isFirstPostPodcast } from 'utils'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export default class IndexPage extends Component {
   static propTypes = {
@@ -40,28 +40,28 @@ export default class IndexPage extends Component {
       podcast: shape({ edges: array }),
       posts: shape({ edges: array }),
     }).isRequired,
-  };
+  }
 
-  static contextType = PodcastContext;
+  static contextType = PodcastContext
 
-  getPodcastInfo = () => this.props.data.podcast.edges[0].node;
+  getPodcastInfo = () => this.props.data.podcast.edges[0].node
 
   handlePlayButtonClick = () => {
-    const { podcastURL } = this.getPodcastInfo().frontmatter;
-    const { isPlaying, url, setPodcastState, setPlaying } = this.context;
+    const { podcastURL } = this.getPodcastInfo().frontmatter
+    const { isPlaying, url, setPodcastState, setPlaying } = this.context
 
     if (podcastURL === url) {
-      setPlaying(!isPlaying);
+      setPlaying(!isPlaying)
     } else {
-      setPodcastState({ url: podcastURL });
+      setPodcastState({ url: podcastURL })
     }
-  };
+  }
 
   renderPodcast() {
-    const { isBuffering, isPlaying, url } = this.context;
-    const { fields, frontmatter } = this.getPodcastInfo();
-    const { slug } = fields;
-    const { title, podcastURL, image, imageURL } = frontmatter;
+    const { isBuffering, isPlaying, url } = this.context
+    const { fields, frontmatter } = this.getPodcastInfo()
+    const { slug } = fields
+    const { title, podcastURL, image, imageURL } = frontmatter
 
     return (
       <PodcastSection>
@@ -87,7 +87,7 @@ export default class IndexPage extends Component {
           <SubscribeLinksBar />
         </PodcastSectionContents>
       </PodcastSection>
-    );
+    )
   }
 
   renderPost = ({ node: post }, index) => {
@@ -95,7 +95,7 @@ export default class IndexPage extends Component {
       id,
       frontmatter: { image, imageURL, title, date, format },
       fields: { slug },
-    } = post;
+    } = post
 
     return (
       <BlogPreviewContainer key={id} to={slug}>
@@ -111,13 +111,13 @@ export default class IndexPage extends Component {
           <DateText index={index}>{date}</DateText>
         </PreviewTextContainer>
       </BlogPreviewContainer>
-    );
-  };
+    )
+  }
 
   renderPosts() {
-    const { data } = this.props;
-    const { edges } = data.posts;
-    const posts = isFirstPostPodcast(edges) ? _.tail(edges) : _.take(edges, 8);
+    const { data } = this.props
+    const { edges } = data.posts
+    const posts = isFirstPostPodcast(edges) ? _.tail(edges) : _.take(edges, 8)
 
     return (
       <section>
@@ -133,12 +133,12 @@ export default class IndexPage extends Component {
           <LinkButton to="/blog/">See more posts</LinkButton>
         </SeeMoreContainer>
       </section>
-    );
+    )
   }
 
   render() {
-    const { data } = this.props;
-    const { title, subtitle, siteUrl } = data.site.siteMetadata;
+    const { data } = this.props
+    const { title, subtitle, siteUrl } = data.site.siteMetadata
 
     return (
       <>
@@ -154,7 +154,7 @@ export default class IndexPage extends Component {
         {this.renderPodcast()}
         {this.renderPosts()}
       </>
-    );
+    )
   }
 }
 
@@ -225,4 +225,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

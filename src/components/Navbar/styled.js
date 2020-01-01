@@ -1,14 +1,14 @@
-import styled from 'styled-components';
-import posed from 'react-pose';
-import Link from 'components/Link';
-import { primary, white } from 'style/colors';
-import { onMobile } from 'style/mediaQueries';
-import { DESKTOP_NAV_HEIGHT, MOBILE_NAV_HEIGHT } from './constants';
+import styled from 'styled-components'
+import posed from 'react-pose'
+import Link from 'components/Link'
+import { primary, white } from 'style/colors'
+import { onMobile } from 'style/mediaQueries'
+import { DESKTOP_NAV_HEIGHT, MOBILE_NAV_HEIGHT } from './constants'
 
 const nav = posed.nav({
   show: { y: 0, transition: { ease: 'easeInOut' } },
   hide: { y: '-100%', delay: 300, transition: { ease: 'easeInOut' } },
-});
+})
 
 export const Nav = styled(nav)`
   position: fixed;
@@ -34,11 +34,11 @@ export const Nav = styled(nav)`
     margin: 0;
     padding: 0;
   }
-`;
+`
 
 export const LogoLink = styled(Link)`
   z-index: 1001;
-`;
+`
 
 export const Logo = styled.img`
   height: ${DESKTOP_NAV_HEIGHT};
@@ -56,7 +56,7 @@ export const Logo = styled.img`
   ${onMobile} {
     height: ${MOBILE_NAV_HEIGHT};
   }
-`;
+`
 
 export const Button = styled.button`
   display: flex;
@@ -76,14 +76,14 @@ export const Button = styled.button`
       width: 30px;
     }
   }
-`;
+`
 
 export const FlexRow = styled.div`
   display: flex;
   justify-content: flex-end;
-`;
+`
 
-const easeInOut = { ease: 'easeInOut' };
+const easeInOut = { ease: 'easeInOut' }
 const ul = posed.ul({
   open: {
     scaleX: 1,
@@ -92,7 +92,7 @@ const ul = posed.ul({
     transition: easeInOut,
   },
   closed: { scaleX: 0, transition: easeInOut },
-});
+})
 
 export const Menu = styled(ul)`
   position: fixed;
@@ -110,21 +110,21 @@ export const Menu = styled(ul)`
   transform: scaleX(0);
   transform-origin: right;
   z-index: 1000;
-`;
+`
 
 const li = posed.li({
   open: { opacity: 1, y: 0 },
   closed: { opacity: 0, y: 10, transition: { duration: 0 } },
-});
+})
 
 export const MenuItem = styled(li)`
   margin: 0 auto;
   line-height: 1;
   padding: 1rem;
-`;
+`
 
 export const NavLink = styled(Link)`
   color: ${white};
   font-size: 1.5rem;
   font-weight: 600;
-`;
+`

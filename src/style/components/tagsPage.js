@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import Link from 'components/Link';
-import { onMobile } from 'style/mediaQueries';
-import { primary } from 'style/colors';
+import styled from 'styled-components'
+import Link from 'components/Link'
+import { onMobile } from 'style/mediaQueries'
+import { primary } from 'style/colors'
 
 export const List = styled.ul`
   display: flex;
@@ -13,7 +13,7 @@ export const List = styled.ul`
   ${onMobile} {
     justify-content: center;
   }
-`;
+`
 
 export const Item = styled.li`
   display: inline-block;
@@ -22,7 +22,7 @@ export const Item = styled.li`
   ${onMobile} {
     margin: 0.2rem;
   }
-`;
+`
 
 export const TagLink = styled(Link)`
   display: flex;
@@ -39,4 +39,4 @@ export const TagLink = styled(Link)`
   &:hover {
     filter: brightness(110%);
   }
-`;
+`

@@ -1,17 +1,17 @@
-import _ from 'lodash';
-import React, { Component } from 'react';
-import { array, func, node, object, string } from 'prop-types';
-import { graphql } from 'gatsby';
-import PageHelmet from 'components/Helmets/PageHelmet';
-import Content, { HTMLContent } from 'components/Content';
-import PreviewCompatibleImage from 'components/PreviewCompatibleImage';
-import { TitleBG, Title, Section } from 'style/components/aboutPage';
+import _ from 'lodash'
+import React, { Component } from 'react'
+import { array, func, node, object, string } from 'prop-types'
+import { graphql } from 'gatsby'
+import PageHelmet from 'components/Helmets/PageHelmet'
+import Content, { HTMLContent } from 'components/Content'
+import PreviewCompatibleImage from 'components/PreviewCompatibleImage'
+import { TitleBG, Title, Section } from 'style/components/aboutPage'
 import {
   Grid,
   AlbumContainer,
   InfoContainer,
   ArtistAndTitle,
-} from 'style/components/fmaPage';
+} from 'style/components/fmaPage'
 
 export class FMACollectionTemplate extends Component {
   static propTypes = {
@@ -20,50 +20,50 @@ export class FMACollectionTemplate extends Component {
     content: string,
     contentComponent: func,
     helmet: node,
-  };
+  }
 
   static defaultProps = {
     content: '',
     contentComponent: undefined,
     helmet: null,
-  };
+  }
 
-  state = { numberToShow: 4 };
+  state = { numberToShow: 4 }
 
   clearShowInfo = (index) => {
-    const { showInfo } = this.state;
-    if (index !== showInfo) return;
-    this.setState({ showInfo: null });
-  };
+    const { showInfo } = this.state
+    if (index !== showInfo) return
+    this.setState({ showInfo: null })
+  }
 
   handleHover = (index) => () => {
-    const { showInfo } = this.state;
-    if (showInfo === index) return;
-    clearTimeout(this.state.timeout);
-    this.setState({ showInfo: index });
-  };
+    const { showInfo } = this.state
+    if (showInfo === index) return
+    clearTimeout(this.state.timeout)
+    this.setState({ showInfo: index })
+  }
 
   handleBlur = (index) => () => {
     this.setState({
       timeout: setTimeout(() => this.clearShowInfo(index), 500),
-    });
-  };
+    })
+  }
 
   hasMore = () => {
-    const { collection } = this.props;
-    const { numberToShow } = this.state;
+    const { collection } = this.props
+    const { numberToShow } = this.state
 
-    return numberToShow < collection.length;
-  };
+    return numberToShow < collection.length
+  }
 
   loadMore = () => {
-    const { numberToShow } = this.state;
-    this.setState({ numberToShow: numberToShow + 2 });
-  };
+    const { numberToShow } = this.state
+    this.setState({ numberToShow: numberToShow + 2 })
+  }
 
   renderAlbums() {
-    const { collection } = this.props;
-    const { showInfo } = this.state;
+    const { collection } = this.props
+    const { showInfo } = this.state
 
     return _.map(collection, ({ artist, title, url, image, genres }, index) => (
       <AlbumContainer
@@ -81,12 +81,12 @@ export class FMACollectionTemplate extends Component {
           <div>{`(${genres.join(`, `)})`}</div>
         </InfoContainer>
       </AlbumContainer>
-    ));
+    ))
   }
 
   render() {
-    const { title, content, contentComponent, helmet } = this.props;
-    const PageContent = contentComponent || Content;
+    const { title, content, contentComponent, helmet } = this.props
+    const PageContent = contentComponent || Content
 
     return (
       <>
@@ -101,7 +101,7 @@ export class FMACollectionTemplate extends Component {
           {this.renderAlbums()}
         </Grid>
       </>
-    );
+    )
   }
 }
 
@@ -111,9 +111,9 @@ const FMACollection = ({ data }) => {
     site: {
       siteMetadata: { title },
     },
-  } = data;
-  const description = post.excerpt.replace(/\s{2}/g, ` `).replace(/\s\./g, `.`);
-  const pageTitle = `${post.frontmatter.title} | ${title}`;
+  } = data
+  const description = post.excerpt.replace(/\s{2}/g, ` `).replace(/\s\./g, `.`)
+  const pageTitle = `${post.frontmatter.title} | ${title}`
 
   return (
     <FMACollectionTemplate
@@ -130,14 +130,14 @@ const FMACollection = ({ data }) => {
         />
       }
     />
-  );
-};
+  )
+}
 
 FMACollection.propTypes = {
   data: object.isRequired,
-};
+}
 
-export default FMACollection;
+export default FMACollection
 
 export const fmaCollectionQuery = graphql`
   query FMACollection($id: String!) {
@@ -170,4 +170,4 @@ export const fmaCollectionQuery = graphql`
       }
     }
   }
-`;
+`

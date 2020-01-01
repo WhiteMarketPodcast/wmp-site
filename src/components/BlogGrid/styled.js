@@ -1,15 +1,15 @@
-import styled from 'styled-components';
-import Link from 'components/Link';
-import InfiniteScroll from 'react-infinite-scroller';
+import styled from 'styled-components'
+import Link from 'components/Link'
+import InfiniteScroll from 'react-infinite-scroller'
 import {
   black,
   primary,
   seeThruPrimary,
   seeThruPrimaryDark,
   white,
-} from 'style/colors';
-import { onMobile, onDesktop } from 'style/mediaQueries';
-import PreviewCompatibleImage from '../PreviewCompatibleImage';
+} from 'style/colors'
+import { onMobile, onDesktop } from 'style/mediaQueries'
+import PreviewCompatibleImage from '../PreviewCompatibleImage'
 
 export const BlogListGrid = styled(InfiniteScroll)`
   display: grid;
@@ -27,7 +27,7 @@ export const BlogListGrid = styled(InfiniteScroll)`
     grid-template-columns: repeat(auto-fit, 18rem);
     grid-auto-rows: 16rem;
   }
-`;
+`
 
 export const BlogPreviewContainer = styled(Link)`
   position: relative;
@@ -55,7 +55,7 @@ export const BlogPreviewContainer = styled(Link)`
       }
     }
   }
-`;
+`
 
 export const BlogPreviewImage = styled(PreviewCompatibleImage)`
   background-color: ${primary};
@@ -73,7 +73,7 @@ export const BlogPreviewImage = styled(PreviewCompatibleImage)`
     bottom: 0;
     left: 0;
   }
-`;
+`
 
 export const PreviewTextContainer = styled.div`
   position: relative;
@@ -88,7 +88,7 @@ export const PreviewTextContainer = styled.div`
     grid-row: 1;
     align-self: end;
   }
-`;
+`
 
 export const PostType = styled.div`
   position: absolute;
@@ -104,7 +104,7 @@ export const PostType = styled.div`
   line-height: 1;
   padding: 0.2rem 0.5rem;
   text-transform: uppercase;
-`;
+`
 
 export const PreviewTitle = styled.h2`
   font-size: 1.2rem;
@@ -114,7 +114,7 @@ export const PreviewTitle = styled.h2`
   a {
     color: ${white};
   }
-`;
+`
 
 export const ExcerptContainer = styled.div`
   grid-area: excerpt;
@@ -145,7 +145,7 @@ export const ExcerptContainer = styled.div`
       transform: translateY(0);
     }
   }
-`;
+`
 
 export const DateText = styled.div`
   color: ${white};
@@ -156,4 +156,4 @@ export const DateText = styled.div`
   @media (min-width: 576px) {
     margin-top: 0.5rem;
   }
-`;
+`

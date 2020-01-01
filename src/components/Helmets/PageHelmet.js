@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react';
-import { bool, string } from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
-import Helmet from 'react-helmet';
-import FacebookHelmet from './FacebookHelmet';
-import TwitterHelmet from './TwitterHelmet';
+import React, { PureComponent } from 'react'
+import { bool, string } from 'prop-types'
+import { StaticQuery, graphql } from 'gatsby'
+import Helmet from 'react-helmet'
+import FacebookHelmet from './FacebookHelmet'
+import TwitterHelmet from './TwitterHelmet'
 
 class PageHelmet extends PureComponent {
   static propTypes = {
@@ -20,7 +20,7 @@ class PageHelmet extends PureComponent {
     siteName: string.isRequired,
     siteUrl: string.isRequired,
     siteLogo: string.isRequired,
-  };
+  }
 
   static defaultProps = {
     description: ``,
@@ -28,7 +28,7 @@ class PageHelmet extends PureComponent {
     imageAlt: ``,
     largeTwitterCard: false,
     type: `article`,
-  };
+  }
 
   render() {
     const {
@@ -42,9 +42,9 @@ class PageHelmet extends PureComponent {
       siteName,
       siteUrl,
       type,
-    } = this.props;
-    const title = `${pageTitle} | ${siteName}`;
-    const url = `${siteUrl}${path}`;
+    } = this.props
+    const title = `${pageTitle} | ${siteName}`
+    const url = `${siteUrl}${path}`
 
     const helmetProps = {
       title,
@@ -54,7 +54,7 @@ class PageHelmet extends PureComponent {
       url,
       type,
       cardType: largeTwitterCard ? `summary_large_image` : `summary`,
-    };
+    }
 
     return (
       <>
@@ -65,7 +65,7 @@ class PageHelmet extends PureComponent {
         <FacebookHelmet {...helmetProps} />
         <TwitterHelmet {...helmetProps} />
       </>
-    );
+    )
   }
 }
 
@@ -79,11 +79,11 @@ const query = graphql`
       }
     }
   }
-`;
+`
 
 export default (props) => (
   <StaticQuery
     query={query}
     render={({ site }) => <PageHelmet {...site.siteMetadata} {...props} />}
   />
-);
+)

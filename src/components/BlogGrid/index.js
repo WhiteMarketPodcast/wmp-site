@@ -1,7 +1,7 @@
-import _ from 'lodash';
-import React, { Component } from 'react';
-import { array } from 'prop-types';
-import { formatConverter } from 'utils';
+import _ from 'lodash'
+import React, { Component } from 'react'
+import { array } from 'prop-types'
+import { formatConverter } from 'utils'
 import {
   BlogListGrid,
   BlogPreviewContainer,
@@ -11,55 +11,55 @@ import {
   PreviewTitle,
   ExcerptContainer,
   DateText,
-} from './styled';
+} from './styled'
 
 class BlogGrid extends Component {
   static propTypes = {
     posts: array.isRequired,
-  };
+  }
 
-  state = { numberToShow: 4, showExcerpt: null };
+  state = { numberToShow: 4, showExcerpt: null }
 
   clearShowExcerpt = (index) => {
-    const { showExcerpt } = this.state;
-    if (index !== showExcerpt) return;
-    this.setState({ showExcerpt: null });
-  };
+    const { showExcerpt } = this.state
+    if (index !== showExcerpt) return
+    this.setState({ showExcerpt: null })
+  }
 
   handleHover = (index) => () => {
-    const { showExcerpt } = this.state;
-    if (showExcerpt === index) return;
-    clearTimeout(this.state.timeout);
-    this.setState({ showExcerpt: index });
-  };
+    const { showExcerpt } = this.state
+    if (showExcerpt === index) return
+    clearTimeout(this.state.timeout)
+    this.setState({ showExcerpt: index })
+  }
 
   handleBlur = (index) => () => {
     this.setState({
       timeout: setTimeout(() => this.clearShowExcerpt(index), 500),
-    });
-  };
+    })
+  }
 
   hasMore = () => {
-    const { numberToShow } = this.state;
-    const { posts } = this.props;
+    const { numberToShow } = this.state
+    const { posts } = this.props
 
-    return numberToShow < posts.length;
-  };
+    return numberToShow < posts.length
+  }
 
   loadMore = () => {
-    const { numberToShow } = this.state;
-    this.setState({ numberToShow: numberToShow + 4 });
-  };
+    const { numberToShow } = this.state
+    this.setState({ numberToShow: numberToShow + 4 })
+  }
 
   renderPost = ({ node: post }, index) => {
-    const { showExcerpt } = this.state;
+    const { showExcerpt } = this.state
     const {
       id,
       frontmatter: { image, imageURL, title, date, format },
       fields: { slug },
       excerpt,
-    } = post;
-    const excerptClass = showExcerpt === index ? `active` : ``;
+    } = post
+    const excerptClass = showExcerpt === index ? `active` : ``
 
     return (
       <BlogPreviewContainer
@@ -79,17 +79,14 @@ class BlogGrid extends Component {
         </PreviewTextContainer>
         <ExcerptContainer className={excerptClass}>{excerpt}</ExcerptContainer>
       </BlogPreviewContainer>
-    );
-  };
+    )
+  }
 
   renderPosts() {
-    const { numberToShow } = this.state;
-    const { posts } = this.props;
+    const { numberToShow } = this.state
+    const { posts } = this.props
 
-    return _(posts)
-      .take(numberToShow)
-      .map(this.renderPost)
-      .value();
+    return _.take(posts, numberToShow).map(this.renderPost)
   }
 
   render() {
@@ -97,8 +94,8 @@ class BlogGrid extends Component {
       <BlogListGrid hasMore={this.hasMore()} loadMore={this.loadMore}>
         {this.renderPosts()}
       </BlogListGrid>
-    );
+    )
   }
 }
 
-export default BlogGrid;
+export default BlogGrid

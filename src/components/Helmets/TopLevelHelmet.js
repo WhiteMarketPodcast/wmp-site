@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react';
-import { string } from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
-import Helmet from 'react-helmet';
-import FacebookHelmet from './FacebookHelmet';
-import TwitterHelmet from './TwitterHelmet';
+import React, { PureComponent } from 'react'
+import { string } from 'prop-types'
+import { StaticQuery, graphql } from 'gatsby'
+import Helmet from 'react-helmet'
+import FacebookHelmet from './FacebookHelmet'
+import TwitterHelmet from './TwitterHelmet'
 
 class TopLevelHelmet extends PureComponent {
   static propTypes = {
@@ -12,10 +12,10 @@ class TopLevelHelmet extends PureComponent {
     siteUrl: string.isRequired,
     subtitle: string.isRequired,
     title: string.isRequired,
-  };
+  }
 
   render() {
-    const { title, subtitle, description, siteLogo, siteUrl } = this.props;
+    const { title, subtitle, description, siteLogo, siteUrl } = this.props
 
     const helmetProps = {
       title,
@@ -23,7 +23,7 @@ class TopLevelHelmet extends PureComponent {
       image: siteLogo,
       url: siteUrl,
       type: `website`,
-    };
+    }
 
     return (
       <>
@@ -35,7 +35,7 @@ class TopLevelHelmet extends PureComponent {
         <FacebookHelmet {...helmetProps} />
         <TwitterHelmet {...helmetProps} />
       </>
-    );
+    )
   }
 }
 
@@ -51,11 +51,11 @@ const query = graphql`
       }
     }
   }
-`;
+`
 
 export default (props) => (
   <StaticQuery
     query={query}
     render={({ site }) => <TopLevelHelmet {...site.siteMetadata} {...props} />}
   />
-);
+)

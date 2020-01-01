@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
-import { node, string } from 'prop-types';
-import Helmet from 'react-helmet';
+import React, { PureComponent } from 'react'
+import { node, string } from 'prop-types'
+import Helmet from 'react-helmet'
 
 class FacebookHelmet extends PureComponent {
   static propTypes = {
@@ -10,16 +10,16 @@ class FacebookHelmet extends PureComponent {
     description: string,
     image: string.isRequired,
     children: node,
-  };
+  }
 
   static defaultProps = {
     type: `article`,
     children: null,
     description: ``,
-  };
+  }
 
   render() {
-    const { children, description, image, title, type, url } = this.props;
+    const { children, description, image, title, type, url } = this.props
 
     return (
       <Helmet>
@@ -32,8 +32,8 @@ class FacebookHelmet extends PureComponent {
         <meta property="og:image" content={image} />
         {children}
       </Helmet>
-    );
+    )
   }
 }
 
-export default FacebookHelmet;
+export default FacebookHelmet

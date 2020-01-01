@@ -1,15 +1,15 @@
-import _ from 'lodash';
-import React, { Component } from 'react';
-import { array, func, node, string, shape, object } from 'prop-types';
-import { graphql } from 'gatsby';
-import { FaEnvelope, FaFacebook, FaTwitter, FaWhatsapp } from 'react-icons/fa';
-import Link from 'components/Link';
-import PodcastContext from 'components/PodcastContext';
-import PlayButton from 'components/PlayButton';
-import VideoPlayer from 'components/VideoPlayer';
-import Content, { HTMLContent } from 'components/Content';
-import { SrText } from 'style/components';
-import PageHelmet from 'components/Helmets/PageHelmet';
+import _ from 'lodash'
+import React, { Component } from 'react'
+import { array, func, node, string, shape, object } from 'prop-types'
+import { graphql } from 'gatsby'
+import { FaEnvelope, FaFacebook, FaTwitter, FaWhatsapp } from 'react-icons/fa'
+import Link from 'components/Link'
+import PodcastContext from 'components/PodcastContext'
+import PlayButton from 'components/PlayButton'
+import VideoPlayer from 'components/VideoPlayer'
+import Content, { HTMLContent } from 'components/Content'
+import { SrText } from 'style/components'
+import PageHelmet from 'components/Helmets/PageHelmet'
 import {
   Hero,
   HeroContents,
@@ -28,10 +28,10 @@ import {
   ShareLinksContainer,
   Fade,
   CenteredFade,
-} from 'style/components/blogPostPage';
-import { licenceURLs } from 'utils';
-import { getShareURLs } from 'utils/sharing';
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
+} from 'style/components/blogPostPage'
+import { licenceURLs } from 'utils'
+import { getShareURLs } from 'utils/sharing'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 function renderImageInfoSpan(text, name, url) {
   return (
@@ -39,7 +39,7 @@ function renderImageInfoSpan(text, name, url) {
       {text}
       {url ? <Link to={url}>{name}</Link> : name}
     </span>
-  );
+  )
 }
 
 export class BlogPostTemplate extends Component {
@@ -64,10 +64,11 @@ export class BlogPostTemplate extends Component {
     title: string.isRequired,
     siteUrl: string.isRequired,
     slug: string.isRequired,
+    twitterUsername: string.isRequired,
     helmet: node,
     pageContext: object.isRequired,
     tags: array,
-  };
+  }
 
   static defaultProps = {
     contentComponent: undefined,
@@ -78,53 +79,54 @@ export class BlogPostTemplate extends Component {
     imageURL: ``,
     podcastURL: ``,
     videoURL: ``,
-  };
+  }
 
-  static contextType = PodcastContext;
+  static contextType = PodcastContext
 
   state = {
     showMedia: false,
-  };
+  }
 
   getMediaURL = () => {
-    const { podcastURL, videoURL } = this.props;
-    return podcastURL || videoURL;
-  };
+    const { podcastURL, videoURL } = this.props
+    return podcastURL || videoURL
+  }
 
   handlePlayClick = () => {
-    const { format } = this.props;
-    const { showMedia } = this.state;
-    const { setPodcastState, url: currentURL } = this.context;
-    const url = this.getMediaURL();
+    const { format } = this.props
+    const { showMedia } = this.state
+    const { setPodcastState, url: currentURL } = this.context
+    const url = this.getMediaURL()
 
     if (format === `audio`) {
       if (url !== currentURL) {
-        setPodcastState({ url });
+        setPodcastState({ url })
       } else {
-        const playerButton = document.getElementById(`podcast-play-button`);
-        if (playerButton) playerButton.click();
+        const playerButton = document.getElementById(`podcast-play-button`)
+        if (playerButton) playerButton.click()
       }
     }
     if (!showMedia) {
-      this.setState({ showMedia: true });
+      this.setState({ showMedia: true })
     }
-  };
+  }
 
   isPlaying = () => {
-    const { isPlaying } = this.context;
-    const mediaURL = this.getMediaURL();
-    const { url } = this.context;
+    const { isPlaying } = this.context
+    const mediaURL = this.getMediaURL()
+    const { url } = this.context
 
-    return url === mediaURL && isPlaying;
-  };
+    return url === mediaURL && isPlaying
+  }
 
   renderShareLinks() {
-    const { title, slug, siteUrl } = this.props;
+    const { title, slug, siteUrl, twitterUsername } = this.props
 
     const { facebookURL, twitterURL, whatsAppURL, mailto } = getShareURLs({
       url: `${siteUrl}${slug}`,
       text: title,
-    });
+      twitterUsername,
+    })
 
     return (
       <>
@@ -148,25 +150,25 @@ export class BlogPostTemplate extends Component {
           </ShareLink>
         </ShareLinksContainer>
       </>
-    );
+    )
   }
 
   renderTags() {
-    const { tags } = this.props;
-    if (_.isEmpty(tags)) return null;
+    const { tags } = this.props
+    if (_.isEmpty(tags)) return null
 
     const tagList = _.map(tags, (tag) => (
       <li key={`${tag}tag`}>
         <TagLink to={`/tags/${_.kebabCase(tag)}/`}>{tag}</TagLink>
       </li>
-    ));
+    ))
 
     return (
       <>
         <h4>Tags</h4>
         <TagList>{tagList}</TagList>
       </>
-    );
+    )
   }
 
   renderSidebar() {
@@ -176,45 +178,45 @@ export class BlogPostTemplate extends Component {
         {this.renderTags()}
         {this.renderLinksToOtherPosts()}
       </Sidebar>
-    );
+    )
   }
 
   renderLinksToOtherPosts() {
-    const { pageContext } = this.props;
-    if (!pageContext) return null;
+    const { pageContext } = this.props
+    if (!pageContext) return null
 
-    const { otherPosts } = pageContext;
+    const { otherPosts } = pageContext
 
     const links = _.map(otherPosts, (post) => {
-      if (_.isEmpty(post)) return null;
-      const { title } = post.frontmatter;
-      const { slug } = post.fields;
+      if (_.isEmpty(post)) return null
+      const { title } = post.frontmatter
+      const { slug } = post.fields
       return (
         <li key={slug}>
           <BlogPostLink to={slug}>{`.: ${title}`}</BlogPostLink>
         </li>
-      );
-    });
+      )
+    })
 
     return (
       <div>
         <h4>More from the blog</h4>
         <BlogPostLinksContainer>{links}</BlogPostLinksContainer>
       </div>
-    );
+    )
   }
 
   renderImageCredit() {
-    const { imageCredit } = this.props;
-    if (!_.isObject(imageCredit)) return null;
-    const { author, licence } = imageCredit;
-    const { name, url, site, siteURL } = author || {};
-    const licenceURL = licence && licenceURLs[licence];
+    const { imageCredit } = this.props
+    if (!_.isObject(imageCredit)) return null
+    const { author, licence } = imageCredit
+    const { name, url, site, siteURL } = author || {}
+    const licenceURL = licence && licenceURLs[licence]
 
-    const photoBy = renderImageInfoSpan(`Photo by `, name, url);
-    const where = site && renderImageInfoSpan(` on `, site, siteURL);
+    const photoBy = renderImageInfoSpan(`Photo by `, name, url)
+    const where = site && renderImageInfoSpan(` on `, site, siteURL)
     const licenceInfo =
-      licence && renderImageInfoSpan(` – `, licence, licenceURL);
+      licence && renderImageInfoSpan(` – `, licence, licenceURL)
 
     return (
       <ImageCredit>
@@ -222,14 +224,14 @@ export class BlogPostTemplate extends Component {
         {where}
         {licenceInfo}
       </ImageCredit>
-    );
+    )
   }
 
   renderVideo() {
-    const { format, image, imageURL } = this.props;
-    const { showMedia } = this.state;
-    const url = this.getMediaURL();
-    if (format !== `video` || !showMedia || !url) return null;
+    const { format, image, imageURL } = this.props
+    const { showMedia } = this.state
+    const url = this.getMediaURL()
+    if (format !== `video` || !showMedia || !url) return null
     return (
       <VideoPlyrContainer
         className={format}
@@ -238,13 +240,13 @@ export class BlogPostTemplate extends Component {
       >
         <VideoPlayer url={url} />
       </VideoPlyrContainer>
-    );
+    )
   }
 
   renderTitle() {
-    const { format, image, imageURL, title, date } = this.props;
-    const { showMedia } = this.state;
-    if (showMedia && format === `video`) return null;
+    const { format, image, imageURL, title, date } = this.props
+    const { showMedia } = this.state
+    if (showMedia && format === `video`) return null
 
     return (
       <Hero>
@@ -260,14 +262,14 @@ export class BlogPostTemplate extends Component {
           </CenteredFade>
         </HeroContents>
       </Hero>
-    );
+    )
   }
 
   renderPlayButton() {
-    const url = this.getMediaURL();
-    const { format } = this.props;
-    const srText = `Play ${format === `audio` ? `podcast` : format}`;
-    if (!url) return null;
+    const url = this.getMediaURL()
+    const { format } = this.props
+    const srText = `Play ${format === `audio` ? `podcast` : format}`
+    if (!url) return null
 
     return (
       <Fade>
@@ -277,12 +279,12 @@ export class BlogPostTemplate extends Component {
           screenReaderText={srText}
         />
       </Fade>
-    );
+    )
   }
 
   render() {
-    const { content, contentComponent, helmet } = this.props;
-    const PostContent = contentComponent || Content;
+    const { content, contentComponent, helmet } = this.props
+    const PostContent = contentComponent || Content
 
     return (
       <section>
@@ -299,23 +301,23 @@ export class BlogPostTemplate extends Component {
           {this.renderSidebar()}
         </Column>
       </section>
-    );
+    )
   }
 }
 
 const BlogPost = ({ data, pageContext }) => {
   const {
     site: {
-      siteMetadata: { siteUrl },
+      siteMetadata: { siteUrl, twitterUsername },
     },
     markdownRemark: {
       html,
       frontmatter,
       fields: { slug },
     },
-  } = data;
-  const { title, description, image, imageURL, imageAlt } = frontmatter;
-  const imageSrc = _.get(image, 'childImageSharp.fluid.src', imageURL);
+  } = data
+  const { title, description, image, imageURL, imageAlt } = frontmatter
+  const imageSrc = _.get(image, 'childImageSharp.fluid.src', imageURL)
 
   return (
     <BlogPostTemplate
@@ -333,20 +335,21 @@ const BlogPost = ({ data, pageContext }) => {
       }
       pageContext={pageContext}
       siteUrl={siteUrl}
+      twitterUsername={twitterUsername}
       slug={slug}
       {...frontmatter}
     />
-  );
-};
+  )
+}
 
 BlogPost.propTypes = {
   data: shape({
     markdownRemark: object,
   }).isRequired,
   pageContext: object.isRequired,
-};
+}
 
-export default BlogPost;
+export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
@@ -387,7 +390,8 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         siteUrl
+        twitterUsername
       }
     }
   }
-`;
+`

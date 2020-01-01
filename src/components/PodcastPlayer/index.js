@@ -1,16 +1,16 @@
-import _ from 'lodash';
-import React, { PureComponent } from 'react';
-import { object } from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
-import PodcastContext from 'components/PodcastContext';
-import PauseIcon from 'mdi-react/PauseIcon';
-import PlayIcon from 'mdi-react/PlayIcon';
-import VolumeHighIcon from 'mdi-react/VolumeHighIcon';
-import VolumeLowIcon from 'mdi-react/VolumeLowIcon';
-import VolumeMediumIcon from 'mdi-react/VolumeMediumIcon';
-import VolumeOffIcon from 'mdi-react/VolumeOffIcon';
-import LoadingIcon from 'mdi-react/LoadingIcon';
-import { SrOnly, SrText } from 'style/components';
+import _ from 'lodash'
+import React, { PureComponent } from 'react'
+import { object } from 'prop-types'
+import { StaticQuery, graphql } from 'gatsby'
+import PodcastContext from 'components/PodcastContext'
+import PauseIcon from 'mdi-react/PauseIcon'
+import PlayIcon from 'mdi-react/PlayIcon'
+import VolumeHighIcon from 'mdi-react/VolumeHighIcon'
+import VolumeLowIcon from 'mdi-react/VolumeLowIcon'
+import VolumeMediumIcon from 'mdi-react/VolumeMediumIcon'
+import VolumeOffIcon from 'mdi-react/VolumeOffIcon'
+import LoadingIcon from 'mdi-react/LoadingIcon'
+import { SrOnly, SrText } from 'style/components'
 import {
   AudioPlayerContainer,
   Button,
@@ -26,15 +26,15 @@ import {
   TimeRemaining,
   VolumeContainer,
   VolumeSlider,
-} from './styled';
-import { formatTime } from './utils';
+} from './styled'
+import { formatTime } from './utils'
 
 class PodcastPlayer extends PureComponent {
-  static contextType = PodcastContext;
+  static contextType = PodcastContext
 
   static propTypes = {
     podcasts: object.isRequired,
-  };
+  }
 
   state = {
     url: ``,
@@ -44,133 +44,133 @@ class PodcastPlayer extends PureComponent {
     muted: false,
     played: 0,
     episodes: _.map(this.props.podcasts.edges, `node.frontmatter`),
-  };
+  }
 
   componentDidUpdate() {
-    const { url } = this.context;
-    const { url: currentURL, changingURL } = this.state;
-    if (changingURL || currentURL === url) return;
-    console.log(`url change`);
-    this.load(url);
+    const { url } = this.context
+    const { url: currentURL, changingURL } = this.state
+    if (changingURL || currentURL === url) return
+    console.log(`url change`)
+    this.load(url)
   }
 
   getEpisode() {
-    const { episodes } = this.state;
-    const { url } = this.context;
-    const episode = _.find(episodes, [`podcastURL`, url]);
-    return episode || {};
+    const { episodes } = this.state
+    const { url } = this.context
+    const episode = _.find(episodes, [`podcastURL`, url])
+    return episode || {}
   }
 
   getEpisodeImage = () => {
-    const { image, imageURL = '' } = this.getEpisode();
-    return _.get(image, 'childImageSharp.fixed.src', imageURL);
-  };
+    const { image, imageURL = '' } = this.getEpisode()
+    return _.get(image, 'childImageSharp.fixed.src', imageURL)
+  }
 
   getEpisodeTitle = () => {
-    const { title = `` } = this.getEpisode();
-    return title.replace(/^session /i, ``);
-  };
+    const { title = `` } = this.getEpisode()
+    return title.replace(/^session /i, ``)
+  }
 
   getVolumeIcon = () => {
-    const { muted, volume } = this.state;
-    if (muted) return VolumeOffIcon;
-    if (volume <= 0.3) return VolumeLowIcon;
-    if (volume >= 0.7) return VolumeHighIcon;
-    return VolumeMediumIcon;
-  };
+    const { muted, volume } = this.state
+    if (muted) return VolumeOffIcon
+    if (volume <= 0.3) return VolumeLowIcon
+    if (volume >= 0.7) return VolumeHighIcon
+    return VolumeMediumIcon
+  }
 
   load = (url) => {
-    const { setPlaying, setBuffering } = this.context;
+    const { setPlaying, setBuffering } = this.context
     this.setState({
       url,
       played: 0,
       title: this.getEpisodeTitle(),
       episodeImage: this.getEpisodeImage(),
-    });
-    setPlaying(true);
-    setBuffering(true);
-  };
+    })
+    setPlaying(true)
+    setBuffering(true)
+  }
 
   playPause = () => {
-    const { isPlaying, setPlaying } = this.context;
-    setPlaying(!isPlaying);
-  };
+    const { isPlaying, setPlaying } = this.context
+    setPlaying(!isPlaying)
+  }
 
   stop = () => {
-    const { setPlaying } = this.context;
-    this.setState({ url: null });
-    setPlaying(false);
-  };
+    const { setPlaying } = this.context
+    this.setState({ url: null })
+    setPlaying(false)
+  }
 
   setVolume = (e) => {
-    this.setState({ volume: parseFloat(e.target.value) });
-  };
+    this.setState({ volume: parseFloat(e.target.value) })
+  }
 
   toggleMuted = () => {
-    this.setState(({ muted }) => ({ muted: !muted }));
-  };
+    this.setState(({ muted }) => ({ muted: !muted }))
+  }
 
   onReady = () => {
-    this.setState({ changingURL: false });
-  };
+    this.setState({ changingURL: false })
+  }
 
   onPlay = () => {
-    console.log('onPlay');
-    const { setBuffering } = this.context;
-    setBuffering(false);
-  };
+    console.log('onPlay')
+    const { setBuffering } = this.context
+    setBuffering(false)
+  }
 
   onPause = () => {
-    console.log('onPause');
-    const { setPlaying } = this.context;
-    setPlaying(false);
-  };
+    console.log('onPause')
+    const { setPlaying } = this.context
+    setPlaying(false)
+  }
 
   onSeekMouseDown = () => {
-    this.setState({ seeking: true });
-  };
+    this.setState({ seeking: true })
+  }
 
   onSeekChange = (e) => {
-    this.setState({ played: parseFloat(e.target.value) });
-  };
+    this.setState({ played: parseFloat(e.target.value) })
+  }
 
   onSeekMouseUp = (e) => {
-    this.setState({ seeking: false });
-    this.player.seekTo(parseFloat(e.target.value));
-  };
+    this.setState({ seeking: false })
+    this.player.seekTo(parseFloat(e.target.value))
+  }
 
   onProgressMouseDown = () => {
-    this.setState({ seeking: true });
-  };
+    this.setState({ seeking: true })
+  }
 
   onProgressMouseUp = (e) => {
-    const played = (1 / window.innerWidth) * e.screenX;
+    const played = (1 / window.innerWidth) * e.screenX
 
-    this.setState({ seeking: false, played });
-    this.player.seekTo(played);
-  };
+    this.setState({ seeking: false, played })
+    this.player.seekTo(played)
+  }
 
   onProgress = (state) => {
     // We only want to update time slider if we are not currently seeking
-    if (this.state.seeking) return;
-    this.setState(state);
-  };
+    if (this.state.seeking) return
+    this.setState(state)
+  }
 
   onEnded = () => {
-    const { setPlaying } = this.context;
-    setPlaying(false);
-  };
+    const { setPlaying } = this.context
+    setPlaying(false)
+  }
 
   onDuration = (duration) => {
-    this.setState({ duration });
-  };
+    this.setState({ duration })
+  }
 
   ref = (player) => {
-    this.player = player;
-  };
+    this.player = player
+  }
 
   render() {
-    const { isBuffering, isPlaying, setPodcastState } = this.context;
+    const { isBuffering, isPlaying, setPodcastState } = this.context
     const {
       url,
       title,
@@ -179,13 +179,13 @@ class PodcastPlayer extends PureComponent {
       muted,
       played,
       duration,
-    } = this.state;
-    if (!url) return null;
+    } = this.state
+    if (!url) return null
     const [PlayPauseIcon, srText] = isPlaying
       ? [PauseIcon, `Pause`]
-      : [PlayIcon, `Play`];
-    const VolumeIcon = this.getVolumeIcon();
-    const muteText = muted ? `Unmute` : `Mute`;
+      : [PlayIcon, `Play`]
+    const VolumeIcon = this.getVolumeIcon()
+    const muteText = muted ? `Unmute` : `Mute`
 
     return (
       <AudioPlayerContainer pose="enter" initialPose="exit">
@@ -203,7 +203,7 @@ class PodcastPlayer extends PureComponent {
           onDuration={this.onDuration}
           onBuffer={() => setPodcastState({ isBuffering: true })}
           onBufferEnd={() => {
-            setPodcastState({ isPlaying: true, isBuffering: false });
+            setPodcastState({ isPlaying: true, isBuffering: false })
           }}
         />
 
@@ -271,7 +271,7 @@ class PodcastPlayer extends PureComponent {
           </PlayButtonsContainer>
         </ControlsContainer>
       </AudioPlayerContainer>
-    );
+    )
   }
 }
 
@@ -298,11 +298,11 @@ const query = graphql`
       }
     }
   }
-`;
+`
 
 export default () => (
   <StaticQuery
     query={query}
     render={({ podcasts }) => <PodcastPlayer podcasts={podcasts} />}
   />
-);
+)

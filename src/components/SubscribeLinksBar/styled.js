@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { white, primary } from 'style/colors';
-import { sansSerif } from 'style/fonts';
-import { onMobile } from 'style/mediaQueries';
+import styled from 'styled-components'
+import { white, primary } from 'style/colors'
+import { sansSerif } from 'style/fonts'
+import { onMobile } from 'style/mediaQueries'
 
 export const Bar = styled.div`
   display: flex;
@@ -43,7 +43,7 @@ export const Bar = styled.div`
       margin-left: 0.5rem;
     }
   }
-`;
+`
 
 export const Links = styled.div`
   display: flex;
@@ -51,7 +51,7 @@ export const Links = styled.div`
   align-items: center;
   width: 100%;
   max-width: 400px;
-`;
+`
 
 export const Title = styled.div`
   color: ${white};
@@ -65,4 +65,4 @@ export const Title = styled.div`
   text-transform: uppercase;
   padding: 0.2rem 0.5rem;
   background-color: ${primary};
-`;
+`

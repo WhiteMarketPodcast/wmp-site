@@ -1,12 +1,12 @@
-import _ from 'lodash';
-import React, { Component } from 'react';
-import { array, shape, string } from 'prop-types';
-import { graphql } from 'gatsby';
-import { HTMLContent } from 'components/Content';
-import PodcastContext from 'components/PodcastContext';
-import PageHelmet from 'components/Helmets/PageHelmet';
-import SubscribeLinksBar from 'components/SubscribeLinksBar';
-import { SrText } from 'style/components';
+import _ from 'lodash'
+import React, { Component } from 'react'
+import { array, shape, string } from 'prop-types'
+import { graphql } from 'gatsby'
+import { HTMLContent } from 'components/Content'
+import PodcastContext from 'components/PodcastContext'
+import PageHelmet from 'components/Helmets/PageHelmet'
+import SubscribeLinksBar from 'components/SubscribeLinksBar'
+import { SrText } from 'style/components'
 import {
   Grid,
   EpisodesColumn,
@@ -19,12 +19,12 @@ import {
   TitleBG,
   TitleContainer,
   Title,
-} from 'style/components/podcastPage';
-import PlayIcon from 'mdi-react/PlayIcon';
-import SpeakerIcon from 'mdi-react/SpeakerIcon';
+} from 'style/components/podcastPage'
+import PlayIcon from 'mdi-react/PlayIcon'
+import SpeakerIcon from 'mdi-react/SpeakerIcon'
 
-const pageTitle = `Podcast Archive`;
-const pageDescription = ``;
+const pageTitle = `Podcast Archive`
+const pageDescription = ``
 export default class PodcastPage extends Component {
   static propTypes = {
     data: shape({
@@ -33,50 +33,50 @@ export default class PodcastPage extends Component {
       }),
       podcasts: shape({ edges: array }),
     }).isRequired,
-  };
+  }
 
-  static contextType = PodcastContext;
+  static contextType = PodcastContext
 
   state = {
     episodes: _.map(this.props.data.podcasts.edges, `node`),
     showDetails: this.props.data.podcasts.edges[0].id,
-  };
+  }
 
   componentDidMount() {
-    const { url } = this.context;
-    const { episodes, showDetails } = this.state;
+    const { url } = this.context
+    const { episodes, showDetails } = this.state
     const { id } =
-      _.find(episodes, [`frontmatter.podcastURL`, url]) || episodes[0];
-    if (showDetails === id) return;
-    this.setState({ showDetails: id });
+      _.find(episodes, [`frontmatter.podcastURL`, url]) || episodes[0]
+    if (showDetails === id) return
+    this.setState({ showDetails: id })
   }
 
   getSelectedEpisode = () => {
-    const { episodes, showDetails } = this.state;
-    return _.find(episodes, [`id`, showDetails]) || episodes[0];
-  };
+    const { episodes, showDetails } = this.state
+    return _.find(episodes, [`id`, showDetails]) || episodes[0]
+  }
 
-  setShowDetails = (id) => () => this.setState({ showDetails: id });
+  setShowDetails = (id) => () => this.setState({ showDetails: id })
 
   handlePlayButtonClick = (podcastURL) => () => {
-    const { isPlaying, url, setPodcastState, setPlaying } = this.context;
+    const { isPlaying, url, setPodcastState, setPlaying } = this.context
 
     if (podcastURL === url) {
-      setPlaying(!isPlaying);
+      setPlaying(!isPlaying)
     } else {
-      setPodcastState({ url: podcastURL });
+      setPodcastState({ url: podcastURL })
     }
-  };
+  }
 
   renderEpisodeTab = (episode) => {
-    const { url } = this.context;
+    const { url } = this.context
     const {
       id,
       frontmatter: { title, podcastURL /* , date */ },
-    } = episode;
-    const { id: currentId } = this.getSelectedEpisode();
-    const selected = id === currentId;
-    const isCurrentEpisode = url === podcastURL;
+    } = episode
+    const { id: currentId } = this.getSelectedEpisode()
+    const selected = id === currentId
+    const isCurrentEpisode = url === podcastURL
     return (
       <EpisodeTab key={id} selected={selected}>
         <TabButton
@@ -101,33 +101,33 @@ export default class PodcastPage extends Component {
           </PlayButton>
         )}
       </EpisodeTab>
-    );
-  };
+    )
+  }
 
   renderEpisodes() {
-    const { episodes } = this.state;
+    const { episodes } = this.state
 
     return (
       <EpisodesColumn>{_.map(episodes, this.renderEpisodeTab)}</EpisodesColumn>
-    );
+    )
   }
 
   renderSelectedEpisode() {
     const {
       html,
       frontmatter: { title },
-    } = this.getSelectedEpisode();
+    } = this.getSelectedEpisode()
 
     return (
       <CurrentEpisodeContainer>
         <SelectedEpsiodeTitle>{title}</SelectedEpsiodeTitle>
         <HTMLContent content={html} />
       </CurrentEpisodeContainer>
-    );
+    )
   }
 
   render() {
-    const { image, imageURL } = this.getSelectedEpisode().frontmatter;
+    const { image, imageURL } = this.getSelectedEpisode().frontmatter
 
     return (
       <>
@@ -147,7 +147,7 @@ export default class PodcastPage extends Component {
           {this.renderSelectedEpisode()}
         </Grid>
       </>
-    );
+    )
   }
 }
 
@@ -179,4 +179,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

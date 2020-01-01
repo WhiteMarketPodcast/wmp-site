@@ -1,25 +1,25 @@
-import styled from 'styled-components';
-import posed from 'react-pose';
-import Link from 'components/Link';
+import styled from 'styled-components'
+import posed from 'react-pose'
+import Link from 'components/Link'
 import {
   MOBILE_NAV_HEIGHT,
   DESKTOP_NAV_HEIGHT,
-} from 'components/Navbar/constants';
-import { white, black, primary, darkGrey, grey } from '../colors';
-import { onMobile } from '../mediaQueries';
-import { fade, slideUpWithDelay } from '../poses';
+} from 'components/Navbar/constants'
+import { white, black, primary, darkGrey, grey } from '../colors'
+import { onMobile } from '../mediaQueries'
+import { fade, slideUpWithDelay } from '../poses'
 
 export const Title = styled.h1`
   color: ${white};
   max-width: 26ch;
   margin: 0 auto 1rem auto;
   text-align: center;
-`;
+`
 
 export const Hero = styled.div`
   position: relative;
   background-color: ${black};
-`;
+`
 
 export const HeroContents = styled.div`
   position: relative;
@@ -39,26 +39,26 @@ export const HeroContents = styled.div`
   ${onMobile} {
     padding: 1rem;
   }
-`;
+`
 
-export const Fade = posed.div(fade);
+export const Fade = posed.div(fade)
 export const CenteredFade = styled(Fade)`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   will-change: opacity;
-`;
+`
 
 export const Date = styled.div`
   color: ${white};
   font-weight: 600;
   margin-top: 1rem;
-`;
+`
 
 export const CoverImage = styled.img`
   object-fit: cover;
-`;
+`
 
 export const Column = styled.div`
   display: grid;
@@ -71,9 +71,9 @@ export const Column = styled.div`
   ${onMobile} {
     grid-template-columns: 1fr;
   }
-`;
+`
 
-const SlideUp = posed.div(slideUpWithDelay);
+const SlideUp = posed.div(slideUpWithDelay)
 export const BlogContent = styled(SlideUp)`
   display: flex;
   flex-direction: column;
@@ -111,7 +111,7 @@ export const BlogContent = styled(SlideUp)`
     margin: 0 auto;
     max-width: 100%;
   }
-`;
+`
 
 export const Sidebar = styled.aside`
   padding: 2rem 1rem;
@@ -125,7 +125,7 @@ export const Sidebar = styled.aside`
   ${onMobile} {
     padding: 1rem;
   }
-`;
+`
 
 export const TagList = styled.ul`
   list-style: none;
@@ -137,7 +137,7 @@ export const TagList = styled.ul`
   li {
     display: flex;
   }
-`;
+`
 
 export const BlogPostLinksContainer = styled.ul`
   display: flex;
@@ -145,7 +145,7 @@ export const BlogPostLinksContainer = styled.ul`
   list-style: none;
   margin: 1rem 0;
   padding: 0;
-`;
+`
 
 export const BlogPostLink = styled(Link)`
   display: flex;
@@ -155,7 +155,7 @@ export const BlogPostLink = styled(Link)`
   line-height: 1.3;
   margin: 0;
   margin-bottom: 0.5rem;
-`;
+`
 
 export const TagLink = styled(Link)`
   background-color: ${primary};
@@ -169,7 +169,7 @@ export const TagLink = styled(Link)`
   &:hover {
     filter: brightness(110%);
   }
-`;
+`
 
 export const VideoPlyrContainer = styled.div`
   background-color: ${darkGrey};
@@ -198,13 +198,13 @@ export const VideoPlyrContainer = styled.div`
       max-width: calc((100vh - ${MOBILE_NAV_HEIGHT}) / 9 * 16);
     }
   }
-`;
+`
 
 export const ShareLinksContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 1rem 0 1.4rem 0;
-`;
+`
 
 export const ShareLink = styled(Link)`
   display: inline-block;
@@ -218,7 +218,7 @@ export const ShareLink = styled(Link)`
     filter: unset;
     opacity: 1;
   }
-`;
+`
 
 export const ImageCredit = styled.div`
   border-bottom: 1px solid ${grey};
@@ -227,4 +227,4 @@ export const ImageCredit = styled.div`
   font-style: italic;
   margin: 0 1rem;
   margin-top: 0.3rem;
-`;
+`

@@ -1,17 +1,17 @@
-import _ from 'lodash';
-import styled from 'styled-components';
-import Link from 'components/Link';
+import _ from 'lodash'
+import styled from 'styled-components'
+import Link from 'components/Link'
 import {
   black,
   primary,
   seeThruPrimaryDark,
   seeThruWhite,
   white,
-} from '../colors';
-import { sansSerif } from '../fonts';
-import { onMobile } from '../mediaQueries';
+} from '../colors'
+import { sansSerif } from '../fonts'
+import { onMobile } from '../mediaQueries'
 
-const isHighlightedPreview = (index) => _.includes([0, 3, 5], index);
+const isHighlightedPreview = (index) => _.includes([0, 3, 5], index)
 
 export const BlogPostPreviewGrid = styled.div`
   display: grid;
@@ -125,7 +125,7 @@ export const BlogPostPreviewGrid = styled.div`
   > a:nth-child(8) {
     grid-area: small5;
   }
-`;
+`
 
 export const BlogPreviewContainer = styled(Link)`
   position: relative;
@@ -140,7 +140,7 @@ export const BlogPreviewContainer = styled(Link)`
   @media (max-width: 575px) {
     align-items: flex-start;
   }
-`;
+`
 
 export const BlogPreviewImage = styled.div`
   position: absolute;
@@ -153,7 +153,7 @@ export const BlogPreviewImage = styled.div`
   @media (max-width: 575px) {
     width: 40%;
   }
-`;
+`
 
 export const PreviewTextContainer = styled.div`
   position: relative;
@@ -162,11 +162,11 @@ export const PreviewTextContainer = styled.div`
   ${({ index }) => {
     const [bgColor, n] = isHighlightedPreview(index)
       ? [seeThruPrimaryDark, `1.5`]
-      : [seeThruWhite, `1`];
+      : [seeThruWhite, `1`]
     return `
       background-color: ${bgColor};
       padding: ${n}rem;
-    `;
+    `
   }};
 
   @media (max-width: 575px) {
@@ -175,7 +175,7 @@ export const PreviewTextContainer = styled.div`
     margin-left: 40%;
     padding: 0 1rem;
   }
-`;
+`
 
 export const PostType = styled.div`
   display: inline;
@@ -194,7 +194,7 @@ export const PostType = styled.div`
     top: -0.7em;
     left: 1em;
   }
-`;
+`
 
 export const PreviewTitle = styled.h3`
   font-size: ${({ index }) => (isHighlightedPreview(index) ? `1.5` : `1.2`)}rem;
@@ -208,7 +208,7 @@ export const PreviewTitle = styled.h3`
       font-size: 1.2rem;
     }
   }
-`;
+`
 
 export const DateText = styled.div`
   color: ${black};
@@ -221,13 +221,13 @@ export const DateText = styled.div`
   @media (min-width: 576px) {
     color: ${({ index }) => (isHighlightedPreview(index) ? white : black)};
   }
-`;
+`
 
-const linearGradient = `linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.4))`;
+const linearGradient = `linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.4))`
 export const PodcastSection = styled.section`
   position: relative;
   background-color: ${primary};
-`;
+`
 
 export const PodcastSectionContents = styled.div`
   position: relative;
@@ -243,7 +243,7 @@ export const PodcastSectionContents = styled.div`
   @media (max-width: 575px) {
     min-height: 500px;
   }
-`;
+`
 
 export const PodcastPlayBox = styled.div`
   display: flex;
@@ -252,7 +252,7 @@ export const PodcastPlayBox = styled.div`
   flex-direction: column;
   flex: 1;
   padding: 3rem 1rem 1rem 1rem;
-`;
+`
 
 export const PodcastTextContainer = styled.div`
   display: flex;
@@ -263,7 +263,7 @@ export const PodcastTextContainer = styled.div`
   ${onMobile} {
     padding-bottom: 0;
   }
-`;
+`
 
 export const PodcastSmallText = styled.h2`
   background-color: ${primary};
@@ -280,18 +280,18 @@ export const PodcastSmallText = styled.h2`
   ${onMobile} {
     font-size: 0.75rem;
   }
-`;
+`
 
 export const PodcastTitle = styled.h3`
   color: ${white};
   max-width: 50ch;
   margin: 0 auto;
-`;
+`
 
 export const PlyrContainer = styled.div`
   width: 50ch;
   max-width: 100%;
-`;
+`
 
 export const SeeMoreContainer = styled.div`
   display: flex;
@@ -303,4 +303,4 @@ export const SeeMoreContainer = styled.div`
   ${onMobile} {
     padding: 1.5rem 0;
   }
-`;
+`

@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { LinkButton as Link } from 'style/components';
-import { white, primary } from '../colors';
-import { onMobile } from '../mediaQueries';
+import styled from 'styled-components'
+import { LinkButton as Link } from 'style/components'
+import { white, primary } from '../colors'
+import { onMobile } from '../mediaQueries'
 
 export const Section404 = styled.section`
   display: flex;
@@ -16,19 +16,19 @@ export const Section404 = styled.section`
   ${onMobile} {
     padding-top: 0;
   }
-`;
+`
 
 export const H1 = styled.h1`
   color: ${white};
   font-size: 10rem;
   margin: 0 auto 1rem auto;
-`;
+`
 
 export const LinkButton = styled(Link)`
   border: 1px solid ${white};
   color: ${white};
   margin: 1rem auto;
-`;
+`
 
 export const TextCenter = styled.div`
   margin: 1rem;
@@ -37,4 +37,4 @@ export const TextCenter = styled.div`
   ${onMobile} {
     white-space: pre;
   }
-`;
+`

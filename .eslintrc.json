@@ -27,20 +27,38 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "paths": ["./src"]
+        "paths": [
+          "./src"
+        ]
       }
     }
   },
-  "plugins": ["react", "jsx-a11y", "prettier"],
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "prettier"
+  ],
   "rules": {
+    "curly": [
+      "error",
+      "multi-line",
+      "consistent"
+    ],
     "prettier/prettier": [
       "error",
-      { "arrowParens": "always", "singleQuote": true, "trailingComma": "all" }
+      {
+        "arrowParens": "always",
+        "singleQuote": true,
+        "trailingComma": "all",
+        "semi": false
+      }
     ],
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
-        "components": ["ExternalLink"]
+        "components": [
+          "ExternalLink"
+        ]
       }
     ],
     "no-console": 0,
@@ -72,7 +90,10 @@
           "rendering"
         ],
         "groups": {
-          "rendering": ["/^render.+$/", "render"]
+          "rendering": [
+            "/^render.+$/",
+            "render"
+          ]
         }
       }
     ]

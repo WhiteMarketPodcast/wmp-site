@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
-import { onMobile, onDesktop } from './mediaQueries';
-import { primaryDark, lightGrey, primary } from './colors';
+import { createGlobalStyle } from 'styled-components'
+import { onMobile, onDesktop } from './mediaQueries'
+import { primaryDark, lightGrey, primary } from './colors'
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -83,6 +83,6 @@ const GlobalStyle = createGlobalStyle`
   .spin {
     animation: spin 0.5s infinite linear;
   }
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle

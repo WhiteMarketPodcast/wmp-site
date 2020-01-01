@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import Link from 'components/Link';
-import InfiniteScroll from 'react-infinite-scroller';
-import { primary, white } from 'style/colors';
-import { onMobile, onDesktop } from 'style/mediaQueries';
+import styled from 'styled-components'
+import Link from 'components/Link'
+import InfiniteScroll from 'react-infinite-scroller'
+import { primary, white } from 'style/colors'
+import { onMobile, onDesktop } from 'style/mediaQueries'
 
 export const Grid = styled(InfiniteScroll)`
   display: grid;
@@ -19,7 +19,7 @@ export const Grid = styled(InfiniteScroll)`
     grid-template-columns: repeat(auto-fit, 18rem);
     grid-auto-rows: 18rem;
   }
-`;
+`
 
 export const AlbumContainer = styled(Link)`
   position: relative;
@@ -39,7 +39,7 @@ export const AlbumContainer = styled(Link)`
     opacity: 1;
     font-weight: 600;
   }
-`;
+`
 
 export const InfoContainer = styled.div`
   grid-area: excerpt;
@@ -65,8 +65,8 @@ export const InfoContainer = styled.div`
     transition: all 0.2s ease;
     transform: translateY(${({ active }) => (active ? 0 : 100)}%);
   }
-`;
+`
 
 export const ArtistAndTitle = styled.div`
   font-weight: 600;
-`;
+`

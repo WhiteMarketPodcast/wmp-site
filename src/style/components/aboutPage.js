@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { FlexCenter, BrandH1, PaddedSection } from 'style/components';
-import { primary, white } from 'style/colors';
-import { onMobile } from 'style/mediaQueries';
+import styled from 'styled-components'
+import { FlexCenter, BrandH1, PaddedSection } from 'style/components'
+import { primary, white } from 'style/colors'
+import { onMobile } from 'style/mediaQueries'
 
 export const TitleBG = styled(FlexCenter)`
   background-color: ${primary};
@@ -12,14 +12,14 @@ export const TitleBG = styled(FlexCenter)`
   ${onMobile} {
     padding: 3rem 1rem;
   }
-`;
+`
 
 export const Title = styled(BrandH1)`
   color: ${white};
   margin: 0 auto;
-`;
+`
 
 export const Section = styled(PaddedSection)`
   padding-top: 1rem;
   padding-bottom: 1rem;
-`;
+`

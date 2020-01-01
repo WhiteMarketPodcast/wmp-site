@@ -1,19 +1,19 @@
-import styled from 'styled-components';
-import posed from 'react-pose';
-import { primary, white, black, hexToRGBA } from 'style/colors';
-import { onMobile } from 'style/mediaQueries';
-import Player from 'react-player';
-import { tinyWMPLogo } from '../utils';
+import styled from 'styled-components'
+import posed from 'react-pose'
+import { primary, white, black, hexToRGBA } from 'style/colors'
+import { onMobile } from 'style/mediaQueries'
+import Player from 'react-player'
+import { tinyWMPLogo } from '../utils'
 
 export const ReactPlayer = styled(Player)`
   position: absolute;
   z-index: -1;
-`;
+`
 
 const audioDiv = posed.div({
   enter: { y: 0, transition: { ease: 'easeInOut' } },
   exit: { y: `100%` },
-});
+})
 
 export const AudioPlayerContainer = styled(audioDiv)`
   position: fixed;
@@ -23,16 +23,16 @@ export const AudioPlayerContainer = styled(audioDiv)`
   display: flex;
   flex-direction: column;
   background-color: ${white};
-`;
+`
 
 const Flex = styled.div`
   display: flex;
-`;
+`
 
 export const ControlsContainer = styled(Flex)`
   align-items: center;
   padding: 5px;
-`;
+`
 
 export const PodcastArtwork = styled.div`
   width: 50px;
@@ -42,14 +42,14 @@ export const PodcastArtwork = styled.div`
   background-position: center;
   background-size: cover;
   flex: 0 0 auto;
-`;
+`
 export const PlayButtonsContainer = styled(Flex)`
   background-color: rebeccapurple;
-`;
+`
 export const PodcastInfoContainer = styled(Flex)`
   flex: 1 1 auto;
   align-items: center;
-`;
+`
 
 export const PodcastTitle = styled.div`
   font-size: 0.75rem;
@@ -63,7 +63,7 @@ export const PodcastTitle = styled.div`
   ${onMobile} {
     letter-spacing: -0.5px;
   }
-`;
+`
 
 export const TimeRemaining = styled.div`
   display: flex;
@@ -74,19 +74,19 @@ export const TimeRemaining = styled.div`
   line-height: 1.2;
   padding-right: 0.5rem;
   width: 8ch;
-`;
+`
 
 export const ProgressBG = styled.div`
   width: 100%;
   background-color: ${hexToRGBA(primary, 0.3)};
   cursor: pointer;
-`;
+`
 
 export const ProgressBar = styled.div`
   cursor: pointer;
   background-color: ${primary};
   height: 6px;
-`;
+`
 
 export const VolumeContainer = styled(Flex)`
   align-items: center;
@@ -95,7 +95,7 @@ export const VolumeContainer = styled(Flex)`
   ${onMobile} {
     display: none;
   }
-`;
+`
 
 export const Button = styled.button`
   display: flex;
@@ -116,10 +116,10 @@ export const Button = styled.button`
     background-color: ${primary};
     color: ${white};
   }
-`;
+`
 
 export const PlayButton = styled(Button)`
   border: 1px solid ${hexToRGBA(primary, 0.3)};
-`;
+`
 
-export * from './inputRange';
+export * from './inputRange'

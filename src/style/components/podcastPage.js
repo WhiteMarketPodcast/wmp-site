@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import PreviewCompatibleImage from 'components/PreviewCompatibleImage';
-import { FlexCenterColumn, BrandH1 } from 'style/components';
+import styled from 'styled-components'
+import PreviewCompatibleImage from 'components/PreviewCompatibleImage'
+import { FlexCenterColumn, BrandH1 } from 'style/components'
 import {
   primary,
   primaryLight,
@@ -8,8 +8,8 @@ import {
   offWhite,
   lightGrey,
   white,
-} from 'style/colors';
-import { onMobile } from 'style/mediaQueries';
+} from 'style/colors'
+import { onMobile } from 'style/mediaQueries'
 
 export const TitleBG = styled(PreviewCompatibleImage)`
   position: absolute;
@@ -18,7 +18,7 @@ export const TitleBG = styled(PreviewCompatibleImage)`
   bottom: 0;
   right: 0;
   z-index: -1;
-`;
+`
 
 export const TitleContainer = styled(FlexCenterColumn)`
   position: relative;
@@ -34,12 +34,12 @@ export const TitleContainer = styled(FlexCenterColumn)`
   ${onMobile} {
     padding: 3rem 1rem 1rem 1rem;
   }
-`;
+`
 
 export const Title = styled(BrandH1)`
   color: ${white};
   margin: 0 auto;
-`;
+`
 
 export const Grid = styled.div`
   padding: 3rem 0;
@@ -52,7 +52,7 @@ export const Grid = styled.div`
     flex-direction: column;
     padding: 1.5rem 0;
   }
-`;
+`
 
 export const EpisodesColumn = styled.div`
   border: 1px solid ${lightGrey};
@@ -68,7 +68,7 @@ export const EpisodesColumn = styled.div`
     margin: 0 1rem;
     max-height: 250px;
   }
-`;
+`
 
 export const EpisodeTab = styled.div`
   position: relative;
@@ -94,16 +94,16 @@ export const EpisodeTab = styled.div`
           content: '';
           width: 10px;
         }
-      `;
+      `
     }
 
     return `
     background-color: ${offWhite};
     border-right: 1px solid ${lightGrey};
     border-left: 10px solid ${lightGrey};
-  `;
+  `
   }};
-`;
+`
 
 export const TabButton = styled.button`
   background: transparent;
@@ -123,7 +123,7 @@ export const TabButton = styled.button`
   }
 
   ${({ selected }) => (selected ? `border-left: 10px solid transparent;` : ``)};
-`;
+`
 
 export const CurrentEpisodeContainer = styled.div`
   flex: 2;
@@ -139,11 +139,11 @@ export const CurrentEpisodeContainer = styled.div`
   * {
     max-width: 100%;
   }
-`;
+`
 
 export const SelectedEpsiodeTitle = styled.h2`
   margin-top: 0;
-`;
+`
 
 export const PlayButton = styled.button`
   display: flex;
@@ -162,7 +162,7 @@ export const PlayButton = styled.button`
   &:focus {
     color: ${primary};
   }
-`;
+`
 
 export const IconContainer = styled.div`
   display: flex;
@@ -172,4 +172,4 @@ export const IconContainer = styled.div`
   margin-left: 0.5rem;
   height: 35px;
   width: 35px;
-`;
+`

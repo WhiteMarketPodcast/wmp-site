@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import BlogGrid from 'components/BlogGrid';
-import { BrandH1 } from 'style/components';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
+import BlogGrid from 'components/BlogGrid'
+import { BrandH1 } from 'style/components'
 
 export default class BlogList extends Component {
   static propTypes = {
@@ -11,18 +11,18 @@ export default class BlogList extends Component {
         edges: PropTypes.array,
       }),
     }).isRequired,
-  };
+  }
 
   render() {
-    const { data } = this.props;
-    const { edges: posts } = data.allMarkdownRemark;
+    const { data } = this.props
+    const { edges: posts } = data.allMarkdownRemark
 
     return (
       <>
         <BrandH1>Blog Posts</BrandH1>
         <BlogGrid posts={posts} />
       </>
-    );
+    )
   }
 }
 
@@ -58,4 +58,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

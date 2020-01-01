@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { seeThruPrimary, primary, white } from 'style/colors';
+import styled from 'styled-components'
+import { seeThruPrimary, primary, white } from 'style/colors'
 
 export const Button = styled.button`
   display: flex;
@@ -19,4 +19,4 @@ export const Button = styled.button`
   &:focus {
     background-color: ${primary};
   }
-`;
+`

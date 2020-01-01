@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { white, primary, primaryDark, hexToRGBA } from 'style/colors';
+import styled from 'styled-components'
+import { white, primary, primaryDark, hexToRGBA } from 'style/colors'
 
 export const VolumeSlider = styled.input`
   &[type='range'] {
@@ -85,4 +85,4 @@ export const VolumeSlider = styled.input`
       background: ${primary};
     }
   }
-`;
+`

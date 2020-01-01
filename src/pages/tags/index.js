@@ -1,15 +1,15 @@
-import _ from 'lodash';
-import React, { Component } from 'react';
-import { object } from 'prop-types';
-import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
-import { PaddedSection, BrandH1 } from 'style/components';
-import { List, Item, TagLink } from 'style/components/tagsPage';
+import _ from 'lodash'
+import React, { Component } from 'react'
+import { object } from 'prop-types'
+import Helmet from 'react-helmet'
+import { graphql } from 'gatsby'
+import { PaddedSection, BrandH1 } from 'style/components'
+import { List, Item, TagLink } from 'style/components/tagsPage'
 
-const getRemsFromCount = (count) => `${count * 0.05 + 0.8}rem`;
+const getRemsFromCount = (count) => `${count * 0.05 + 0.8}rem`
 
 class TagsPage extends Component {
-  static propTypes = { data: object.isRequired };
+  static propTypes = { data: object.isRequired }
 
   renderTag = ({ fieldValue, totalCount: count }) => (
     <Item key={fieldValue}>
@@ -22,7 +22,7 @@ class TagsPage extends Component {
         {`${fieldValue} (${count})`}
       </TagLink>
     </Item>
-  );
+  )
 
   render() {
     const {
@@ -30,7 +30,7 @@ class TagsPage extends Component {
         allMarkdownRemark: { group },
         site: { siteMetadata },
       },
-    } = this.props;
+    } = this.props
 
     return (
       <>
@@ -38,18 +38,17 @@ class TagsPage extends Component {
           <Helmet title={`Tags | ${siteMetadata.title}`} />
           <BrandH1>Tags</BrandH1>
           <List>
-            {_(group)
-              .sortBy(({ fieldValue }) => fieldValue.toLowerCase())
-              .map(this.renderTag)
-              .value()}
+            {_.sortBy(group, ({ fieldValue }) => fieldValue.toLowerCase()).map(
+              this.renderTag,
+            )}
           </List>
         </PaddedSection>
       </>
-    );
+    )
   }
 }
 
-export default TagsPage;
+export default TagsPage
 
 export const tagPageQuery = graphql`
   query TagsQuery {
@@ -65,4 +64,4 @@ export const tagPageQuery = graphql`
       }
     }
   }
-`;
+`

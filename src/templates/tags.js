@@ -1,21 +1,21 @@
-import React from 'react';
-import { object } from 'prop-types';
-import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
-import BlogGrid from 'components/BlogGrid';
+import React from 'react'
+import { object } from 'prop-types'
+import Helmet from 'react-helmet'
+import { graphql } from 'gatsby'
+import BlogGrid from 'components/BlogGrid'
 import {
   BrandH1,
   FlexCenter,
   FlexCenterWithMargin,
   LinkButton,
   TitleHighlight,
-} from 'style/components';
+} from 'style/components'
 
 class TagRoute extends React.Component {
   static propTypes = {
     data: object.isRequired,
     pageContext: object.isRequired,
-  };
+  }
 
   render() {
     const {
@@ -24,9 +24,9 @@ class TagRoute extends React.Component {
         site: { siteMetadata },
       },
       pageContext: { tag },
-    } = this.props;
+    } = this.props
 
-    const tagHeader = `Posts tagged with`;
+    const tagHeader = `Posts tagged with`
 
     return (
       <>
@@ -44,11 +44,11 @@ class TagRoute extends React.Component {
           </FlexCenterWithMargin>
         </section>
       </>
-    );
+    )
   }
 }
 
-export default TagRoute;
+export default TagRoute
 
 export const tagPageQuery = graphql`
   query TagPage($tag: String) {
@@ -88,4 +88,4 @@ export const tagPageQuery = graphql`
       }
     }
   }
-`;
+`

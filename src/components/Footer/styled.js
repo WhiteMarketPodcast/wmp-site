@@ -1,13 +1,13 @@
-import styled from 'styled-components';
-import Link from 'components/Link';
-import { black, white, primaryDark } from 'style/colors';
-import { onMobile } from 'style/mediaQueries';
+import styled from 'styled-components'
+import Link from 'components/Link'
+import { black, white, primaryDark } from 'style/colors'
+import { onMobile } from 'style/mediaQueries'
 
 export const StyledFooter = styled.footer`
   a {
     color: ${white};
   }
-`;
+`
 
 export const CopyrightRow = styled.div`
   background-color: ${black};
@@ -35,7 +35,7 @@ export const CopyrightRow = styled.div`
       }
     }
   }
-`;
+`
 
 export const LicenceInfo = styled.div`
   display: grid;
@@ -56,17 +56,17 @@ export const LicenceInfo = styled.div`
     color: ${white};
     font-weight: 600;
   }
-`;
+`
 
 export const CCIcon = styled.span`
   font-size: 2rem;
   line-height: 1;
   margin-right: 0.2rem;
-`;
+`
 
 export const CCIconContainer = styled.div`
   margin-bottom: 0.5rem;
-`;
+`
 
 export const SocialIconContainer = styled.div`
   display: flex;
@@ -76,7 +76,7 @@ export const SocialIconContainer = styled.div`
   ${onMobile} {
     text-align: center;
   }
-`;
+`
 
 export const SocialLink = styled(Link)`
   display: inline-block;
@@ -89,7 +89,7 @@ export const SocialLink = styled(Link)`
     filter: unset;
     opacity: 1;
   }
-`;
+`
 
 export const PrivacyLink = styled(Link)`
   color: ${white};
@@ -101,4 +101,4 @@ export const PrivacyLink = styled(Link)`
     filter: unset;
     opacity: 1;
   }
-`;
+`

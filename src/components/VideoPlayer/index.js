@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import ReactPlayer from 'react-player';
-import { string } from 'prop-types';
+import React, { Component } from 'react'
+import ReactPlayer from 'react-player'
+import { string } from 'prop-types'
 
 class VideoPlayer extends Component {
-  static propTypes = { url: string.isRequired };
+  static propTypes = { url: string.isRequired }
 
   state = {
     url: this.props.url,
@@ -12,57 +12,57 @@ class VideoPlayer extends Component {
     playbackRate: 1.0,
     loop: false,
     playing: true,
-  };
+  }
 
   load = (url) => {
     this.setState({
       url,
       playing: true,
-    });
-  };
+    })
+  }
 
-  playPause = () => this.setState(({ playing }) => ({ playing: !playing }));
+  playPause = () => this.setState(({ playing }) => ({ playing: !playing }))
 
   stop = () => {
-    this.setState({ url: null });
-    this.setState({ playing: false });
-  };
+    this.setState({ url: null })
+    this.setState({ playing: false })
+  }
 
   toggleLoop = () => {
-    this.setState(({ loop }) => ({ loop: !loop }));
-  };
+    this.setState(({ loop }) => ({ loop: !loop }))
+  }
 
   setVolume = (e) => {
-    this.setState({ volume: parseFloat(e.target.value) });
-  };
+    this.setState({ volume: parseFloat(e.target.value) })
+  }
 
   toggleMuted = () => {
-    this.setState(({ muted }) => ({ muted: !muted }));
-  };
+    this.setState(({ muted }) => ({ muted: !muted }))
+  }
 
   setPlaybackRate = (e) => {
-    this.setState({ playbackRate: parseFloat(e.target.value) });
-  };
+    this.setState({ playbackRate: parseFloat(e.target.value) })
+  }
 
-  onPlay = () => this.setState({ playing: true });
+  onPlay = () => this.setState({ playing: true })
 
-  onPause = () => this.setState({ playing: false });
+  onPause = () => this.setState({ playing: false })
 
   onProgress = (state) => {
     // We only want to update time slider if we are not currently seeking
     if (!this.state.seeking) {
-      this.setState(state);
+      this.setState(state)
     }
-  };
+  }
 
-  onEnded = () => this.setState(({ loop }) => ({ playing: loop }));
+  onEnded = () => this.setState(({ loop }) => ({ playing: loop }))
 
   ref = (player) => {
-    this.player = player;
-  };
+    this.player = player
+  }
 
   render() {
-    const { url, volume, muted, loop, playbackRate, playing } = this.state;
+    const { url, volume, muted, loop, playbackRate, playing } = this.state
 
     return (
       <ReactPlayer
@@ -81,8 +81,8 @@ class VideoPlayer extends Component {
         onEnded={this.onEnded}
         controls
       />
-    );
+    )
   }
 }
 
-export default VideoPlayer;
+export default VideoPlayer
