@@ -319,7 +319,12 @@ const BlogPost = ({ data, pageContext }) => {
     },
   } = data
   const { title, description, image, imageURL, imageAlt } = frontmatter
-  const imageSrc = _.get(image, 'childImageSharp.fluid.src', imageURL)
+
+  let imageSrc = imageURL
+  const localImage = _.get(image, 'childImageSharp.fluid.src')
+  if (localImage) {
+    imageSrc = `${siteUrl}${localImage}`
+  }
 
   return (
     <BlogPostTemplate
