@@ -6386,14 +6386,14 @@ gatsby-telemetry@^1.1.46:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby-transformer-remark@^2.6.45:
-  version "2.6.45"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.6.45.tgz#e397371ac8f17d24627a247f466dde3a54c25f44"
-  integrity sha512-3oICZvZmQyecK+vGBpcLOuDMpJio2OsJEGnmEXlQuS0KOWALGvZCfu3sNu4ROHemEgwY8q5z7OANjqZVxIaloQ==
+gatsby-transformer-remark@^2.6.51:
+  version "2.6.51"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.6.51.tgz#e67439ae8c6fa3198059690d9b929520d098963f"
+  integrity sha512-e4N6TnHzGeAoIsumtEaOKJPPWakJ67uQCb5ekbzNAqwTaggsTYRyzIJ9bV8dkj8osroJA6tC3s84eOl3uKwRjw==
   dependencies:
     "@babel/runtime" "^7.7.6"
     bluebird "^3.7.2"
-    gatsby-core-utils "^1.0.25"
+    gatsby-core-utils "^1.0.28"
     gray-matter "^4.0.2"
     hast-util-raw "^4.0.0"
     hast-util-to-html "^4.0.1"
@@ -6404,7 +6404,7 @@ gatsby-transformer-remark@^2.6.45:
     remark "^10.0.1"
     remark-parse "^6.0.3"
     remark-retext "^3.1.3"
-    remark-stringify "^5.0.0"
+    remark-stringify "6.0.4"
     retext-english "^3.0.4"
     sanitize-html "^1.20.1"
     underscore.string "^3.3.5"
@@ -9312,15 +9312,10 @@ mdast-util-to-nlcst@^3.2.0:
     unist-util-position "^3.0.0"
     vfile-location "^2.0.0"
 
-mdast-util-to-string@^1.0.4, mdast-util-to-string@^1.0.7:
+mdast-util-to-string@^1.0.4, mdast-util-to-string@^1.0.5, mdast-util-to-string@^1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/mdast-util-to-string/-/mdast-util-to-string-1.0.7.tgz#62d8e9c6b2113070d8b497c7dc35bf12796f06ee"
   integrity sha512-P+gdtssCoHOX+eJUrrC30Sixqao86ZPlVjR5NEAoy0U79Pfxb1Y0Gntei0+GrnQD4T04X9xA8tcugp90cSmNow==
-
-mdast-util-to-string@^1.0.5:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/mdast-util-to-string/-/mdast-util-to-string-1.0.6.tgz#7d85421021343b33de1552fc71cb8e5b4ae7536d"
-  integrity sha512-868pp48gUPmZIhfKrLbaDneuzGiw3OTDjHc5M1kAepR2CWBJ+HpEsm252K4aXdiP5coVZaJPOqGtVU6Po8xnXg==
 
 mdast-util-toc@^5.0:
   version "5.0.0"
@@ -12879,41 +12874,7 @@ remark-retext@^3.1.3:
   dependencies:
     mdast-util-to-nlcst "^3.2.0"
 
-remark-stringify@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/remark-stringify/-/remark-stringify-1.1.0.tgz#a7105e25b9ee2bf9a49b75d2c423f11b06ae2092"
-  integrity sha1-pxBeJbnuK/mkm3XSxCPxGwauIJI=
-  dependencies:
-    ccount "^1.0.0"
-    extend "^3.0.0"
-    longest-streak "^1.0.0"
-    markdown-table "^0.4.0"
-    parse-entities "^1.0.2"
-    repeat-string "^1.5.4"
-    stringify-entities "^1.0.1"
-    unherit "^1.0.4"
-
-remark-stringify@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/remark-stringify/-/remark-stringify-5.0.0.tgz#336d3a4d4a6a3390d933eeba62e8de4bd280afba"
-  integrity sha512-Ws5MdA69ftqQ/yhRF9XhVV29mhxbfGhbz0Rx5bQH+oJcNhhSM6nCu1EpLod+DjrFGrU0BMPs+czVmJZU7xiS7w==
-  dependencies:
-    ccount "^1.0.0"
-    is-alphanumeric "^1.0.0"
-    is-decimal "^1.0.0"
-    is-whitespace-character "^1.0.0"
-    longest-streak "^2.0.1"
-    markdown-escapes "^1.0.0"
-    markdown-table "^1.1.0"
-    mdast-util-compact "^1.0.0"
-    parse-entities "^1.0.2"
-    repeat-string "^1.5.4"
-    state-toggle "^1.0.0"
-    stringify-entities "^1.0.1"
-    unherit "^1.0.4"
-    xtend "^4.0.1"
-
-remark-stringify@^6.0.0, remark-stringify@^6.0.4:
+remark-stringify@6.0.4, remark-stringify@^6.0.0, remark-stringify@^6.0.4:
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/remark-stringify/-/remark-stringify-6.0.4.tgz#16ac229d4d1593249018663c7bddf28aafc4e088"
   integrity sha512-eRWGdEPMVudijE/psbIDNcnJLRVx3xhfuEsTDGgH4GsFF91dVhw5nhmnBppafJ7+NWINW6C7ZwWbi30ImJzqWg==
@@ -12932,6 +12893,20 @@ remark-stringify@^6.0.0, remark-stringify@^6.0.4:
     stringify-entities "^1.0.1"
     unherit "^1.0.4"
     xtend "^4.0.1"
+
+remark-stringify@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/remark-stringify/-/remark-stringify-1.1.0.tgz#a7105e25b9ee2bf9a49b75d2c423f11b06ae2092"
+  integrity sha1-pxBeJbnuK/mkm3XSxCPxGwauIJI=
+  dependencies:
+    ccount "^1.0.0"
+    extend "^3.0.0"
+    longest-streak "^1.0.0"
+    markdown-table "^0.4.0"
+    parse-entities "^1.0.2"
+    repeat-string "^1.5.4"
+    stringify-entities "^1.0.1"
+    unherit "^1.0.4"
 
 remark@^10.0.1:
   version "10.0.1"
@@ -15230,14 +15205,7 @@ unist-util-position@^3.0.0:
   resolved "https://registry.yarnpkg.com/unist-util-position/-/unist-util-position-3.0.3.tgz#fff942b879538b242096c148153826664b1ca373"
   integrity sha512-28EpCBYFvnMeq9y/4w6pbnFmCUfzlsc41NJui5c51hOFjBA1fejcwc+5W4z2+0ECVbScG3dURS3JTVqwenzqZw==
 
-unist-util-remove-position@^1.0.0:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/unist-util-remove-position/-/unist-util-remove-position-1.1.3.tgz#d91aa8b89b30cb38bad2924da11072faa64fd972"
-  integrity sha512-CtszTlOjP2sBGYc2zcKA/CvNdTdEs3ozbiJ63IPBxh8iZg42SCCb8m04f8z2+V1aSk5a7BxbZKEdoDjadmBkWA==
-  dependencies:
-    unist-util-visit "^1.1.0"
-
-unist-util-remove-position@^1.1.4:
+unist-util-remove-position@^1.0.0, unist-util-remove-position@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/unist-util-remove-position/-/unist-util-remove-position-1.1.4.tgz#ec037348b6102c897703eee6d0294ca4755a2020"
   integrity sha512-tLqd653ArxJIPnKII6LMZwH+mb5q+n/GtXQZo6S6csPRs5zB0u79Yw8ouR3wTw8wxvdJFhpP6Y7jorWdCgLO0A==
@@ -15285,17 +15253,10 @@ unist-util-visit-parents@^3.0.0:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
 
-unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.1.1, unist-util-visit@^1.4.1:
+unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.1.1, unist-util-visit@^1.1.3, unist-util-visit@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.4.1.tgz#4724aaa8486e6ee6e26d7ff3c8685960d560b1e3"
   integrity sha512-AvGNk7Bb//EmJZyhtRUnNMEpId/AZ5Ph/KUpTI09WHQuDZHKovQ1oEv3mfmKpWKtoMzyMC4GLBm1Zy5k12fjIw==
-  dependencies:
-    unist-util-visit-parents "^2.0.0"
-
-unist-util-visit@^1.1.3:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.4.0.tgz#1cb763647186dc26f5e1df5db6bd1e48b3cc2fb1"
-  integrity sha512-FiGu34ziNsZA3ZUteZxSFaczIjGmksfSgdKqBfOejrrfzyUy5b7YrlzT1Bcvi+djkYDituJDy2XB7tGTeBieKw==
   dependencies:
     unist-util-visit-parents "^2.0.0"
 
