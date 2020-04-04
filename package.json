@@ -52,11 +52,11 @@
   "license": "GPL-3.0",
   "main": "n/a",
   "scripts": {
-    "start": "yarn develop",
+    "start": "npm run develop",
     "clean": "rimraf .cache public",
-    "build": "yarn clean && gatsby build",
-    "deploy": "yarn && yarn build && netlify deploy -p -d public",
-    "develop": "yarn clean && gatsby develop",
+    "build": "gatsby build",
+    "deploy": "npm run clean && npm i && npm run build && netlify deploy -p -d public",
+    "develop": "gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --arrow-parens always --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "lint": "eslint --fix \"{gatsby-*.js,src/**/*.js}\"",
@@ -73,8 +73,8 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
-    "eslint-plugin-react-hooks": "^2.4.0",
-    "prettier": "^1.7.4",
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "prettier": "^2.0.2",
     "rimraf": "^3.0.2"
   }
 }
