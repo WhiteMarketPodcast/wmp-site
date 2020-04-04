@@ -29,7 +29,7 @@ blocks:
             - npm run test
         - name: Type-check
           commands:
-            - npm run typecheck
+            - npm run typecheck --if-present
       prologue:
         commands:
           - checkout
