@@ -1,0 +1,50 @@
+version: v1.0
+name: All tests
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+blocks:
+  - name: Install dependencies
+    task:
+      jobs:
+        - name: npm i
+          commands:
+            - checkout
+            - sem-version node 12
+            - cache restore
+            - npm install
+            - cache store
+    dependencies: []
+  - name: Checks
+    dependencies:
+      - Install dependencies
+    task:
+      jobs:
+        - name: Lint
+          commands:
+            - npm run lint
+        - name: Tests
+          commands:
+            - npm run test
+        - name: Type-check
+          commands:
+            - npm run typecheck
+      prologue:
+        commands:
+          - checkout
+          - sem-version node 12
+          - cache restore
+  - name: Build
+    dependencies:
+      - Checks
+    task:
+      jobs:
+        - name: Build
+          commands:
+            - npm run build
+      prologue:
+        commands:
+          - checkout
+          - sem-version node 12
+          - cache restore
