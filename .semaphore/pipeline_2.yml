@@ -1,0 +1,21 @@
+version: v1.0
+name: Deploy the site
+blocks:
+  - name: Deploy
+    task:
+      secrets:
+        - name: Netlify deploy token
+        - name: Netlify WMP site ID
+      jobs:
+        - name: Netlify
+          commands:
+            - checkout
+            - sem-version node 12
+            - cache restore
+            - npm install
+            - cache store
+            - npm run deploy
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
