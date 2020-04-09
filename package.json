@@ -74,7 +74,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^3.0.0",
-    "netlify-cli": "^2.41.0",
+    "netlify-cli": "^2.42.0",
     "prettier": "^2.0.4",
     "rimraf": "^3.0.2"
   }
