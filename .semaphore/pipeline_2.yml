@@ -9,19 +9,19 @@ blocks:
       jobs:
         - name: Netlify
           commands:
+            - 'GIT_COMMIT_MESSAGE=$(curl "https://api.github.com/repos/WhiteMarketPodcast/wmp-site/git/commits/$SEMAPHORE_GIT_SHA" | jq -r ''.message'')'
+            - 'curl "https://api.telegram.org/$WMP_TELEGRAM_BOT/sendMessage" --data-urlencode "chat_id=$WMP_TELEGRAM_CHAT_ID" --data-urlencode "text=Starting deploy for \"$GIT_COMMIT_MESSAGE\""'
             - checkout
             - sem-version node 12
             - cache restore
             - npm run deploy
-  - name: Notify
-    task:
-      secrets:
-        - name: WMP Telegram
-      jobs:
-        - name: Send Telegram notification
+      epilogue:
+        on_pass:
           commands:
-            - 'GIT_COMMIT_MESSAGE=$(curl "https://api.github.com/repos/WhiteMarketPodcast/wmp-site/git/commits/$SEMAPHORE_GIT_SHA" | jq -r ''.message'')'
-            - 'curl "https://api.telegram.org/$WMP_TELEGRAM_BOT/sendMessage" --data-urlencode "chat_id=$WMP_TELEGRAM_CHAT_ID" --data-urlencode "text=Deployed \"$GIT_COMMIT_MESSAGE\""'
+            - 'curl "https://api.telegram.org/$WMP_TELEGRAM_BOT/sendMessage" --data-urlencode "chat_id=$WMP_TELEGRAM_CHAT_ID" --data-urlencode "text=Successfully deployed \"$GIT_COMMIT_MESSAGE\""'
+        on_fail:
+          commands:
+            - 'curl "https://api.telegram.org/$WMP_TELEGRAM_BOT/sendMessage" --data-urlencode "chat_id=$WMP_TELEGRAM_CHAT_ID" --data-urlencode "text=Failed to deploy \"$GIT_COMMIT_MESSAGE\""'
 agent:
   machine:
     type: e1-standard-2
