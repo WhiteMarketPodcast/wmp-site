@@ -4,8 +4,9 @@ blocks:
   - name: Deploy
     task:
       secrets:
-        - name: Netlify deploy token
         - name: Netlify WMP site ID
+        - name: Netlify deploy token
+        - name: WMP Telegram
       jobs:
         - name: Netlify
           commands:
