@@ -15,6 +15,14 @@ blocks:
             - npm install
             - cache store
             - npm run deploy
+  - name: Notify
+    task:
+      secrets:
+        - name: WMP Telegram
+      jobs:
+        - name: Send Telegram notification
+          commands:
+            - 'curl "https://api.telegram.org/$WMP_TELEGRAM_BOT/sendMessage" --data-urlencode "chat_id=$WMP_TELEGRAM_CHAT_ID" --data-urlencode "text=Deployed \"$SEMAPHORE_GIT_PR_NAME\" (branch: $SEMAPHORE_GIT_PR_BRANCH)"'
 agent:
   machine:
     type: e1-standard-2
