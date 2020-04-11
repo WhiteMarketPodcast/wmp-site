@@ -20,7 +20,8 @@ blocks:
       jobs:
         - name: Send Telegram notification
           commands:
-            - 'curl "https://api.telegram.org/$WMP_TELEGRAM_BOT/sendMessage" --data-urlencode "chat_id=$WMP_TELEGRAM_CHAT_ID" --data-urlencode "text=Deployed \"$SEMAPHORE_JOB_NAME\""'
+            - 'GIT_COMMIT_MESSAGE=$(curl "https://api.github.com/repos/WhiteMarketPodcast/wmp-site/git/commits/$SEMAPHORE_GIT_SHA" | jq -r ''.message'')'
+            - 'curl "https://api.telegram.org/$WMP_TELEGRAM_BOT/sendMessage" --data-urlencode "chat_id=$WMP_TELEGRAM_CHAT_ID" --data-urlencode "text=Deployed \"$GIT_COMMIT_MESSAGE\""'
 agent:
   machine:
     type: e1-standard-2
