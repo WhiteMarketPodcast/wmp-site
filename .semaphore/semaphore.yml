@@ -17,6 +17,8 @@ blocks:
             - cache restore
             - npm install
             - cache store
+      secrets:
+        - name: WMP Telegram
     dependencies: []
   - name: Checks
     dependencies:
@@ -44,6 +46,8 @@ blocks:
         on_fail:
           commands:
             - 'curl "https://api.telegram.org/$WMP_TELEGRAM_BOT/sendMessage" --data-urlencode "chat_id=$WMP_TELEGRAM_CHAT_ID" --data-urlencode "text=$GIT_COMMIT_MESSAGE: Failed $SEMAPHORE_JOB_NAME check"'
+      secrets:
+        - name: WMP Telegram
   - name: Build
     dependencies:
       - Checks
