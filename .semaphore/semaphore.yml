@@ -10,6 +10,8 @@ blocks:
       jobs:
         - name: npm i
           commands:
+            - 'GIT_COMMIT_MESSAGE=$(curl "https://api.github.com/repos/WhiteMarketPodcast/wmp-site/git/commits/$SEMAPHORE_GIT_SHA" | jq -r ''.message'')'
+            - 'curl "https://api.telegram.org/$WMP_TELEGRAM_BOT/sendMessage" --data-urlencode "chat_id=$WMP_TELEGRAM_CHAT_ID" --data-urlencode "text=Running tests on \"$GIT_COMMIT_MESSAGE\""'
             - checkout
             - sem-version node 12
             - cache restore
@@ -35,6 +37,13 @@ blocks:
           - checkout
           - sem-version node 12
           - cache restore
+      epilogue:
+        on_pass:
+          commands:
+            - 'curl "https://api.telegram.org/$WMP_TELEGRAM_BOT/sendMessage" --data-urlencode "chat_id=$WMP_TELEGRAM_CHAT_ID" --data-urlencode "text=$GIT_COMMIT_MESSAGE: Passed $SEMAPHORE_JOB_NAME check"'
+        on_fail:
+          commands:
+            - 'curl "https://api.telegram.org/$WMP_TELEGRAM_BOT/sendMessage" --data-urlencode "chat_id=$WMP_TELEGRAM_CHAT_ID" --data-urlencode "text=$GIT_COMMIT_MESSAGE: Failed $SEMAPHORE_JOB_NAME check"'
   - name: Build
     dependencies:
       - Checks
