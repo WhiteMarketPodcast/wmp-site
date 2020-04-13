@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import React, { Component } from 'react'
 import { object } from 'prop-types'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import { PaddedSection, BrandH1 } from 'style/components'
 import { List, Item, TagLink } from 'style/components/tagsPage'

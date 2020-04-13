@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import { node, string } from 'prop-types'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 class FacebookHelmet extends PureComponent {
   static propTypes = {
