@@ -5,7 +5,7 @@
   "author": "Ciaran Edwards",
   "dependencies": {
     "gatsby": "^2.20.23",
-    "gatsby-image": "^2.3.3",
+    "gatsby-image": "^2.3.4",
     "gatsby-plugin-eslint": "^2.0.1",
     "gatsby-plugin-manifest": "^2.3.4",
     "gatsby-plugin-netlify": "^2.2.3",
