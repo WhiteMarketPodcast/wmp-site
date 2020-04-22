@@ -20,7 +20,7 @@
     "gatsby-plugin-styled-components": "^3.2.3",
     "gatsby-remark-copy-linked-files": "^2.2.3",
     "gatsby-remark-external-links": "^0.0.4",
-    "gatsby-remark-images": "^3.2.4",
+    "gatsby-remark-images": "^3.2.5",
     "gatsby-remark-relative-images": "^0.3.0",
     "gatsby-source-filesystem": "^2.2.4",
     "gatsby-transformer-remark": "^2.7.3",
