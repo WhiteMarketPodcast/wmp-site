@@ -36,7 +36,7 @@ blocks:
           - sem-version node 12
           - cache restore
     skip:
-      when: branch = 'master'
+      when: branch = 'master' OR branch =~ '^cms\/'
   - name: Build
     dependencies:
       - Checks
