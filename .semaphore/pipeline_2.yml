@@ -15,7 +15,11 @@ blocks:
             - checkout
             - sem-version node 12
             - cache restore
+            - cache restore build-cache
+            - cache restore build-assets
             - npm run deploy
+            - cache store build-cache .cache
+            - cache store build-assets public/static
       epilogue:
         on_pass:
           commands:
