@@ -51,7 +51,7 @@ blocks:
           - sem-version node 12
           - cache restore
           - cache restore build-cache
-          - cache restore build-assets
+          - cache restore build-result
     skip:
       when: branch = 'master'
 promotions:

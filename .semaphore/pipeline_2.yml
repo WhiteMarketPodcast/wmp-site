@@ -19,13 +19,13 @@ blocks:
           - sem-version node 12
           - cache restore
           - cache restore build-cache
-          - cache restore build-assets
+          - cache restore build-result
       epilogue:
         on_pass:
           commands:
             - 'curl "https://api.telegram.org/$WMP_TELEGRAM_BOT/sendMessage" --data-urlencode "chat_id=$WMP_TELEGRAM_CHAT_ID" --data-urlencode "text=Successfully deployed \"$GIT_COMMIT_MESSAGE\""'
             - cache store build-cache .cache
-            - cache store build-assets public/static
+            - cache store build-result public
         on_fail:
           commands:
             - 'curl "https://api.telegram.org/$WMP_TELEGRAM_BOT/sendMessage" --data-urlencode "chat_id=$WMP_TELEGRAM_CHAT_ID" --data-urlencode "text=Failed to deploy \"$GIT_COMMIT_MESSAGE\""'
