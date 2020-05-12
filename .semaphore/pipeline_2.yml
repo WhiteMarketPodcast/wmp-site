@@ -29,6 +29,7 @@ blocks:
         on_fail:
           commands:
             - 'curl "https://api.telegram.org/$WMP_TELEGRAM_BOT/sendMessage" --data-urlencode "chat_id=$WMP_TELEGRAM_CHAT_ID" --data-urlencode "text=Failed to deploy \"$GIT_COMMIT_MESSAGE\""'
+            - cache clear
 agent:
   machine:
     type: e1-standard-2
