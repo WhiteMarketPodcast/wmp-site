@@ -45,8 +45,6 @@ blocks:
         - name: Build
           commands:
             - npm run build
-            - cache store build-cache .cache
-            - cache store build-assets public/static
       prologue:
         commands:
           - checkout

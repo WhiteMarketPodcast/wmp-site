@@ -12,18 +12,20 @@ blocks:
           commands:
             - 'GIT_COMMIT_MESSAGE=$(curl "https://api.github.com/repos/WhiteMarketPodcast/wmp-site/git/commits/$SEMAPHORE_GIT_SHA" | jq -r ''.message'')'
             - 'curl "https://api.telegram.org/$WMP_TELEGRAM_BOT/sendMessage" --data-urlencode "chat_id=$WMP_TELEGRAM_CHAT_ID" --data-urlencode "text=Starting deploy for \"$GIT_COMMIT_MESSAGE\""'
-            - checkout
-            - sem-version node 12
-            - cache restore
-            - cache restore build-cache
-            - cache restore build-assets
             - npm run deploy
-            - cache store build-cache .cache
-            - cache store build-assets public/static
+      prologue:
+        commands:
+          - checkout
+          - sem-version node 12
+          - cache restore
+          - cache restore build-cache
+          - cache restore build-assets
       epilogue:
         on_pass:
           commands:
             - 'curl "https://api.telegram.org/$WMP_TELEGRAM_BOT/sendMessage" --data-urlencode "chat_id=$WMP_TELEGRAM_CHAT_ID" --data-urlencode "text=Successfully deployed \"$GIT_COMMIT_MESSAGE\""'
+            - cache store build-cache .cache
+            - cache store build-assets public/static
         on_fail:
           commands:
             - 'curl "https://api.telegram.org/$WMP_TELEGRAM_BOT/sendMessage" --data-urlencode "chat_id=$WMP_TELEGRAM_CHAT_ID" --data-urlencode "text=Failed to deploy \"$GIT_COMMIT_MESSAGE\""'
