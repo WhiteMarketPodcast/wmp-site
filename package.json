@@ -58,7 +58,7 @@
     "react-player": "^1.15.2",
     "react-pose": "^4.0.10",
     "rss": "^1.2.2",
-    "styled-components": "^5.1.0",
+    "styled-components": "^5.1.1",
     "typeface-crete-round": "^0.0.72",
     "typeface-montserrat": "^0.0.75"
   },
