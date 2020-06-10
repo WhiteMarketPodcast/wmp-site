@@ -33,7 +33,7 @@
     "gatsby-plugin-sass": "^2.3.3",
     "gatsby-plugin-sharp": "^2.6.10",
     "gatsby-plugin-sitemap": "^2.4.4",
-    "gatsby-plugin-styled-components": "^3.3.3",
+    "gatsby-plugin-styled-components": "^3.3.4",
     "gatsby-remark-copy-linked-files": "^2.3.4",
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-images": "^3.3.9",
