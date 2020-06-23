@@ -79,7 +79,7 @@
     "babel-plugin-styled-components": "^1.10.7",
     "babel-preset-gatsby": "^0.4.9",
     "eslint": "^7.3.1",
-    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-import": "^2.21.2",
