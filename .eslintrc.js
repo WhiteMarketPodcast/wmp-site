@@ -63,6 +63,10 @@ module.exports = {
     'react/prefer-stateless-function': 0,
     'react/state-in-constructor': 0,
     'react/static-property-placement': 0,
+    'import/extensions': [
+      'error',
+      { ignorePackages: true, ts: 'never', tsx: 'never' },
+    ],
     'import/no-extraneous-dependencies': [
       'error',
       {
