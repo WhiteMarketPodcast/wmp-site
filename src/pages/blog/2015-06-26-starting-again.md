@@ -4,7 +4,6 @@ title: "We're starting again and we're bringing treats"
 description: ''
 date: 2015-06-26T11:38:21.000Z
 image: /img/Norton-Kersche-Remixed.jpg
-imageURL: ''
 useArchiveDescription: false
 format: standard
 categories:

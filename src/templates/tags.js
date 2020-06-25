@@ -80,7 +80,6 @@ export const tagPageQuery = graphql`
                 }
               }
             }
-            imageURL
             imageAlt
             title
           }

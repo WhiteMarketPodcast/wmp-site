@@ -129,7 +129,7 @@ export default class PodcastPage extends Component {
   }
 
   render() {
-    const { image, imageURL } = this.getSelectedEpisode().frontmatter
+    const { image } = this.getSelectedEpisode().frontmatter
 
     return (
       <>
@@ -140,7 +140,7 @@ export default class PodcastPage extends Component {
         />
 
         <TitleContainer>
-          <TitleBG imageInfo={image || imageURL} className="fill" />
+          <TitleBG image={image} className="fill" />
           <Title>{pageTitle}</Title>
           <SubscribeLinksBar />
         </TitleContainer>
@@ -173,7 +173,6 @@ export const pageQuery = graphql`
                 }
               }
             }
-            imageURL
             imageAlt
             podcastURL
           }

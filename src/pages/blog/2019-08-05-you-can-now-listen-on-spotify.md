@@ -5,7 +5,6 @@ date: 2019-08-05T07:54:09.546Z
 description: ''
 format: standard
 image: /img/sara-kurfess-wxu9yeanelg-unsplash.jpg
-imageURL: 'https://unsplash.com/photos/wXU9yeANElg'
 imageAlt: spotify-logo-on-smartphone-screen
 imageCredit:
   author:

@@ -50,7 +50,6 @@ export class BlogPostTemplate extends Component {
     contentComponent: func,
     format: string.isRequired,
     image: string,
-    imageURL: string,
     imageCredit: shape({
       licence: string,
       author: shape({
@@ -78,7 +77,6 @@ export class BlogPostTemplate extends Component {
     helmet: null,
     image: ``,
     imageCredit: undefined,
-    imageURL: ``,
     podcastURL: ``,
     videoURL: ``,
   }
@@ -230,32 +228,25 @@ export class BlogPostTemplate extends Component {
   }
 
   renderVideo() {
-    const { format, image, imageURL } = this.props
+    const { format, image } = this.props
     const { showMedia } = this.state
     const url = this.getMediaURL()
     if (format !== `video` || !showMedia || !url) return null
     return (
-      <VideoPlyrContainer
-        className={format}
-        key={url}
-        bgImage={image || imageURL}
-      >
+      <VideoPlyrContainer className={format} key={url} bgImage={image}>
         <VideoPlayer url={url} />
       </VideoPlyrContainer>
     )
   }
 
   renderTitle() {
-    const { format, image, imageURL, title, date } = this.props
+    const { format, image, title, date } = this.props
     const { showMedia } = this.state
     if (showMedia && format === `video`) return null
 
     return (
       <Hero>
-        <PreviewCompatibleImage
-          imageInfo={image || imageURL}
-          className="fill"
-        />
+        <PreviewCompatibleImage image={image} className="fill" />
         <HeroContents>
           <CenteredFade>
             <Title>{title}</Title>
@@ -318,10 +309,11 @@ const BlogPost = ({ data, pageContext }) => {
       fields: { slug },
     },
   } = data
-  const { title, description, image, imageURL, imageAlt } = frontmatter
+  const { title, description, image, imageAlt } = frontmatter
 
-  let imageSrc = imageURL
+  let imageSrc
   const localImage = _.get(image, 'childImageSharp.fluid.src')
+
   if (localImage) {
     imageSrc = `${siteUrl}${localImage}`
   }
@@ -374,7 +366,6 @@ export const pageQuery = graphql`
             }
           }
         }
-        imageURL
         imageCredit {
           author {
             name

@@ -47,7 +47,6 @@ export const CenteredFade = styled(Fade)`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  will-change: opacity;
 `
 
 export const Date = styled.div`

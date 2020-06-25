@@ -1,87 +1,84 @@
-const _ = require('lodash');
-const fetch = require('node-fetch');
-const RSS = require('rss');
-const fs = require('fs');
-const pify = require('pify');
-const mp3Duration = require('mp3-duration');
+const _ = require('lodash')
+const fetch = require('node-fetch')
+const RSS = require('rss')
+const fs = require('fs')
+const pify = require('pify')
+const mp3Duration = require('mp3-duration')
 
-const writeFile = pify(fs.writeFile);
-const ARCHIVE_ORG_BASE_URL = `https://archive.org/details/`;
+const writeFile = pify(fs.writeFile)
+const ARCHIVE_ORG_BASE_URL = `https://archive.org/details/`
 const getArchiveDetailsURL = (podcastURL) =>
   `${ARCHIVE_ORG_BASE_URL}${
     podcastURL.replace(/.*\/download\//, '').split('/')[0]
-  }?output=json`;
-const getMp3FromURL = (url) => decodeURIComponent(_.last(url.split('/')));
+  }?output=json`
+const getMp3FromURL = (url) => decodeURIComponent(_.last(url.split('/')))
 
 function deleteLocalFile(filepath) {
   fs.unlink(filepath, (err) => {
-    if (err) throw err;
-    console.log(filepath, 'was deleted');
-  });
+    if (err) throw err
+    console.log(filepath, 'was deleted')
+  })
 }
 
 function convertSecondsToTime(seconds) {
-  return new Date(seconds * 1000)
-    .toISOString()
-    .split('T')[1]
-    .split('.')[0];
+  return new Date(seconds * 1000).toISOString().split('T')[1].split('.')[0]
 }
 
 async function callArchiveAPI(podcastURL) {
-  const mp3Path = getMp3FromURL(podcastURL);
+  const mp3Path = getMp3FromURL(podcastURL)
 
-  const response = await fetch(getArchiveDetailsURL(podcastURL));
-  const json = await response.json();
+  const response = await fetch(getArchiveDetailsURL(podcastURL))
+  const json = await response.json()
 
-  const { description } = json.metadata;
-  const { size, length } = json.files[`/${mp3Path}`];
+  const { description } = json.metadata
+  const { size, length } = json.files[`/${mp3Path}`]
 
   return {
     size,
     duration: convertSecondsToTime(length),
     description,
-  };
+  }
 }
 
 async function getDetailsFromArchive(podcastURL) {
   try {
-    const details = await callArchiveAPI(podcastURL);
-    return details;
+    const details = await callArchiveAPI(podcastURL)
+    return details
   } catch (error) {
-    console.log(`!!! failed: ${podcastURL}`);
-    console.log(`Error:`, error.toString());
-    return {};
+    console.log(`!!! failed: ${podcastURL}`)
+    console.log(`Error:`, error.toString())
+    return {}
   }
 }
 
 async function getDuration(url) {
   try {
-    const mp3Path = getMp3FromURL(url);
-    const response = await fetch(url);
+    const mp3Path = getMp3FromURL(url)
+    const response = await fetch(url)
 
     // write file data locally
-    response.body.pipe(fs.createWriteStream(mp3Path));
+    response.body.pipe(fs.createWriteStream(mp3Path))
     await new Promise((resolve, reject) => {
-      response.body.on(`end`, resolve);
-      response.body.on(`error`, reject);
-    });
+      response.body.on(`end`, resolve)
+      response.body.on(`error`, reject)
+    })
 
-    const duration = await mp3Duration(mp3Path);
-    deleteLocalFile(mp3Path);
-    return convertSecondsToTime(duration);
+    const duration = await mp3Duration(mp3Path)
+    deleteLocalFile(mp3Path)
+    return convertSecondsToTime(duration)
   } catch (e) {
-    console.log(`getDuration error:`, e);
-    return '0';
+    console.log(`getDuration error:`, e)
+    return '0'
   }
 }
 
 async function getFileSize(url) {
   try {
-    const { headers } = await fetch(url, { method: 'head' });
-    return headers.get('content-length');
+    const { headers } = await fetch(url, { method: 'head' })
+    return headers.get('content-length')
   } catch (e) {
-    console.log(`getFileSize error:`, e.toString());
-    return 0;
+    console.log(`getFileSize error:`, e.toString())
+    return 0
   }
 }
 
@@ -96,10 +93,10 @@ function createChannelSetup(data) {
     owner,
     ownerEmail,
     categories,
-  } = data.siteMetadata;
+  } = data.siteMetadata
 
-  console.log(`========== running RSS setup ==========`);
-  const imageUrl = siteLogo || ``;
+  console.log(`========== running RSS setup ==========`)
+  const imageUrl = siteLogo || ``
 
   return {
     title,
@@ -145,34 +142,35 @@ function createChannelSetup(data) {
         'itunes:category': { _attr: { text: category } },
       })),
     ],
-  };
+  }
 }
 
 // This creates each item in the feed
 function createEpisodes(site, allMarkdownRemark) {
-  const { siteUrl, siteLogo, owner } = site.siteMetadata;
+  const { siteUrl, siteLogo, owner } = site.siteMetadata
 
   const episodeDetails = allMarkdownRemark.edges.map(async ({ node }) => {
-    const { frontmatter, fields, excerpt, html } = node;
-    const { useArchiveDescription, podcastURL, title } = frontmatter;
-    const url = siteUrl + fields.slug;
+    const { frontmatter, fields, excerpt, html } = node
+    const { useArchiveDescription, podcastURL, title } = frontmatter
+    const url = siteUrl + fields.slug
 
-    console.log(`~~~ getting ${title} info\n`);
-    const archiveDetails = await getDetailsFromArchive(podcastURL);
-    let { size, duration } = archiveDetails;
+    console.log(`~~~ getting ${title} info\n`)
+    const archiveDetails = await getDetailsFromArchive(podcastURL)
+    let { size, duration } = archiveDetails
 
-    if (!size) size = await getFileSize(podcastURL);
-    if (!duration) duration = await getDuration(podcastURL);
-    console.log(`~~~ finished ${title}\n`);
+    if (!size) size = await getFileSize(podcastURL)
+    if (!duration) duration = await getDuration(podcastURL)
+    console.log(`~~~ finished ${title}\n`)
 
     const description = useArchiveDescription
       ? archiveDetails.description
       : excerpt
           .replace(/\s{2,}/g, ` `)
           .replace(/\s,/g, `,`)
-          .replace(/\s\./g, `.`);
+          .replace(/\s\./g, `.`)
 
-    return Object.assign({}, frontmatter, {
+    return {
+      ...frontmatter,
       description,
       url,
       guid: url,
@@ -197,26 +195,26 @@ function createEpisodes(site, allMarkdownRemark) {
         { 'itunes:image': { _attr: { href: siteLogo } } },
         { 'itunes:duration': duration },
       ],
-    });
-  });
+    }
+  })
 
-  return Promise.all(episodeDetails);
+  return Promise.all(episodeDetails)
 }
 
 // ~~~ exports ~~~
 async function createRSSFeed(podcastData) {
-  if (process.env.NODE_ENV === 'development') return;
-  const { site, allMarkdownRemark } = podcastData.data;
+  if (process.env.NODE_ENV === 'development') return
+  const { site, allMarkdownRemark } = podcastData.data
 
-  console.time(`*** got all info ***`);
-  const channelInfo = createChannelSetup(site);
-  const episodes = await createEpisodes(site, allMarkdownRemark);
-  console.timeEnd(`*** got all info ***`);
+  console.time(`*** got all info ***`)
+  const channelInfo = createChannelSetup(site)
+  const episodes = await createEpisodes(site, allMarkdownRemark)
+  console.timeEnd(`*** got all info ***`)
 
-  const feed = new RSS(channelInfo);
-  episodes.forEach((episode) => feed.item(episode));
+  const feed = new RSS(channelInfo)
+  episodes.forEach((episode) => feed.item(episode))
 
-  await writeFile(`./public/rss.xml`, feed.xml());
+  await writeFile(`./public/rss.xml`, feed.xml())
 }
 
 const podcastQuery = `
@@ -253,9 +251,9 @@ const podcastQuery = `
       }
     }
   }
-`;
+`
 
 module.exports = {
   createRSSFeed,
   podcastQuery,
-};
+}

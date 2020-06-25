@@ -4,7 +4,6 @@ title: This season on White Market Podcast
 date: 2019-11-09T13:00:00.000Z
 format: audio
 image: /img/jonathan-farber-kvlcvi-ulgo-unsplash.jpg
-imageURL: 'https://unsplash.com/photos/KVlcVi-Ulgo'
 imageAlt: Sound studio with headphones and microphones
 imageCredit:
   author:

@@ -16,7 +16,6 @@ const BlogPostPreview = ({ entry, widgetFor }) => {
       tags={tags}
       title={entry.getIn(['data', 'title'])}
       image={entry.getIn(['data', 'image'])}
-      imageURL={entry.getIn(['data', 'imageURL'])}
       imageCredit={entry.getIn(['data', 'imageCredit'])}
       format={entry.getIn(['data', 'format'])}
       podcastURL={entry.getIn(['data', 'podcastURL'])}

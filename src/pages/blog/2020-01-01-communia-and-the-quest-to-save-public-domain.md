@@ -8,8 +8,6 @@ description: >-
   with public domain issues. Happy Public Domain Day!
 format: audio
 image: /img/ccbysa-juanluischaurant-communia.jpg
-imageURL: >-
-  https://github.com/WhiteMarketPodcast/whitemarketpodcast-repo/blob/master/featured%20images/CCBYSA-juanluischaurant-communia.jpg
 imageAlt: old camera under a Communia banner
 imageCredit:
   author:

@@ -50,7 +50,6 @@ export const pageQuery = graphql`
                 }
               }
             }
-            imageURL
             imageAlt
             format
           }

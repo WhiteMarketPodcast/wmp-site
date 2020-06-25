@@ -55,7 +55,7 @@ class BlogGrid extends Component {
     const { showExcerpt } = this.state
     const {
       id,
-      frontmatter: { image, imageURL, title, date, format },
+      frontmatter: { image, title, date, format },
       fields: { slug },
       excerpt,
     } = post
@@ -71,7 +71,7 @@ class BlogGrid extends Component {
         onMouseLeave={this.handleBlur(index)}
         tabIndex="0"
       >
-        <BlogPreviewImage imageInfo={image || imageURL} />
+        <BlogPreviewImage image={image} />
         <PreviewTextContainer index={index}>
           <PostType format={format}>{formatConverter[format]}</PostType>
           <PreviewTitle index={index}>{title}</PreviewTitle>

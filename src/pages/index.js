@@ -2,6 +2,7 @@ import _ from 'lodash'
 import React, { Component } from 'react'
 import { array, shape, string } from 'prop-types'
 import { graphql, Link } from 'gatsby'
+import Image from 'gatsby-image'
 import { Helmet } from 'react-helmet'
 import PlayButton from 'components/PlayButton'
 import SubscribeLinksBar from 'components/SubscribeLinksBar'
@@ -26,7 +27,6 @@ import {
   SeeMoreContainer,
 } from 'style/components'
 import { formatConverter, isFirstPostPodcast } from 'utils'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 export default class IndexPage extends Component {
   static propTypes = {
@@ -61,14 +61,11 @@ export default class IndexPage extends Component {
     const { isBuffering, isPlaying, url } = this.context
     const { fields, frontmatter } = this.getPodcastInfo()
     const { slug } = fields
-    const { title, podcastURL, image, imageURL } = frontmatter
+    const { title, podcastURL, image } = frontmatter
 
     return (
       <PodcastSection>
-        <PreviewCompatibleImage
-          imageInfo={image || imageURL}
-          className="fill"
-        />
+        <Image fluid={image.childImageSharp.fluid} className="fill" />
         <PodcastSectionContents>
           <PodcastPlayBox>
             <PodcastTextContainer>
@@ -93,17 +90,14 @@ export default class IndexPage extends Component {
   renderPost = ({ node: post }, index) => {
     const {
       id,
-      frontmatter: { image, imageURL, title, date, format },
+      frontmatter: { image, title, date, format },
       fields: { slug },
     } = post
 
     return (
       <BlogPreviewContainer key={id} to={slug}>
         <BlogPreviewImage>
-          <PreviewCompatibleImage
-            imageInfo={image || imageURL}
-            className="fill"
-          />
+          <Image fluid={[image.childImageSharp.fluid]} className="fill" />
         </BlogPreviewImage>
         <PreviewTextContainer index={index}>
           <PostType format={format}>{formatConverter[format]}</PostType>
@@ -185,12 +179,15 @@ export const pageQuery = graphql`
             date(formatString: "DD MMMM YYYY")
             image {
               childImageSharp {
-                fluid(maxWidth: 1700) {
+                fluid(
+                  maxWidth: 1700
+                  srcSetBreakpoints: [150, 400, 700, 1000, 1500, 1900]
+                  sizes: "(max-width: 700px) 275px, (max-width: 1000px) 400px, 1100px"
+                ) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
-            imageURL
             imageAlt
             format
           }
@@ -217,7 +214,6 @@ export const pageQuery = graphql`
                 }
               }
             }
-            imageURL
             imageAlt
             podcastURL
           }

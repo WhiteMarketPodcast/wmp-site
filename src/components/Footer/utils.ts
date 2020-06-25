@@ -1,4 +1,10 @@
-export const getSRTextForLinks = ({ title, email }) => ({
+export const getSRTextForLinks = ({
+  title,
+  email,
+}: {
+  title: string
+  email: string
+}) => ({
   email: `Email ${email}`,
   rss: `Go to the podcast RSS feed`,
   facebook: `Go to ${title}'s Facebook page`,

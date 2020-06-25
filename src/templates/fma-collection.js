@@ -75,7 +75,7 @@ export class FMACollectionTemplate extends Component {
         onMouseLeave={this.handleBlur(index)}
         tabIndex="0"
       >
-        <PreviewCompatibleImage imageInfo={image} className="fill" />
+        <PreviewCompatibleImage image={image} className="fill" />
         <InfoContainer active={index === showInfo}>
           <ArtistAndTitle>{`${artist} - ${title}`}</ArtistAndTitle>
           <div>{`(${genres.join(`, `)})`}</div>

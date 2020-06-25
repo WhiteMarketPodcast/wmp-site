@@ -8,104 +8,97 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'src/pages/blog'
+  - name: "blog"
+    label: "Blog"
+    folder: "src/pages/blog"
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {
-          label: 'Template Key',
-          name: 'templateKey',
-          widget: 'hidden',
-          default: 'blog-post',
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "blog-post",
         }
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
       - {
-          label: 'Description',
-          name: 'description',
-          widget: 'text',
+          label: "Description",
+          name: "description",
+          widget: "text",
           required: false,
         }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: "Body", name: "body", widget: "markdown" }
       - {
-          label: 'Post type',
-          name: 'format',
-          widget: 'select',
-          options: ['standard', 'audio', 'video'],
-          default: 'standard',
+          label: "Post type",
+          name: "format",
+          widget: "select",
+          options: ["standard", "audio", "video"],
+          default: "standard",
         }
       - {
-          label: 'Cover image (upload)',
-          name: 'image',
-          widget: 'image',
-          required: false,
-          default: '',
+          label: "Cover image (upload)",
+          name: "image",
+          widget: "image",
+          required: true,
         }
       - {
-          label: 'Image URL',
-          name: 'imageURL',
-          widget: 'string',
-          required: false,
-        }
-      - {
-          label: 'Image alt text',
-          name: 'imageAlt',
-          widget: 'string',
+          label: "Image alt text",
+          name: "imageAlt",
+          widget: "string",
           required: false,
         }
       - {
-          label: 'Image credit',
-          name: 'imageCredit',
-          widget: 'object',
+          label: "Image credit",
+          name: "imageCredit",
+          widget: "object",
           fields:
             [
               {
-                label: 'Author',
-                name: 'author',
-                widget: 'object',
+                label: "Author",
+                name: "author",
+                widget: "object",
                 fields:
                   [
                     {
-                      label: 'Name',
-                      name: 'name',
-                      widget: 'string',
+                      label: "Name",
+                      name: "name",
+                      widget: "string",
                       required: false,
                     },
                     {
-                      label: 'URL',
-                      name: 'url',
-                      widget: 'string',
+                      label: "URL",
+                      name: "url",
+                      widget: "string",
                       required: false,
                     },
                     {
-                      label: 'Site name',
-                      name: 'site',
-                      widget: 'string',
+                      label: "Site name",
+                      name: "site",
+                      widget: "string",
                       required: false,
                     },
                     {
-                      label: 'Site URL',
-                      name: 'siteURL',
-                      widget: 'string',
+                      label: "Site URL",
+                      name: "siteURL",
+                      widget: "string",
                       required: false,
                     },
                   ],
                 required: false,
               },
               {
-                label: 'Licence',
-                name: 'licence',
-                widget: 'select',
+                label: "Licence",
+                name: "licence",
+                widget: "select",
                 options:
                   [
-                    'CC BY',
-                    'CC BY-SA',
-                    'CC BY-ND',
-                    'CC BY-NC',
-                    'CC BY-NC-SA',
-                    'CC BY-NC-ND',
+                    "CC BY",
+                    "CC BY-SA",
+                    "CC BY-ND",
+                    "CC BY-NC",
+                    "CC BY-NC-SA",
+                    "CC BY-NC-ND",
                   ],
                 required: false,
               },
@@ -113,72 +106,76 @@ collections:
           required: false,
         }
       - {
-          label: 'Podcast URL',
-          name: 'podcastURL',
-          widget: 'string',
+          label: "Podcast URL",
+          name: "podcastURL",
+          widget: "string",
           required: false,
         }
       - {
-          label: 'Use archive.org for podcast description',
-          name: 'useArchiveDescription',
-          widget: 'boolean',
+          label: "Use archive.org for podcast description",
+          name: "useArchiveDescription",
+          widget: "boolean",
           default: false,
           required: false,
         }
       - {
-          label: 'Video URL',
-          name: 'videoURL',
-          widget: 'string',
+          label: "Video URL",
+          name: "videoURL",
+          widget: "string",
           required: false,
         }
-      - { label: 'Categories', name: 'categories', widget: 'list', default: [] }
-      - { label: 'Tags', name: 'tags', widget: 'list', default: [] }
+      - { label: "Categories", name: "categories", widget: "list", default: [] }
+      - { label: "Tags", name: "tags", widget: "list", default: [] }
 
-  - name: 'pages'
-    label: 'Pages'
+  - name: "pages"
+    label: "Pages"
     files:
-      - file: 'src/pages/about/index.md'
-        label: 'About'
-        name: 'about'
+      - file: "src/pages/about/index.md"
+        label: "About"
+        name: "about"
         fields:
           - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'about-page',
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "about-page",
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-      - file: 'src/pages/privacy-policy/index.md'
-        label: 'Privacy policy'
-        name: 'privacy-policy'
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "src/pages/privacy-policy/index.md"
+        label: "Privacy policy"
+        name: "privacy-policy"
         fields:
           - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'privacy-policy',
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "privacy-policy",
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-      - file: 'src/pages/fma-collection/index.md'
-        label: 'FMA Collection'
-        name: 'fma-collection'
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - file: "src/pages/fma-collection/index.md"
+        label: "FMA Collection"
+        name: "fma-collection"
         fields:
           - {
-              label: 'Template Key',
-              name: 'templateKey',
-              widget: 'hidden',
-              default: 'privacy-policy',
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "privacy-policy",
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-          - { label: 'Collection', name: 'collection', widget: 'list', fields:
-            [
-              { label: 'Title', name: title, widget: string },
-              { label: 'Artist', name: artist, widget: string },
-              { label: 'Album art', name: image, widget: image },
-              { label: 'Genres', name: genres, widget: list },
-              { label: 'URL', name: url, widget: string },
-            ]
-          }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - {
+              label: "Collection",
+              name: "collection",
+              widget: "list",
+              fields:
+                [
+                  { label: "Title", name: title, widget: string },
+                  { label: "Artist", name: artist, widget: string },
+                  { label: "Album art", name: image, widget: image },
+                  { label: "Genres", name: genres, widget: list },
+                  { label: "URL", name: url, widget: string },
+                ],
+            }

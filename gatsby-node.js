@@ -20,7 +20,6 @@ exports.createPages = ({ actions, graphql }) => {
               tags
               templateKey
               title
-              imageURL
             }
           }
         }
