@@ -1,8 +1,10 @@
-import styled from 'styled-components'
 import posed from 'react-pose'
+import styled from 'styled-components'
+
 import Link from 'components/Link'
 import { primary, white } from 'style/colors'
 import { onMobile } from 'style/mediaQueries'
+
 import { DESKTOP_NAV_HEIGHT, MOBILE_NAV_HEIGHT } from './constants'
 
 const nav = posed.nav({

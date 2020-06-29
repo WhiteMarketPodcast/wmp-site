@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Section404, H1, LinkButton, TextCenter } from 'style/components/404'
+
+import { H1, LinkButton, Section404, TextCenter } from 'style/components/404'
 
 const text404 = `This is not the page\nyou are looking for`
 

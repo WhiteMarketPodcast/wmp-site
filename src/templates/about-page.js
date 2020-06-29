@@ -1,8 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
+
 import Content, { HTMLContent } from 'components/Content'
-import { TitleBG, Title, Section } from 'style/components/aboutPage'
+import { Section, Title, TitleBG } from 'style/components/aboutPage'
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content

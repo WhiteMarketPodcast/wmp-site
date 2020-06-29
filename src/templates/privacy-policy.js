@@ -1,8 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
+
 import Content, { HTMLContent } from 'components/Content'
-import { PaddedSection, BrandH1, FlexCenter } from 'style/components'
+import { BrandH1, FlexCenter, PaddedSection } from 'style/components'
 
 export const PrivacyPolicyTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content

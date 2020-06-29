@@ -1,11 +1,12 @@
-import styled from 'styled-components'
 import posed from 'react-pose'
+import styled from 'styled-components'
+
 import {
-  MOBILE_NAV_HEIGHT,
   DESKTOP_NAV_HEIGHT,
+  MOBILE_NAV_HEIGHT,
 } from 'components/Navbar/constants'
-import { pageFade } from 'style/poses'
 import { onMobile } from 'style/mediaQueries'
+import { pageFade } from 'style/poses'
 
 const div = posed.div(pageFade)
 

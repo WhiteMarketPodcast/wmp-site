@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { white, primary } from 'style/colors'
+
+import { primary, white } from 'style/colors'
 import { sansSerif } from 'style/fonts'
 import { onMobile } from 'style/mediaQueries'
 

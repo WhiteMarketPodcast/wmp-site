@@ -1,6 +1,8 @@
 import _ from 'lodash'
 import styled from 'styled-components'
+
 import Link from 'components/Link'
+
 import {
   black,
   primary,

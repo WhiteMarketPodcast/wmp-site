@@ -1,8 +1,10 @@
-import styled from 'styled-components'
-import posed from 'react-pose'
-import { primary, white, black, hexToRGBA } from 'style/colors'
-import { onMobile } from 'style/mediaQueries'
 import Player from 'react-player'
+import posed from 'react-pose'
+import styled from 'styled-components'
+
+import { black, hexToRGBA, primary, white } from 'style/colors'
+import { onMobile } from 'style/mediaQueries'
+
 import { tinyWMPLogo } from '../utils'
 
 export const ReactPlayer = styled(Player)`

@@ -1,27 +1,27 @@
-import _ from 'lodash'
 import React, { Component } from 'react'
-import { array, shape, string } from 'prop-types'
 import { graphql } from 'gatsby'
+import _ from 'lodash'
 import PlayIcon from 'mdi-react/PlayIcon'
 import SpeakerIcon from 'mdi-react/SpeakerIcon'
+import { array, shape, string } from 'prop-types'
 
-import PodcastContext from 'contexts/PodcastContext'
 import { HTMLContent } from 'components/Content'
 import PageHelmet from 'components/Helmets/PageHelmet'
 import SubscribeLinksBar from 'components/SubscribeLinksBar'
+import PodcastContext from 'contexts/PodcastContext'
 import { SrText } from 'style/components'
 import {
-  Grid,
+  CurrentEpisodeContainer,
   EpisodesColumn,
   EpisodeTab,
-  TabButton,
-  CurrentEpisodeContainer,
-  SelectedEpsiodeTitle,
-  PlayButton,
+  Grid,
   IconContainer,
+  PlayButton,
+  SelectedEpsiodeTitle,
+  TabButton,
+  Title,
   TitleBG,
   TitleContainer,
-  Title,
 } from 'style/components/podcastPage'
 
 const pageTitle = `Podcast Archive`

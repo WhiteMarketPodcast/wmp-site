@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react'
-import { bool, string } from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
+import { graphql, StaticQuery } from 'gatsby'
+import { bool, string } from 'prop-types'
+
 import FacebookHelmet from './FacebookHelmet'
 import TwitterHelmet from './TwitterHelmet'
 

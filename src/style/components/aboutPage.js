@@ -1,6 +1,7 @@
 import styled from 'styled-components'
-import { FlexCenter, BrandH1, PaddedSection } from 'style/components'
+
 import { primary, white } from 'style/colors'
+import { BrandH1, FlexCenter, PaddedSection } from 'style/components'
 import { onMobile } from 'style/mediaQueries'
 
 export const TitleBG = styled(FlexCenter)`

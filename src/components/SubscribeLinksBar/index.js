@@ -1,11 +1,13 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import { FaRss, FaSpotify, FaPodcast, FaMixcloud } from 'react-icons/fa'
-import Link from 'components/Link'
-import { SrText } from 'style/components'
+import { FaMixcloud, FaPodcast, FaRss, FaSpotify } from 'react-icons/fa'
+import { graphql, useStaticQuery } from 'gatsby'
+
 import castboxLogo from 'assets/castbox.png'
 import googlePodcastsLogo from 'assets/google-podcasts-logo.png'
 import pocketCastsLogo from 'assets/pocket-casts.png'
+import Link from 'components/Link'
+import { SrText } from 'style/components'
+
 import { Bar, Links, Title } from './styled'
 
 const SubscribeLinksBar = () => {

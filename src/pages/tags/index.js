@@ -1,10 +1,11 @@
-import _ from 'lodash'
 import React, { Component } from 'react'
-import { object } from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
-import { PaddedSection, BrandH1 } from 'style/components'
-import { List, Item, TagLink } from 'style/components/tagsPage'
+import _ from 'lodash'
+import { object } from 'prop-types'
+
+import { BrandH1, PaddedSection } from 'style/components'
+import { Item, List, TagLink } from 'style/components/tagsPage'
 
 const getRemsFromCount = (count) => `${count * 0.05 + 0.8}rem`
 

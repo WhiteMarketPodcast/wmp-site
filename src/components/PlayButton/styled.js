@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { seeThruPrimary, primary, white } from 'style/colors'
+
+import { primary, seeThruPrimary, white } from 'style/colors'
 
 export const Button = styled.button`
   display: flex;

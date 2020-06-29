@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -9,7 +11,13 @@ module.exports = {
     sourceType: 'module',
     project: ['./tsconfig.json'],
   },
-  plugins: ['react', 'react-hooks', 'jsx-a11y', 'prettier'],
+  plugins: [
+    'react',
+    'react-hooks',
+    'jsx-a11y',
+    'prettier',
+    'simple-import-sort',
+  ],
   extends: [
     'eslint:recommended',
     'airbnb',
@@ -95,6 +103,26 @@ module.exports = {
         },
       },
     ],
+    'simple-import-sort/sort': [
+      'error',
+      {
+        groups: [
+          // Side effect imports.
+          ['^\\u0000'],
+          // Packages. `react` and `gatsby` related packages come first.
+          ['^react', '^gatsby', '^@?\\w'],
+          // src folders
+          [`^(${fs.readdirSync('src').join('|')})(/.*|$)`],
+          // Parent imports. Put `..` last.
+          ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+          // Other relative imports. Put same-folder imports and `.` last.
+          ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+          // Style imports.
+          ['^.+\\.s?css$'],
+        ],
+      },
+    ],
+
     '@typescript-eslint/camelcase': 'off',
     '@typescript-eslint/no-unused-vars': [
       'error',

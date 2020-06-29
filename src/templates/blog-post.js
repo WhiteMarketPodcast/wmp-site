@@ -1,39 +1,38 @@
-import _ from 'lodash'
 import React, { Component } from 'react'
-import { array, func, node, string, shape, object } from 'prop-types'
-import { graphql } from 'gatsby'
 import { FaEnvelope, FaFacebook, FaTwitter, FaWhatsapp } from 'react-icons/fa'
+import { graphql } from 'gatsby'
+import _ from 'lodash'
+import { array, func, node, object, shape, string } from 'prop-types'
 
-import { licenceURLs } from 'utils'
-import { getShareURLs } from 'utils/sharing'
-
-import PodcastContext from 'contexts/PodcastContext'
-import Link from 'components/Link'
-import PlayButton from 'components/PlayButton'
-import VideoPlayer from 'components/VideoPlayer'
 import Content, { HTMLContent } from 'components/Content'
 import PageHelmet from 'components/Helmets/PageHelmet'
+import Link from 'components/Link'
+import PlayButton from 'components/PlayButton'
 import PreviewCompatibleImage from 'components/PreviewCompatibleImage'
+import VideoPlayer from 'components/VideoPlayer'
+import PodcastContext from 'contexts/PodcastContext'
 import { SrText } from 'style/components'
 import {
-  Hero,
-  HeroContents,
-  Title,
-  Column,
   BlogContent,
-  ImageCredit,
-  Date,
-  TagList,
-  Sidebar,
   BlogPostLink,
   BlogPostLinksContainer,
-  TagLink,
-  VideoPlyrContainer,
+  CenteredFade,
+  Column,
+  Date,
+  Fade,
+  Hero,
+  HeroContents,
+  ImageCredit,
   ShareLink,
   ShareLinksContainer,
-  Fade,
-  CenteredFade,
+  Sidebar,
+  TagLink,
+  TagList,
+  Title,
+  VideoPlyrContainer,
 } from 'style/components/blogPostPage'
+import { licenceURLs } from 'utils'
+import { getShareURLs } from 'utils/sharing'
 
 function renderImageInfoSpan(text, name, url) {
   return (

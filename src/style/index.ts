@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
-import { onMobile, onDesktop } from './mediaQueries'
-import { primaryDark, lightGrey, primary } from './colors'
+
+import { lightGrey, primary, primaryDark } from './colors'
+import { onDesktop, onMobile } from './mediaQueries'
 
 const GlobalStyle = createGlobalStyle`
   html {

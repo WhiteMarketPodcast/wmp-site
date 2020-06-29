@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
-import { string } from 'prop-types'
 import isEmpty from 'lodash/isEmpty'
 import CloseIcon from 'mdi-react/CloseIcon'
 import MenuIcon from 'mdi-react/MenuIcon'
-import { SrText } from 'style/components'
+import { string } from 'prop-types'
+
 import logo from 'img/White-market-transp-logo.png'
+import { SrText } from 'style/components'
+
 import { LINKS } from './constants'
 import { Button, Logo, LogoLink, Menu, MenuItem, Nav, NavLink } from './styled'
 

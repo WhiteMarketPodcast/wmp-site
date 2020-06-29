@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+
 import Link from 'components/Link'
-import { onMobile } from 'style/mediaQueries'
 import { primary } from 'style/colors'
+import { onMobile } from 'style/mediaQueries'
 
 export const List = styled.ul`
   display: flex;

@@ -1,8 +1,9 @@
-import styled from 'styled-components'
-import Link from 'components/Link'
 import InfiniteScroll from 'react-infinite-scroller'
+import styled from 'styled-components'
+
+import Link from 'components/Link'
 import { primary, white } from 'style/colors'
-import { onMobile, onDesktop } from 'style/mediaQueries'
+import { onDesktop, onMobile } from 'style/mediaQueries'
 
 export const Grid = styled(InfiniteScroll)`
   display: grid;

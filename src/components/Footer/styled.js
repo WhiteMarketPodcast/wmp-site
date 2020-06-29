@@ -1,6 +1,7 @@
 import styled from 'styled-components'
+
 import Link from 'components/Link'
-import { black, white, primaryDark } from 'style/colors'
+import { black, primaryDark, white } from 'style/colors'
 import { onMobile } from 'style/mediaQueries'
 
 export const StyledFooter = styled.footer`

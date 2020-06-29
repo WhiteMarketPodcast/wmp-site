@@ -1,14 +1,15 @@
 import styled from 'styled-components'
+
 import PreviewCompatibleImage from 'components/PreviewCompatibleImage'
-import { FlexCenterColumn, BrandH1 } from 'style/components'
 import {
+  black,
+  lightGrey,
+  offWhite,
   primary,
   primaryLight,
-  black,
-  offWhite,
-  lightGrey,
   white,
 } from 'style/colors'
+import { BrandH1, FlexCenterColumn } from 'style/components'
 import { onMobile } from 'style/mediaQueries'
 
 export const TitleBG = styled(PreviewCompatibleImage)`

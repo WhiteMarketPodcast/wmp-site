@@ -1,7 +1,9 @@
-import _ from 'lodash'
 import React from 'react'
+import _ from 'lodash'
 import PropTypes from 'prop-types'
+
 import { BlogPostTemplate } from 'templates/blog-post'
+
 import injectStyle from '../injectStyle'
 
 const BlogPostPreview = ({ entry, widgetFor }) => {

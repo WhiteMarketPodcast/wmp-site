@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { white, primary, primaryDark, hexToRGBA } from 'style/colors'
+
+import { hexToRGBA, primary, primaryDark, white } from 'style/colors'
 
 export const VolumeSlider = styled.input`
   &[type='range'] {

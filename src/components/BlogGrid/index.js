@@ -1,16 +1,18 @@
-import _ from 'lodash'
 import React, { Component } from 'react'
+import _ from 'lodash'
 import { array } from 'prop-types'
+
 import { formatConverter } from 'utils'
+
 import {
   BlogListGrid,
   BlogPreviewContainer,
   BlogPreviewImage,
-  PreviewTextContainer,
-  PostType,
-  PreviewTitle,
-  ExcerptContainer,
   DateText,
+  ExcerptContainer,
+  PostType,
+  PreviewTextContainer,
+  PreviewTitle,
 } from './styled'
 
 class BlogGrid extends Component {

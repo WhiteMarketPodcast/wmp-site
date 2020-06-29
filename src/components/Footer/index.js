@@ -1,29 +1,31 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import {
-  FaEnvelope,
-  FaFacebook,
-  FaTwitter,
-  FaRss,
-  FaMixcloud,
-  FaPodcast,
-  FaGithub,
   FaCreativeCommons,
   FaCreativeCommonsBy,
   FaCreativeCommonsSa,
+  FaEnvelope,
+  FaFacebook,
+  FaGithub,
+  FaMixcloud,
+  FaPodcast,
+  FaRss,
   FaSpotify,
+  FaTwitter,
 } from 'react-icons/fa'
+import { graphql, useStaticQuery } from 'gatsby'
+
 import Link from 'components/Link'
 import { SrText } from 'style/components'
+
 import {
-  StyledFooter,
-  LicenceInfo,
-  CopyrightRow,
   CCIcon,
   CCIconContainer,
+  CopyrightRow,
+  LicenceInfo,
+  PrivacyLink,
   SocialIconContainer,
   SocialLink,
-  PrivacyLink,
+  StyledFooter,
 } from './styled'
 import { getSRTextForLinks } from './utils'
 

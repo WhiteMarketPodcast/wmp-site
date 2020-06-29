@@ -1,29 +1,30 @@
-import _ from 'lodash'
 import React, { Component } from 'react'
-import { array, shape, string } from 'prop-types'
+import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
-import { Helmet } from 'react-helmet'
+import _ from 'lodash'
+import { array, shape, string } from 'prop-types'
+
 import PlayButton from 'components/PlayButton'
 import SubscribeLinksBar from 'components/SubscribeLinksBar'
 import PodcastContext from 'contexts/PodcastContext'
 import {
   BlogPostPreviewGrid,
   BlogPreviewContainer,
-  PreviewTitle,
   BlogPreviewImage,
-  PreviewTextContainer,
-  PostType,
+  BrandH2,
   DateText,
   FlexCenter,
   LinkButton,
+  PodcastPlayBox,
   PodcastSection,
   PodcastSectionContents,
-  PodcastTextContainer,
   PodcastSmallText,
+  PodcastTextContainer,
   PodcastTitle,
-  BrandH2,
-  PodcastPlayBox,
+  PostType,
+  PreviewTextContainer,
+  PreviewTitle,
   SeeMoreContainer,
 } from 'style/components'
 import { formatConverter, isFirstPostPodcast } from 'utils'

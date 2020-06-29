@@ -1,5 +1,5 @@
 import React from 'react'
-import { string, node } from 'prop-types'
+import { node, string } from 'prop-types'
 
 const ExternalLink = ({ href, children, ...otherProps }) => (
   <a href={href} target="_blank" rel="noopener noreferrer" {...otherProps}>

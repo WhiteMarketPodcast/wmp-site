@@ -1,11 +1,13 @@
-import styled from 'styled-components'
 import posed from 'react-pose'
+import styled from 'styled-components'
+
 import Link from 'components/Link'
 import {
-  MOBILE_NAV_HEIGHT,
   DESKTOP_NAV_HEIGHT,
+  MOBILE_NAV_HEIGHT,
 } from 'components/Navbar/constants'
-import { white, black, primary, darkGrey, grey } from '../colors'
+
+import { black, darkGrey, grey, primary, white } from '../colors'
 import { onMobile } from '../mediaQueries'
 import { fade, slideUpWithDelay } from '../poses'
 

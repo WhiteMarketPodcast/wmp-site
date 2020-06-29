@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import { PrivacyPolicyTemplate } from 'templates/privacy-policy'
+
 import injectStyle from '../injectStyle'
 
 const PrivacyPolicyPreview = ({ entry, widgetFor }) => (

@@ -1,16 +1,17 @@
-import _ from 'lodash'
 import React, { Component } from 'react'
-import { array, func, node, object, string } from 'prop-types'
 import { graphql } from 'gatsby'
-import PageHelmet from 'components/Helmets/PageHelmet'
+import _ from 'lodash'
+import { array, func, node, object, string } from 'prop-types'
+
 import Content, { HTMLContent } from 'components/Content'
+import PageHelmet from 'components/Helmets/PageHelmet'
 import PreviewCompatibleImage from 'components/PreviewCompatibleImage'
-import { TitleBG, Title, Section } from 'style/components/aboutPage'
+import { Section, Title, TitleBG } from 'style/components/aboutPage'
 import {
-  Grid,
   AlbumContainer,
-  InfoContainer,
   ArtistAndTitle,
+  Grid,
+  InfoContainer,
 } from 'style/components/fmaPage'
 
 export class FMACollectionTemplate extends Component {

@@ -1,6 +1,7 @@
 import React from 'react'
-import { func, node, string } from 'prop-types'
 import { Link as GatsbyLink } from 'gatsby'
+import { func, node, string } from 'prop-types'
+
 import ExternalLink from 'components/ExternalLink'
 
 function Link(props) {

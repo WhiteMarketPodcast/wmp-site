@@ -1,7 +1,8 @@
 import React from 'react'
-import { object } from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
+import { object } from 'prop-types'
+
 import BlogGrid from 'components/BlogGrid'
 import {
   BrandH1,

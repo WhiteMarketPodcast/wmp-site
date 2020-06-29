@@ -1,5 +1,7 @@
 import styled from 'styled-components'
+
 import Link from 'components/Link'
+
 import { primary, white } from '../colors'
 import { onMobile } from '../mediaQueries'
 

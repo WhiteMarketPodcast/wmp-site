@@ -1,6 +1,8 @@
 import styled from 'styled-components'
+
 import { LinkButton as Link } from 'style/components'
-import { white, primary } from '../colors'
+
+import { primary, white } from '../colors'
 import { onMobile } from '../mediaQueries'
 
 export const Section404 = styled.section`

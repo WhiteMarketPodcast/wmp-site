@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
-import { bool, func, string } from 'prop-types'
-import PlayIcon from 'mdi-react/PlayIcon'
-import PauseIcon from 'mdi-react/PauseIcon'
 import LoadingIcon from 'mdi-react/LoadingIcon'
+import PauseIcon from 'mdi-react/PauseIcon'
+import PlayIcon from 'mdi-react/PlayIcon'
+import { bool, func, string } from 'prop-types'
+
 import { SrText } from 'style/components'
+
 import { Button } from './styled'
 
 class PlayButton extends Component {

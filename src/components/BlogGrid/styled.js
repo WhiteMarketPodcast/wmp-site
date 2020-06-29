@@ -1,6 +1,7 @@
-import styled from 'styled-components'
-import Link from 'components/Link'
 import InfiniteScroll from 'react-infinite-scroller'
+import styled from 'styled-components'
+
+import Link from 'components/Link'
 import {
   black,
   primary,
@@ -8,7 +9,8 @@ import {
   seeThruPrimaryDark,
   white,
 } from 'style/colors'
-import { onMobile, onDesktop } from 'style/mediaQueries'
+import { onDesktop, onMobile } from 'style/mediaQueries'
+
 import PreviewCompatibleImage from '../PreviewCompatibleImage'
 
 export const BlogListGrid = styled(InfiniteScroll)`

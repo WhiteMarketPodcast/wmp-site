@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { PodcastProvider } from './src/contexts/PodcastContext'
+
 import Layout from './src/components/Layout'
+import { PodcastProvider } from './src/contexts/PodcastContext'
 import { delay } from './src/style/poses'
 
 export const wrapPageElement = ({ element, props }) => (

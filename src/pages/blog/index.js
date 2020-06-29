@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+import PropTypes from 'prop-types'
+
 import BlogGrid from 'components/BlogGrid'
 import { BrandH1 } from 'style/components'
 
