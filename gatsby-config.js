@@ -26,6 +26,7 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-typescript`,
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
@@ -91,17 +92,6 @@ module.exports = {
           },
           `gatsby-remark-external-links`,
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-eslint`,
-      options: {
-        test: /\.js$|\.jsx$/,
-        exclude: /(node_modules|cache|public)/,
-        options: {
-          emitWarning: true,
-          failOnError: false,
-        },
       },
     },
     `gatsby-plugin-netlify-cms`,
