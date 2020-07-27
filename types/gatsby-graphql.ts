@@ -738,13 +738,13 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___format'
   | 'childMarkdownRemark___frontmatter___categories'
   | 'childMarkdownRemark___frontmatter___tags'
+  | 'childMarkdownRemark___frontmatter___imageAlt'
+  | 'childMarkdownRemark___frontmatter___podcastURL'
   | 'childMarkdownRemark___frontmatter___collection'
   | 'childMarkdownRemark___frontmatter___collection___artist'
   | 'childMarkdownRemark___frontmatter___collection___title'
   | 'childMarkdownRemark___frontmatter___collection___genres'
   | 'childMarkdownRemark___frontmatter___collection___url'
-  | 'childMarkdownRemark___frontmatter___podcastURL'
-  | 'childMarkdownRemark___frontmatter___imageAlt'
   | 'childMarkdownRemark___frontmatter___videoURL'
   | 'childMarkdownRemark___frontmatter___imageCredit___licence'
   | 'childMarkdownRemark___excerpt'
@@ -1586,6 +1586,8 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___format'
   | 'frontmatter___categories'
   | 'frontmatter___tags'
+  | 'frontmatter___imageAlt'
+  | 'frontmatter___podcastURL'
   | 'frontmatter___collection'
   | 'frontmatter___collection___artist'
   | 'frontmatter___collection___title'
@@ -1627,8 +1629,6 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___collection___image___publicURL'
   | 'frontmatter___collection___image___id'
   | 'frontmatter___collection___image___children'
-  | 'frontmatter___podcastURL'
-  | 'frontmatter___imageAlt'
   | 'frontmatter___videoURL'
   | 'frontmatter___imageCredit___author___name'
   | 'frontmatter___imageCredit___author___url'
@@ -1771,9 +1771,9 @@ export type MarkdownRemarkFrontmatter = {
   format?: Maybe<Scalars['String']>;
   categories?: Maybe<Array<Maybe<Scalars['String']>>>;
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
-  collection?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterCollection>>>;
-  podcastURL?: Maybe<Scalars['String']>;
   imageAlt?: Maybe<Scalars['String']>;
+  podcastURL?: Maybe<Scalars['String']>;
+  collection?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterCollection>>>;
   videoURL?: Maybe<Scalars['String']>;
   imageCredit?: Maybe<MarkdownRemarkFrontmatterImageCredit>;
 };
@@ -1817,9 +1817,9 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   format?: Maybe<StringQueryOperatorInput>;
   categories?: Maybe<StringQueryOperatorInput>;
   tags?: Maybe<StringQueryOperatorInput>;
-  collection?: Maybe<MarkdownRemarkFrontmatterCollectionFilterListInput>;
-  podcastURL?: Maybe<StringQueryOperatorInput>;
   imageAlt?: Maybe<StringQueryOperatorInput>;
+  podcastURL?: Maybe<StringQueryOperatorInput>;
+  collection?: Maybe<MarkdownRemarkFrontmatterCollectionFilterListInput>;
   videoURL?: Maybe<StringQueryOperatorInput>;
   imageCredit?: Maybe<MarkdownRemarkFrontmatterImageCreditFilterInput>;
 };
@@ -2769,7 +2769,17 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___maxWidth'
   | 'pluginCreator___pluginOptions___tracedSVG'
   | 'pluginCreator___pluginOptions___backgroundColor'
+  | 'pluginCreator___pluginOptions___pathPrefix'
+  | 'pluginCreator___pluginOptions___wrapperStyle'
+  | 'pluginCreator___pluginOptions___linkImagesToOriginal'
+  | 'pluginCreator___pluginOptions___showCaptions'
+  | 'pluginCreator___pluginOptions___markdownCaptions'
+  | 'pluginCreator___pluginOptions___withWebp'
+  | 'pluginCreator___pluginOptions___loading'
+  | 'pluginCreator___pluginOptions___disableBgImageOnAlpha'
+  | 'pluginCreator___pluginOptions___disableBgImage'
   | 'pluginCreator___pluginOptions___destinationDir'
+  | 'pluginCreator___pluginOptions___ignoreFileExtensions'
   | 'pluginCreator___pluginOptions___pathCheck'
   | 'pluginCreator___nodeAPIs'
   | 'pluginCreator___browserAPIs'
@@ -2967,7 +2977,17 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___plugins___pluginOptions___maxWidth'
   | 'pluginOptions___plugins___pluginOptions___tracedSVG'
   | 'pluginOptions___plugins___pluginOptions___backgroundColor'
+  | 'pluginOptions___plugins___pluginOptions___pathPrefix'
+  | 'pluginOptions___plugins___pluginOptions___wrapperStyle'
+  | 'pluginOptions___plugins___pluginOptions___linkImagesToOriginal'
+  | 'pluginOptions___plugins___pluginOptions___showCaptions'
+  | 'pluginOptions___plugins___pluginOptions___markdownCaptions'
+  | 'pluginOptions___plugins___pluginOptions___withWebp'
+  | 'pluginOptions___plugins___pluginOptions___loading'
+  | 'pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha'
+  | 'pluginOptions___plugins___pluginOptions___disableBgImage'
   | 'pluginOptions___plugins___pluginOptions___destinationDir'
+  | 'pluginOptions___plugins___pluginOptions___ignoreFileExtensions'
   | 'pluginOptions___plugins___browserAPIs'
   | 'pluginOptions___plugins___pluginFilepath'
   | 'pluginOptions___fileName'
@@ -2988,7 +3008,17 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___maxWidth'
   | 'pluginOptions___tracedSVG'
   | 'pluginOptions___backgroundColor'
+  | 'pluginOptions___pathPrefix'
+  | 'pluginOptions___wrapperStyle'
+  | 'pluginOptions___linkImagesToOriginal'
+  | 'pluginOptions___showCaptions'
+  | 'pluginOptions___markdownCaptions'
+  | 'pluginOptions___withWebp'
+  | 'pluginOptions___loading'
+  | 'pluginOptions___disableBgImageOnAlpha'
+  | 'pluginOptions___disableBgImage'
   | 'pluginOptions___destinationDir'
+  | 'pluginOptions___ignoreFileExtensions'
   | 'pluginOptions___pathCheck'
   | 'nodeAPIs'
   | 'browserAPIs'
@@ -3124,7 +3154,17 @@ export type SitePluginPluginOptions = {
   maxWidth?: Maybe<Scalars['Int']>;
   tracedSVG?: Maybe<Scalars['Boolean']>;
   backgroundColor?: Maybe<Scalars['String']>;
+  pathPrefix?: Maybe<Scalars['String']>;
+  wrapperStyle?: Maybe<Scalars['String']>;
+  linkImagesToOriginal?: Maybe<Scalars['Boolean']>;
+  showCaptions?: Maybe<Scalars['Boolean']>;
+  markdownCaptions?: Maybe<Scalars['Boolean']>;
+  withWebp?: Maybe<Scalars['Boolean']>;
+  loading?: Maybe<Scalars['String']>;
+  disableBgImageOnAlpha?: Maybe<Scalars['Boolean']>;
+  disableBgImage?: Maybe<Scalars['Boolean']>;
   destinationDir?: Maybe<Scalars['String']>;
+  ignoreFileExtensions?: Maybe<Array<Maybe<Scalars['String']>>>;
   pathCheck?: Maybe<Scalars['Boolean']>;
 };
 
@@ -3148,7 +3188,17 @@ export type SitePluginPluginOptionsFilterInput = {
   maxWidth?: Maybe<IntQueryOperatorInput>;
   tracedSVG?: Maybe<BooleanQueryOperatorInput>;
   backgroundColor?: Maybe<StringQueryOperatorInput>;
+  pathPrefix?: Maybe<StringQueryOperatorInput>;
+  wrapperStyle?: Maybe<StringQueryOperatorInput>;
+  linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>;
+  showCaptions?: Maybe<BooleanQueryOperatorInput>;
+  markdownCaptions?: Maybe<BooleanQueryOperatorInput>;
+  withWebp?: Maybe<BooleanQueryOperatorInput>;
+  loading?: Maybe<StringQueryOperatorInput>;
+  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>;
+  disableBgImage?: Maybe<BooleanQueryOperatorInput>;
   destinationDir?: Maybe<StringQueryOperatorInput>;
+  ignoreFileExtensions?: Maybe<StringQueryOperatorInput>;
   pathCheck?: Maybe<BooleanQueryOperatorInput>;
 };
 
@@ -3181,7 +3231,17 @@ export type SitePluginPluginOptionsPluginsPluginOptions = {
   maxWidth?: Maybe<Scalars['Int']>;
   tracedSVG?: Maybe<Scalars['Boolean']>;
   backgroundColor?: Maybe<Scalars['String']>;
+  pathPrefix?: Maybe<Scalars['String']>;
+  wrapperStyle?: Maybe<Scalars['String']>;
+  linkImagesToOriginal?: Maybe<Scalars['Boolean']>;
+  showCaptions?: Maybe<Scalars['Boolean']>;
+  markdownCaptions?: Maybe<Scalars['Boolean']>;
+  withWebp?: Maybe<Scalars['Boolean']>;
+  loading?: Maybe<Scalars['String']>;
+  disableBgImageOnAlpha?: Maybe<Scalars['Boolean']>;
+  disableBgImage?: Maybe<Scalars['Boolean']>;
   destinationDir?: Maybe<Scalars['String']>;
+  ignoreFileExtensions?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
 
 export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
@@ -3189,7 +3249,17 @@ export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   maxWidth?: Maybe<IntQueryOperatorInput>;
   tracedSVG?: Maybe<BooleanQueryOperatorInput>;
   backgroundColor?: Maybe<StringQueryOperatorInput>;
+  pathPrefix?: Maybe<StringQueryOperatorInput>;
+  wrapperStyle?: Maybe<StringQueryOperatorInput>;
+  linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>;
+  showCaptions?: Maybe<BooleanQueryOperatorInput>;
+  markdownCaptions?: Maybe<BooleanQueryOperatorInput>;
+  withWebp?: Maybe<BooleanQueryOperatorInput>;
+  loading?: Maybe<StringQueryOperatorInput>;
+  disableBgImageOnAlpha?: Maybe<BooleanQueryOperatorInput>;
+  disableBgImage?: Maybe<BooleanQueryOperatorInput>;
   destinationDir?: Maybe<StringQueryOperatorInput>;
+  ignoreFileExtensions?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePluginSortInput = {
