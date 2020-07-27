@@ -1,3 +1,5 @@
+import { BlogListQuery } from 'types/gatsby-graphql'
+
 export const formatConverter = {
   standard: `blog`,
   audio: `podcast`,
@@ -13,6 +15,8 @@ export const licenceURLs = {
   'CC BY-NC-ND': `https://creativecommons.org/licenses/by-nc-nd/4.0/`,
 }
 
-export function isFirstPostPodcast(posts) {
+export function isFirstPostPodcast(
+  posts: BlogListQuery['allMarkdownRemark']['edges'],
+) {
   return posts[0].node.frontmatter.format === 'audio'
 }

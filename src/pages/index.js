@@ -154,7 +154,7 @@ export default class IndexPage extends Component {
 }
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query IndexPage {
     site {
       siteMetadata {
         title

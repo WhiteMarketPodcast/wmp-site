@@ -154,7 +154,7 @@ export default class PodcastPage extends Component {
 }
 
 export const pageQuery = graphql`
-  query AllEpisodesQuery {
+  query AllPodcastEpisodes {
     podcasts: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { format: { eq: "audio" } } }

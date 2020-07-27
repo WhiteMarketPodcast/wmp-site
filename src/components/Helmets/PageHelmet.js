@@ -71,7 +71,7 @@ class PageHelmet extends PureComponent {
 }
 
 const query = graphql`
-  query PageQuery {
+  query PageHelmet {
     site {
       siteMetadata {
         siteName: title

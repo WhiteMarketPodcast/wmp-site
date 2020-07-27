@@ -41,7 +41,7 @@ class TopLevelHelmet extends PureComponent {
 }
 
 const query = graphql`
-  query HelmetQuery {
+  query TopLevelHelmet {
     site {
       siteMetadata {
         title

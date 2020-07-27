@@ -79,6 +79,8 @@ module.exports = {
       'error',
       {
         devDependencies: [
+          'gatsby-node.js',
+          'rss-config.js',
           'jest/**/*',
           '**/__tests__/*.*',
           '**/*.test.*',
@@ -111,6 +113,7 @@ module.exports = {
           ['^\\u0000'],
           // Packages. `react` and `gatsby` related packages come first.
           ['^react', '^gatsby', '^@?\\w'],
+          ['^types(/.*|$)'],
           // src folders
           [`^(${fs.readdirSync('src').join('|')})(/.*|$)`],
           // Parent imports. Put `..` last.
@@ -160,7 +163,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        paths: ['./src'],
+        paths: ['./src', '.'],
         extensions: ['.js', '.ts', '.tsx'],
       },
     },

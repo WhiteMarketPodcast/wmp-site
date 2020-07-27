@@ -28,7 +28,7 @@ export default class BlogList extends Component {
 }
 
 export const pageQuery = graphql`
-  query BlogListQuery {
+  query BlogList {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "blog-post" } } }

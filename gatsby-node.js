@@ -84,7 +84,7 @@ exports.createPages = ({ actions, graphql }) => {
 
       createPage({
         path: tagPath,
-        component: path.resolve(`src/templates/tags.js`),
+        component: path.resolve(`src/templates/tags.tsx`),
         context: { tag },
       })
     })
@@ -105,4 +105,16 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const value = createFilePath({ node, getNode })
     createNodeField({ name: `slug`, node, value })
   }
+}
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [
+        path.resolve(__dirname, 'src'),
+        path.resolve(__dirname),
+        'node_modules',
+      ],
+    },
+  })
 }

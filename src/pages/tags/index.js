@@ -52,7 +52,7 @@ class TagsPage extends Component {
 export default TagsPage
 
 export const tagPageQuery = graphql`
-  query TagsQuery {
+  query TagsPage {
     site {
       siteMetadata {
         title

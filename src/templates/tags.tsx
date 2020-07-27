@@ -1,7 +1,8 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
-import { object } from 'prop-types'
+
+import { TagPageQuery } from 'types/gatsby-graphql'
 
 import BlogGrid from 'components/BlogGrid'
 import {
@@ -12,41 +13,35 @@ import {
   TitleHighlight,
 } from 'style/components'
 
-class TagRoute extends React.Component {
-  static propTypes = {
-    data: object.isRequired,
-    pageContext: object.isRequired,
-  }
+type TagRouteProps = {
+  data: TagPageQuery
+  pageContext: { tag: string }
+}
 
-  render() {
-    const {
-      data: {
-        allMarkdownRemark: { edges: posts },
-        site: { siteMetadata },
-      },
-      pageContext: { tag },
-    } = this.props
+const TagRoute = ({ data, pageContext }: TagRouteProps) => {
+  const {
+    allMarkdownRemark: { edges: posts },
+    site: { siteMetadata },
+  } = data
+  const { tag } = pageContext
 
-    const tagHeader = `Posts tagged with`
-
-    return (
-      <>
-        <section>
-          <Helmet title={`${tag} | ${siteMetadata.title}`} />
-          <FlexCenter>
-            <BrandH1 className="small">
-              <span>{tagHeader}</span>
-              <TitleHighlight>{tag}</TitleHighlight>
-            </BrandH1>
-          </FlexCenter>
-          <BlogGrid posts={posts} />
-          <FlexCenterWithMargin>
-            <LinkButton to="/tags/">Browse all tags</LinkButton>
-          </FlexCenterWithMargin>
-        </section>
-      </>
-    )
-  }
+  return (
+    <>
+      <section>
+        <Helmet title={`${tag} | ${siteMetadata.title}`} />
+        <FlexCenter>
+          <BrandH1 className="small">
+            <span>Posts tagged with</span>
+            <TitleHighlight>{tag}</TitleHighlight>
+          </BrandH1>
+        </FlexCenter>
+        <BlogGrid posts={posts} />
+        <FlexCenterWithMargin>
+          <LinkButton to="/tags/">Browse all tags</LinkButton>
+        </FlexCenterWithMargin>
+      </section>
+    </>
+  )
 }
 
 export default TagRoute

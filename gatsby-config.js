@@ -26,8 +26,19 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-typescript`,
     `gatsby-plugin-resolve-src`,
+    `gatsby-plugin-typescript`,
+    {
+      resolve: `gatsby-plugin-graphql-codegen`,
+      options: {
+        fileName: 'types/gatsby-graphql.ts',
+        documentPaths: [
+          `./src/**/*.{js,ts,tsx}`,
+          `./.cache/fragments/*.js`,
+          `./node_modules/gatsby-*/**/*.js`,
+        ],
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,

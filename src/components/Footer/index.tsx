@@ -14,6 +14,8 @@ import {
 } from 'react-icons/fa'
 import { graphql, useStaticQuery } from 'gatsby'
 
+import { FooterQuery } from 'types/gatsby-graphql'
+
 import Link from 'components/Link'
 import { SrText } from 'style/components'
 
@@ -30,8 +32,8 @@ import {
 import { getSRTextForLinks } from './utils'
 
 const Footer = () => {
-  const data = useStaticQuery(graphql`
-    query FooterQuery {
+  const data = useStaticQuery<FooterQuery>(graphql`
+    query Footer {
       site {
         siteMetadata {
           siteUrl

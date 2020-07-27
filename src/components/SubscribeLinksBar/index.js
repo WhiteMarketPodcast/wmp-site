@@ -12,7 +12,7 @@ import { Bar, Links, Title } from './styled'
 
 const SubscribeLinksBar = () => {
   const data = useStaticQuery(graphql`
-    query SubscribeLinksBarQuery {
+    query SubscribeLinksBar {
       site {
         siteMetadata {
           siteUrl

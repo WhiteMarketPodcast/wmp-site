@@ -260,6 +260,7 @@ export class BlogPostTemplate extends Component {
   renderPlayButton() {
     const url = this.getMediaURL()
     const { format } = this.props
+    const { isBuffering } = this.context
     const srText = `Play ${format === `audio` ? `podcast` : format}`
     if (!url) return null
 
@@ -268,6 +269,7 @@ export class BlogPostTemplate extends Component {
         <PlayButton
           onClick={this.handlePlayClick}
           isPlaying={this.isPlaying()}
+          isBuffering={isBuffering}
           screenReaderText={srText}
         />
       </Fade>

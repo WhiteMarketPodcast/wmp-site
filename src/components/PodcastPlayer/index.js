@@ -278,7 +278,7 @@ class PodcastPlayer extends PureComponent {
 }
 
 const query = graphql`
-  query PodcastPlayerQuery {
+  query PodcastPlayer {
     podcasts: allMarkdownRemark(
       filter: { frontmatter: { format: { eq: "audio" } } }
     ) {
