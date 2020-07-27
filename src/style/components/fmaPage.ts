@@ -42,7 +42,7 @@ export const AlbumContainer = styled(Link)`
   }
 `
 
-export const InfoContainer = styled.div`
+export const InfoContainer = styled.div<{ active: boolean }>`
   grid-area: excerpt;
   font-size: 0.8rem;
 

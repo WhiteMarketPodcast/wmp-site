@@ -71,7 +71,7 @@ export const EpisodesColumn = styled.div`
   }
 `
 
-export const EpisodeTab = styled.div`
+export const EpisodeTab = styled.div<{ selected?: boolean }>`
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -106,7 +106,7 @@ export const EpisodeTab = styled.div`
   }};
 `
 
-export const TabButton = styled.button`
+export const TabButton = styled.button<{ selected?: boolean }>`
   background: transparent;
   border: 0;
   border-radius: 0;

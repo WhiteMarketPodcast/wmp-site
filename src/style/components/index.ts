@@ -47,7 +47,7 @@ export const LinkButton = styled(Link)`
   padding: 0.8em 1.5em;
 `
 
-export const BrandH1 = styled.h1`
+export const BrandH1 = styled.h1<{ moreMarginOnTop?: boolean }>`
   position: relative;
   margin: ${({ moreMarginOnTop }) =>
     moreMarginOnTop ? `3rem auto 1rem auto` : `2rem auto`};

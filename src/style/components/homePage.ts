@@ -13,7 +13,7 @@ import {
 import { sansSerif } from '../fonts'
 import { onMobile } from '../mediaQueries'
 
-const isHighlightedPreview = (index) => _.includes([0, 3, 5], index)
+const isHighlightedPreview = (index: number) => _.includes([0, 3, 5], index)
 
 export const BlogPostPreviewGrid = styled.div`
   display: grid;
@@ -157,7 +157,7 @@ export const BlogPreviewImage = styled.div`
   }
 `
 
-export const PreviewTextContainer = styled.div`
+export const PreviewTextContainer = styled.div<{ index: number }>`
   position: relative;
   width: 100%;
 
@@ -198,7 +198,7 @@ export const PostType = styled.div`
   }
 `
 
-export const PreviewTitle = styled.h3`
+export const PreviewTitle = styled.h3<{ index: number }>`
   font-size: ${({ index }) => (isHighlightedPreview(index) ? `1.5` : `1.2`)}rem;
   margin: 0;
 
@@ -212,7 +212,7 @@ export const PreviewTitle = styled.h3`
   }
 `
 
-export const DateText = styled.div`
+export const DateText = styled.div<{ index: number }>`
   color: ${black};
   font-size: 0.75rem;
   font-weight: 600;
