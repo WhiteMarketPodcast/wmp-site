@@ -97,7 +97,7 @@
     "gatsby-transformer-sharp": "^2.5.12",
     "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^26.2.1",
+    "jest": "^26.2.2",
     "lint-staged": "^10.2.11",
     "lodash-webpack-plugin": "^0.11.5",
     "mp3-duration": "^1.1.0",
