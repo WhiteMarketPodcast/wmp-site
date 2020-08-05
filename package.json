@@ -84,7 +84,7 @@
     "gatsby-plugin-resolve-src": "^2.1.0",
     "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-sass": "^2.3.12",
-    "gatsby-plugin-sharp": "^2.6.24",
+    "gatsby-plugin-sharp": "^2.6.25",
     "gatsby-plugin-sitemap": "^2.4.11",
     "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-plugin-typescript": "^2.4.16",
