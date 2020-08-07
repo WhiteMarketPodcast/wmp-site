@@ -77,7 +77,7 @@
     "eslint-plugin-testing-library": "^3.4.1",
     "gatsby-plugin-graphql-codegen": "^2.7.1",
     "gatsby-plugin-manifest": "^2.4.22",
-    "gatsby-plugin-netlify": "^2.3.11",
+    "gatsby-plugin-netlify": "^2.3.12",
     "gatsby-plugin-netlify-cms": "^4.3.11",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
