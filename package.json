@@ -76,7 +76,7 @@
     "eslint-plugin-simple-import-sort": "^5.0.3",
     "eslint-plugin-testing-library": "^3.6.0",
     "gatsby-plugin-graphql-codegen": "^2.7.1",
-    "gatsby-plugin-manifest": "^2.4.22",
+    "gatsby-plugin-manifest": "^2.4.23",
     "gatsby-plugin-netlify": "^2.3.13",
     "gatsby-plugin-netlify-cms": "^4.3.11",
     "gatsby-plugin-react-helmet": "^3.3.10",
