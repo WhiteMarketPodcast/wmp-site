@@ -157,6 +157,7 @@ module.exports = {
         'import/extensions': 'off',
         'import/named': 'off',
         'react/prop-types': 'off',
+        'react/require-default-props': 'off',
       },
     },
   ],
