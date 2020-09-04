@@ -105,6 +105,10 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: '@bundle-analyzer/gatsby-plugin',
+      options: { token: '4715bed33887b99e2b4dbdd80782346cd8cf3777' },
+    },
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify`, // make sure to keep it last in the array
   ],
