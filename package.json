@@ -93,7 +93,7 @@
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-images": "^3.3.29",
     "gatsby-remark-relative-images": "^2.0.2",
-    "gatsby-source-filesystem": "^2.3.27",
+    "gatsby-source-filesystem": "^2.3.28",
     "gatsby-transformer-remark": "^2.8.32",
     "gatsby-transformer-sharp": "^2.5.14",
     "husky": "^4.3.0",
