@@ -50,7 +50,7 @@
   "devDependencies": {
     "@bundle-analyzer/gatsby-plugin": "^0.5.1",
     "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.0.2",
+    "@testing-library/react": "^11.0.3",
     "@types/jest": "^26.0.13",
     "@types/node": "^14.6.4",
     "@types/react": "^16.9.49",
