@@ -3,12 +3,11 @@ const fs = require('fs')
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    ecmaVersion: 2019,
+    sourceType: 'module',
     ecmaFeatures: {
-      experimentalObjectRestSpread: true,
       jsx: true,
     },
-    ecmaVersion: 6,
-    sourceType: 'module',
     project: ['./tsconfig.json'],
   },
   plugins: [
@@ -19,7 +18,7 @@ module.exports = {
     'simple-import-sort',
   ],
   extends: [
-    'eslint:recommended',
+    'plugin:react/recommended',
     'airbnb',
     'plugin:@typescript-eslint/recommended',
     'plugin:jest/recommended',
@@ -55,22 +54,24 @@ module.exports = {
         components: ['ExternalLink'],
       },
     ],
-    'no-console': 0,
+    'no-console': 'off',
     'no-param-reassign': [
       'error',
       {
         props: false,
       },
     ],
-    'no-underscore-dangle': 0,
-    'object-curly-newline': 0,
-    'react/destructuring-assignment': 0,
-    'react/jsx-filename-extension': 0,
-    'react/jsx-props-no-spreading': 0,
-    'react/no-danger': 0,
-    'react/prefer-stateless-function': 0,
-    'react/state-in-constructor': 0,
-    'react/static-property-placement': 0,
+    'no-underscore-dangle': 'off',
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': 'error',
+    'object-curly-newline': 'off',
+    'react/destructuring-assignment': 'off',
+    'react/jsx-filename-extension': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/no-danger': 'off',
+    'react/prefer-stateless-function': 'off',
+    'react/state-in-constructor': 'off',
+    'react/static-property-placement': 'off',
     'import/extensions': [
       'error',
       { ignorePackages: true, ts: 'never', tsx: 'never' },
@@ -88,8 +89,8 @@ module.exports = {
         ],
       },
     ],
-    'import/prefer-default-export': 0,
-    'react/forbid-prop-types': 0,
+    'import/prefer-default-export': 'off',
+    'react/forbid-prop-types': 'off',
     'react/sort-comp': [
       2,
       {
