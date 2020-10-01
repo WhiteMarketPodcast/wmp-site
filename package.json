@@ -45,7 +45,7 @@
     "styled-components": "^5.2.0",
     "typeface-crete-round": "^0.0.72",
     "typeface-montserrat": "^0.0.75",
-    "typescript": "^4.0.2"
+    "typescript": "^4.0.3"
   },
   "devDependencies": {
     "@bundle-analyzer/gatsby-plugin": "^0.5.1",
