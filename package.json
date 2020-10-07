@@ -44,7 +44,7 @@
     "react-pose": "^4.0.10",
     "styled-components": "^5.2.0",
     "typeface-crete-round": "^0.0.72",
-    "typeface-montserrat": "^0.0.75",
+    "typeface-montserrat": "^1.1.13",
     "typescript": "^4.0.3"
   },
   "devDependencies": {
