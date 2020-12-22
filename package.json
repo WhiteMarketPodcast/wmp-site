@@ -48,7 +48,6 @@
     "typescript": "^4.0.3"
   },
   "devDependencies": {
-    "@bundle-analyzer/gatsby-plugin": "^0.5.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.0.4",
     "@types/jest": "^26.0.14",
