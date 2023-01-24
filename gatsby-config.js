@@ -1,13 +1,13 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.whitemarketpodcast.eu`,
+    siteUrl: `https://www.whitemarketpodcast.cc`,
     // This is both the title of the site and of the podcast
     title: `White Market Podcast`,
     subtitle: `Free music and free culture`,
     description: `White Market Podcast is show about free music and free culture by Rute Correia. While the show is mainly focused on Creative Commons-licenced music, since it is also naturally intertwined with other movements and ideologies such as Open Source and Open Access, it often features these and similar forms of activism related to digital rights and freedom.`,
     owner: `White Market Podcast`,
     ownerEmail: `whitemarketpodcast@gmail.com`,
-    siteLogo: `https://www.whitemarketpodcast.eu/img/White_market_logo_1400x1400.jpg`,
+    siteLogo: `https://www.whitemarketpodcast.cc/img/White_market_logo_1400x1400.jpg`,
     categories: [`Society & Culture`, `Music`, `Technology`],
     twitterUsername: 'WhiteMarketCast',
     links: {

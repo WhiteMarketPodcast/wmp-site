@@ -1,6 +1,6 @@
 # White Market Podcast's website
 
-Welcome to the repo for the [White Market Podcast website](https://www.whitemarketpodcast.eu), built using the [Gatsby + Netlify CMS Starter](https://github.com/netlify-templates/gatsby-starter-netlify-cms). 🤗
+Welcome to the repo for the [White Market Podcast website](https://www.whitemarketpodcast.cc), built using the [Gatsby + Netlify CMS Starter](https://github.com/netlify-templates/gatsby-starter-netlify-cms). 🤗
 
 White Market Podcast is an open show dedicated to free music and free culture. 📻
 
@@ -41,10 +41,10 @@ The MIT license that came with the `Gatsby + Netlify CMS Starter` is included [h
 
 ## Find out more about the show or get in touch:
 
-[Website](https://www.whitemarketpodcast.eu/) | Email: hello@whitemarketpodcast.eu
+[Website](https://www.whitemarketpodcast.cc/) | Email: hello@whitemarketpodcast.cc
 
 [Facebook](https://www.facebook.com/whitemarketpodcast) | [Twitter](https://twitter.com/WhiteMarketCast) | [Mixcloud](https://www.mixcloud.com/whitemarketpodcast/)
 
-[iTunes](https://itunes.apple.com/gb/podcast/white-market-podcast/id1033024096) | [RSS feed](http://www.whitemarketpodcast.eu/rss.xml)
+[iTunes](https://itunes.apple.com/gb/podcast/white-market-podcast/id1033024096) | [RSS feed](http://www.whitemarketpodcast.cc/rss.xml)
 
 [Archive.org](https://archive.org/details/@white_market_podcast) | [Free Music Archive](https://freemusicarchive.org/curator/programamarcabranca)
